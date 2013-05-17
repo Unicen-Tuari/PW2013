@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TT Taller de Reparacion</title>
+		<link rel="stylesheet" href="styles/style.css"/>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html" accesskey="h">Inicio</a>
+			<a href="servicios.html" accesskey="s">Servicios</a>
+			<a href="consulta.html" class="elemento_actual" accesskey="r">Consulta Reparacion</a>
+			<a href="contacto.html" accesskey="c">Contacto</a>
+			<a href="login.html" class="flota_der" accesskey="l">Login</a>
+		</nav>
+		<header>
+			<img class="logo_izq flota_izq" src='images/linux.png'/>
+			<img class="logo_der flota_der" src='images/win.png'/>
+			<div class="logo">
+				<p class ="logo">Logo</p>
+				<p class="logo">Banner</p>
+			</div>
+        </header>
+        <div class="clear"></div>
+		<div class="elemento_contenedor" id="consulta">
+			<h2>Consulta tu Reparacion</h2>
+			<form class="formcliente flota_izq">
+				<fieldset>
+					<legend>Datos personales</legend><br/>
+					<input class="formconsulta" type="text" name="nombre" placeholder="*Nombre" pattern="[a-zA-Z]+" title="Formato: Nombre" required autofocus/><br/><br/>
+					<input class="formconsulta" type="text" name="apellido" placeholder="*Apellido" pattern="[a-zA-Z]+" title="Formato: Apellido" required/><br/><br/>
+					<input class="formconsulta" type="text" name="dni" placeholder="*DNI" pattern="[\d]{7,8}" title="Formato: 7 a 8 Digitos" required/><br/><br/>
+					<span class="campoobliga">*Campos Obligatorios</span>
+				</fieldset>
+				<br/><input class="botonesform" type="reset" value="BORRAR"/>
+				<input class="botonesform" type="submit" value="ACEPTAR"/>
+			</form>
+            <div class="datos_consultados flota_der">
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+                <p>Datos formateados traidos desde la base de datos, obtenidos por el form datos personales</p>
+            </div>
+        </div>
+        <footer class="clear">
+            <div class="elemento_contenedor" id="footer">
+                <ul>
+                    <li>Dirección</li>
+                    <li>Localidad</li>
+                    <li>Telefono</li>
+                    <li>Mail</li>
+                </ul>
+            </div>
+            <div id="copyright">Copyright 2012-2013. Designed by Federico Bailes</div>
+		</footer>
+	</body>
+</html>

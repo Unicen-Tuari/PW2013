@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TT Taller de Reparacion</title>
+		<link rel="stylesheet" href="styles/style.css"/>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html" accesskey="h">Inicio</a>
+			<a href="servicios.html" accesskey="s">Servicios</a>
+			<a href="consulta.html" accesskey="r">Consulta Reparacion</a>
+			<a href="contacto.html" class="elemento_actual" accesskey="c">Contacto</a>
+			<a href="login.html" class="flota_der" accesskey="l">Login</a>
+		</nav>
+		<header>
+			<img class="logo_izq flota_izq" src='images/linux.png'/>
+			<img class="logo_der flota_der" src='images/win.png'/>
+			<div class="logo">
+				<p class ="logo">Logo</p>
+				<p class="logo">Banner</p>
+			</div>
+		</header>
+		<div class="elemento_contenedor" id="contacto">
+			<h2>Formulario de Contacto</h2>
+			<form class="formcontacto">
+				<fieldset>
+					<legend>Consulta</legend><br>
+					<input class="formcontacto" type="text" name="nombre" placeholder="*Nombre y Apellido" pattern="[a-zA-Z]+\s[a-zA-Z]+" title="Formato: Nombre Apellido" required autofocus/><br/><br/>
+					<input class="formcontacto" type="email" name="correo" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required/><br/><br/>
+					<input class="formcontacto" type="tel" name="telefono" placeholder="Telefono (Incluya Cod. Área)" pattern="[\d]{3,5}-[\d]{7,12}" title="Formato: (Cod. Área)-(Numero Completo)" required/><br/><br/>
+					<textarea name="consulta" placeholder="*Ingrese aqui su consulta" required/></textarea><br/><br/>
+					<span class="campoobliga">*Campos Obligatorios</span>
+				</fieldset>
+				<br/><input class="botonesform" type="reset" value="BORRAR"/>
+				<input class="botonesform" type="submit" value="ACEPTAR"/>
+			</form>
+		</div>
+        <footer class="clear">
+            <div class="elemento_contenedor" id="footer">
+                <ul>
+                    <li>Dirección</li>
+                    <li>Localidad</li>
+                    <li>Telefono</li>
+                    <li>Mail</li>
+                </ul>
+            </div>
+            <div id="copyright">Copyright 2012-2013. Designed by Federico Bailes</div>
+		</footer>
+	</body>
+</html>

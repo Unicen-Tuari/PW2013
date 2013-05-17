@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TT Taller de Reparacion</title>
+		<link rel="stylesheet" href="styles/style.css"/>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<nav>
+			<a href="index.html" accesskey="h">Inicio</a>
+			<a href="servicios.html" accesskey="s">Servicios</a>
+			<a href="consulta.html" accesskey="r">Consulta Reparacion</a>
+			<a href="contacto.html" accesskey="c">Contacto</a>
+			<a href="login.html" class="elemento_actual flota_der" accesskey="l">Login</a>
+		</nav>
+		<header>
+			<img class="logo_izq flota_izq" src='images/linux.png'>
+			<img class="logo_der flota_der" src='images/win.png'>
+			<div class="logo">
+				<p class ="logo">Logo</p>
+				<p class="logo">Banner</p>
+			</div>
+        </header>
+        <div class="clear"></div>
+        <div class="elemento_contenedor" id="contacto">
+            <h2>LOGIN</h2>
+			<form class="formcontacto">
+				<fieldset>
+					<legend>DATOS LOGIN ADMINISTRADOR</legend><br/>
+					<input class="formcontacto" type="text" name="usuario" placeholder="*Usuario" pattern="[\w-.]+" required autofocus/><br/><br/>
+                    <input class="formcontacto" type="password" name="password" placeholder="*Contraseña" pattern="[\w-.]+" required/><br/><br/>
+					<span class="campoobliga">*Campos Obligatorios</span>
+				</fieldset>
+				<br/><input class="botonesform" type="reset" value="BORRAR"/>
+				<input class="botonesform" type="submit" value="ACEPTAR"/>
+			</form>
+        </div>
+        <footer class="clear">
+            <div class="elemento_contenedor" id="footer">
+                <ul>
+                    <li>Dirección</li>
+                    <li>Localidad</li>
+                    <li>Telefono</li>
+                    <li>Mail</li>
+                </ul>
+            </div>
+            <div id="copyright">Copyright 2012-2013. Designed by Federico Bailes</div>
+		</footer>
+	</body>
+</html>
