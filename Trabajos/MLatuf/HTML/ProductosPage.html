@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sistema de Gesti&oacute;n para forrajer&iacute;a.</title>
+		<link rel="stylesheet" href="../CSS/Home.css">
+		<link rel="stylesheet" href="../CSS/Principal.css">
+	</head>
+	<body>
+		<header>Sistema de Gesti&oacute;n para Forrajer&iacute;a</header>
+		<aside>
+			<div class="boton">
+				<a href="HomePage.html">Inicio</a>
+			</div>
+			<div class="boton">
+				<a href="ClientesPage.html">Clientes</a>
+			</div>
+			<div class="boton seleccionado">
+				<a href="ProductosPage.html">Productos</a>
+			</div>
+			<div class="boton">
+				<a href="TransaccionesPage.html">Transacciones</a>
+			</div>
+			<div class="boton">
+				<a href="PresupuestoPage.html">Presupuesto</a>
+			</div>
+		</aside>
+		<section class="principal">
+			<section class="opciones">
+				<p>En esta secci&oacute;n se muestran los productos cargados en el sistema, con la opci&oacute;n de editar sus datos, eliminar un producto, como asi tambi&eacute;n crear uno nuevo.</p>
+				<label> Seleccione Producto:</label><br>
+				<select>
+					<option value="1">Producto 1</option>
+					<option value="2">Producto 2</option>
+					<option value="3">Producto 3</option>
+					<option value="4">Producto 4</option>
+				</select>
+				<input type="radio" name="tipo" value="barraca" checked="checked"/>Barraca
+				<input type="radio" name="tipo" value="forrajeria"/>Forrajeria
+				<div class="botones opciones">
+					<input type="button" name="Nuevo" value="Nuevo Producto"/> 
+					<input type="button" name="Editar" value="Editar Producto"/> 
+					<input type="button" name="Borrar" value="Borrar Producto"/>
+				</div>
+			</section>
+			<form class="datos">
+				<section class="renglon">
+					<label> Nombre:</label>
+					<input type="textbox" value="Lanas" disabled/>
+					<label> Tipo:</label>
+					<select disabled>
+						<option value="1" selected="selected">Barraca</option>
+						<option value="2">Forrajeria</option>
+					</select>
+					<label> Precio:</label>
+					<label> $</label>
+					<input class="precio" type="textbox" value="5" disabled/>
+					<input type="radio" name="tipoPrecio" value="kilo" checked="checked"/>Kilo
+					<input type="radio" name="tipoPrecio" value="unidad"/>Unidad
+				</section>
+				<section class="renglon">
+					<label> Descripci&oacute;n:</label><br>
+					<textarea class="descripcion" disabled>Cueros lanares</textarea>
+				</section>
+				<div class="botones datos">
+					<input type="submit" name="Guardar" value="Guardar Producto"/> 
+				</div>				
+			</form>
+		</section>
+	</body>
+</html>
