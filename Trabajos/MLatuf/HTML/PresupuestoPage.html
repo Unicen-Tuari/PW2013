@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sistema de Gesti&oacute;n para forrajer&iacute;a.</title>
+		<link rel="stylesheet" href="../CSS/Home.css">
+		<link rel="stylesheet" href="../CSS/Principal.css">
+	</head>
+	<body>
+		<header>Sistema de Gesti&oacute;n para Forrajer&iacute;a</header>
+		<aside>
+			<div class="boton">
+				<a href="HomePage.html">Inicio</a>
+			</div>
+			<div class="boton">
+				<a href="ClientesPage.html">Clientes</a>
+			</div>
+			<div class="boton">
+				<a href="ProductosPage.html">Productos</a>
+			</div>
+			<div class="boton">
+				<a href="TransaccionesPage.html">Transacciones</a>
+			</div>
+			<div class="boton seleccionado">
+				<a href="PresupuestoPage.html">Presupuesto</a>
+			</div>
+		</aside>
+		<section class="principal">
+			<section class="operaciones">
+				<p>
+					En esta secci&oacute;n se muestran las 10(cinco) &uacute;timas transacciones realizadas en el sistema que afectan el presupuesto, con la opci&oacute;n de realizar una nueva, borrar o editar una existente.<br>
+					Tambi&eacute;n se permiten realizar acciones como calcular el presupuesto mensual o diario.
+				</p>
+				<section class="renglon">
+					<label>Fecha Inicio:</label>
+					<input type="textbox"/>
+					<label>Fecha Fin:</label>
+					<input type="textbox"/>
+				</section>
+				<section class="renglon">
+					<label> Tipo:</label>
+					<select>
+						<option value="diario" selected="selected">Diario</option>
+						<option value="mensual">Mensual</option>
+						<option value="periodo">Periodo</option>
+					</select>
+				</section>
+				<section class="renglon">					
+					<label> Presupuesto:</label>
+					<label> $</label>
+					<input type="textbox" value="12,500" disabled/>
+					<input type="button" name="Calcular" value="Calcular"/>
+				</section>					
+			</section>
+			<form class="datos">
+				<table class="presupuesto">
+					<thead>
+						<tr>
+							<th>Tipo</th>
+							<th>Descripci&oacute;n</th>
+							<th>Precio</th>
+							<th>Fecha</th>
+							<th>Comentarios</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>17/05/2012</td>
+							<td>Plata para comida</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto">Gasto</option>
+									<option value="ingreso" selected="selected">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa">Casa</option>
+									<option value="barraca" selected="selected">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>1500</td>
+							<td>16/05/2012</td>
+							<td>Venta de lana</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela" selected="selected">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>16/05/2012</td>
+							<td>Plata para comida</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado" selected="selected">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>500</td>
+							<td>16/05/2012</td>
+							<td>Sueldo semanal</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>200</td>
+							<td>15/05/2012</td>
+							<td>Plata para comida</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto">Gasto</option>
+									<option value="ingreso" selected="selected">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa">Casa</option>
+									<option value="barraca" selected="selected">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>400</td>
+							<td>15/05/2012</td>
+							<td>Venta d&oacute;lares</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>17/05/2012</td>
+							<td>lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>17/05/2012</td>
+							<td>lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>17/05/2012</td>
+							<td>lorem ipsum</td>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option value="gasto" selected="selected">Gasto</option>
+									<option value="ingreso">Ingreso</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option value="casa" selected="selected">Casa</option>
+									<option value="barraca">Barraca</option>
+									<option value="empleado">Empleado</option>
+									<option value="abuela">Abuela</option>
+									<option value="combustible">Combustible</option>
+								</select>
+							</td>
+							<td>100</td>
+							<td>17/05/2012</td>
+							<td>lorem ipsum</td>
+						</tr>
+					</tbody>
+				</table>
+				<section class="navegadoresTabla">
+					<a href="TransaccionesPage.html"><<--Siguiente</a>
+					<a href="TransaccionesPage.html">Anterior-->></a>
+				</section>
+				<div class="botones datos">
+					<input type="submit" name="Guardar" value="Guardar Registro"/>
+					<input type="button" name="Editar" value="Editar Registro"/> 
+					<input type="button" name="Borrar" value="Borrar Registro"/> 
+				</div>
+			</form>
+		</section>
+	</body>
+</html>
