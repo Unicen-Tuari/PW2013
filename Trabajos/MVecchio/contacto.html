@@ -29,10 +29,44 @@
 					</ul>
 				</nav>				
 			</header>
-			</div class="contenedorcentral">
-			<form> 
-			</form>
+			<div id="contenedorcentral">
+				<article id="articulo" >
+					<form id="formulariocontacto" target="_blank" onsubmit="return window.confirm(&quot;Consulta Enviada. Espera la confirmaci&oacute;n del Administrador&quot;);">
+						<ul>
+						    <li>
+						    	<h2>Contactanos!!</h2>
+	       					</li>
+	       					<li>
+	           					<label for="nombre">Nombre:</label>
+	           					<input type="text"  placeholder="Juan" required />
+	       					</li>
+	       					<li>
+	           					<label for="apellido">Apellido:</label>
+	           					<input type="text"  placeholder="Perez" required />
+	       					</li>
+	       					<li>
+						        <label for="email">Email:</label>
+						        <input type="email" name="email" placeholder="juanperez@mail.com" required />
+						    </li>
+						    <li>
+						        <label for="Mensaje">Mensaje:</label>
+						        <textarea name="Mensaje" cols="40" rows="6" required ></textarea>
+						    </li>
+						    <li>
+						       <button class="submit" type="submit">Enviar</button>
+						    </li>
+						</ul>
+					</form>
+				</article>
 			</div>
+			<aside id="contenedorlateral">
+				<a href="http://www.arba.gov.ar/" target="_blank"><img class="fondoimagen"alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
+				<a href="http://www.dnrpa.gov.ar/" target="_blank"><img class="fondoimagen"alt="Logo Arba" src="imagenes/LogoRegistro.bmp"></a>
+			</aside>
 		</div>
 	</body>
+	<footer>
+	</footer>
+
 </html>
+			
