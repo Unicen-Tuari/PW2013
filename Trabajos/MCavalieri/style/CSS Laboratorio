@@ -1,0 +1,64 @@
+body {
+	background: #001429;
+}
+
+header {
+	margin:10px 30px;
+}
+
+nav {
+	height: 40px;
+	background: #000000;
+	text-align:left;
+}
+
+a.menu {
+	display: inline-block;
+	padding: 0px 25px;
+	line-height: 40px;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Oswald", sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+a.flota_derecha {
+	float: right;
+}
+
+a.elemento_actual, a:hover {
+	background: #FF4719;
+	border-radius:13px;
+}
+
+a.imagen_header{
+	background: url('laboratorio.jpg')
+	height:250px;
+	width:300px;
+}
+
+article, form {
+	background: url('../image/imagen2.jpg');
+	color: #FFFFFF;
+	text-align: center;
+	position:absolute;
+	left: 25%;
+	margin: 40px;
+	width: 50%;
+}
+
+article.articulo_principal {
+	border-radius:15px;
+	height: 800px;
+	font-family: sans-serif;
+}
+form.validacion {
+	padding-top: 40px;
+	border-radius:10px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	height: 90px;
+}

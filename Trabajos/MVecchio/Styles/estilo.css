@@ -160,7 +160,8 @@ padding-top: 340px;
 }
 
 div#contenedorcentral article#articulo{
-padding: 80px;
+margin-left:20px;
+padding: 60px;
 border-radius: 10px;
 background-color: #fff;
 width: 520px;
@@ -168,6 +169,62 @@ float: left;
 position: static;
 }
 
+form#formulariocontacto ul{
+text-align: left;
+border-bottom:1px solid #eee;
+position:relative;
+}
+
+form#formulariocontacto ul li{
+padding:12px;
+border-bottom:1px solid #eee;
+position:relative;
+}
+
+form#formulariocontacto label{
+color: #555555;
+display: inline-block;
+float: left;
+font-size: 13px;
+font-weight: bold;
+margin-top: 3px;
+padding: 3px;
+width: 90px;
+}
+
+form#formulariocontacto input{
+height:15px;
+width:220px;
+padding:5px 8px;
+}
+
+form#formulariocontacto textarea {
+    padding:8px;
+    width:300px;
+}
+
+form#formulariocontacto button {
+    margin-left:90px;
+}
+
+form#formulariocontacto input, form#formulariocontacto textarea {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+    color: #888;
+    font-size: 12px;
+    padding-right:30px;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    transition: padding .25s;
+}
+
+form#formulariocontacto input:focus, form#formulariocontacto textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+    padding-right:50px;
+}
 
 aside#contenedorlateral{
 background-color: #fff;
