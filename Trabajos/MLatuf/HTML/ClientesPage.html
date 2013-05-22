@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sistema de Gesti&oacute;n para forrajer&iacute;a.</title>
+		<link rel="stylesheet" href="../CSS/Home.css">
+		<link rel="stylesheet" href="../CSS/Principal.css">
+	</head>
+	<body>
+		<header>Sistema de Gesti&oacute;n para Forrajer&iacute;a</header>
+		<aside>
+			<div class="boton">
+				<a href="HomePage.html">Inicio</a>
+			</div>
+			<div class="boton seleccionado">
+				<a href="ClientesPage.html">Clientes</a>
+			</div>
+			<div class="boton">
+				<a href="ProductosPage.html">Productos</a>
+			</div>
+			<div class="boton">
+				<a href="TransaccionesPage.html">Transacciones</a>
+			</div>
+			<div class="boton">
+				<a href="PresupuestoPage.html">Presupuesto</a>
+			</div>
+		</aside>
+		<section class="principal">
+			<section class="opciones">
+				<p>En esta secci&oacute;n se muestran los clientes cargados en el sistema, con la opci&oacute;n de editar sus datos, eliminar un cliente, como asi tambi&eacute;n crear uno nuevo.</p>
+				<label> Seleccione Cliente:</label><br>
+				<select>
+					<option value="1">Cliente 1</option>
+					<option value="2">Cliente 2</option>
+					<option value="3">Cliente 3</option>
+					<option value="4">Cliente 4</option>
+				</select>
+				<div class="botones opciones">
+					<input type="button" name="Nuevo" value="Nuevo Cliente"/> 
+					<input type="button" name="Editar" value="Editar Cliente"/> 
+					<input type="button" name="Borrar" value="Borrar Cliente"/>
+				</div>
+			</section>
+			<form class="datos">
+				<section class="renglon">
+					<label class="apellido"> Apellido:</label>
+					<input type="textbox" value="Per&eacute;z" disabled/>
+					<label class="nombre"> Nombre:</label>
+					<input type="textbox" value="Juan Carlos" disabled/>
+				</section>
+				<section class="renglon">
+					<label> Direcci&oacute;n:</label>
+					<input class="direccion" type="textbox" value="Sarmiento 1234" disabled/>
+					<a href="https://maps.google.com.ar/">Como llegar.</a>
+				</section>
+				<section class="renglon">
+					<label class="fijo"> Tel&eacute;fono Fijo:</label>
+					<label> Prefijo:</label>
+					<input class="prefijo" type="textbox" value="02267" disabled/>
+					<label> N&uacute;mero:</label>
+					<input type="textbox" value="441234" disabled/>
+				</section>
+				<section class="renglon">
+					<label> Tel&eacute;fono Celular:</label>
+					<label> Prefijo:</label>
+					<input class="prefijo" type="textbox" value="02267" disabled/>
+					<label> N&uacute;mero:</label>
+					<input type="textbox" value="15123456" disabled/>
+				</section>
+				<div class="botones datos">
+					<input type="submit" name="Guardar" value="Guardar Cliente"/> 
+				</div>				
+			</section>
+		</form>
+	</body>
+</html>
