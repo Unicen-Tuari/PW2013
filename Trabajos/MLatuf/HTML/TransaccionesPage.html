@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sistema de Gesti&oacute;n para forrajer&iacute;a.</title>
+		<link rel="stylesheet" href="../CSS/Home.css">
+		<link rel="stylesheet" href="../CSS/Principal.css">
+	</head>
+	<body>
+		<header>Sistema de Gesti&oacute;n para Forrajer&iacute;a</header>
+		<aside>
+			<div class="boton">
+				<a href="HomePage.html">Inicio</a>
+			</div>
+			<div class="boton">
+				<a href="ClientesPage.html">Clientes</a>
+			</div>
+			<div class="boton">
+				<a href="ProductosPage.html">Productos</a>
+			</div>
+			<div class="boton seleccionado">
+				<a href="TransaccionesPage.html">Transacciones</a>
+			</div>
+			<div class="boton">
+				<a href="PresupuestoPage.html">Presupuesto</a>
+			</div>
+		</aside>
+		<section class="principal">
+			<section class="opciones">
+				<p>En esta secci&oacute;n se muestran las 5(cinco) &uacute;timas transacciones realizadas en el sistema, con la opci&oacute;n de realizar una nueva, borrar o editar una existente.</p>
+				<section class="renglon">
+					<label> Seleccione Producto:</label><br>
+					<select>
+						<option value="1">Producto 1</option>
+						<option value="2">Producto 2</option>
+						<option value="3">Producto 3</option>
+						<option value="4">Producto 4</option>
+					</select>
+					<input type="radio" name="tipo" value="barraca" checked="checked"/>Barraca
+					<input type="radio" name="tipo" value="forrajeria"/>Forrajeria
+					<input type="button" name="nuevoProducto" value="Nuevo Producto"/>
+				</section>
+				<section class="renglon">
+					<label> Seleccione Cliente:</label><br>
+					<select>
+						<option value="1">Cliente 1</option>
+						<option value="2">Cliente 2</option>
+						<option value="3">Cliente 3</option>
+						<option value="4">Cliente 4</option>
+					</select>
+					<input type="button" name="nuevocliente" value="Nuevo Cliente"/>
+				</section>	
+				<div class="botones opciones">
+					<input type="button" name="comprar" value="Compra"/> 
+					<input type="button" name="vender" value="Venta"/> 
+				</div>
+			</section>
+			<form class="datos">
+				<table>
+					<thead>
+						<tr>
+							<th>Cliente 1</th>
+							<th>Producto 1</th>
+							<th>Tipo</th>
+							<th>Cantidad</th>
+							<th>Precio</th>
+							<th>Descripci&oacute;n</th>
+							<th>Comentarios</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cliente 2</td>
+							<td>Producto 1</td>
+							<td>Venta</td>
+							<td>10</td>
+							<td>9</td>
+							<td>Descripci&oacute;n</td>
+							<td>Comentarios</td>
+						</tr>
+						<tr>
+							<td>Cliente 3</td>
+							<td>Producto 2</td>
+							<td>Compra</td>
+							<td>5</td>
+							<td>85.9</td>
+							<td>Descripci&oacute;n</td>
+							<td>Comentarios</td>
+						</tr>
+						<tr>
+							<td>Cliente 2</td>
+							<td>Producto 3</td>
+							<td>Venta</td>
+							<td>2</td>
+							<td>37.5</td>
+							<td>Descripci&oacute;n</td>
+							<td>Comentarios</td>
+						</tr>
+						<tr>
+							<td>Cliente 1</td>
+							<td>Producto 4</td>
+							<td>Compra</td>
+							<td>15</td>
+							<td>50</td>
+							<td>Descripci&oacute;n</td>
+							<td>Comentarios</td>
+						</tr>
+						<tr>
+							<td>Cliente 4</td>
+							<td>Producto 1</td>
+							<td>Venta</td>
+							<td>50</td>
+							<td>500</td>
+							<td>Descripci&oacute;n</td>
+							<td>Comentarios</td>
+						</tr>
+					</tbody>
+				</table>
+				<section class="navegadoresTabla">
+					<a href="TransaccionesPage.html"><<--Siguiente</a>
+					<a href="TransaccionesPage.html">Anterior-->></a>
+				</section>
+				<div class="botones datos">
+					<input type="submit" name="Guardar" value="Guardar Registro"/>
+					<input type="button" name="Editar" value="Editar Registro"/> 
+					<input type="button" name="Borrar" value="Borrar Registro"/> 
+				</div>
+			</form>
+		</section>
+	</body>
+</html>

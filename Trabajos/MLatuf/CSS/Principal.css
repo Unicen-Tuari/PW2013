@@ -1,0 +1,103 @@
+.hidden{ display: none;}
+aside {
+	float:left;
+	width:25%;
+}
+
+aside div.boton{ 
+	width: 80%;
+	padding:13px 20px;
+}
+aside div.boton a{font-size:14px;}
+aside div.boton.seleccionado{background:-moz-linear-gradient(top, #1e5799 0%, #2989d8 49%, #207cca 90%);}
+aside div.boton.seleccionado a{	
+	font-weight:bold;
+	color:#ffffff;
+}
+
+section.principal{
+	background-color: #4274A6;
+    border: 5px solid #9D9FA0;
+    float: left;
+    height: auto;
+    margin: 15px;
+    width: 70%;
+}
+section.principal section,section.principal form{
+	margin:0px;
+	padding:10px 20px 60px 20px;
+	font-size:15px;
+	color:#ffffff;
+}
+section.principal section.operaciones{padding-bottom:30px;}
+section.principal section.opciones{border-bottom:2px solid #9D9FA0;}
+section.principal section.opciones select{
+	width:20%;
+	margin-top:5px;
+}
+section.principal form.datos input.direccion{width:48%;}
+
+
+section.opciones div.botones.opciones,form.datos div.botones.datos {
+	float:right;	
+}
+section.opciones  input[type="button"],form.datos  input[type="submit"],form.datos  input[type="button"],section.operaciones input[type="button"]{
+	background-color: #E6E6E6;
+    border: 1px solid #585858;
+    border-radius: 5px 5px 5px 5px;
+    font-family: verdana;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 4px 12px;
+    text-align: center;
+}
+section.opciones  input[type="button"]:hover,form.datos  input[type="submit"]:hover,form.datos  input[type="button"]:hover, 
+section.operaciones input[type="button"]:hover{ 
+	background:-moz-linear-gradient(top, #b5bdc8 0%, #828c95 36%, #b5bdc8 53%, #28343b 100%);
+	cursor:pointer;	
+}
+section.principal form.datos section.renglon,section.principal section.operaciones section.renglon{
+	width:100%;
+	padding:5px;
+	margin: 10px;
+}
+section.principal form.datos section.renglon a{
+	margin-left: 10px;
+	color:#ffffff;
+}
+section.principal form.datos section.renglon input.prefijo{width:50px;}
+section.principal form.datos section.renglon label,section.principal section.operaciones section.renglon label{ margin:5px;}
+section.principal form.datos section.renglon label.nombre {margin-left: 39px;}
+section.principal form.datos section.renglon label.apellido{ margin-right: 16px;}
+section.principal form.datos section.renglon label.fijo {margin-right: 28px;}
+section.principal form.datos section.renglon textarea{
+	margin-left:5px;
+	font-family: verdana;
+    font-size: 12px;
+	width:74%;
+}
+section.principal form.datos section.renglon input.precio,section.principal section.operaciones section.renglon input.precio{width:30px;}
+
+section.principal section.opciones section.renglon{padding-bottom:20px;}
+
+section.principal form.datos table{
+	margin-left:15px;
+	text-align:center;
+	background-color:#BDBDBD;
+	color:#000000;
+	width:97%;
+}
+section.principal form.datos table thead tr th,section.principal form.datos table tbody tr td{border:1px solid #000000;}
+section.principal form.datos table tbody tr td{padding:5px 3px;}
+section.principal form.datos table tbody tr{
+	background-color:#ffffff;
+	font-size:12px;
+}
+section.principal form.datos table tbody tr:hover{ 
+	background:-moz-linear-gradient(top, #bfd255 0%, #8eb92a 17%, #72aa00 86%, #9ecb2d 100%);
+	cursor:pointer;
+}
+section.principal form.datos section.navegadoresTabla{text-align:center;}
+section.principal form.datos section.navegadoresTabla a{color:#ffffff;}
+
+section.principal form.datos table.presupuesto{margin-top:10px;}
