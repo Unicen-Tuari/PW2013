@@ -100,14 +100,10 @@ div.elemento_contenedor {
 	border-radius:10px;
 	padding:20px;
 }
-div.datos_consultados {
-	width:75%;
-	margin-left:20px;
-}
 div#consulta {
 	margin-left:10px;
 	margin-right:10px;
-	height:400px;
+	height:350px;
 }
 div#contacto {
 	width:75%;
@@ -122,6 +118,10 @@ div#copyright {
 	font-size:18px;
 	margin-top:20px;
 	color:#000;
+}
+form.datos_consultados {
+	width:75%;
+	margin-left:20px;
 }
 form.formcliente {
 	width:20%;
@@ -143,7 +143,7 @@ textarea {
 	height:204px;
 	padding:5px;
 }
-input.formconsulta,input.formcontacto {
+input {
 	height:25px;
 	padding:0 5px;
 }
@@ -169,10 +169,10 @@ input[type=reset]:hover,input[type=submit]:hover,input[type=submit]:focus,input[
 	background-image:url(../images/fondoboton.jpg);
 	color:#FFF;
 }
-input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=password]:focus,textarea:focus {
+input.formconsulta:focus,input.formcontacto:focus,textarea:focus {
 	border-radius:0 10px;
 }
-input[type=text]:hover,input[type=tel]:hover,input[type=email]:hover,input[type=password]:hover,textarea:hover {
+input.formconsulta:hover,input.formcontacto:hover,textarea:hover {
 	background-color:#E5E6DD;
 }
 p {
@@ -213,7 +213,7 @@ li {
 img#ultima,article#ultimo {
 	margin:0 10px;
 }
-form,legend,-webkit-input-placeholder,-ms-input-placeholder {
+form,legend,::-webkit-input-placeholder,-ms-input-placeholder {
 	text-align:center;
 }
 fieldset{
