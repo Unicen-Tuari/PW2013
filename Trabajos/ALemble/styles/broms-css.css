@@ -78,6 +78,14 @@ float:right;
 margin:4px 0px 4px 0px;
 }
 
+form{
+
+}
+.form-title{
+text-align:center;
+font-size:25px;
+}
+
 
 #search-button-movie{
 width:329px;
@@ -85,7 +93,6 @@ height:50px;
 border: 2px solid #000000;
 border-radius: 9px;
 float:left;
-
 text-align:center;
 }
 #search-button-serie{
@@ -118,7 +125,7 @@ clear:both;
 padding:5px;
 }
 #dateblock {
-background: url(images/dateblock.gif);
+background:url(images/dateblock.gif);
 background-repeat: no-repeat;
 width: 66px;
 height:70px;
