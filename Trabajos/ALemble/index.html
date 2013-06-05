@@ -239,10 +239,24 @@
 		<aside><!--Aside bar of the web-->
 			<form action="demo_form.asp" method="get">
 				<div class="form-title">REGISTRATE!</div>
-				Nombre:   <input type="text" name="nombre"><br>
-				Username: <input type="text" name="username"><br>
-				Mail:     <input type="mail" name="mail"><br>
-				Fecha de nacimiento: <input type="date" name="fechaNac"><br>
+				<table border="0">
+				<tr>
+					<th>Nombre:</th>
+					<th><input type="text" name="nombre"><br></th>
+				</tr><tr>
+					<th>Username:</th>
+					<th><input type="text" name="username"><br></th>
+				</tr><tr>
+					<th>Password:</th>
+					<th><input type="password" name="password"><br></th>
+				</tr><tr>
+					<th>Mail:</th>
+					<th><input type="mail" name="mail"><br></th>
+				</tr><tr>
+					<th>Fecha de Nacimiento:</th>
+					<th><input type="date" name="fechaNac"><br></th>
+				</tr>
+				</table>
 				<div class="submit-form"><input type="submit" value="Enviar"></div>
 			</form><br>
 			Archivos
@@ -251,7 +265,7 @@
 		</aside>
 	
 		<footer>
-		<button type="button" id="goto-heaven" onclick="$('body').scrollTo(0)">IR AL CIELO</button><br>
+		<button type="button" id="goto-heaven" value="IR AL CIELO" onclick="scrollTo(0)">IR AL CIELO</button><br>
 		<div id="footer-text">		
 		© Broms Web 2013
 		</div>
