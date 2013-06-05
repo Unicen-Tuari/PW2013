@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Ejemplo PDO - PHP</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+ <div class="container">
+ 	<h1>Formulario de Consulta</h1>
+   <form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="name">Nombre</label>
+    <div class="controls">
+      <input type="text" id="name" placeholder="Nombre">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="lastname">Apellido</label>
+    <div class="controls">
+      <input type="text" id="lastname" placeholder="Apellido">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="email">Email</label>
+    <div class="controls">
+      <input type="text" id="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="consulta">Consulta</label>
+    <div class="controls">
+      <textarea id="consulta" placeholder="Ingrese aqui su consulta..."></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+       <button type="button" class="btn" onclick="verificarFormulario();">Enviar</button>
+    </div>
+  </div>
+</form>
+  </div>
+</body>
+</html>
