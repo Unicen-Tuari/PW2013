@@ -1,7 +1,9 @@
 
 body{
 width:989px;
-background-color:#ffffff;
+background-color:#484848;
+width:1007px;
+margin: 0px;
 }
 header{
 height:125px;
@@ -15,7 +17,7 @@ width: 661px;
 text-align: left;
 float:left;
 background: transparent;
-margin:0px 2px 0px 0px;
+margin:0px 2px 0px 8px;
 }
 .post{
 margin-bottom:22px;
@@ -26,6 +28,7 @@ border-color: black;
 border-radius: 9px; 
 padding:10px;
 margin:4px 0px 4px 0px;
+background-color:white
 }
 
 .title{
@@ -75,7 +78,19 @@ border: 2px solid #000000;
 border-radius: 9px; 
 padding: 5px;
 float:right;
-margin:4px 0px 4px 0px;
+margin:4px 8px 4px 0px;
+background-color:white;
+}
+
+form{
+
+}
+.submit-form{
+text-align:center;
+}
+.form-title{
+text-align:center;
+font-size:25px;
 }
 
 
@@ -85,8 +100,8 @@ height:50px;
 border: 2px solid #000000;
 border-radius: 9px;
 float:left;
-
 text-align:center;
+margin-left: 8px;
 }
 #search-button-serie{
 width:329px;
@@ -112,13 +127,14 @@ width:977px;
 background-color:#ffffff;
 border: 2px solid black;
 clear:both;
-margin:0px 4px 0px 0px;
+margin:0px 8px 0px 8px;
 border-radius: 9px 9px 83px 83px; 
 clear:both;
 padding:5px;
+background-color:white;
 }
 #dateblock {
-background: url(images/dateblock.gif);
+background:url(images/dateblock.gif);
 background-repeat: no-repeat;
 width: 66px;
 height:70px;

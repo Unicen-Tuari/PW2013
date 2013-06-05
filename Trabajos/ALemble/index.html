@@ -61,7 +61,7 @@
 					<div class="descrip"><!--Description of the post-->
 					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 					</div>
-					<button type="button" class="go-post">Ir al post</button>
+					<button type="button" class="go-post" onclick="javascript:self.location='post1.html?id=1';">Ir al post</button>
 				</div>
 			</div>
 			<div class="post">
@@ -98,8 +98,8 @@
 				<div class="datbox">
 					<div class="descrip"><!--Description of the post-->
 					Evangelion 3.0 es la tercera entrega de la tetralogía “Rebuild Of Evangelion” y los capítulos que re-adaptaran a la pantalla grande seran desde el 20 al 24 en el cual los sucesos más transcendentes van desde la operación de rescate de Shinji y Rei quienes se encuentran absorbidos dentro del EVA unidad 01, la pelea espacial que se da entre el décimo ángel Arael y el EVA unidad 02 piloteado nuevamente por Asuka y el ataque del ultimo ángel Kaworu Nagisa al dogma central de Nerv con su propio EVA unidad 06.					</div>
+				<button type="button" class="go-post" onclick="javascript:self.location='post2.html?id=1';">Ir al post</button>
 				</div>
-				<button type="button" class="go-post">Ir al post</button>
 			</div>
 			<div class="post">
 				<div class="datbox"><!--Box with date and title-->
@@ -142,7 +142,7 @@
 				<div class="datbox">
 					<div class="descrip"><!--Description of the post-->
 					Hace cinco años, el mismo día en que su madre fue asesinada, las pequeñas Victoria y Lilly desaparecieron en el bosque. Buscadas incansablemente por su tío Lucas (Nikolai Coster-Waldau) y su novia Annabel (Jessica Chastain), son encontradas unos años más tarde. Comienzan entonces una nueva vida de la mano de Annabel, pero pronto descubren que alguien o algo misterioso las sigue arropando por las noches.					</div>
-					<button type="button" class="go-post">Ir al post</button>
+					<button type="button" class="go-post" onclick="javascript:self.location='post3.html?id=1';">Ir al post</button>
 				</div>
 			</div>
 			<div class="post">
@@ -187,7 +187,7 @@
 					<div class="descrip"><!--Description of the post-->
 					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 					</div>
-					<button type="button" class="go-post">Ir al post</button>
+					<button type="button" class="go-post" onclick="javascript:self.location='post1.html?id=1';">Ir al post</button>
 				</div>
 			</div>
 			<div class="post">
@@ -232,27 +232,40 @@
 					<div class="descrip"><!--Description of the post-->
 					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 					</div>
-					<button type="button" class="go-post">Ir al post</button>
+					<button type="button" class="go-post" onclick="javascript:self.location='post1.html?id=1';">Ir al post</button>
 				</div>
 			</div>
 		</div>
 		<aside><!--Aside bar of the web-->
 			<form action="demo_form.asp" method="get">
-				REGISTRATE! <br>
-				Nombre: <input type="text" name="nombre"><br>
-				Username: <input type="text" name="username"><br>
-				Mail: <input type="mail" name="mail"><br>
-				Fecha de nacimiento: <input type="date" name="fechaNac"><br>
-				<input type="submit" value="Submit">
+				<div class="form-title">REGISTRATE!</div>
+				<table border="0">
+				<tr>
+					<th>Nombre:</th>
+					<th><input type="text" name="nombre"><br></th>
+				</tr><tr>
+					<th>Username:</th>
+					<th><input type="text" name="username"><br></th>
+				</tr><tr>
+					<th>Password:</th>
+					<th><input type="password" name="password"><br></th>
+				</tr><tr>
+					<th>Mail:</th>
+					<th><input type="mail" name="mail"><br></th>
+				</tr><tr>
+					<th>Fecha de Nacimiento:</th>
+					<th><input type="date" name="fechaNac"><br></th>
+				</tr>
+				</table>
+				<div class="submit-form"><input type="submit" value="Enviar"></div>
 			</form><br>
-			<li>Archivos
-				<ul>
+			Archivos
 				<li>Abril 2013 </li>
 				<li>Mayo 2013 </li>
 		</aside>
 	
 		<footer>
-		<button type="button" id="goto-heaven" onclick="$('body').scrollTo(0)">IR AL CIELO</button><br>
+		<button type="button" id="goto-heaven" value="IR AL CIELO" onclick="scrollTo(0)">IR AL CIELO</button><br>
 		<div id="footer-text">		
 		© Broms Web 2013
 		</div>
