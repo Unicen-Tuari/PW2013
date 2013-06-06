@@ -1,0 +1,61 @@
+body{
+    background-color:#222;
+    margin:0px;
+    padding:0px;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 12px;
+}
+#logotop{
+	margin-top: 5px;
+	margin-left: 42px;
+}
+#login{
+	float: right;
+	margin-right: 40px;
+	margin-top: 40px;
+	margin-top: 40px;
+	font-family: inherit;
+	font-size: inherit;
+	color: #999;
+}
+
+#divisor{
+	float: middle;
+	margin-top: 10px;
+}
+	
+a{
+    text-decoration:none;
+}
+#navlist {
+    width: 170px;
+    margin-top: 5px;
+	margin-left: 0px;
+}
+#navlist ul {
+    list-style: none;
+}
+
+#navlist li a{
+    display: block;
+    height: 25px;
+    width: 130px;
+    padding: 9px;
+    margin: 5px;
+    background: inherit;
+    border-right: 4px solid #444;
+    color: #999;
+    font-size: 1em;
+}
+
+#navlist li a:hover {
+    color: #f4f4f4;
+    background: #333;
+    border-right: 4px solid #003366;
+}
+
+#navlist li .active {
+    color: #999;
+    background: #333;
+    border-right: 4px solid #444;
+}

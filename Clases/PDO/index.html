@@ -8,24 +8,60 @@
     <h1> Listado de Mensajes </h1>
     <table class="table table-hover">
     	<thead>
-	  	<tr>
-			<td>ID</td>
-			<td>Titulo</td>
-			<td>Mensaje</td>
-	  	</tr>
-  		</thead>
-    	<tbody>
-	  	<tr>
-			<td>1</td>
-			<td>Titulo 1</td>
-			<td>Este es el texto del mensaje 1</td>
-	  	</tr>
-	  	<tr>
-			<td>2</td>
-			<td>Titulo 2</td>
-			<td>Este es el texto del mensaje 2</td>
-	  	</tr>
-  		</tbody>
+<?php
+//Configuración
+$host 	= "localhost";
+$db	= "admillan";
+$user	= "root";
+$pass	= "";
+
+//Conexión
+try{
+
+$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+}
+catch(PDOException $pe)
+{
+	die('Error de conexion, Mensaje: ' -$pe->getMessage());
+}
+
+//Consulta
+$sql = "SELECT * FROM mensaje";
+
+//Ejecucion
+$q	 = $conn->query($sql);
+
+//Si es null, hubo un error
+if(!$q)
+{
+  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
+}
+$r = $q->fetch();
+print ("
+  <thead>
+  <tr>
+	<td>$r[ID]</td>
+	<td>$r[Titulo]</td>
+	<td>$r[Mensaje]</td>
+  </tr>
+  </thead>
+  ");
+  
+//Si todo salió bien imprimo todos los registros.
+while($r = $q->fetch()){
+  print ("
+  <tbody>
+  <tr>
+	<td>$r[ID]</td>
+	<td>$r[Titulo]</td>
+	<td>$r[Mensaje]</td>
+  </tr>
+  </tbody>
+  ");
+}
+
+?>
+
 </table>
   </div>
 </body>
