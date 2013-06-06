@@ -1,3 +1,3 @@
-$(document).ready(galeria(){
+$(document).ready(function(){
   $('.bxslider').bxSlider();
 });
