@@ -2,16 +2,20 @@
 <html>
 	<head>
 		<title>TT Taller de Reparacion</title>
-		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<meta charset="UTF-8">
+		<script src="js/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+		<link rel="stylesheet" href="styles/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
 	</head>
-	<body>
+	<body>	
 		<nav>
-			<a href="index.html" accesskey="h">Inicio</a>
-			<a href="servicios.html" accesskey="s">Servicios</a>
-			<a href="consulta.html" class="elemento_actual" accesskey="r">Consulta Reparacion</a>
-			<a href="contacto.html" accesskey="c">Contacto</a>
-			<a href="login.html" class="flota_der" accesskey="l">Login</a>
+			<a href="index.html" class="menu" accesskey="h">Inicio</a>
+			<a href="servicios.html" class="menu" accesskey="s">Servicios</a>
+			<a href="consulta.html" class="elemento_actual menu" accesskey="r">Consulta Reparacion</a>
+			<a href="contacto.html" class="menu" accesskey="c">Contacto</a>
+			<a href="login.html" class="flota_der menu" accesskey="l">Login</a>
 		</nav>
 		<header>
 			<img class="logo_izq flota_izq" src="images/linux.png" alt="Logo Windows">
@@ -45,7 +49,12 @@
 					</select></span><br><br><br>
 					Articulo: <input type="text" name="articulo" readonly> Marca: <input type="text" name="marca" readonly="true"> Modelo: <input type="text" name="modelo" readonly><br><br><br>
 					Nro. de serie: <input type="text" name="serie" readonly> Fecha presentado: <input type="text" name="fecha_ini" readonly> Fecha finalizado: <input type="text" name="fecha_fin" readonly><br><br><br>
-					Estado reparación: <input type="text" name="estado" readonly> Precio reparación: <input type="text" name="precio" readonly><br><br>
+					Estado reparación: <input type="text" name="estado" readonly> Precio reparación: <input type="text" name="precio" readonly><br><br><br>
+					<ul>
+						<li><a class="fancybox" rel="g1" href="images/fotos/1.jpg"><img class="redonda" src="images/thumbnails/t_1.jpg" alt="paisaje"></a></li>
+						<li><a class="fancybox" rel="g1" href="images/fotos/2.jpg"><img class="redonda" src="images/thumbnails/t_2.jpg" alt="paisaje 2"></a></li>
+						<li><a class="fancybox" rel="g1" href="images/fotos/3.jpg"><img class="redonda" src="images/thumbnails/t_3.jpg" alt="paisaje 3"></a></li>
+					</ul>			
 				</fieldset>
 			</form>
 		</div>
@@ -60,5 +69,16 @@
 			</div>
 			<div id="copyright">Copyright 2012-2013. Designed by Federico Bailes</div>
 		</footer>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				padding: 5,
+    			nextEffect: 'fade',
+    			prevEffect: 'fade',
+    			openEffect: 'elastic',
+    			closeEffect: 'elastic'
+    		})
+		});
+		</script>
 	</body>
 </html>
