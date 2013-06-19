@@ -48,9 +48,20 @@
 						<option value="">Reparación 2</option>
 						<option value="">Reparación 3</option>
 					</select></span><br><br><br>
-					Articulo: <input type="text" name="articulo" readonly> Marca: <input type="text" name="marca" readonly> Modelo: <input type="text" name="modelo" readonly><br><br><br>
-					Nro. de serie: <input type="text" name="serie" readonly> Fecha presentado: <input type="text" name="fecha_ini" readonly> Fecha finalizado: <input type="text" name="fecha_fin" readonly><br><br><br>
-					Estado reparación: <input type="text" name="estado" readonly> Precio reparación: <input type="text" name="precio" readonly><br><br><br>
+					<?php
+						include ('consulta.php');
+						print('Articulo: <input type="text" name="articulo" value="'.$datos_rep['articulo'].'" readonly> ');
+						print('Marca: <input type="text" name="marca" value="'.$datos_rep['marca'].'" readonly> ');
+						print('Modelo: <input type="text" name="modelo" value="'.$datos_rep['modelo'].'" readonly> ');
+						print('<br><br><br>');
+						print('Nro. de serie: <input type="text" name="serie" value="'.$datos_rep['numero_serie'].'" readonly> ');
+						print('Fecha presentado: <input type="text" name="fecha_ini" value="'.$datos_rep['fecha_inicio_f'].'" readonly> ');
+						print('Fecha finalizado: <input type="text" name="fecha_fin" value="'.$datos_rep['fecha_fin_f'].'" readonly> ');
+						print('<br><br><br>');
+						print('Estado reparación: <input type="text" name="estado" value="'.$nombre_estado['nombre_estado'].'" readonly> ');
+						print('Precio reparación: <input type="text" name="precio" value="$ '.$datos_rep['precio_reparacion'].'" readonly> ');
+						print('<br><br><br>');
+					?>
 					<ul>
 						<li><a class="fancybox" rel="g1" href="images/fotos/1.jpg"><img class="redonda" src="images/thumbnails/t_1.jpg" alt="paisaje"></a></li>
 						<li><a class="fancybox" rel="g1" href="images/fotos/2.jpg"><img class="redonda" src="images/thumbnails/t_2.jpg" alt="paisaje 2"></a></li>

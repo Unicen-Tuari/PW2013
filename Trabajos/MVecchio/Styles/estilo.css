@@ -1,98 +1,106 @@
 *{
-margin:0;
-padding: 0;
+	margin:0;
+	padding: 0;
 }
+
 body{
-text-align:center;
-font-family:arial,helvetica,sans-serif;
-font-size: 14px;
-background-color: #F5D0A9;
+	text-align:center;
+	font-family:arial,helvetica,sans-serif;
+	font-size: 14px;
+	background-color: #F5D0A9;
 }
 
 div#contenedorgeneral{
-top:0;
-bottom: 0;
-width:900px;
-margin:auto;
+	top:0;
+	bottom: 0;
+	width:900px;
+	margin:auto;
 }
 
-div#contenedorgeneral header#encabezado{
-box-shadow: 0px 4px 10px #000;
-top:0;
-width: 900px;
-height: 304px;
-background-color:#fff;
-position: fixed;
-border-radius: 0 0 5px 5px;
+header#encabezado{
+	box-shadow: 0px 4px 10px #000;
+	top:0;
+	width: 900px;
+	height: 270px;
+	margin-bottom: 1px;
+	background-color:#fff;
+	border-radius: 0 0 5px 5px;
 }
 
 header#encabezado img{
-max-height: 270px;
-top:0;
+	max-height: 270px;
+	top:0;
 }
 
 ul{list-style-type: none;}
 
+.menu{
+	box-shadow: 0px 4px 10px #000;
+	padding: 0 0 2px 0; 
+	width: 900px;
+	background-color:#fff;
+	border-radius: 5px 5px 5px 5px;
+	z-index: 1000;
+}
 .menu li a{
-color: #FFF;
-font-weight: bold;
-text-decoration:none;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration:none;
 }
 .menu li{
-padding:5px 0 5px 0;
-width: 145px;
-background-color:#A4A4A4; 
-border:1px outset #A4A4A4;
-display: inline-block;
-position: relative;
-margin: -2px;
-cursor: pointer;
+	padding:5px 0 5px 0;
+	width: 145px;
+	background-color:#A4A4A4; 
+	border:1px outset #A4A4A4;
+	display: inline-block;
+	position: relative;
+	margin: -2px;
+	cursor: pointer;
 }
 
 .menu >li:hover{
-background-color: #F6E3CE;
-padding-top: 10px;
-box-shadow: 0px 0px 4px #A4A4A4;
-border-radius: 10px 10px 0px 0px;
-border:1px outset #F6E3CE;
-color: #FAFAFA;
-text-shadow:1px 1px 1px  #A4A4A4;
+	background-color: #F6E3CE;
+	padding-top: 10px;
+	box-shadow: 0px 0px 4px #A4A4A4;
+	border-radius: 10px 10px 0px 0px;
+	border:1px outset #F6E3CE;
+	color: #FAFAFA;
+	text-shadow:1px 1px 1px  #A4A4A4;
 
 }
 
-.menu >li.selected{
-background-color: #D8D8D8;
-padding-top: 10px;
-box-shadow: 0px 0px 4px #A4A4A4;
-border-radius: 10px 10px 0px 0px;
-border:1px outset #FAFAFA;
-color: #FAFAFA;
-text-shadow:1px 1px 1px  #A4A4A4;
+.menu .selected {
+	background-color: #D8D8D8;
+	padding-top: 10px;
+	box-shadow: 0px 0px 4px #A4A4A4;
+	border-radius: 10px 10px 0px 0px;
+	border:1px outset #FAFAFA;
+	color: #FAFAFA;
+	text-shadow:1px 1px 1px  #A4A4A4;
 }
 
 .submenu {
-position: absolute;
-top:35px;
-left: 1px;
-display: none;
-box-shadow: 0px 0.5px 5px #000;
-border-radius: 0px 0px 10px 10px;
--moz-animation-duration:0.8s;
--webkit-animation-duration:0.8s;
--ms-animation-duration:0.8s;
+	position: absolute;
+	top:34px;
+	left: 1px;
+	display: none;
+	box-shadow: 0px 0.5px 5px #000;
+	border-radius: 0px 0px 10px 10px;
+	-moz-animation-duration:0.8s;
+	-webkit-animation-duration:0.8s;
+	-ms-animation-duration:0.8s;
 }
 
 .submenu li:last-child{
-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .submenu >li{
 	display: block;
 }
 .submenu li:hover{
-background-color: #F6E3CE;
-text-shadow: 2px 2px 2px #A4A4A4;
-z-index: 2;
+	background-color: #F6E3CE;
+	text-shadow: 2px 2px 2px #A4A4A4;
 }
 
 .menu li:hover ul{
@@ -112,7 +120,7 @@ z-index: 2;
 		box-shadow: -10px 4px 6px #000;
 	}
 	
-	100€{
+	100%{
 		opacity: 1;
 		left: 0px;
 	}
@@ -128,7 +136,7 @@ z-index: 2;
 		box-shadow: -10px 4px 6px #000;
 	}
 	
-	100€{
+	100%{
 		opacity: 1;
 		left:0px;
 	}
@@ -143,7 +151,7 @@ z-index: 2;
 		box-shadow: -10px 4px 6px #000;
 	}
 	
-	100€{
+	100%{
 		opacity: 1;
 		left: 0px;
 	}
@@ -156,40 +164,40 @@ z-index: 2;
 }
 
 div#contenedorcentral{
-padding-top: 340px;
+	padding-top: 60px;
 }
 
-div#contenedorcentral article#articulo{
-margin-left:20px;
-padding: 60px;
-border-radius: 10px;
-background-color: #fff;
-width: 520px;
-float: left;
-position: static;
+article#articulo{
+	margin-left:20px;
+	padding: 60px;
+	border-radius: 10px;
+	background-color: #fff;
+	width: 520px;
+	float: left;
+	position: static;
 }
 
 form#formulariocontacto ul{
-text-align: left;
-border-bottom:1px solid #eee;
-position:relative;
+	text-align: left;
+	border-bottom:1px solid #eee;
+	position:relative;
 }
 
 form#formulariocontacto ul li{
-padding:12px;
-border-bottom:1px solid #eee;
-position:relative;
+	padding:12px;
+	border-bottom:1px solid #eee;
+	position:relative;
 }
 
 form#formulariocontacto label{
-color: #555555;
-display: inline-block;
-float: left;
-font-size: 13px;
-font-weight: bold;
-margin-top: 3px;
-padding: 3px;
-width: 90px;
+	color: #555555;
+	display: inline-block;
+	float: left;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 3px;
+	padding: 3px;
+	width: 90px;
 }
 
 form#formulariocontacto input{
@@ -201,6 +209,8 @@ padding:5px 8px;
 form#formulariocontacto textarea {
     padding:8px;
     width:300px;
+    max-height:250px; 
+    max-width: 330px;
 }
 
 form#formulariocontacto button {
@@ -226,14 +236,31 @@ form#formulariocontacto input:focus, form#formulariocontacto textarea:focus {
     padding-right:50px;
 }
 
-aside#contenedorlateral{
-background-color: #fff;
+aside#contenedorlateral {
 width: 200px;
-height: 600px;
-border-radius: 10px;
+margin-right: 20px;
+height:;
 float:right;
 position: static;
+
 }
 
+div#contenedorloguin{
+	height: 120px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 20px;
 
+}
+
+div#contenedorpublis{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	height: 1000px;
+}
+
+.botonsubmit{
+	padding: 5px;
+}
 

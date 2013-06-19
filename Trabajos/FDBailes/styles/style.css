@@ -21,7 +21,7 @@ footer {
 header {
 	margin:20px auto 40px;
 }
-a {
+a.menu {
 	display:inline-block;
 	line-height:40px;
 	text-decoration:none;
@@ -33,7 +33,7 @@ a {
 	padding:0 25px;
 	outline:none;
 }
-a.elemento_actual,a:hover,a:focus {
+a.elemento_actual,a.menu:hover,a.menu:focus {
 	background-image:url(../images/fondoboton.jpg);
 	border-radius:10px;
 }
@@ -50,6 +50,11 @@ img.foto_servicio {
 	width:300px;
 	margin:0 10px 20px;
 	padding:0;
+	border-radius:10px;
+}
+img.redonda {
+	border-radius:10px;
+	border:2px solid #FFF;
 }
 article {
 	border-radius:10px;
@@ -103,7 +108,7 @@ div.elemento_contenedor {
 div#consulta {
 	margin-left:10px;
 	margin-right:10px;
-	height:350px;
+	height:450px;
 }
 div#contacto {
 	width:75%;
@@ -146,6 +151,9 @@ textarea {
 input {
 	height:25px;
 	padding:0 5px;
+}
+input[readonly] {
+	text-align:center;
 }
 input.formconsulta {
 	width:175px;
