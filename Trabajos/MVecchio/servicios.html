@@ -3,36 +3,78 @@
 	<head>
 		<title>Gestoria del Automotor CN</title>
 		<link rel="stylesheet" href="styles/estilo.css">
+		<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+
+		<script type="text/javascript" 	src="./js/jquery.smint.js"></script>
+
+		<script type="text/javascript">
+			
+		$(document).ready( function() {
+		    $('.menu').smint({
+		    	'scrollSpeed' : 1000
+		    });
+		});
+
+		</script>
 	</head>
 	<body>
 		<div id="contenedorgeneral">
 			<header id="encabezado">
 				<img alt="Logo CN" src="imagenes/cn.jpg">
-				<nav>
-					<ul class="menu">
-						<li><a href="inicio.html">Inicio</a></li>
-						<li><a href="servicios.html">Servicios</a>
-							<ul class="submenu">
-								<li><a href="estadotransferencia.html">Estado de Transferencias</a></li>
-								<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
-							</ul>
-						</li>
-						<li><a href="clientes.html">Clientes Amigos</a></li>
-						<li><a href="links.html">Links de Inter&eacute;s</a></li>
-						<li><a href="cuenta.html">Cuenta</a>
-							<ul class="submenu">
-								<li><a href="editardatos.html">Editar Datos</a></li>
-								<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
-							</ul>
-						</li>
-						<li><a href="contacto.html">Contacto</a></li>
-					</ul>
-				</nav>				
 			</header>
-			</div class="contenedorcentral">
-			<form> 
-			</form>
+			<nav>
+				<ul class="menu">
+					<li><a href="inicio.html">Inicio</a></li>
+					<li class="selected"><a href="servicios.html">Servicios</a>
+						<ul class="submenu">
+							<li><a href="estadotransferencia.html">Estado de Transferencias</a></li>
+							<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
+						</ul>
+					</li>
+					<li><a href="clientes.html">Clientes Amigos</a></li>
+					<li><a href="links.html">Links de Inter&eacute;s</a></li>
+					<li ><a href="cuenta.html">Cuenta</a>
+						<ul class="submenu">
+							<li><a href="editardatos.html">Editar Datos</a></li>
+							<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
+						</ul>
+					</li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>	
+			<div id="contenedorcentral">
+				<article id="articulo" >
+
+				</article>
 			</div>
+			<aside id="contenedorlateral">
+				<div id="contenedorloguin">
+					<h3>Ingresa con tu Cuenta!</h3>
+					<form class="formulario" name="loguin" action="" method="" accept-charset="">
+						<ul>
+							<li>
+								<input type="text" name="usuario" placeholder="Email!" required>
+							</li>
+							<li>
+								<input type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
+							</li>
+							<li>
+								<input type="checkbox" name="redordarme" id="recordarme">
+								Recordar en esta computadora
+							</li>
+							<li>
+								<input class="botonsubmit" type="submit" value="Entrar">
+							</li>
+						</ul>
+					</form>
+
+				</div>
+				<div id="contenedorpublis">
+					<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
+					<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
+				</div>
+			</aside>
+		</div>
 		</div>
 	</body>
 </html>
