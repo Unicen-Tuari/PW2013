@@ -8,7 +8,6 @@
 		<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
 		<link rel="stylesheet" href="styles/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 		<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-		<script type="text/javascript" src="js/rellena_formconsulta.js"></script>
 	</head>
 	<body>	
 		<nav>
@@ -27,40 +26,23 @@
 			</div>
 		</header>
 		<div class="clear"></div>
-		<div class="elemento_contenedor" id="consulta">
-			<h2>Consulta tu Reparación</h2>
-			<form class="formcliente flota_izq" method="post" action="prueba.php">
+		<div class="elemento_contenedor" id="datos_consulta">
+			<form class="datoscliente" method="post" action="prueba.php">
 				<fieldset>
-					<legend>Datos personales</legend><br>
-					<input class="formconsulta" type="text" name="nombre" placeholder="*Nombre" pattern="[a-zA-Z]+" title="Formato: Nombre" required autofocus><br><br>
-					<input class="formconsulta" type="text" name="apellido" placeholder="*Apellido" pattern="[a-zA-Z]+" title="Formato: Apellido" required><br><br>
-					<input class="formconsulta" type="text" name="dni" placeholder="*DNI" pattern="[\d]{7,8}" title="Formato: 7 a 8 Digitos" required><br><br>
-					<span class="campoobliga">*Campos Obligatorios</span>
+					<legend>Datos personales</legend>
+					<input class="botonesform flota_izq" type="reset" value="BORRAR">
+					<input class="formconsulta" type="text" name="dni" placeholder="DNI" pattern="[\d]{7,8}" title="Formato: 7 a 8 Digitos" required autofocus>
+					<input class="botonesform flota_der" type="submit" value="ACEPTAR">
 				</fieldset>
-				<br><input class="botonesform" type="reset" value="BORRAR">
-				<input class="botonesform" type="submit" value="ACEPTAR">
+				<br>
+				
 			</form>
-			<form class="datos_consultados flota_izq">
+			<form class="datos_consultados">
 				<fieldset>
 					<legend>Datos reparación</legend>
-					<span class="flota_izq">Seleccione reparación: <select>
-						<option value="">Reparación 1</option>
-						<option value="">Reparación 2</option>
-						<option value="">Reparación 3</option>
-					</select></span><br><br><br>
+					<br>
 					<?php
 						include ('consulta.php');
-						print('Articulo: <input type="text" name="articulo" value="'.$datos_rep['articulo'].'" readonly> ');
-						print('Marca: <input type="text" name="marca" value="'.$datos_rep['marca'].'" readonly> ');
-						print('Modelo: <input type="text" name="modelo" value="'.$datos_rep['modelo'].'" readonly> ');
-						print('<br><br><br>');
-						print('Nro. de serie: <input type="text" name="serie" value="'.$datos_rep['numero_serie'].'" readonly> ');
-						print('Fecha presentado: <input type="text" name="fecha_ini" value="'.$datos_rep['fecha_inicio_f'].'" readonly> ');
-						print('Fecha finalizado: <input type="text" name="fecha_fin" value="'.$datos_rep['fecha_fin_f'].'" readonly> ');
-						print('<br><br><br>');
-						print('Estado reparación: <input type="text" name="estado" value="'.$nombre_estado['nombre_estado'].'" readonly> ');
-						print('Precio reparación: <input type="text" name="precio" value="$ '.$datos_rep['precio_reparacion'].'" readonly> ');
-						print('<br><br><br>');
 					?>
 					<ul>
 						<li><a class="fancybox" rel="g1" href="images/fotos/1.jpg"><img class="redonda" src="images/thumbnails/t_1.jpg" alt="paisaje"></a></li>

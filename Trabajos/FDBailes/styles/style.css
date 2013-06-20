@@ -71,7 +71,6 @@ article.articulo_index_aside {
 	height:283px;
 	width:320px;
 	margin-right:10px;
-	padding:20px;
 }
 article.articulo_servicio_der,article.articulo_servicio_izq {
 	height:210px;
@@ -105,13 +104,12 @@ div.elemento_contenedor {
 	border-radius:10px;
 	padding:20px;
 }
-div#consulta {
-	margin-left:10px;
-	margin-right:10px;
-	height:450px;
+div#datos_consulta {
+	width:1000px;
+	margin:0 auto;
 }
 div#contacto {
-	width:75%;
+	width:60%;
 }
 div#footer {
 	width:700px;
@@ -124,13 +122,8 @@ div#copyright {
 	margin-top:20px;
 	color:#000;
 }
-form.datos_consultados {
-	width:75%;
-	margin-left:20px;
-}
-form.formcliente {
-	width:20%;
-	margin-right:20px;
+input.unico {
+	height:30px;
 }
 form.formcontacto {
 	width:50%;
@@ -149,7 +142,7 @@ textarea {
 	padding:5px;
 }
 input {
-	height:25px;
+	height:35px;
 	padding:0 5px;
 }
 input[readonly] {
@@ -164,7 +157,6 @@ input.formcontacto {
 input.botonesform {
 	font-family:Oswald, sans-serif;
 	color:#000;
-	height:40px;
 	width:100px;
 	font-size:13px;
 	background-image:url(../images/binding_light.png);
