@@ -43,12 +43,7 @@
 					<br>
 					<?php
 						include ('rellena_consulta.php');
-					?>
-					<ul>
-						<li><a class="fancybox" rel="g1" href="images/fotos/1.jpg"><img class="redonda" src="images/thumbnails/t_1.jpg" alt="paisaje"></a></li>
-						<li><a class="fancybox" rel="g1" href="images/fotos/2.jpg"><img class="redonda" src="images/thumbnails/t_2.jpg" alt="paisaje 2"></a></li>
-						<li><a class="fancybox" rel="g1" href="images/fotos/3.jpg"><img class="redonda" src="images/thumbnails/t_3.jpg" alt="paisaje 3"></a></li>
-					</ul>			
+					?>			
 				</fieldset>
 			</form>
 		</div>
