@@ -1,5 +1,27 @@
 <!DOCTYPE HTML>
-
+<?php
+//Configuración
+$host 	= "localhost";
+$db	= "broms";
+$user	= "root";
+$pass	= "";
+//Conexión
+$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+//Consulta - Parametros Posicionales
+$sql = "SELECT * 
+		FROM posts 
+		ORDER BY Fecha
+		LIMIT 5";
+$q = $conn->prepare($sql);
+if(!$q)
+{
+  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
+}
+//fetch
+while($r = $q->fetch()){
+print_r($r);
+}
+?>
 <html>
 	
 	<head>
@@ -238,7 +260,7 @@
 		</div>
 		<aside><!--Aside bar of the web-->
 			<form action="demo_form.asp" method="get">
-				<div class="form-title"><image src="styles/images/registrate.png"></div>
+				<div class="form-title">REGISTRATE!</div>
 				<table border="0">
 				<tr>
 					<th>Nombre:</th>
@@ -259,13 +281,13 @@
 				</table>
 				<div class="submit-form"><input type="submit" value="Enviar"></div>
 			</form><br>
-			<image src="styles/images/archivos.png">
+			Archivos
 				<li>Abril 2013 </li>
 				<li>Mayo 2013 </li>
 		</aside>
 	
 		<footer>
-		<button type="button" id="goto-heaven" value="IR AL CIELO" onclick="scrollTo(0)"><image src="styles/images/cielo.png"></button><br>
+		<button type="button" id="goto-heaven" value="IR AL CIELO" onclick="scrollTo(0)">IR AL CIELO</button><br>
 		<div id="footer-text">		
 		© Broms Web 2013
 		</div>
