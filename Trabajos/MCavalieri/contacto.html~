@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<head>
+		<title>Laboratorio Cavalieri-Hoffman</title>
+		<link rel="stylesheet" type="text/css" href="CSS Laboratorio.css">
+	</head>
+	<body>
+		<nav>
+			<!-- agreagar hora y fecha, flotados a la izquierda -->
+			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
+		</nav>
+		<header>
+			<img class="imagen_header" src='laboratorio.jpg'/> <!-- Cuando el usuario pueda enviar la foto, se sube -->
+		</header>
+		<nav>
+			<a class="menu" href="index.html" accesskey="i">Inicio</a>
+			<a class="menu" href="trabajos.html" accesskey="t">Trabajos</a>
+			<a class="menu" href="contacto.html" accesskey="c">Contacto</a>
+			<a class="menu" href="calendario.html" accesskey="f">Calendario</a>
+			<a class="menu flota_derecha" href="comentarios.html" acceskey="e">Comentarios</a>
+		</nav>
+
+		<article class="articulo_principal trabajos">
+			<h2> Contacto </h2>
+			<p> Teléfono: 02284 - 418618 </p>
+			<p> Dirección 25 de mayo 1234</p>
+			<p> Mecánicos: Cavalieri Pablo mp 000001, Hoffmann Daniel mp 000002</p>
+			<p> 7400 Olavarría - Pcia. Bs. As. </p>
+			
+		</article>
+		<img class="imagen_sonrisa imagen_circular" src='sonrisa.gif' />
+		<img class="imagen_diente imagen_circular" src='diente.jpg' />
+		<footer> &copy Cavalieri Martin 2013.</footer>
+	</body>
+</html>
