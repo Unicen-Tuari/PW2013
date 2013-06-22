@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<head>
+		<title>Laboratorio Cavalieri-Hoffman</title>
+		<link rel="stylesheet" type="text/css" href="style/CSS Laboratorio.css">
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>		
+		<nav>
+			<!-- agreagar hora y fecha, flotados a la izquierda -->
+			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
+		</nav>
+		<header>
+		<body onLoad="deslizar_imagenes();">
+			<img class="imagen_header" name="deslizar"/>
+		</header>
+		<nav>
+			<a class="menu" href="index.html" accesskey="i">Inicio</a>
+			<a class="menu" href="trabajos.html" accesskey="t">Trabajos</a>
+			<a class="menu" href="contacto.html" accesskey="c">Contacto</a>
+			<a class="menu" href="calendario.html" accesskey="f">Calendario</a>
+			<a class="menu flota_derecha" href="comentarios.html" acceskey="e">Comentarios</a>
+		</nav>
+		<div class="centrado_medio">
+			<article class="trabajos articulo_principal">
+			<ul>
+				<h2> Prótesis fija </h2> <!-- Para el segundo cuatrimestre esto puede variar, para que se puedan ver los precios, si el usuaro está logueado -->
+				<ul>
+					<li> 001   Corona colada </li>
+					<li> 002   Corona colada c/ frente estético </li>
+					<li> 003   Incrustación en Cromo Níquel </li>
+					<li> 004   Perno Muñón (Metal Orcast) </li>
+					<li> 005   Perno Muñón (Metal Cromo Níquel) </li>
+					<li> 006   Perno Muñón (Colado Directo) </li>
+					<li> 007   Perno Muñón c/ 2 Raíz Pasante </li>
+					<li> 008   Perno Muñón c/ Raíz Pasante </li>
+					<li> 009   Perno Seccionado </li>
+					<li> 010   Frentes de acrílico (Biolón USA) </li>
+					<li> 011   Corona de Acrílico (Biolón USA) </li>
+					<li> 012   Corona metálica revestida de acrílico </li>
+					<li> 013   Corona provisoria </li>
+					<li> 014   Attachments tipo rielera </li>
+					<li> 015   Attachments tipo a bola </li>
+					<li> 016   Mesoestructura sobre implante </li>
+					<li> 016.5 Perno bola attachments </li>
+				</ul>
+			<br>
+				<h2> Cerámica </h2>
+				<ul>
+					<li> 017   Corona de porcelana s/metal </li>
+					<li> 017.5 Corona de porce s/ metal (vita) </li>
+					<li> 018   Corona Veener c/frente de porcelana </li>
+					<li> 019   Incrustación cerámica s/ metal </li>
+					<li> 020   Coronas Inyectadas </li>
+					<li> 021   Incrustación y carillas inyectadas </li>
+					<li> 022   Perno de alta c/opaco </li>
+					<li> <!-- ¿Qué pasó acá? --> Corona de Circonio </li>
+				</ul>
+			<br>
+				<h2> Prótesis removible </h2>
+				<ul>
+					<li> 023   Cubetas individuales de acrílico </li>
+					<li> 023.5 Cubetas individual parcial de acrílico </li>
+					<li> 024   Prótesis inferior hasta 4 dientes </li>
+					<li> 025   Prótesis inferior hasta 8 dientes </li>
+					<li> 026   Prótesis inferior hasta 12 dientes </li>
+					<li> 027   Prótesis superior hasta 4 dientes </li>
+					<li> 028   Prótesis superior hasta 8 dientes </li>
+					<li> 029   Prótesis superior hasta 12 dientes </li>
+					<li> 030   Prótesis completa por 14 dientes </li>
+					<li> 031   Prótesis flexible hasta 4 </li>
+					<li> 032   Prótesis flexible hasta 8 </li>
+					<li> 033   Prótesis flexible hasta 12 </li>
+					<li> 034   Prótesis flexible completa </li>
+					<li> 035   Retenedor acrílico flexible transp. </li>
+					<li> 036   Retenedor forjado </li>
+					<li> 037   Retenedor triple forjado </li>
+					<li> 038   Guía quirúrgica </li>
+					<li> 039   Rebasado </li>
+					<li> 040   Reparación simple </li>
+					<li> 041   Reparación compleja </li>
+					<li> 042   Reparación agregado de diente </li>
+					<li> 043   Reparación agregados varios </li>
+				</ul>
+			<br>
+				<h2> Prótesis de cromo cobalto </h2>
+				<ul>
+					<li> 044   Armazón cromo cobalto superior </li>
+					<li> 045   Armazón cromo cobalto inferior </li>
+					<li> 046   Soldadura </li>
+					<li> 047   Cromo Flex hasta 4 </li>
+					<li> 048   Cromo Flex hasta 8 </li>
+					<li> 049   Cromo Flex hasta 12 </li>
+					<li> 050   Cromo Flex completo </li>
+				</ul>
+			<br>
+				<h2> Placas termo adaptadas </h2>
+				<ul>
+					<li> 051   Placas miorrelajante de goma </li>
+					<li> 052   Placas miorrelajante plástica </li>
+					<li> 053   Placas de goma para blanqueamiento </li>
+					<li> 054   Protectores bucales </li>
+					<li> 055   Cubetas individuales termoadapt. </li>
+				</ul>
+			<br>
+				<h2> Placas </h2>
+				<ul>
+					<li> 056   Placas de ortodoncia simple </li>
+					<li> 057   Placas de ortodoncia disyuntoras </li>
+					<li> 058   Placas de ortodoncia c/resorte </li>
+					<li> 059   Placas de ortodoncia c/planos alt. </li>
+					<li> 060   Placas ortopédicas bimax simple </li>
+					<li> 061   Placas ortopédicas bimax com </li>
+					<li> 062   Placas de descanso (termo cristal) </li>
+					<li> 063   Placas ortosis </li>
+					<li> 064   Bandas para ortodoncia (Disyunt) </li>
+					<li> 065   Hauley </li>
+					<li> 066   Botón de nance </li>
+					<li> 067   Mantenedor de espacio </li>
+					<li> 068   Barra colada para contención </li>
+					<li> 069   Arco Lingual soldado </li>
+					<li> 070   Juego de zocalados </li>
+					<li> 071   Soldadura de plata </li>
+					<li> 072   Arco traspalatino </li>
+					<li> 073   Encerado de diagnóstico </li>
+					<li> 074   Disyuntor c/4 bandas y tornillo araña </li>
+					<li> 075   Disyuntor c/arco vest. Y ganchos p/máscara, s/tornillo s/bandas </li>
+				</ul>
+			<br>
+		</ul>
+		</article>
+		</div>
+		<img class="imagen_sonrisa imagen_circular" src='sonrisa.gif' />
+		<img class="imagen_diente imagen_circular" src='diente.jpg' />
+		<footer> &copy Cavalieri Martin 2013.</footer>
+	</body>
+</html>

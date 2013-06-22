@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	<head>
+		<title>Laboratorio Cavalieri-Hoffman</title>
+		<link rel="stylesheet" type="text/css" href="style/CSS Laboratorio.css">
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body>
+		<nav>
+			<!-- agreagar hora y fecha, flotados a la izquierda -->
+<!--		Nombre <input type="text" name="nombre"> <a class="flota_derecha"/a>
+			Clave <input type="password" name="pass"> <a class="flota_derecha"/a>
+-->
+			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
+
+	<!--	<input type="button" value="Ingresar"> -->
+
+		</nav>
+		<header>
+		<body onLoad="deslizar_imagenes();">
+			<img class="imagen_header" name="deslizar"/>
+		</header>
+		<nav>
+			<a class="menu" href="index.html" accesskey="i">Inicio</a>
+			<a class="menu" href="trabajos.html" accesskey="t">Trabajos</a>
+			<a class="menu" href="contacto.html" accesskey="c">Contacto</a>
+			<a class="menu" href="calendario.html" accesskey="f">Calendario</a>
+			<a class="menu flota_derecha" href="comentarios.html" acceskey="e">Comentarios</a>
+		</nav>
+
+		<article class="articulo_principal">
+			<h2> ¿Quiénes somos? </h2>
+			<p> Agregar una introducción de quiénes son, qué ofrecen y lo que quieran agregar. </p>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br> 
+		</article>
+		<div style="clear: both">
+		</div>
+		<img class="imagen_sonrisa imagen_circular" src='images/sonrisa.gif' />
+		<img class="imagen_diente imagen_circular" src='images/diente.jpg' />
+		<footer> &copy Cavalieri Martin 2013.</footer>
+	</body>
+</html>
