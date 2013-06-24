@@ -33,6 +33,4 @@ while($r = $q->fetch()){
   print_r($r);
 }
 
-
-
 ?>
