@@ -1,3 +1,34 @@
+<?php
+//Configuración
+$host 	= "localhost";
+$db	= "gestoriaautomotor";
+$user	= "root";
+$pass	= "";
+
+//Conexión
+try{
+
+$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+}
+catch(PDOException $pe)
+{
+	die('Error de conexion, Mensaje: ' -$pe->getMessage());
+}
+
+//Consulta
+$sql = "SELECT url_imagen,web FROM cliente";
+
+//Ejecucion
+$q	 = $conn->query($sql);
+
+//Si es null, hubo un error
+if(!$q)
+{
+  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,9 +62,9 @@
 							<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
 						</ul>
 					</li>
-					<li><a href="clientes.php">Clientes Amigos</a></li>
-					<li class="selected"><a href="links.html">Links de Inter&eacute;s</a></li>
-					<li ><a href="cuenta.html">Cuenta</a>
+					<li class="selected"><a href="clientes.php">Clientes Amigos</a></li>
+					<li><a href="links.html">Links de Inter&eacute;s</a></li>
+					<li><a href="cuenta.html">Cuenta</a>
 						<ul class="submenu">
 							<li><a href="editardatos.html">Editar Datos</a></li>
 							<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
@@ -44,7 +75,17 @@
 			</nav>	
 			<div id="contenedorcentral">
 				<article id="articulo" >
-
+					<?php
+					//Imprimo fotos de clientes "amigos" de a 3 por fila.
+						$cont=0;
+						while($r = $q->fetch()){
+  							while (cont<2 and $r){
+  								echo('<a id="linkamigo" href="//'.$r[web].'" target="_blank"><img alt="Imagen Amigo" src="'.$r[url_imagen].'"></a>');
+  								$r= $q->fetch();
+  								$cont++;
+  							}
+						}
+					?>		
 				</article>
 			</div>
 			<aside id="contenedorlateral">
