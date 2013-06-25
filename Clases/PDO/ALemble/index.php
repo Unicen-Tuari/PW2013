@@ -10,8 +10,8 @@
     	<thead>
 <?php
 //Configuración
-$host 	= "localhost";
-$db	= "admillan";
+$host 	= "127.0.0.1";
+$db	= "ejemplo";
 $user	= "root";
 $pass	= "";
 
@@ -22,7 +22,7 @@ $conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
 }
 catch(PDOException $pe)
 {
-	die('Error de conexion, Mensaje: ' -$pe->getMessage());
+	die('Error de conexion, Mensaje');
 }
 
 //Consulta
@@ -42,7 +42,7 @@ print ("
   <tr>
 	<td>$r[ID]</td>
 	<td>$r[Titulo]</td>
-	<td>$r[Mensaje]</td>
+	<td>$r[Texto]</td>
   </tr>
   </thead>
   ");
@@ -54,7 +54,7 @@ while($r = $q->fetch()){
   <tr>
 	<td>$r[ID]</td>
 	<td>$r[Titulo]</td>
-	<td>$r[Mensaje]</td>
+	<td>$r[Texto]</td>
   </tr>
   </tbody>
   ");
