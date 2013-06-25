@@ -30,10 +30,10 @@
 			<p> ¡Cuéntenos su experiencia! </p>
 			<textarea class="comentario_usuario" placeholder="¿Qué piensa sobre esta web?" required></textarea>
 			<br><br>
-			<nav>
+			<form>
 				<input class="botones_comentario" type="reset" value="Borrar">
 				<input class="botones_comentario" type="submit" value="Enviar">
-			</nav>
+			</form>
 		</article>
 		<img class="imagen_sonrisa imagen_circular" src='images/sonrisa.gif' />
 		<img class="imagen_diente imagen_circular" src='images/diente.jpg' />

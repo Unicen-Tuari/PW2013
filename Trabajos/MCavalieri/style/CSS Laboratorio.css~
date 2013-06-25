@@ -1,5 +1,5 @@
 body {
-	background: /*#865486;*/#99c2ea;7
+	background: /*#865486;*/#99c2ea;
 	width:800px;
 }
 
@@ -9,7 +9,7 @@ header {
 }
 
 nav {
-	height: 40px;
+	height: 400px;
 	background: #3385d6;
 	text-align:left;
 }
@@ -106,7 +106,6 @@ img.imagen_sonrisa{
 }
 
 img.imagen_diente{
-	position: ;
 	float: right;
 	margin: 20px;
 	width: 200px;
