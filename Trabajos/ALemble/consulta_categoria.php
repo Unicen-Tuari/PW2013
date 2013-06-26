@@ -1,9 +1,10 @@
 <?php
-//Consulta - Parametros Posicionales
+$categoria = $_GET['categoria'];
 $sql = "SELECT p.ID, p.IDCategoria, c.nombre, p.IDUsuario, u.alias, p.Fecha, p.Titulo, p.url_imagen, p.descripcion, p.requirimientos, p.descarga, p.puntuacion
 		FROM posts p
 		JOIN usuarios u ON ( u.ID = p.IDUsuario ) 
-		JOIN categorias c ON ( c.ID = p.IDCategoria ) 
+		JOIN categorias c ON ( c.ID = p.IDCategoria )
+		WHERE c.nombre = '$categoria' 
 		ORDER BY Fecha
 		LIMIT 5";
 $q = $conn->query($sql);
@@ -11,5 +12,4 @@ if(!$q)
 {
   die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
 }
-
 ?>
