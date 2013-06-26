@@ -11,7 +11,7 @@
   <div class="control-group">
     <label for="name">Nombre</label>
     <div class="controls">
-      <input type="text" for="name" placeholder="Nombre">
+      <input type="text" name="name" placeholder="Nombre">
     </div>
   </div>
     </div>
