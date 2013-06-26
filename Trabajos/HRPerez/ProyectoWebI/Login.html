@@ -3,15 +3,15 @@
 <html>
     <head>
 	    <title>Tecper</title>
-		<link rel="stylesheet" href="C:\Users\Perez\Documents\Universidad\2º Año\Programacion en Web I\Proyecto Web I/Index.css">
+		<link rel="stylesheet" href="./style/Style.css">
+		<script type="text/javascript" src="js/verificarform.js"></script>
     </head>
     <body>
 	    <header>
 		    <h1>tec<span class="titulonegro">per</span></h1>
-			<img class="iconofacebook" src="images/iconofacebook.jpg" alt="Facebook"></img>
-			<img class="iconotwitter" src="images/iconotwitter.jpg" alt="Twitter"></img>
-			<img class="iconoyoutube" src="images/youtube.jpg" alt="Youtube"></img>
-			<img class="iconogoogle" src="images/google+.jpg" alt="Google+"></img>
+			<img class="iconofacebook" src="images/iconofacebook.png" alt="Facebook"></img>
+			<img class="iconotwitter" src="images/iconotwitter.png" alt="Twitter"></img>
+			<img class="iconoyoutube" src="images/IconoYoutube.jpg" alt="Youtube"></img>
 			<a href ="Login.html" class="contactar">Login</a>
 		</header>
 			     <nav>
@@ -28,22 +28,23 @@
 				<header>
 				   <h2>Login</h2>
                 <header>
-			 <form>
+			 <form action="consulta.php" method="post">
 			 <img class="imagenlogin" src="images/login2.jpg" alt="registrate"></img> 
                 <div class="camposlogin"> 
 				<div class="itemrow">
-		         <label>Nombre/s:</label> 
-				 <input type="text" name="nombre"></input><br><br>
+		         <label>Nombre:</label> 
+				 <input type="text" id="Nombre" placeholder ="Nombre" ><br><br>
 				 <label>Apellido/s:</label>  
-				 <input type="text" name="ape"></input><br><br>
+				 <input type="text" id="Apellido" placeholder ="Apellido" ><br><br>
 			     <label>E-mail:</label> 
-				 <input type="email" name="mail"><br><br>
+				 <input type="text" id="Email" class="mail" placeholder= "E-mail"><br><br>
 				 <label>Asunto:</label>  
-				 <input type="text" name="nombre"><br><br>
+				 <input type="text" id="Asunto" class="nombre" placeholder="Asunto"><br><br>
 				 <label>Mensaje:</label>     
-				 <input type="text" name="nombre" class="mensaje">
-				 <input type="submit" name="enviar" class="enviar">
-				</div>
+				 <textarea type="text" id="Mensaje" rows= 5 cols=25 class="nombre" placeholder="Mensaje" class="mensaje"></textarea>
+				 <input type=button  value=Atrás  onclick="history.go(-1)" > 
+				 <input type="submit" value="Enviar" onclick="verificarFormulario();">
+				 </div>
 				</div>
 	         </form>
 			 </div>
