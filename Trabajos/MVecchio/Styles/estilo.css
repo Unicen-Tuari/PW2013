@@ -1,13 +1,20 @@
 *{
 	margin:0;
 	padding: 0;
+	
 }
 
 body{
 	text-align:center;
 	font-family:arial,helvetica,sans-serif;
 	font-size: 14px;
-	background-color: #F5D0A9;
+	/*background-color: #F5D0A9;*/
+	background-image: url("../imagenes/background.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 }
 
 div#contenedorgeneral{
@@ -15,6 +22,7 @@ div#contenedorgeneral{
 	bottom: 0;
 	width:900px;
 	margin:auto;
+	max-height: 100%;
 }
 
 header#encabezado{
@@ -90,9 +98,9 @@ ul{list-style-type: none;}
 	display: none;
 	box-shadow: 0px 0.5px 5px #000;
 	border-radius: 0px 0px 10px 10px;
-	-moz-animation-duration:0.8s;
-	-webkit-animation-duration:0.8s;
-	-ms-animation-duration:0.8s;
+	-moz-animation-duration:0.4s;
+	-webkit-animation-duration:0.4s;
+	-ms-animation-duration:0.4s;
 }
 
 .submenu li:last-child{
@@ -170,13 +178,15 @@ ul{list-style-type: none;}
 div#contenedorcentral{
 	padding-top: 60px;
 	padding-bottom: 600px;
+	height: 550px;
+	background-color:  #F6E3CE;
 }
 
 article#articulo{
 	padding: 20px ;
 	margin-left: 10px;
-	height:500px;
-	max-height: 800px;
+	height: auto;
+	max-height: 1000px;
 	border-radius: 10px;
 	background-color: #fff;
 	width: 610px;
@@ -184,7 +194,7 @@ article#articulo{
 	position: static;
 }
 
-form#formulariocontacto ul{
+article#articulo ul{
 	text-align: left;
 	border-bottom:1px solid #eee;
 	position:relative;
@@ -283,6 +293,7 @@ form#formulariocontacto input:focus, form#formulariocontacto textarea:focus {
 }
 
 #contenedorpublis{
+	opacity: 1;
 	background-color: #fff;
 	border-radius: 10px;
 	padding: 10px;
@@ -308,14 +319,32 @@ form#formulariocontacto input:focus, form#formulariocontacto textarea:focus {
 	box-shadow:0px 0px 10px gray; /*CSS3 shadow: 30px blurred shadow all around image*/
 }
 
+#inicio{
+	border-radius: 10px;
+	border: 1px solid gray;
+	padding: 15px;
+	padding-bottom: 40px;
+	text-align: left;	
+}
+
+#inicio #datos{
+	margin: 20px;
+	font-size: 14px;
+}
+
+.cajita{
+	border-top: 1px solid gray;
+	margin-top: 10px;
+	font-size: 14px;
+
+}
+
 footer{
+	margin: auto ;
 	position: relative;
-	margin-bottom: 10px;
-    height: auto !important;
-    height: 100%;
-    text-align: center;
+	height: auto ;
     font-weight: bold ;
-    width:100%;
+    width:99%;
 	padding:5px 0 5px 0;
 	background-color:#A4A4A4; 
 	border:1px outset #A4A4A4;
