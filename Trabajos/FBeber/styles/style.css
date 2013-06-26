@@ -3,16 +3,15 @@ header{
 	width: 880px;
 	height: 200px;
 	text-align: center;
-	background-image: url("images/fondo_titulo.png");
+	background-image: url("../images/fondo_titulo.png");
 	background-repeat: repeat;
 	border-left: 10px solid white;
 	border-right: 10px solid white;
 	float: center;	
 }
 nav.header{
-	width: 140px;
+	width: 150px;
 	height: 100px;
-	margin-top: 0px;
 	text-align: left;
 	float: right;
 	background-image: none;
@@ -49,7 +48,7 @@ nav{
 	height: 60px;
 	text-align: center;
 	float: center;
-	background-image: url("images/fondo_botones.png");
+	background-image: url("../images/fondo_botones.png");
 	background-repeat: repeat;
 	border-bottom: 10px solid white;
 	border-left: 10px solid white;
@@ -69,7 +68,19 @@ img.contacto{
 	float: center;
 	
 }
-/*--------------------------------------PRODUCTOS_DESTACADO--------------------------------------------*/
+/*--------------------------------------PRODUCTOS_DESTACADOS--------------------------------------------*/
+div.detalles{
+	padding: 10px;
+	width: 260px;
+	margin-right: 20px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align: justify;
+	float: right;
+}
+
+
 img.producto_destacado{
 	width: 100px;
 	padding: 10px;
@@ -104,15 +115,14 @@ p.descripcion_destacado{
 	float: center;
 }
 /*----------------------------------------PAGINA EN GENERAL---------------------------------------------*/
+
 body{
-	margin: 0px;
+	margin: 0 auto;
 	width: 900px;
-	padding-left: 15%;
-	padding-right: 15%;
 	background-color: gray;
 	font-family: sans-serif;
 	text-align: center;
-	float: center;
+	
 }
 aside{
 	width: 200px;
@@ -175,7 +185,7 @@ footer{
 	float: bottom;
 	width: 870px;
 	padding-right: 10px;
-	background-color: rgb(102,102,102);
+	background-image: url("../images/fondo_botones.png");
 	text-align: center;
 	border: 10px solid white;
 	border-bottom: 0px;
@@ -265,17 +275,6 @@ div.bases_cond{
 
 }
 /*-------------------------------------------PRODUCTOS-------------------------------------------------*/
-div.ingrese_prod{
-	padding: 10px;
-	width: 390px;
-	margin-right: 5px;
-	margin-left: 15px;
-	margin-bottom: 5px;
-	margin-top: 5px;
-	text-align: justify;
-	float: left;
-	border: 2px solid blue;
-}
 img.producto{
 	width: 150px;
 	height: 120px;
@@ -311,10 +310,35 @@ p.descripcion{
 	float: center;
 }
 
+/*-------------------------------------------SESION-------------------------------------------------*/
 
+div.mi_sesion{
+	padding: 30px;
+	width: 220px;
+	margin-right: 5px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	text-align: justify;
+	float: left;
+	border: 2px solid gray;
+}
 
+p.mi_sesion{
+	width: 220px;
+	font-family: sans-serif;
+	font-size: 14px;
+	text-align: justify;
+	float: right;
+}
 
-
+h3.mi_sesion{
+	width:220px;
+	text-align:left;
+	font-size: 16px;
+	float: left;
+	color: gray;
+}
 
 
 
