@@ -1,0 +1,23 @@
+shell> mysql --user=root mysql
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'millanad'@'localhost'
+	IDENTIFIED BY 'q2w3d' WITH GRANT OPTION;
+mysql> GRANT RELOAD,PROCESS ON *.* TO 'admin'@'localhost';
+mysql> GRANT USAGE ON *.* TO 'sinprivilegios'@'localhost';
+
+
+extension=php_pdo.dll
+extension=php_pdo_mysql.dll
+
+
+On a Linux server you can compile php with the following option --with-pdo-mysql In your php.ini, add the following lines 
+extension=pdo.so
+extension=pdo_mysql.so
+
+sudo /etc/init.d/apache2 restart
+
+CREATE DATABASE millanad;
+USE millanad;
+CREATE TABLE contacto ( tel VARCHAR(30) NOT NULL , direccion VARCHAR(50) NOT NULL); 
+INSERT INTO contacto VALUES ('(02262) 15-49-5903','Costa Rica 518 Dto 3, Tandil');
+

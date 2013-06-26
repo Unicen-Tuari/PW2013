@@ -1,0 +1,38 @@
+/* Estilos Formulario
+-------------------------*/
+form {
+    margin:0 auto;
+    max-width:100%;
+}
+input, textarea {
+    background:#666666;
+    border:2px solid #f6f6f6;
+    color:#ffffff;
+    font-size:0.8em;
+    max-height:20px;
+    margin-top:5px;
+    padding:10px;
+    max-width:380px;
+}
+label {
+    display:block;
+    letter-spacing:1px;
+    margin-top: 5px;
+}
+textarea {
+    max-height:40px;
+}
+#submit {
+    border:none;
+    cursor:pointer;
+    max-height:30px;
+    margin-top:20px;
+    max-width:85px;
+}
+.formulario {
+    color: black;
+    display:block;
+    font-family: FuenteExterna, Arial;
+    text-align: center;
+    max-width:510px;
+}
