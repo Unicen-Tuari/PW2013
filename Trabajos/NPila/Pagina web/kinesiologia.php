@@ -12,20 +12,9 @@
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
-							<div class="post">
-								<h2 class="title">Ingrese el nombre del paciente </h2>
-							</div>
-							<div id="search" >
-								<form method="get" action="#">
-									<div>
-										<input type="text" name="s" id="search-text" value="" />
-										<input type="submit" id="search-submit" value="GO" />
-									</div>
-								</form>
-								<?php
-									include();
-								?>
-							</div>
+							<?php
+								include('consulta.php');
+							?>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">
@@ -41,7 +30,7 @@
 							</nav> 
 							<!-- FIN BARRA LATERAL -->
 						</div>
-						<div style="clear: both;">&nbsp;</div>
+						<div style="clear: both;"></div>
 					</div>
 				</div>
 			</div>
