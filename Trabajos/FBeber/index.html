@@ -1,15 +1,17 @@
+
 <!doctype html>
 <html>
 <head>
 	<title>Compras y Ventas Dx.</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <header>
 	<nav class="header">
-		<img src="images/logo_usuarios.png"><a class="header" href="sesion.html"><h1>Mi Sesion</h1></a><br>
-		<img src="images/logo_lapiz.png"><a class="header" href="registrate.html"><h1>Registrate</h1></a>
-	</nav>
+		<img src="images/logo_usuarios.png"><a class="header" href="sesion.html"><h1>Mi Sesion</h1></a>
+		<img src="images/logo_lapiz.png"><a class="header" href="registrate.html"><h1>Registrate</h1></a><br><br>
+		</nav>
 	<img class="logo" src="images/logo.png" alt="logo de compras y ventas dx">
 	<titulo>Compras y Ventas Dx.</titulo>
 </header>
@@ -17,11 +19,12 @@
 		<a class="botones" href="index.html"><u>INICIO</u></a>
 		<a class="botones" href="vendo.html">VENDO</a>
 		<a class="botones" href="compro.html">COMPRO</a>
-		<a class="botones" href="servicios.html">SERVICIOS</a>
 		<a class="botones" href="ayuda.html">AYUDA</a>
 		<a class="botones" href="nosotros.html">NOSOTROS</a>
+		<a class="botones" href="ingrese.html">INGRESE NUEVO AVISO</a>
 	</nav>
 	
+	<div class="centrar">
 	<article>
 		<aside>
 		<a href= "http://www.facebook.com"><img class="logo_aside" src="images/logo_face.jpg"></a>
@@ -39,56 +42,52 @@
 		<img src="images/linea.png"><br>
 		<img src="files/publicidades/publicidad_2.gif" alt=""><br>
 		<img src="images/linea.png"><br>
-		<img src="files/publicidades/publicidad_4.jpg" alt=""><br>
-		<img src="images/linea.png"><br>
-		<img src="files/publicidades/publicidad_5.png" alt=""><br>
-	</aside>
-	<h2>Bienvenidos..</h2>
-	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</aside>
+	<h2>Bienvenid@s..</h2>
+	<p>Compras y ventas Dx el sitio perfecto para acceder a operaciones de compra-venta de cualquier tipo de art&iacute;culos, servicios y dem&aacute;s!</p>
 	<p class="linea_punteada">.......................................................................................................</p>
-	<h3>Destacados..</h3>
+	<h3>&Uacute;ltimos Avisos</h3>
 	<div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
+		<img class="producto_destacado" src="files/publicaciones/camioneta.jpg" alt="camioneta">
+		<h3 class="descripcion_destacado">Compro</h3>
+		<p class="descripcion_destacado">Camioneta</p>
+		<p class="descripcion_destacado">Modelo: 2005</p>
+		 <div class="container">
+ 		 	<div id="ocultar">
+ 				<p class="descripcion_destacado"><u>Detalles del contacto</u></p>
+ 			</div>
+  			<button onLoad="ocultar();">Ver Detalles</button>
+  		</div>
 	</div>
 	<div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
-	</div><div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
-	</div><div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
-	</div><div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
-	</div><div class="descripcion_destacado">
-		<img class="producto_destacado" src="files/publicaciones/imagen1.jpg" alt="imagen1">
-		<h3 class="descripcion_destacado">Descripcion</h3>
-		<p class="descripcion_destacado">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		<img src="images/carrito.png">
+		<img class="producto_destacado" src="files/publicaciones/carrito.jpg" alt="carrito">
+		<h3 class="descripcion_destacado">Vendo</h3>
+		<p class="descripcion_destacado">Andador para bebes</p>
+		<p class="descripcion_destacado"></p>
 	</div>
-
+	<div class="descripcion_destacado">
+		<img class="producto_destacado" src="files/publicaciones/silla_mesa.jpg" alt="silla_mesa">
+		<h3 class="descripcion_destacado">Vendo</h3>
+		<p class="descripcion_destacado">Silla y mesa de jardin</p>
+		<p class="descripcion_destacado"></p>
+	</div>
+	<div class="descripcion_destacado">
+		<img class="producto_destacado" src="files/publicaciones/cartera.jpg" alt="cartera">
+		<h3 class="descripcion_destacado">Vendo</h3>
+		<p class="descripcion_destacado">Cartera</p>
+		<p class="descripcion_destacado">cuero color negro, casi sin uso</p>
+	</div>
+	<div class="descripcion_destacado">
+		<img class="producto_destacado" src="files/publicaciones/celular.jpg" alt="celular">
+		<h3 class="descripcion_destacado">Compro</h3>
+		<p class="descripcion_destacado">Celular</p>
+		<p class="descripcion_destacado">Blackberry</p>
+	</div>
+	
 	</article>
+</div>
 	<footer>
-		<a class="footer" href="index.html"><u>INICIO</u></a>
-		<a class="footer" href="vendo.html">VENDO</a>
-		<a class="footer" href="compro.html">COMPRO</a>
-		<a class="footer" href="servicios.html">SERVICIOS</a>
-		<a class="footer" href="ayuda.html">AYUDA</a>
-		<a class="footer" href="nosotros.html">NOSOTROS</a>
-		<br><br>Programacion Web l</footer>
+		Programaci&oacute;n Web l</footer>
 </body>
 
 

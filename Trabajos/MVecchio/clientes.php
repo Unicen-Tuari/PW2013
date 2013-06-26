@@ -16,7 +16,7 @@ catch(PDOException $pe)
 }
 
 //Consulta
-$sql = "SELECT url_imagen,web FROM cliente";
+$sql = "SELECT es_cliente_amigo,url_imagen,web FROM cliente";
 
 //Ejecucion
 $q	 = $conn->query($sql);
@@ -79,7 +79,7 @@ if(!$q)
 					//Imprimo fotos de clientes "amigos" de a 3 por fila.
 						$cont=0;
 						while($r = $q->fetch()){
-  							while (cont<2 and $r){
+  							while (cont<2 and $r and $r[es_cliente_amigo]='s'){
   								echo('<a id="linkamigo" href="//'.$r[web].'" target="_blank"><img alt="Imagen Amigo" src="'.$r[url_imagen].'"></a>');
   								$r= $q->fetch();
   								$cont++;
@@ -117,6 +117,8 @@ if(!$q)
 			</div>			
 		</div>
 	<footer>
-		Copyright
+		Copyright 2013 Vecchio Matias Designs
+		<br>vecchiomatiasdesigns@gmail.com
+		<br>
 	</footer>
 </html>
