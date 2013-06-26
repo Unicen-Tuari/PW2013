@@ -10,10 +10,10 @@
 	if (isset($_POST['comentario'])){
 		$comentario = $_POST['comentario'];
 		$sql = "insert into COMENTARIOS (texto)
-				values ('$comentario')"; 
+				values ('$comentario');"; 
 		$var1 = $conn->query($sql);
 		if(!$var1) {
-			die(print($conn->errorInfo()[2]));
+			die(print($conn->errorInfo()));
 		}
 		else {
 			print ('Comentario recibido. ¡Muchas gracias!');
