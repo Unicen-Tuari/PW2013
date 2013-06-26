@@ -1,5 +1,4 @@
 <?php
-//Consulta - Parametros Posicionales
 $sql = "SELECT p.ID, p.IDCategoria, c.nombre, p.IDUsuario, u.alias, p.Fecha, p.Titulo, p.url_imagen, p.descripcion, p.requirimientos, p.descarga, p.puntuacion
 		FROM posts p
 		JOIN usuarios u ON ( u.ID = p.IDUsuario ) 
