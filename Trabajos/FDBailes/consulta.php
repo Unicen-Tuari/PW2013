@@ -33,9 +33,7 @@
 					<input class="botonesform flota_izq" type="reset" value="BORRAR">
 					<input class="formconsulta" type="text" name="dni" placeholder="DNI" pattern="[\d]{7,8}" title="Formato: 7 a 8 Digitos" required autofocus>
 					<input class="botonesform flota_der" type="submit" value="ACEPTAR">
-				</fieldset>
-				<br>
-				
+				</fieldset><br>
 			</form>
 			<form class="datos_consultados">
 				<fieldset>

@@ -3,6 +3,7 @@
 	<head>
 		<title>Gestoria del Automotor CN</title>
 		<link rel="stylesheet" href="styles/estilo.css">
+		<script type="text/javascript" 	src="js/validarinfo.js"></script>
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
 		<script type="text/javascript" 	src="js/jquery.smint.js"></script>
@@ -25,15 +26,15 @@
 			<nav>
 				<ul class="menu">
 					<li><a href="inicio.html">Inicio</a></li>
-					<li><a href="servicios.html">Servicios</a>
+					<li>Servicios
 						<ul class="submenu">
 							<li><a href="estadotransferencia.html">Estado de Transferencias</a></li>
 							<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
 						</ul>
 					</li>
-					<li><a href="clientes.html">Clientes Amigos</a></li>
+					<li><a href="clientes.php">Clientes Amigos</a></li>
 					<li><a href="links.html">Links de Inter&eacute;s</a></li>
-					<li><a href="cuenta.html">Cuenta</a>
+					<li>Cuenta
 						<ul class="submenu">
 							<li><a href="editardatos.html">Editar Datos</a></li>
 							<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
@@ -44,68 +45,69 @@
 			</nav>				
 			<div id="contenedorcentral">
 				<article id="articulo" >
-					<form id="formulariocontacto" target="_blank" onsubmit="return window.confirm(&quot;Consulta Enviada. Espera la confirmaci&oacute;n del Administrador&quot;);">
+					<form id="formulariocontacto" action="" method="POST" >
 						<ul>
 						    <li>
 						    	<h2>Contactanos!!</h2>
 	       					</li>
 	       					<li>
-	           					<label for="nombre">Nombre:</label>
-	           					<input type="text"  placeholder="Nombre" required />
+	           					<label for="nombre"><span class="requerido">* </span>Nombre y &nbsp;&nbsp;Apellido:</label>
+	           					<input type="text" id="nombre" placeholder="Nombre y Apellido" required autofocus="autofocus" />
 	       					</li>
 	       					<li>
-	           					<label for="apellido">Apellido:</label>
-	           					<input type="text"  placeholder="Apellido" required />
+						        <label for="email"><span class="requerido">* </span>Email:</label>
+						        <input type="email" id="email" placeholder="Email" required />
+						    </li>
+						    <li>
+						        <label for="telefono">&nbsp;&nbsp;Telefono:</label>
+						        <input type="tel" id="telefono" placeholder="Telefono">
+						    </li>
+						    <li>
+	           					<label for="asunto"><span class="requerido">* </span>Asunto:</label>
+	           					<input type="text" id="asunto" placeholder="Asunto" required />
 	       					</li>
-	       					<li>
-						        <label for="Email">Email:</label>
-						        <input type="email" name="email" placeholder="Email" required />
+						    <li>
+						        <label for="mensaje"><span class="requerido">* </span>Mensaje:</label>
+						        <textarea id="mensaje" cols="40" rows="6" required ></textarea>
 						    </li>
 						    <li>
-						        <label for="Telefono">Telefono:</label>
-						        <input type="tel" name="telefono" placeholder="Telefono">
-						    </li>
-						    <li>
-						        <label for="Mensaje">Mensaje:</label>
-						        <textarea name="mensaje" cols="40" rows="6" required ></textarea>
-						    </li>
-						    <li>
-						       <button class="botonsubmit"class="submit" type="submit">Enviar</button>
+						       <button class="botonsubmit"  onclick="verificarFormulario();">Enviar Mensaje</button>
 						    </li>
 						</ul>
 					</form>
 				</article>
-			</div>
-			<aside id="contenedorlateral">
-				<div id="contenedorloguin">
-					<h3>Ingresa con tu Cuenta!</h3>
-					<form class="formulario" name="loguin" action="" method="" accept-charset="">
-						<ul>
-							<li>
-								<input type="text" name="usuario" placeholder="Email!" required>
-							</li>
-							<li>
-								<input type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
-							</li>
-							<li>
-								<input type="checkbox" name="redordarme" id="recordarme">
-								Recordar en esta computadora
-							</li>
-							<li>
-								<input class="botonsubmit" type="submit" value="Entrar">
-							</li>
-						</ul>
-					</form>
+				<aside id="contenedorlateral">
+					<div id="contenedorloguin">
+						<h3>Ingresa con tu Cuenta!</h3>
+						<form class="loguin" name="loguin" action="" method="" accept-charset="">
+							<ul>
+								<li>
+									<input id="input" type="text" name="usuario" placeholder="Email!" required>
+								</li>
+								<li>
+									<input id="input" type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
+								</li>
+								<li>
+									<input id="input" type="checkbox" name="recordarme" id="recordarme">
+									Recordarme
+								</li>
+								<li>
+									<input class="botonsubmit" type="submit" value="Entrar">
+								</li>
+							</ul>
+						</form>
 
-				</div>
-				<div id="contenedorpublis">
-					<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
-					<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
-				</div>
-			</aside>
+					</div>
+					<div id="contenedorpublis">
+						<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
+						<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
+					</div>
+				</aside>
+			</div>			
 		</div>
 	</body>
 	<footer>
+		Copyright
 	</footer>
 
 </html>

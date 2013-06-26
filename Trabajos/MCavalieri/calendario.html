@@ -4,6 +4,7 @@
 	<head>
 		<title>Laboratorio Cavalieri-Hoffman</title>
 		<link rel="stylesheet" type="text/css" href="style/CSS Laboratorio.css">
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -11,7 +12,8 @@
 			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
 		</nav>
 		<header>
-			<img class="imagen_header" src='laboratorio.jpg'/> <!-- Cuando el usuario pueda enviar la foto, se sube -->
+		<body onLoad="deslizar_imagenes();">
+			<img class="imagen_header" name="deslizar"/>
 		</header>
 		<nav>
 			<a class="menu" href="index.html" accesskey="i">Inicio</a>
@@ -21,10 +23,10 @@
 			<a class="menu flota_derecha" href="comentarios.html" acceskey="e">Comentarios</a>
 		</nav>
 		<article class="articulo_principal" />
-			<p> Función futura </p> <br>
+			<p> /*Función para el segundo cuatrimestre*/ </p> <br>
 		</article>
-		<img class="imagen_sonrisa imagen_circular" src='sonrisa.gif' />
-		<img class="imagen_diente imagen_circular" src='diente.jpg' />
+		<img class="imagen_sonrisa imagen_circular" src='images/sonrisa.gif' />
+		<img class="imagen_diente imagen_circular" src='images/diente.jpg' />
 		<footer> &copy Cavalieri Martin 2013.</footer>
 	</body>
 </html>

@@ -1,6 +1,6 @@
 body {
-	background: /*#865486;*/#99c2ea;7
-	width:800px;
+	background: /*#865486;*/#99c2ea;
+	width: 1264px
 }
 
 /*color mrdio*/
@@ -10,10 +10,20 @@ header {
 
 nav {
 	height: 40px;
+	width: 1270px;
 	background: #3385d6;
 	text-align:left;
 }
 
+form.validacion {
+	background: #70aae2;
+	margin: 30px auto auto;
+	border-radius:10px;
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+	text-align: center;
+	width: 400px;
+}
+	
 a.menu {
 	display: inline-block;
 	padding: 0px 25px;
@@ -26,6 +36,14 @@ a.menu {
 	font-size: 13px;
 	font-weight: normal;
 	color: #FFFFFF;
+}
+
+article {
+	background: #70aae2;
+	color: #FFFFFF;
+	text-align: center;
+	position:absolute;
+	margin: 415px;
 }
 
 a.flota_derecha {
@@ -54,15 +72,6 @@ footer {
 	left:0;
 }
 
-article, form {
-	background: #70aae2;
-	color: #FFFFFF;
-	text-align: center;
-	position:absolute;
-	margin: 415px;
-/*	width: 50%;
-*/}
-
 article.articulo_principal {
 	border-radius:15px;
 	font-family: sans-serif;
@@ -71,14 +80,8 @@ article.articulo_principal {
 }
 
 article.trabajos{
+	padding: 0px 10px;
 	text-align: left;
-}
-
-form.validacion {
-	padding-top: 40px;
-	border-radius:10px;
-	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
-	height: 110	px;
 }
 
 img.imagen_header {
@@ -92,10 +95,10 @@ img.imagen_circular {
 }
 
 img.imagen_sonrisa{
+	float: left;
 	margin: 20px;
 	width: 200px;
 	height: 200px;
-	left: 10%;
 }
 
 img.imagen_diente{
@@ -106,13 +109,11 @@ img.imagen_diente{
 }
 
 textarea.comentario_usuario{
-	width: 200px;
+	margin: 0px 20px;
+	width: 500px;
+	height: 60px;
 }
 
-
-
-
-
-
-
-
+botones_comentario{
+	
+}

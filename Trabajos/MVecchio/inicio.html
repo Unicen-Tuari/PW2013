@@ -2,8 +2,6 @@
 <html>
 	<head>
 		<title>Gestoria del Automotor CN</title>
-
-
 		<link rel="stylesheet" href="styles/estilo.css">
 		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 
@@ -27,15 +25,15 @@
 			<nav>
 				<ul class="menu">
 					<li class="selected"><a href="inicio.html">Inicio</a></li>
-					<li><a href="servicios.html">Servicios</a>
+					<li>Servicios
 						<ul class="submenu">
 							<li><a href="estadotransferencia.html">Estado de Transferencias</a></li>
 							<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
 						</ul>
 					</li>
-					<li><a href="clientes.html">Clientes Amigos</a></li>
+					<li><a href="clientes.php">Clientes Amigos</a></li>
 					<li><a href="links.html">Links de Inter&eacute;s</a></li>
-					<li><a href="cuenta.html">Cuenta</a>
+					<li>Cuenta
 						<ul class="submenu">
 							<li><a href="editardatos.html">Editar Datos</a></li>
 							<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
@@ -48,38 +46,37 @@
 				<article id="articulo" >
 					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 				</article>
-			</div>
-			<aside id="contenedorlateral">
-				<div id="contenedorloguin">
-					<h3>Ingresa con tu Cuenta!</h3>
-					<form class="formulario" name="loguin" action="" method="" accept-charset="">
-						<ul>
-							<li>
-								<input type="text" name="usuario" placeholder="Email!" required>
-							</li>
-							<li>
-								<input type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
-							</li>
-							<li>
-								<input type="checkbox" name="redordarme" id="recordarme">
-								Recordar en esta computadora
-							</li>
-							<li>
-								<input class="botonsubmit" type="submit" value="Entrar">
-							</li>
-						</ul>
-					</form>
+				<aside id="contenedorlateral">
+					<div id="contenedorloguin">
+						<h3>Ingresa con tu Cuenta!</h3>
+						<form class="loguin" name="loguin" action="" method="" accept-charset="">
+							<ul>
+								<li>
+									<input id="input" type="text" name="usuario" placeholder="Email!" required>
+								</li>
+								<li>
+									<input id="input" type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
+								</li>
+								<li>
+									<input id="input" type="checkbox" name="recordarme" id="recordarme">
+									Recordarme
+								</li>
+								<li>
+									<input class="botonsubmit" type="submit" value="Entrar">
+								</li>
+							</ul>
+						</form>
 
-				</div>
-				<div id="contenedorpublis">
-					<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
-					<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
-				</div>
-			</aside>
+					</div>
+					<div id="contenedorpublis">
+						<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
+						<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
+					</div>
+				</aside>
+			</div>			
 		</div>
-
 	</body>
 	<footer>
+		Copyright
 	</footer>
-
 </html>
