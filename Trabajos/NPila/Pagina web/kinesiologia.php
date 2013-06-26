@@ -16,14 +16,9 @@
 								<h2 class="title">Ingrese el nombre del paciente </h2>
 							</div>
 							<div id="search" >
-								<form method="get" action="#">
-									<div>
-										<input type="text" name="s" id="search-text" value="" />
-										<input type="submit" id="search-submit" value="GO" />
-									</div>
-								</form>
+								
 								<?php
-									include();
+									include('consulta.php');
 								?>
 							</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
@@ -41,7 +36,7 @@
 							</nav> 
 							<!-- FIN BARRA LATERAL -->
 						</div>
-						<div style="clear: both;">&nbsp;</div>
+						<div style="clear: both;"></div>
 					</div>
 				</div>
 			</div>
