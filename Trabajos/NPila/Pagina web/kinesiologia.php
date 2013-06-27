@@ -12,15 +12,9 @@
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
-							<div class="post">
-								<h2 class="title">Ingrese el nombre del paciente </h2>
-							</div>
-							<div id="search" >
-								
-								<?php
-									include('consulta.php');
-								?>
-							</div>
+							<?php
+								include('consulta.php');
+							?>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">
