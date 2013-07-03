@@ -5,10 +5,9 @@ function verificarFormulario()
 	var telefono = document.getElementById('telefono');
 	var email = document.getElementById('email');
 	var mensaje = document.getElementById('mensaje');
-	var linferior = 3;
-	var lsuperior = 20;
 
-	if(esVacio(nombre.value) && !largoEntre(linferior, lsuperior, nombre.value))
+
+	if(esVacio(nombre.value) || (nombre.value.length<3 || nombre.value.length>20))
 	{
 		alert('Debe ingresar un nombre entre 3 y 30 caracteres');
 		nombre.focus();
@@ -22,9 +21,11 @@ function verificarFormulario()
 		return;
 	}
 
-	if (!esVacio(telefono.value)){
-		telefonoValido (telefono.value);
+	if (!esVacio(telefono.value) && (!telefonoValido (telefono.value)))
+	{
+		alert('Debe ingresar un telefono valido Ej: 22841546897');
 		telefono.focus();
+		return;
 	}
 	
 	if(esVacio(asunto.value) && !largoEntre(linferior, lsuperior, lastname.value))
@@ -42,7 +43,7 @@ function verificarFormulario()
 	}
 
 	
-	return alert('Mensaje Enviado. Tendrás noticias a la brevedad.')
+	return alert('Mensaje Enviado. Nos comunicaremos a la brevedad.')
 }
 
 function emailValido(email)
@@ -69,19 +70,9 @@ function esVacio(valor)
 	return false;
 }
 
-function largoEntre(linferior, lsuperior, valor)
-{
-	if(valor.length> linferior && valor.length < lsuperior)
-	{
-		return true;
-	}
-
-	return false;
-}
-
-function telefonolValido(telefono){
-	if( isNaN(telefono) || !(/^\d{9}$/.test(telefono)) ) { //Si es numero y si tiene 9 cifras seguidas
+function telefonoValido(telefono){
+	if( isNaN(telefono) || (telefono.length<10) ) {
   		return false;
 	}
-	return false;
+	return true;
 }

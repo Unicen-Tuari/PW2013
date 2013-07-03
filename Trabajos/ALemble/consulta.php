@@ -12,23 +12,4 @@ if(!$q)
   die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
 }
 
-//while($r = $q->fetch()){
-//  print ("
-// <tbody>
-// <tr>
-//	<td>$r[nro_fila]</td>
-//	<td>$r[ID]</td>
-//	<td>$r[IDCategoria]</td>
-//	<td>$r[IDUsuario]</td>
-//	<td>$r[Fecha]</td>
-//	<td>$r[Titulo]</td>
-//	<td>$r[url_imagen]</td>
-//	<td>$r[descripcion]</td>
-//	<td>$r[requirimientos]</td>
-//	<td>$r[descarga]</td>
-//	<td>$r[puntuacion]</td>
-// </tr>
-//  </tbody>
-//  ");
-
 ?>
