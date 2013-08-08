@@ -1,6 +1,6 @@
 body {
 	background-image:url(../images/binding_light.png);
-	font-family:"Open Sans",sans-serif;
+	font-family:"Droid sans","Verdana";
 	font-size:14px;
 	color:#FFF;
 	width:1351px;
@@ -27,7 +27,7 @@ a.menu {
 	text-decoration:none;
 	text-align:center;
 	text-transform:uppercase;
-	font-family:Oswald, sans-serif;
+	font-family:"DejaVu Sans","Verdana";
 	font-size:13px;
 	color:#FFF;
 	padding:0 25px;
@@ -129,7 +129,7 @@ form.formcontacto {
 	margin:0 auto;
 }
 input,textarea {
-	font-family:inherit;
+	font-family:"Droid sans","Verdana";
 	font-size:14px;
 	border:none;
 	border-radius:5px;
@@ -154,7 +154,6 @@ input.formcontacto {
 	width:315px;
 }
 input.botonesform {
-	font-family:Oswald, sans-serif;
 	color:#000;
 	width:100px;
 	font-size:13px;

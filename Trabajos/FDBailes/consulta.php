@@ -1,71 +1,47 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>TT Taller de Reparacion</title>
-		<link rel="stylesheet" type="text/css" href="styles/style.css">
-		<meta charset="UTF-8">
-		<script src="js/jquery-1.10.0.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
-		<link rel="stylesheet" href="styles/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
-	</head>
-	<body>	
-		<nav>
-			<a href="index.html" class="menu" accesskey="h">Inicio</a>
-			<a href="servicios.html" class="menu" accesskey="s">Servicios</a>
-			<a href="consulta.php" class="elemento_actual menu" accesskey="r">Consulta Reparacion</a>
-			<a href="contacto.html" class="menu" accesskey="c">Contacto</a>
-			<a href="login.html" class="flota_der menu" accesskey="l">Login</a>
-		</nav>
-		<header>
-			<img class="logo_izq flota_izq" src="images/linux.png" alt="Logo Windows">
-			<img class="logo_der flota_der" src="images/win.png" alt="Logo Linux">
-			<div class="logo">
-				<p class ="logo">Logo</p>
-				<p class="logo">Banner</p>
-			</div>
-		</header>
-		<div class="clear"></div>
-		<div class="elemento_contenedor" id="datos_consulta">
-			<form class="datoscliente" method="post" action="consulta.php">
-				<fieldset>
-					<legend>Datos personales</legend>
-					<input class="botonesform flota_izq" type="reset" value="BORRAR">
-					<input class="formconsulta" type="text" name="dni" placeholder="DNI" pattern="[\d]{7,8}" title="Formato: 7 a 8 Digitos" required autofocus>
-					<input class="botonesform flota_der" type="submit" value="ACEPTAR">
-				</fieldset><br>
-			</form>
-			<form class="datos_consultados">
-				<fieldset>
-					<legend>Datos reparación</legend>
-					<br>
-					<?php
-						include ('rellena_consulta.php');
-					?>			
-				</fieldset>
-			</form>
-		</div>
-		<footer class="clear">
-			<div class="elemento_contenedor" id="footer">
-				<ul>
-					<li>Dirección</li>
-					<li>Localidad</li>
-					<li>Telefono</li>
-					<li>Mail</li>
-				</ul>
-			</div>
-			<div id="copyright">Copyright 2012-2013. Designed by Federico Bailes</div>
-		</footer>
-		<script type="text/javascript">
-		$(document).ready(function() {
-			$(".fancybox").fancybox({
-				padding: 5,
-    			nextEffect: 'fade',
-    			prevEffect: 'fade',
-    			openEffect: 'elastic',
-    			closeEffect: 'elastic'
-    		})
-		});
-		</script>
-	</body>
-</html>
+<?php
+	require('./libs/Smarty.class.php');
+	$smarty = new Smarty;
+	$smarty->caching = false;
+	include ('variables.php');
+	try {
+		$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+	}
+	catch(PDOException $pe)
+	{
+		die('Error de conexion, Mensaje: '.$pe->getMessage());
+	}
+	if (isset($_POST['dni'])){
+		$dni = $_POST['dni'];
+		$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_inicio,'%d/%m/%Y') as fecha_inicio_f,DATE_FORMAT(r.fecha_fin,'%d/%m/%Y') as fecha_fin_f FROM REPARACION r,ESTADO e WHERE dni = $dni AND e.id_estado=r.id_estado ORDER BY fecha_inicio DESC LIMIT 3;"; 
+		$var1 = $conn->prepare($sql);
+		$var1->execute();
+		if(!$var1) {
+			die(print($conn->errorInfo()[2]));
+		}
+		else {
+			$datos_rep = $var1->fetchAll(PDO::FETCH_ASSOC);
+			if ($var1->rowCount()==0) {
+				$datos_rep=null;
+				$datos_img=null;
+			}
+			else {
+				$datos_img=$datos_rep[0];
+				$sql="SELECT link_imagen FROM IMAGEN_REPARACION WHERE id_reparacion = ".$datos_img['id_reparacion'].";";
+				$var2 = $conn->prepare($sql);
+				$var2->execute();
+				if(!$var2) {
+					die(print($conn->errorInfo()[2]));
+				}
+				else {
+					$datos_img = $var2->fetchAll(PDO::FETCH_ASSOC);
+					if ($var2->rowCount()==0) {
+						$datos_img=null;
+					}
+				}
+			}
+		}
+		$smarty->assign("reparaciones",$datos_rep);
+		$smarty->assign("imagenes",$datos_img);
+	}
+	$smarty->display('consulta.tpl');
+?>
