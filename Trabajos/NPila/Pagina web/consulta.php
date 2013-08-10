@@ -1,11 +1,6 @@
 <?php
-	//Configuración
-	$host = "localhost";
-	$db = "consultorio_medico";
-	$user = "root";
-	$pass = "491991_454404";
-
 	//Conexión
+	include('coneccion.php')	
 	try{
 		$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
 	}
