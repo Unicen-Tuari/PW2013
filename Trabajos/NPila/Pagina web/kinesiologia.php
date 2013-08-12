@@ -3,9 +3,10 @@
 	$smarty = new Smarty;
 	$smarty->caching = false;
 	$smarty->cache_lifetime = 120;
-		
+	$smarty->debugging = true;
+
 	//Conexión
-	include('coneccion.php')	
+	include('coneccion.php');	
 	try{
 		$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
 	}
@@ -25,5 +26,5 @@
 		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
 		$smarty->assign("datos", $resultado);
 	}
-	$smarty->display("kinesiologia.tpl")
+	$smarty->display('kinesiologia.tpl');
 ?>

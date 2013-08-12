@@ -31,8 +31,8 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li><a href="turnosk.html">Turnos</a></li>
+									<li><a href="index.php">Inicio</a></li>
+									<li><a href="turnosk.php">Turnos</a></li>
 								</ul>
 							</nav> 
 							<!-- FIN BARRA LATERAL -->
