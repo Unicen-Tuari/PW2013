@@ -26,8 +26,8 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li><a href="turnosn.html">Turnos</a></li>
+									<li><a href="index.php">Inicio</a></li>
+									<li><a href="turnosn.php">Turnos</a></li>
 								</ul>
 							</div>
 						</nav>

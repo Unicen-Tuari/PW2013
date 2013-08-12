@@ -1,39 +1,29 @@
-<!DOCTYPE html> 
-<html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Kinesiologia</title>
-		<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
-	</head>
-	<body>
-		<div id="wrapper">
-			<div id="page">
-				<div id="page-bgtop">
-					<div id="page-bgbtm">
-						<div id="content">
-							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
-							<?php
-								include('consulta.php');
-							?>
-							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
-						</div>
-						<div id="sidebar">
-							<!-- BARRA LATERAL -->
-							<div id="logo">
-								<h1><a>Kinesiologia</a></h1>
-							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li><a href="turnosk.html">Turnos</a></li>
-								</ul>
-							</nav> 
-							<!-- FIN BARRA LATERAL -->
-						</div>
-						<div style="clear: both;"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-</html>
+<?php
+	require('./libs/Smarty.class.php');	
+	$smarty = new Smarty;
+	$smarty->caching = false;
+	$smarty->cache_lifetime = 120;
+		
+	//Conexión
+	include('coneccion.php')	
+	try{
+		$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+	}
+	catch(PDOException $pe){
+		die('Error de conexion, Mensaje: ' .$pe->getMessage());
+	}
+	
+	//Consulta
+	if (isset($_POST['s'])){
+		$nombre = $_POST['s'];
+		$sql = "SELECT * FROM Paciente WHERE Nombre_Apellido = '$nombre'";
+		$resultado = $conn->prepare($sql);
+		$resultado->execute();
+		if(!$resultado){
+			die(print($conn->errorInfo()[2]));
+		}
+		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
+		$smarty->assign("datos", $resultado);
+	}
+	$smarty->display("kinesiologia.tpl")
+?>

@@ -77,7 +77,7 @@
 									<li><a href="kinesiologia.php">Kinesiologia</a></li>
 									<li><a href="#">Cancelar un turno</a></li>
 									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="lista_turnosk.html">Ver turnos dados</a></li>
+									<li><a href="lista_turnosk.php">Ver turnos dados</a></li>
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

@@ -1,6 +1,5 @@
 <?php
-	require('.libs/Smarty.class.php');	
-	$smarty->debugging = true;
+	require('./libs/Smarty.class.php');	
 	$smarty = new Smarty;
 	$smarty->caching = true;
 	$smarty->cache_lifetime = 120;

@@ -74,10 +74,10 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="nutricion.html">Nutricion</a></li>
+									<li><a href="nutricion.php">Nutricion</a></li>
 									<li><a href="#">Cancelar un turno</a></li>
 									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="lista_turnosn.html">Ver turnos dados</a></li>
+									<li><a href="lista_turnosn.php">Ver turnos dados</a></li>
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->
