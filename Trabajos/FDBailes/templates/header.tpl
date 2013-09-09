@@ -2,22 +2,39 @@
 <html>
 	<head>
 		<title>TT Taller de Reparacion</title>
-		<link rel="stylesheet" type="text/css" href="styles/style.css">
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="./css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<link href="./css/own.css" rel="stylesheet" media="screen">
 	</head>
-	<body>
-		<nav>
-			<a href="index.php" class="menu" accesskey="h">Inicio</a>
-			<a href="servicios.php" class="menu" accesskey="s">Servicios</a>
-			<a href="consulta.php" class="menu" accesskey="r">Consulta Reparacion</a>
-			<a href="contacto.php" class="menu" accesskey="c">Contacto</a>
-			<a href="login.php" class="flota_der menu" accesskey="l">Login</a>
-		</nav>
-		<header>
-			<img class="logo_izq flota_izq" src="images/linux.png" alt="Logo Windows">
-			<img class="logo_der flota_der" src="images/win.png" alt="Logo Linux">
-			<div class="logo">
-				<p class="logo">Logo</p>
-				<p class="logo">Banner</p>
-			</div>
-		</header>
+	<body>		
+		<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DataOS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" accesskey="h">Inicio</a></li>
+            <li><a href="#Servicios" accesskey="s">Servicios</a></li>
+            <li><a href="#Consulta" accesskey="r">Consulta Reparacion</a></li>
+            <li><a href="#Contacto" accesskey="c">Contacto</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Usuario" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Contraseña" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Loguear</button>
+          </form>
+        </div>
+	</div>
+    </nav>
