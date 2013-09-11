@@ -33,14 +33,6 @@ CREATE TABLE REPARACION (
 	CONSTRAINT PRECIO_REPARACION_POSITIVO CHECK (precio_reparacion >= 0)
 );
 
-CREATE TABLE IMAGEN_REPARACION (
-	id_reparacion MEDIUMINT UNSIGNED NOT NULL,
-	link_imagen VARCHAR(50) NOT NULL,
-	CONSTRAINT PK_IMAGEN_REPARACION PRIMARY KEY (id_reparacion,link_imagen),
-	CONSTRAINT FK_IMAGEN_REPARACION_REPARACION FOREIGN KEY (id_reparacion) REFERENCES REPARACION (id_reparacion)
-);
-
-
 INSERT INTO CLIENTE VALUES 
 	(35418826,'federico','bailes','dufau 576','0249-154665876','fdbailes@gmail.com'),
 	(32670283,'hernan','bailes','dufau 576','0249-154665876','fdbailes@gmail.com'),
@@ -59,10 +51,3 @@ INSERT INTO REPARACION (numero_serie,marca,modelo,articulo,problema,notas,precio
 	('LASYN-TRSN292','HP','Pavilion DV7 4295','Notebook','problemas de temperatura','',150,'2013-06-17','2013-06-20',32670283,1),
 	('LASYN-TRSN810','HP','Pavilion DV7 4285','Notebook','LCD con falla','',1200,'2013-06-17',NULL,18028179,2),
 	('LASYN-TRSN811','HP','Pavilion DV7 4285','Notebook','LCD con falla','',1200,'2013-06-17',NULL,18028179,3);
-
-INSERT INTO IMAGEN_REPARACION VALUES
-	(1,'images/fotos/1.jpg'),
-	(1,'images/fotos/2.jpg'),
-	(1,'images/fotos/3.jpg'),
-	(2,'images/fotos/4.jpg'),
-	(2,'images/fotos/5.jpg');

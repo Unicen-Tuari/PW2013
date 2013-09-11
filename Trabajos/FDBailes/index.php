@@ -1,7 +1,9 @@
 <?php
-	require('./libs/Smarty.class.php');
-	$smarty = new Smarty;
-	$smarty->caching = true;
-	$smarty->cache_lifetime = 120;
-	$smarty->display('index.tpl');
+	include './models/model_index.php';
+	include './views/view_index.php';
+	include './controllers/controller_index.php';
+	$model = new Model();
+	$view = new View();
+	$controller = new Controller($model, $view);
+	$controller->imprimirPagina();
 ?>
