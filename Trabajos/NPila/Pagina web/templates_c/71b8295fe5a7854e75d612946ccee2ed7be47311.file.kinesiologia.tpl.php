@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-12 14:40:08
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-10 17:49:46
          compiled from "./templates/kinesiologia.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:74350308252091d56b8bc53-05071332%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '71b8295fe5a7854e75d612946ccee2ed7be47311' => 
     array (
       0 => './templates/kinesiologia.tpl',
-      1 => 1376329159,
+      1 => 1378846178,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  <br>
 									Obra Social: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Obr_soc'];?>
  &nbsp &nbsp Numero de afiliado: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Num_afiliado'];?>
-
+ <br><br>
+									<input type="button" onclick="" name="historia" value="Historia Clinica">									
 								</div></legend></div>
 							<?php }else{ ?>
 								<div class="post"><h2 class="title">Ingrese el nombre del paciente </h2></div><div id="search" >

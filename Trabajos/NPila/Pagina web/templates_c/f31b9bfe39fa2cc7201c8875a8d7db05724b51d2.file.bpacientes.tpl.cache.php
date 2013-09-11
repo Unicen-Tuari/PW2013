@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-10 20:27:34
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-10 12:30:00
          compiled from "./templates/bpacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13267116215206cc66456c42-12443018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f31b9bfe39fa2cc7201c8875a8d7db05724b51d2' => 
     array (
       0 => './templates/bpacientes.tpl',
-      1 => 1376176887,
+      1 => 1378826983,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
+  'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5206cc664a4896_58953110',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5206cc664a4896_58953110')) {function content_5206cc664a4896_58953110($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
 
@@ -50,8 +51,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="ipacientes.php">Ingresar paciente</a></li>
-									<li><a href="#">Actualizar informacion del paciente</a></li>
-									<li><a href="#">Actualizar historia clinica</a></li>
+									<li><a href="ainfopaciente.php">Actualizar informacion del paciente</a></li>
+									<li><a href="ahistclinica.php">Actualizar historia clinica</a></li>
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

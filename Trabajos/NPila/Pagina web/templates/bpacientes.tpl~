@@ -26,8 +26,8 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="index.html">Inicio</a></li>
-									<li><a href="ipacientes.html">Ingresar paciente</a></li>
+									<li><a href="index.php">Inicio</a></li>
+									<li><a href="ipacientes.php">Ingresar paciente</a></li>
 									<li><a href="#">Actualizar informacion del paciente</a></li>
 									<li><a href="#">Actualizar historia clinica</a></li>
 								</ul>

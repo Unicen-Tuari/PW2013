@@ -19,7 +19,7 @@
 									<li><a href="ipacientes.php">Ingresar paciente</a></li>
 									<li><a href="#">Actualizar informacion del paciente</a></li>
 									<li><a href="#">Actualizar historia clinica</a></li>
-									<li><a href="bpacientes.html">Borrar paciente</a></li>
+									<li><a href="bpacientes.php">Borrar paciente</a></li>
 								</ul>
 							</div>
 							<!-- FIN BARRA LATERAL -->
