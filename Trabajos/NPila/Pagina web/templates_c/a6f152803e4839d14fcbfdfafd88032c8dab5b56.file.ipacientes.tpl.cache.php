@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-10 20:27:26
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-10 12:38:34
          compiled from "./templates/ipacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6574453835206cc5edfcae5-43157373%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6f152803e4839d14fcbfdfafd88032c8dab5b56' => 
     array (
       0 => './templates/ipacientes.tpl',
-      1 => 1376088244,
+      1 => 1378827506,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
+  'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5206cc5ee3fda7_05563801',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5206cc5ee3fda7_05563801')) {function content_5206cc5ee3fda7_05563801($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
 
@@ -34,8 +35,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<input type="numeric" id="dni" placeholder="D.N.I." size="7"><br><br>
 								<input type="text" id="localidad" placeholder="Localidad" size="15">
 								<input type="text" id="calle"  placeholder="Calle">
-								<input type="numeric" id="num" placeholder="Nº" size="2">
-								<input type="numeric" id="cp" placeholder="C.P." size="2"><br><br>
+								<input type="numeric" id="num" placeholder="Nº" size="4">
+								<input type="numeric" id="cp" placeholder="C.P." size="4"><br><br>
 								<input type="tel" id="tel"  placeholder="Telefono" size="9">
 								<input type="tel" id="cel"  placeholder="Celular" size="10">
 								<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
@@ -89,7 +90,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<option value="11">Noviembre</option>
 									<option value="12">Diciembre</option>
 								</select>
-								<input type="number" id="anio" placeholder="Año" size="2"><br><br>
+								<input type="number" id="anio" placeholder="Año" size="4"><br><br>
 								<input type="text" id="obra_social"  placeholder="Obra Social / Prepaga">
 								<input type="text" id="nro_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
 								Especialidad:					
@@ -113,5 +114,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div style="clear: both;"></div>
 		</div>
 	</body>
+	<script type="text/javascript" src="scripts/compruebaform.js"></script>
 </html>
 <?php }} ?>

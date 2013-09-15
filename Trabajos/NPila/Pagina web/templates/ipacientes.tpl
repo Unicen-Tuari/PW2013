@@ -12,8 +12,8 @@
 								<input type="numeric" id="dni" placeholder="D.N.I." size="7"><br><br>
 								<input type="text" id="localidad" placeholder="Localidad" size="15">
 								<input type="text" id="calle"  placeholder="Calle">
-								<input type="numeric" id="num" placeholder="Nº" size="2">
-								<input type="numeric" id="cp" placeholder="C.P." size="2"><br><br>
+								<input type="numeric" id="num" placeholder="Nº" size="4">
+								<input type="numeric" id="cp" placeholder="C.P." size="4"><br><br>
 								<input type="tel" id="tel"  placeholder="Telefono" size="9">
 								<input type="tel" id="cel"  placeholder="Celular" size="10">
 								<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
@@ -67,7 +67,7 @@
 									<option value="11">Noviembre</option>
 									<option value="12">Diciembre</option>
 								</select>
-								<input type="number" id="anio" placeholder="Año" size="2"><br><br>
+								<input type="number" id="anio" placeholder="Año" size="4"><br><br>
 								<input type="text" id="obra_social"  placeholder="Obra Social / Prepaga">
 								<input type="text" id="nro_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
 								Especialidad:					
@@ -91,4 +91,5 @@
 			<div style="clear: both;"></div>
 		</div>
 	</body>
+	<script type="text/javascript" src="scripts/compruebaform.js"></script>
 </html>

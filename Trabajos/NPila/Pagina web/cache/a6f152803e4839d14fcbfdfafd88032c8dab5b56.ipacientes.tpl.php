@@ -5,23 +5,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6f152803e4839d14fcbfdfafd88032c8dab5b56' => 
     array (
       0 => './templates/ipacientes.tpl',
-      1 => 1376088244,
+      1 => 1378827506,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
     array (
       0 => './templates/head.tpl',
-      1 => 1376103361,
+      1 => 1377725217,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '6574453835206cc5edfcae5-43157373',
-  'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5206cc5ee46f72_59158263',
   'cache_lifetime' => 120,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_522f3cfaaeb629_49675615',
+  'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5206cc5ee46f72_59158263')) {function content_5206cc5ee46f72_59158263($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_522f3cfaaeb629_49675615')) {function content_522f3cfaaeb629_49675615($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -42,8 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<input type="numeric" id="dni" placeholder="D.N.I." size="7"><br><br>
 								<input type="text" id="localidad" placeholder="Localidad" size="15">
 								<input type="text" id="calle"  placeholder="Calle">
-								<input type="numeric" id="num" placeholder="Nº" size="2">
-								<input type="numeric" id="cp" placeholder="C.P." size="2"><br><br>
+								<input type="numeric" id="num" placeholder="Nº" size="4">
+								<input type="numeric" id="cp" placeholder="C.P." size="4"><br><br>
 								<input type="tel" id="tel"  placeholder="Telefono" size="9">
 								<input type="tel" id="cel"  placeholder="Celular" size="10">
 								<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
@@ -97,7 +97,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<option value="11">Noviembre</option>
 									<option value="12">Diciembre</option>
 								</select>
-								<input type="number" id="anio" placeholder="Año" size="2"><br><br>
+								<input type="number" id="anio" placeholder="Año" size="4"><br><br>
 								<input type="text" id="obra_social"  placeholder="Obra Social / Prepaga">
 								<input type="text" id="nro_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
 								Especialidad:					
@@ -121,5 +121,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div style="clear: both;"></div>
 		</div>
 	</body>
+	<script type="text/javascript" src="scripts/compruebaform.js"></script>
 </html>
 <?php }} ?>

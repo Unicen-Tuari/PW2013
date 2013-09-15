@@ -15,7 +15,8 @@
 									Telefono: {$datos.Telefono} &nbsp &nbsp Movil: {$datos.Movil} <br>
 									Correo electronico: {$datos.Mail} <br>
 									Fecha de nacimiento: {$datos.Fecha_nac} <br>
-									Obra Social: {$datos.Obr_soc} &nbsp &nbsp Numero de afiliado: {$datos.Num_afiliado}
+									Obra Social: {$datos.Obr_soc} &nbsp &nbsp Numero de afiliado: {$datos.Num_afiliado} <br><br>
+									<input type="button" onclick="" name="historia" value="Historia Clinica">									
 								</div></legend></div>
 							{else}
 								<div class="post"><h2 class="title">Ingrese el nombre del paciente </h2></div><div id="search" >
