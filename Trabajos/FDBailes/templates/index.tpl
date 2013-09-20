@@ -62,7 +62,7 @@
 	<h2>Consulta el estado de tu reparación</h2>
 </div>
 <div class="container">
-	<form class="form-horizontal text-center" method="GET" action="javascript:getData();">
+	<form class="form-horizontal text-center" method="GET" action="javascript:dataConsulta();">
 		<h3>Datos personales<h3>
 		<div class="form-group" id="form_dni">
 			<div class="input-group col-lg-12">

@@ -14,7 +14,7 @@ class View
     public function generaTabla($datos)
     {
     	$this->smarty->assign("reparaciones",$datos);
-    	$this->smarty->display('data.tpl');
+    	$this->smarty->display('tabla_consulta.tpl');
 	}
 }
 ?>
