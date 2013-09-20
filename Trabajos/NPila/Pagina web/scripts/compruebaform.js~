@@ -173,17 +173,20 @@ function validaciontn() {
 	return true;
 }
 
+$("#cons_datos").submit(function()
+{
+	$.ajax({
+		type: "POST",
+		url: "infopaciente.php",
+		data: $("#cons_datos").serialize(),
+		success: function(data)
+			{
+				document.getElementById('content').innerHTML=data;
 
+			}
+});
 
+return false;
 
-
-
-
-
-
-
-
-
-
-
+});
 

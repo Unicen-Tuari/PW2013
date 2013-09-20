@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e54b68c952497116e51b2612aec7dcf8c9e002ce' => 
     array (
       0 => './templates/turnosn.tpl',
-      1 => 1378918975,
+      1 => 1378919482,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -18,10 +18,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '10878194925206cc754534b3-26575056',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5230a2451c5646_37089891',
+  'unifunc' => 'content_5239f8bfe28637_93033171',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5230a2451c5646_37089891')) {function content_5230a2451c5646_37089891($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5239f8bfe28637_93033171')) {function content_5239f8bfe28637_93033171($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -107,9 +107,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<nav id="menu">
 								<ul>
 									<li><a href="nutricion.php">Nutricion</a></li>
-									<!--li><a href="#">Cancelar un turno</a></li>
-									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="#">Ver turnos dados</a></li-->
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

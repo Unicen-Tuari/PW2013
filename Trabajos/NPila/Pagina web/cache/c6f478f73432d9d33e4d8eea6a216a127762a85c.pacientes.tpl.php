@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c6f478f73432d9d33e4d8eea6a216a127762a85c' => 
     array (
       0 => './templates/pacientes.tpl',
-      1 => 1378826924,
+      1 => 1379532213,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -17,11 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '17580157185206ca095e8410-43758197',
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522f3d55405816_19741237',
+  'unifunc' => 'content_523b5cb4a3cfc5_49596345',
   'has_nocache_code' => false,
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_522f3d55405816_19741237')) {function content_522f3d55405816_19741237($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_523b5cb4a3cfc5_49596345')) {function content_523b5cb4a3cfc5_49596345($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -46,10 +46,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<nav id="menu">
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
-									<li><a href="ipacientes.php">Ingresar paciente</a></li>
-									<li><a href="ainfopaciente.php">Actualizar informacion del paciente</a></li>
-									<li><a href="ahistclinica.php">Actualizar historia clinica</a></li>
-									<li><a href="bpacientes.php">Borrar paciente</a></li>
+									<li><a href="ipacientes.php">Ingresar Paciente</a></li>
+									<li><a href="infopaciente.php">Consultar Paciente</a></li>
+									<li><a href="ainfopaciente.php">Actualizar Informacion del Paciente</a></li>
+									<li><a href="ahistclinica.php">Actualizar Historia Clinica</a></li>
+									<li><a href="bpacientes.php">Borrar Paciente</a></li>
 								</ul>
 							</div>
 							<!-- FIN BARRA LATERAL -->

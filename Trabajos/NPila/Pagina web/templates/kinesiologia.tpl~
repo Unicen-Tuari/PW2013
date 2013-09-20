@@ -6,24 +6,15 @@
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
-							{if isset($datos)}
-								<div class="post"><h2 class="title">Informacion del paciente</h2> <br><br>
-								<legend class="title a"><div class="page">
-									Nombre y apellido: {$datos.Nombre_Apellido} <br>
-									D.N.I: {$datos.DNI} <br>
-									Direccion: {$datos.Calle} &nbsp &nbsp Nº: {$datos.Numero} &nbsp &nbsp Localidad: {$datos.Localidad} <br>
-									Telefono: {$datos.Telefono} &nbsp &nbsp Movil: {$datos.Movil} <br>
-									Correo electronico: {$datos.Mail} <br>
-									Fecha de nacimiento: {$datos.Fecha_nac} <br>
-									Obra Social: {$datos.Obr_soc} &nbsp &nbsp Numero de afiliado: {$datos.Num_afiliado} <br>
-									<input type="button" onclick="" name="historia" value="Historia Clinica">									
-									<!--Antecedentes: {$datos.Antecedentes}-->
-								</div></legend></div>
-							{else}
-								<div class="post"><h2 class="title">Ingrese el nombre del paciente </h2></div><div id="search" >
-								<form method="post" action="kinesiologia.php"><div><input type="text" name="s" id="search-text" value="" /><input type="submit" id="search-submit" value="GO" />
-								</div></form></div>
-							{/if}
+								<div class="post"><h2 class="title">Ingrese el nombre del paciente </h2></div>
+								<div id="search" >
+									<form id="cons_datos" method="post" action="">
+									<div>
+										<input type="text" name="search-text" id="search-text" value="" />
+										<input type="submit" id="search-submit" value="GO" />
+									</div>
+									</form>
+								</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">
@@ -34,6 +25,7 @@
 							<nav id="menu">
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
+									<li><a href="kinesiologia.php">Consultar Otro</a></li>
 									<li><a href="turnosk.php">Turnos</a></li>
 								</ul>
 							</nav> 
@@ -44,5 +36,7 @@
 				</div>
 			</div>
 		</div>
+		<script text="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
+		<script text="text/javascript" src="scripts/compruebaform.js"></script>
 	</body>
 </html>

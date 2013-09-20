@@ -1,4 +1,27 @@
-{include file = "head.tpl"}
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-18 16:44:26
+         compiled from "./templates/turnos.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:871519413523a0032e85476-28080203%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'd52a2d1f741b0750d1dc60053a2dc015bcd00b8e' => 
+    array (
+      0 => './templates/turnos.tpl',
+      1 => 1379533456,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '871519413523a0032e85476-28080203',
+  'function' => 
+  array (
+  ),
+  'cache_lifetime' => 120,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_523a0032f0a301_08271654',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_523a0032f0a301_08271654')) {function content_523a0032f0a301_08271654($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+
 	<body>
 		<div id="wrapper">
 			<div id="page">
@@ -61,6 +84,11 @@
 											<option id="10" value="10">Octubre</option>
 											<option id="11" value="11">Noviembre</option>
 											<option id="12" value="12">Diciembre</option>
+										</select>
+										Especialidad:					
+										<select id="especialidad" style="margin:0 5px 0 0">
+											<option value="kinesiologia">Kinesiologia</option>
+											<option value="nutricion">Nutricion</option>
 										</select><br><br><br>
 										<input type="submit" value="Listar turnos">
 									</legend>
@@ -76,7 +104,8 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="kinesiologia.php">Kinesiologia</a></li>
+									<li><a href="index.php">Inicio</a></li>
+									<li><a href="">Dar Turno</a></li>
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->
@@ -88,3 +117,4 @@
 		</div>
 	</body>
 </html>
+<?php }} ?>

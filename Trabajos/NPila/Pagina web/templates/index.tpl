@@ -17,8 +17,7 @@
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="pacientes.php">Pacientes</a></li>
-									<li><a href="kinesiologia.php">Kinesiologia</a></li>
-									<li><a href="nutricion.php">Nutricion</a></li>
+									<li><a href="turnos.php">Turnos</a></li>
 									<li><a href="medicos.php">Medicos</a></li>
 								</ul>
 							</nav>

@@ -3,5 +3,5 @@
 	$smarty = new Smarty;
 	$smarty->caching = true;
 	$smarty->cache_lifetime = 120;
-	$smarty->display('ainfopaciente.tpl');
+	$smarty->display('dturnos.tpl');
 ?>

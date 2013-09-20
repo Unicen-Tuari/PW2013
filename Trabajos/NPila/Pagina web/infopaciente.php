@@ -1,12 +1,9 @@
 <?php
-	require('./libs/Smarty.class.php');	
+	require('./libs/Smarty.class.php');
 	$smarty = new Smarty;
-	$smarty->caching = false;
-	$smarty->cache_lifetime = 120;
-	$smarty->debugging = true;
 
 	//Conexión
-	include('coneccion.php');	
+	include('conexion.php');	
 	try{
 		$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
 	}
@@ -15,8 +12,8 @@
 	}
 	
 	//Consulta
-	if (isset($_POST['s'])){
-		$nombre = $_POST['s'];
+	if (isset($_POST['search-text'])){
+		$nombre = $_POST['search-text'];
 		$sql = "SELECT * FROM Paciente WHERE Nombre_Apellido = '$nombre'";
 		$resultado = $conn->prepare($sql);
 		$resultado->execute();
@@ -25,6 +22,9 @@
 		}
 		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
 		$smarty->assign("datos", $resultado);
+		$smarty->display('rescunsultakines.tpl');
 	}
-	$smarty->display('kinesiologia.tpl');
+	else{
+		$smarty->display('infopaciente.tpl');
+	}
 ?>

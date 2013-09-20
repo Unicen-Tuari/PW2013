@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b368c39e0c305670ee9b89d31e1e9ff7af349a3d' => 
     array (
       0 => './templates/turnosk.tpl',
-      1 => 1378918779,
+      1 => 1378919500,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -17,11 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'nocache_hash' => '202778934152091dfac61c57-04963829',
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5230a2ef293fd6_51600955',
+  'unifunc' => 'content_5239f86c4d2214_33807088',
   'has_nocache_code' => false,
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5230a2ef293fd6_51600955')) {function content_5230a2ef293fd6_51600955($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5239f86c4d2214_33807088')) {function content_5239f86c4d2214_33807088($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -107,9 +107,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<nav id="menu">
 								<ul>
 									<li><a href="kinesiologia.php">Kinesiologia</a></li>
-									<!--li><a href="#">Cancelar un turno</a></li>
-									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="#">Ver turnos dados</a></li-->
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

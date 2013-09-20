@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-11 13:59:45
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-18 15:38:19
          compiled from "./templates/turnosk.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:202778934152091dfac61c57-04963829%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b368c39e0c305670ee9b89d31e1e9ff7af349a3d' => 
     array (
       0 => './templates/turnosk.tpl',
-      1 => 1378918779,
+      1 => 1378919500,
       2 => 'file',
     ),
   ),
@@ -99,9 +99,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<nav id="menu">
 								<ul>
 									<li><a href="kinesiologia.php">Kinesiologia</a></li>
-									<!--li><a href="#">Cancelar un turno</a></li>
-									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="#">Ver turnos dados</a></li-->
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

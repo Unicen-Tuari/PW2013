@@ -1,4 +1,34 @@
-{include file = "head.tpl"}
+<?php /*%%SmartyHeaderCode:871519413523a0032e85476-28080203%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'd52a2d1f741b0750d1dc60053a2dc015bcd00b8e' => 
+    array (
+      0 => './templates/turnos.tpl',
+      1 => 1379533456,
+      2 => 'file',
+    ),
+    '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
+    array (
+      0 => './templates/head.tpl',
+      1 => 1377725217,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '871519413523a0032e85476-28080203',
+  'cache_lifetime' => 120,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_523a18e221d272_80024060',
+  'has_nocache_code' => false,
+),true); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_523a18e221d272_80024060')) {function content_523a18e221d272_80024060($_smarty_tpl) {?><!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Sistema de gestion</title>
+		<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
+	</head>
+
 	<body>
 		<div id="wrapper">
 			<div id="page">
@@ -61,6 +91,11 @@
 											<option id="10" value="10">Octubre</option>
 											<option id="11" value="11">Noviembre</option>
 											<option id="12" value="12">Diciembre</option>
+										</select>
+										Especialidad:					
+										<select id="especialidad" style="margin:0 5px 0 0">
+											<option value="kinesiologia">Kinesiologia</option>
+											<option value="nutricion">Nutricion</option>
 										</select><br><br><br>
 										<input type="submit" value="Listar turnos">
 									</legend>
@@ -76,7 +111,8 @@
 							</div>
 							<nav id="menu">
 								<ul>
-									<li><a href="nutricion.php">Nutricion</a></li>
+									<li><a href="index.php">Inicio</a></li>
+									<li><a href="">Dar Turno</a></li>
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->
@@ -88,3 +124,4 @@
 		</div>
 	</body>
 </html>
+<?php }} ?>
