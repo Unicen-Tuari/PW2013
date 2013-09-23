@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'acf6ebd7c8cc8b07a79f49597e0feed65b9b4157' => 
     array (
       0 => './templates/ahistclinica.tpl',
-      1 => 1378827380,
+      1 => 1379650099,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -16,12 +16,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ),
   ),
   'nocache_hash' => '1985021293522f3c7e538ad0-23821502',
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_522f3c7e8d8e16_87263048',
+  'unifunc' => 'content_523bca5b407357_03807160',
+  'has_nocache_code' => false,
   'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_522f3c7e8d8e16_87263048')) {function content_522f3c7e8d8e16_87263048($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_523bca5b407357_03807160')) {function content_523bca5b407357_03807160($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -58,6 +58,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="ipacientes.php">Ingresar paciente</a></li>
+									<li><a href="infopaciente.php">Consultar Paciente</a></li>
 									<li><a href="ainfopaciente.php">Actualizar informacion del paciente</a></li>
 									<li><a href="bpacientes.php">Borrar paciente</a></li>
 								</ul>

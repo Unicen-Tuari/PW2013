@@ -1,7 +1,8 @@
 <?php
-	require('./libs/Smarty.class.php');	
-	$smarty = new Smarty;
-	$smarty->caching = true;
-	$smarty->cache_lifetime = 120;
-	$smarty->display('ahistclinica.tpl');
+	include './controlers/cahistclinica.php';
+	include './views/vahistclinica.php';
+
+	$view = new View();
+	$controller = new Controller($view);
+	$controller->imprimirPagina();
 ?>

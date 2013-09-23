@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1378824855,
+      1 => 1379898871,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -18,10 +18,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '459251153522e8072a437c4-89984724',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_523b8f052264e5_38301562',
+  'unifunc' => 'content_5240acc31f8712_09810648',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_523b8f052264e5_38301562')) {function content_523b8f052264e5_38301562($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5240acc31f8712_09810648')) {function content_5240acc31f8712_09810648($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -36,6 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+							<div class="post">
 							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
@@ -49,6 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 						</legend>
 					</form>
+					</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">

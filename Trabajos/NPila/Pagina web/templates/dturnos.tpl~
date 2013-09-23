@@ -19,7 +19,7 @@
 											<option value="kinesiologia">Kinesiologia</option>
 											<option value="nutricion">Nutricion</option>
 										</select><br><br><br>
-										<input type="submit" value="">
+										<input type="submit" value="Dar Turno">
 									</form>
 								</legend>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->

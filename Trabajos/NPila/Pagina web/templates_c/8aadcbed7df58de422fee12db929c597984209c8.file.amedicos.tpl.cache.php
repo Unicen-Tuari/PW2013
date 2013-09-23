@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-10 11:55:10
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-22 22:14:36
          compiled from "./templates/amedicos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:459251153522e8072a437c4-89984724%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1378824855,
+      1 => 1379898871,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+							<div class="post">
 							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
@@ -42,6 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 						</legend>
 					</form>
+					</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">

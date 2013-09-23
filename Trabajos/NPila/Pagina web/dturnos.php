@@ -1,7 +1,8 @@
 <?php
-	require('./libs/Smarty.class.php');	
-	$smarty = new Smarty;
-	$smarty->caching = true;
-	$smarty->cache_lifetime = 120;
-	$smarty->display('dturnos.tpl');
+	include './controlers/cdturnos.php';
+	include './views/vdturnos.php';
+
+	$view = new View();
+	$controller = new Controller($view);
+	$controller->imprimirPagina();
 ?>
