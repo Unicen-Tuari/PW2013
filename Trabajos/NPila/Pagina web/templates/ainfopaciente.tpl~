@@ -28,6 +28,7 @@
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="ipacientes.php">Ingresar paciente</a></li>
+									<li><a href="infopaciente.php">Consultar Paciente</a></li>
 									<li><a href="ahistclinica.php">Actualizar historia clinica</a></li>
 									<li><a href="bpacientes.php">Borrar paciente</a></li>
 								</ul>

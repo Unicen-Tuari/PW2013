@@ -13,16 +13,7 @@
 							<div id="logo">
 								<h1><a>Pacientes</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="ipacientes.php">Ingresar Paciente</a></li>
-									<li><a href="infopaciente.php">Consultar Paciente</a></li>
-									<li><a href="ainfopaciente.php">Actualizar Informacion del Paciente</a></li>
-									<li><a href="ahistclinica.php">Actualizar Historia Clinica</a></li>
-									<li><a href="bpacientes.php">Borrar Paciente</a></li>
-								</ul>
-							</div>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</nav>
 						<div style="clear: both;"></div>

@@ -111,7 +111,7 @@ a:hover {
 	color: #34312C;
 }
 
-/* Menu 
+/* Menu */
 
 #menu {
 	width: 280px;

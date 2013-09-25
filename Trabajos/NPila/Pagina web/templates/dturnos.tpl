@@ -30,11 +30,7 @@
 							<div id="logo">
 								<h1><a>Dar Turnos</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-								</ul>
-							</nav>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</div>
 						<div style="clear: both;"></div>

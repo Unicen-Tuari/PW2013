@@ -8,7 +8,7 @@
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 								<div class="post"><h2 class="title">Ingrese el nombre del paciente </h2></div>
 								<div id="search" >
-									<form id="cons_datos" method="post" action="">
+									<form id="cons_pacientes" method="post" action="">
 									<div>
 										<input type="text" name="search-text" id="search-text" value="" />
 										<input type="submit" id="search-submit" value="GO" />

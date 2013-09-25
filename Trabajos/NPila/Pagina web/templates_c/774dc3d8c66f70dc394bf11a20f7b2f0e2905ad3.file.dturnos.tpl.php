@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-22 22:07:07
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-25 20:06:25
          compiled from "./templates/dturnos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145861096523f9406d89f85-59212591%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774dc3d8c66f70dc394bf11a20f7b2f0e2905ad3' => 
     array (
       0 => './templates/dturnos.tpl',
-      1 => 1379898424,
+      1 => 1380149873,
       2 => 'file',
     ),
   ),
@@ -52,11 +52,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div id="logo">
 								<h1><a>Dar Turnos</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-								</ul>
-							</nav>
+							<?php echo $_smarty_tpl->getSubTemplate ("menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 							<!-- FIN BARRA LATERAL -->
 						</div>
 						<div style="clear: both;"></div>

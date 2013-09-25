@@ -28,14 +28,9 @@
 						<div id="sidebar">
 							<!-- BARRA LATERAL -->
 							<div id="logo">
-								<h1><a>Turnos</a></h1>
+								<h1><a>Consulta de Turnos</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="dturnos.php">Dar Turno</a></li>
-								</ul>
-							</nav>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</div>
 						<div style="clear: both;"></div>

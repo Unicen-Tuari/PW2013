@@ -28,13 +28,7 @@
 							<div id="logo">
 								<h1><a>Agregar medico</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="amedicos.php">Agregar medico</a></li>
-									<li><a href="bmedico.php">Borrar medico</a></li>
-								</ul>
-							</div>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</nav>
 						<div style="clear: both;"></div>

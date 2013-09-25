@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-20 00:38:52
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-24 23:01:59
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:812558188523bc34c7c8541-22360312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1379532674,
+      1 => 1380074361,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_523bc34cd4bec9_34235199',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_523bc34cd4bec9_34235199')) {function content_523bc34cd4bec9_34235199($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -27,22 +27,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div id="page-bgtop">
 					<div id="page-bgbtm">
 						<div id="content">
-							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
-							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
+							<!---->
 						</div>
 						<div id="sidebar">
 						<!-- BARRA LATERAL -->
 							<div id="logo">
 								<h1><a>Sistema de gestion </a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="pacientes.php">Pacientes</a></li>
-									<li><a href="turnos.php">Turnos</a></li>
-									<li><a href="medicos.php">Medicos</a></li>
-								</ul>
-							</nav>
+							<?php echo $_smarty_tpl->getSubTemplate ("menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 						</div>
 						<!-- FIN BARRA LATERAL -->
 						<div style="clear: both;"></div>

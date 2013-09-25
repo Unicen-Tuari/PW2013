@@ -10,7 +10,7 @@
 								<legend class="title a"><br><br>								
 									<form id="" method="post">
 										Nombre y Apellido:
-										<input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="Nombre y Apellido" size="30">
+										<input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="" size="30">
 										<br><br>
 										Turnos para el dia: 									
 										<input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" size="10">

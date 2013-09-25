@@ -22,12 +22,7 @@
 							<div id="logo">
 								<h1><a>Informacion del Paciente</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="pacientes.php">Pacientes</a></li>
-									<li><a href="infopaciente.php">Consultar Otro</a></li>
-								</ul>
-							</nav> 
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</div>
 						<div style="clear: both;"></div>
