@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1378778518,
+      1 => 1379532674,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -18,10 +18,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '60977440052069034ee5b94-46035552',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5230a2ebb401f0_65065532',
+  'unifunc' => 'content_523b8ecf3bc5e4_69567878',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5230a2ebb401f0_65065532')) {function content_5230a2ebb401f0_65065532($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_523b8ecf3bc5e4_69567878')) {function content_523b8ecf3bc5e4_69567878($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -47,8 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="pacientes.php">Pacientes</a></li>
-									<li><a href="kinesiologia.php">Kinesiologia</a></li>
-									<li><a href="nutricion.php">Nutricion</a></li>
+									<li><a href="turnos.php">Turnos</a></li>
 									<li><a href="medicos.php">Medicos</a></li>
 								</ul>
 							</nav>

@@ -16,7 +16,7 @@
 							<nav id="menu">
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
-									<li><a href="#">Agregar medico</a></li>
+									<li><a href="amedicos.php">Agregar medico</a></li>
 									<li><a href="#">Borrar medico</a></li>
 								</ul>
 							</div>

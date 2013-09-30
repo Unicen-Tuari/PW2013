@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-10 12:32:12
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-20 01:08:56
          compiled from "./templates/ainfopaciente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:151247302522f3ab66537c7-30894003%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e7e3f8e59c733d3c0ec8885ee28b0205d720981a' => 
     array (
       0 => './templates/ainfopaciente.tpl',
-      1 => 1378827125,
+      1 => 1379650084,
       2 => 'file',
     ),
   ),
@@ -51,6 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<ul>
 									<li><a href="index.php">Inicio</a></li>
 									<li><a href="ipacientes.php">Ingresar paciente</a></li>
+									<li><a href="infopaciente.php">Consultar Paciente</a></li>
 									<li><a href="ahistclinica.php">Actualizar historia clinica</a></li>
 									<li><a href="bpacientes.php">Borrar paciente</a></li>
 								</ul>
