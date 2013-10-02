@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-11 14:03:00
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-18 15:58:18
          compiled from "./templates/turnosn.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10878194925206cc754534b3-26575056%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e54b68c952497116e51b2612aec7dcf8c9e002ce' => 
     array (
       0 => './templates/turnosn.tpl',
-      1 => 1378918975,
+      1 => 1378919482,
       2 => 'file',
     ),
   ),
@@ -100,9 +100,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<nav id="menu">
 								<ul>
 									<li><a href="nutricion.php">Nutricion</a></li>
-									<!--li><a href="#">Cancelar un turno</a></li>
-									<li><a href="#">Modificar un turno</a></li>
-									<li><a href="#">Ver turnos dados</a></li-->
 								</ul>
 							</nav>
 							<!-- FIN BARRA LATERAL -->

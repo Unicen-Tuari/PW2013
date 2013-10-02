@@ -6,6 +6,7 @@
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+							<div class="post">
 							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
@@ -19,6 +20,7 @@
 							</div>
 						</legend>
 					</form>
+					</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">
@@ -26,13 +28,7 @@
 							<div id="logo">
 								<h1><a>Agregar medico</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="amedicos.php">Agregar medico</a></li>
-									<li><a href="bmedico.php">Borrar medico</a></li>
-								</ul>
-							</div>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
 						</nav>
 						<div style="clear: both;"></div>

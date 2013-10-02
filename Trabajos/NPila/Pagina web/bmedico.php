@@ -1,7 +1,8 @@
 <?php
-	require('./libs/Smarty.class.php');	
-	$smarty = new Smarty;
-	$smarty->caching = true;
-	$smarty->cache_lifetime = 120;
-	$smarty->display('bmedico.tpl');
+	include './controlers/cbmedico.php';
+	include './views/vbmedico.php';
+
+	$view = new View();
+	$controller = new Controller($view);
+	$controller->imprimirPagina();
 ?>
