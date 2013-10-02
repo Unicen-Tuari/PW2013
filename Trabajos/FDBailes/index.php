@@ -5,5 +5,13 @@
 	$model = new Model();
 	$view = new View();
 	$controller = new Controller($model, $view);
-	$controller->imprimirPagina();
+	if(isset($_POST["id_cliente"]))
+	{
+	  
+	  $controller->imprimirConsulta($_POST["id_cliente"]);
+	}
+	else
+	{
+	  $controller->imprimirPagina();
+	}
 ?>

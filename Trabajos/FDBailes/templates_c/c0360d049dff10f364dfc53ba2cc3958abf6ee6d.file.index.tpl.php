@@ -1,4 +1,26 @@
-{include file = "header.tpl"}
+<?php /* Smarty version Smarty-3.1.14, created on 2013-09-23 21:59:15
+         compiled from "./templates/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:9390625925240ac3e0f6648-38208898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
+    array (
+      0 => './templates/index.tpl',
+      1 => 1379970524,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '9390625925240ac3e0f6648-38208898',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5240ac3e2139c0_47350463',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5240ac3e2139c0_47350463')) {function content_5240ac3e2139c0_47350463($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <a id="Home"></a>
 <div class="jumbotron">
 	<div class="container text-center">
@@ -66,11 +88,11 @@
 	<form class="form-horizontal text-center" id="form_consulta" method="POST" action="">
 		<h3>Datos personales<h3>
 		<div class="form-group input-group col-lg-12" id="form_dni">
-			{literal}
+			
 			<label class="sr-only" for="id_cliente">Numero de documento</label>
 			<span class="input-group-addon glyphicon glyphicon-book"></span>
 			<input class="form-control" type="text" name="id_cliente" placeholder="ID Cliente" pattern="[\d]{1,8}" title="Formato: 1 a 8 Digitos" required>
-			{/literal}
+			
 			<span class="input-group-btn">
 				<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button>
 			</span>
@@ -97,16 +119,16 @@
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="email">Email</label>
 					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
-					{literal}
+					
 					<input class="form-control" type="email" name="correo" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required>
-					{/literal}
+					
 				</div>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="telefono">Telefono</label>
 					<span class="input-group-addon glyphicon glyphicon-earphone"></span>
-					{literal}
+					
 					<input class="form-control" type="tel" name="telefono" placeholder="*Telefono (Incluya Cod. Área)" pattern="[\d]{3,5}-[\d]{7,12}" title="Formato: (Cod. Área)-(Numero Completo)" required>
-					{/literal}
+					
 				</div>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="consulta">Consulta</label>
@@ -122,4 +144,5 @@
 		</div>
 	</div>
 </div>
-{include file = "footer.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

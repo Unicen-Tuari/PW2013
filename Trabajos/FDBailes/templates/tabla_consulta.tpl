@@ -21,12 +21,12 @@
 				{assign var = "clase" value = "warning" nocache}
 			{/if}
 		<tr class="{$clase}">
-			<td>{$reparacion.id_reparacion}</td>
+			<td>{$reparacion.id}</td>
 			<td>{$reparacion.articulo}</td>
 			<td>{$reparacion.marca}</td>
 			<td>{$reparacion.modelo}</td>
-			<td>{$reparacion.fecha_inicio_f}</td>
-			<td>{$reparacion.fecha_fin_f}</td>
+			<td>{$reparacion.fecha_ingreso_f}</td>
+			<td>{$reparacion.fecha_egreso_f}</td>
 			<td>{$reparacion.nombre_estado}</td>
 			<td>{$reparacion.precio_reparacion}</td>
 		</tr>

@@ -1,8 +1,8 @@
 <br>
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
         <thead>
           <tr class="active">
-            <th class="text-center">DNI</th>
+            <th class="text-center">ID</th>
             <th class="text-center">Nombre</th>
             <th class="text-center">Apellido</th>
             <th class="text-center">Dirección</th>
@@ -13,7 +13,7 @@
         <tbody>
           {foreach $clientes as $cliente}
     <tr>
-      <td>{$cliente.dni}</td>
+      <td>{$cliente.id}</td>
       <td>{$cliente.nombre}</td>
       <td>{$cliente.apellido}</td>
       <td>{$cliente.direccion}</td>
