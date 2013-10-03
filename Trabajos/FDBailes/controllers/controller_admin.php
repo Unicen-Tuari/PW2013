@@ -31,7 +31,7 @@ class Controller
 	}
 	public function imprimirFormcli()
 	{
-		$this->view->generaFormcli();
+		$this->view->generaFormcli($this->model->consultaNextidcli());
 	}
 	public function imprimirDetallerep($id_reparacion)
 	{
@@ -64,6 +64,17 @@ class Controller
 		{
 			$this->view->generaBusquedacli($consulta);
 		}
+	}
+	public function insertaCli($arreglo)
+	{
+		$arreglo['nombre']=ucfirst($arreglo['nombre']);
+		$arreglo['apellido']=ucfirst($arreglo['apellido']);
+		$arreglo['direccion']=ucfirst($arreglo['direccion']);
+		if(!$arreglo['mail'])
+		{
+			$arreglo['mail'] = '-';
+		}
+		$this->model->guardaCli($arreglo);
 	}
 }
 ?>

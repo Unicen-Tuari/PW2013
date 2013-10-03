@@ -39,8 +39,9 @@ class View
     {
 		$this->smarty->display("nuevareparacion.tpl");
     }
-    public function generaFormcli()
+    public function generaFormcli($datos)
     {
+		$this->smarty->assign("next_id",$datos);
 		$this->smarty->display("nuevocliente.tpl");
     }
     public function generaBusquedarep($datos)

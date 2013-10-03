@@ -220,3 +220,16 @@ $('#buscar').on('click','table tbody tr',function()
 	}
 	return false;
 });
+$("#nuevocliente").on('submit','#form_nuevocli',function() 
+{
+	$.ajax({
+		type: "POST",
+		url: "admin.php",
+		data:$("#form_nuevocli").serialize(),
+		   success: function(data)
+		   {
+			   //$('#nuevocliente').html
+		   }
+	});
+	return false;
+});

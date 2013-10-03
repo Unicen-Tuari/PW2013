@@ -39,7 +39,7 @@ class Model
     }
     public function consultaDetallerep($id_reparacion)
     {
-    	$sql = "SELECT r.*,CONCAT(UPPER(LEFT(`nombre`,1)),SUBSTRING(`nombre`,2)) AS nombre,c.telefono,c.mail,CONCAT(UPPER(LEFT(`apellido`,1)),SUBSTRING(`apellido`,2)) AS apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE r.id = $id_reparacion AND (e.id=r.id_estado) AND c.id=r.id_cliente;";
+    	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE r.id = $id_reparacion AND (e.id=r.id_estado) AND c.id=r.id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if(!$resultado)
@@ -50,7 +50,7 @@ class Model
 	}
 	public function consultaDetallecli($id_cliente)
     {
-    	$sql = "SELECT id,CONCAT(UPPER(LEFT(`nombre`,1)),SUBSTRING(`nombre`,2)) AS nombre,CONCAT(UPPER(LEFT(`apellido`,1)),SUBSTRING(`apellido`,2)) AS apellido,direccion,telefono,mail FROM CLIENTE WHERE id = $id_cliente;";
+    	$sql = "SELECT * FROM CLIENTE WHERE id = $id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if(!$resultado)
@@ -98,6 +98,27 @@ class Model
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
+	}
+	public function consultaNextidcli()
+	{
+		$sql = "SELECT Auto_increment FROM information_schema.TABLES WHERE TABLE_NAME = 'CLIENTE';";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if(!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetch(PDO::FETCH_ASSOC);
+	}
+	public function guardaCli($cliente)
+	{
+		$sql = "INSERT INTO CLIENTE VALUES (NULL,'".$cliente['nombre']."','".$cliente['apellido']."','".$cliente['direccion']."','".$cliente['telefono']."','".$cliente['mail']."');";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if(!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
 	}
 }
 ?>

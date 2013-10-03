@@ -50,9 +50,12 @@
 			}
 		}
 	}
+	else if(isset($_POST["nombre"]))
+	{
+		$controller->insertaCli($_POST);
+	}
 	else
 	{
 		$controller->imprimirPagina();
 	}
-	
 ?>
