@@ -7,7 +7,7 @@
 			<a>Pacientes</a>
 			<ul>
 				<li class="submen"><a href="ipacientes.php">Ingresar Paciente</a></li>
-				<li class="submen"><a href="pacientes.php">Consultar Paciente</a></li>
+				<li class="submen"><a href="infopaciente.php">Consultar Paciente</a></li>
 				<li class="submen"><a href="ainfopaciente.php">Actualizar Paciente</a></li>
 				<li class="submen"><a href="ahistclinica.php">Actualizar Historial</a></li>
 				<li class="submen"><a href="bpacientes.php">Borrar Paciente</a></li>
@@ -25,7 +25,6 @@
 			<ul>
 				<li class="submen"><a href="#">Consultar Medico</a></li>
 				<li class="submen"><a href="amedicos.php">Ingresar Medico</a></li>
-				<li class="submen"><a href="bmedico.php">Borrar Medico</a></li>
 			</ul>
 		</li>
 	</ul>

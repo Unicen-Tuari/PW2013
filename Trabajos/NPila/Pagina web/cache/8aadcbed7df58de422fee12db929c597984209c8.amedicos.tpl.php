@@ -5,7 +5,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1380149841,
+      1 => 1380647646,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
@@ -17,17 +17,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '243b1378187b2878c10cdd133ad5f270cdcebcd8' => 
     array (
       0 => './templates/menu.tpl',
-      1 => 1380149199,
+      1 => 1380647764,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '459251153522e8072a437c4-89984724',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52436c9d306523_85716982',
+  'unifunc' => 'content_524b0489dc5c38_52696284',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52436c9d306523_85716982')) {function content_52436c9d306523_85716982($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_524b0489dc5c38_52696284')) {function content_524b0489dc5c38_52696284($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 							<div class="post">
-							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
+							<h2 class="title">Ingrese los datos del medico </h2><br><br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
 								<div class="page"> 
@@ -52,7 +52,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<select id="especialidad" style="margin:0 5px 0 0">
 									<option>Especialidad</option>
 									<option value="kinesiologia">Kinesiologia</option>
-									<option value="nutricion">Nutricion</option>
+									<option value="nutricion">Nutricion</option></select><br><br>
+									<input type="text" id="calle"  placeholder="Calle">
+									<input type="numeric" id="num" placeholder="Nº" size="4">
+									<input type="text" id="localidad" placeholder="Localidad" size="15"><br><br>
+									<input type="tel" id="tel"  placeholder="Telefono" size="13">
+									<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
+									<input type="submit" value="Cargar Medico">
 								</select><br><br>
 							</div>
 						</legend>
@@ -74,7 +80,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<a>Pacientes</a>
 			<ul>
 				<li class="submen"><a href="ipacientes.php">Ingresar Paciente</a></li>
-				<li class="submen"><a href="pacientes.php">Consultar Paciente</a></li>
+				<li class="submen"><a href="infopaciente.php">Consultar Paciente</a></li>
 				<li class="submen"><a href="ainfopaciente.php">Actualizar Paciente</a></li>
 				<li class="submen"><a href="ahistclinica.php">Actualizar Historial</a></li>
 				<li class="submen"><a href="bpacientes.php">Borrar Paciente</a></li>
@@ -92,7 +98,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<ul>
 				<li class="submen"><a href="#">Consultar Medico</a></li>
 				<li class="submen"><a href="amedicos.php">Ingresar Medico</a></li>
-				<li class="submen"><a href="bmedico.php">Borrar Medico</a></li>
 			</ul>
 		</li>
 	</ul>

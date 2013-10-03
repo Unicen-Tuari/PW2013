@@ -10,7 +10,7 @@
 			}
 			public function imprimirPagina()
 			{
-				$this->smarty->display('ipacientes.tpl');
+				$this->smarty->display('ipacientes.tpl');/*A donde manda despues de cargar*/
 			}
 		}
 ?>
