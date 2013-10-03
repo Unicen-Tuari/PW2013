@@ -10,15 +10,13 @@
     }
 	
 	public function imprimirPagina()
-	{
-		if (isset($_POST['Nombre_Apellido']))
-			{
-				$this->model->guardaPaciente($_POST);
-			}
-		else
-			
-				$this->view->imprimirPagina();
-			}		
-	}
+		{
+			$this->view->imprimirPagina();
+		}
+
+	public function ingresaPaciente($form)
+		{
+			$this->model->guardaPaciente($form);
+		}
 }
 ?>

@@ -11,19 +11,14 @@
 	
 	public function imprimirPagina()
 	{
-	/*	if (isset($_POST['Nombre_Apellido']))
+		if (isset($_POST['Nombre_Apellido']))
 			{
 				$this->model->guardaPaciente($_POST);
-		/*	}
+			}
 		else
-			{*/
+			
 				$this->view->imprimirPagina();
-		/*	}	*/	
+			}		
 	}
-
-	public function ingresaPaciente($arreglo)
-		{
-			$this->model->guardaPaciente($arreglo);
-		}
 }
 ?>
