@@ -1,7 +1,8 @@
 <?php
-class Model
+class Modeladmin
 { 
 	private $conn;
+	
     public function __construct()
     {
     	include ('./variables_conexion.php');
@@ -20,7 +21,7 @@ class Model
     	$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (e.id=r.id_estado) ORDER BY fecha_ingreso DESC;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -31,7 +32,7 @@ class Model
     	$sql = "SELECT * FROM CLIENTE;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -42,7 +43,7 @@ class Model
     	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE r.id = $id_reparacion AND (e.id=r.id_estado) AND c.id=r.id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -53,7 +54,7 @@ class Model
     	$sql = "SELECT * FROM CLIENTE WHERE id = $id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -61,21 +62,21 @@ class Model
 	}
 	public function consultaBusquedarep($valor_principal,$valor_secundario,$tipo_busqueda)
     {
-		if($tipo_busqueda == 'na')
+		if ($tipo_busqueda == 'na')
 		{
-			$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE (r.id_estado = e.id) AND (c.id = r.id_cliente) AND (c.nombre='$valor_principal') AND (c.apellido='$valor_secundario') ORDER BY fecha_ingreso DESC;";
+			$sql = "SELECT r.*,c.nombre,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE (r.id_estado = e.id) AND (c.id = r.id_cliente) AND (c.nombre LIKE '$valor_principal') AND (c.apellido LIKE '$valor_secundario') ORDER BY fecha_ingreso DESC;";
 		}
-		else if($tipo_busqueda == 'id_cliente')
+		else if ($tipo_busqueda == 'id_cliente')
 		{
-			$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (r.id_estado = e.id) AND (r.id_cliente = $valor_principal) ORDER BY fecha_ingreso DESC;";
+			$sql = "SELECT r.*,c.nombre,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE (r.id_estado = e.id) AND (r.id_cliente = $valor_principal) AND (c.id = r.id_cliente) ORDER BY fecha_ingreso DESC;";
 		}
 		else
 		{
-			$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (r.id_estado = e.id) AND (r.id = $valor_principal);";
+			$sql = "SELECT r.*,c.nombre,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE (r.id_estado = e.id) AND (c.id = r.id_cliente) AND (r.id = $valor_principal);";
 		}
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -83,9 +84,9 @@ class Model
 	}
 	public function consultaBusquedacli($valor_principal,$valor_secundario,$tipo_busqueda)
     {
-		if($tipo_busqueda == 'na')
+		if ($tipo_busqueda == 'na')
 		{
-			$sql = "SELECT * FROM CLIENTE WHERE (nombre='$valor_principal') AND (apellido='$valor_secundario') ORDER BY apellido,nombre ASC;";
+			$sql = "SELECT * FROM CLIENTE WHERE (nombre LIKE '$valor_principal') AND (apellido LIKE '$valor_secundario') ORDER BY apellido,nombre ASC;";
 		}
 		else
 		{
@@ -93,7 +94,7 @@ class Model
 		}
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -104,7 +105,7 @@ class Model
 		$sql = "SELECT Auto_increment FROM information_schema.TABLES WHERE TABLE_NAME = 'CLIENTE';";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -115,7 +116,7 @@ class Model
 		$sql = "INSERT INTO CLIENTE VALUES (NULL,'".$cliente['nombre']."','".$cliente['apellido']."','".$cliente['direccion']."','".$cliente['telefono']."','".$cliente['mail']."');";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
-		if(!$resultado)
+		if (!$resultado)
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}

@@ -1,6 +1,6 @@
 <?php
 require('./libs/Smarty.class.php');
-class View
+class Viewadmin
 {
     private $smarty;
     public function __construct()
@@ -47,7 +47,7 @@ class View
     public function generaBusquedarep($datos)
     {
 		$this->smarty->assign("reparaciones",$datos);
-		$this->smarty->display("tabla_adminrep.tpl");
+		$this->smarty->display("busqueda_adminrep.tpl");
     }
     public function generaBusquedacli($datos)
     {

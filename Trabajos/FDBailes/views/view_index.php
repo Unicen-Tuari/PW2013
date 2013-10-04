@@ -1,8 +1,9 @@
 <?php
 require('./libs/Smarty.class.php');
-class View
+class Viewindex
 {
     private $smarty;
+    
     public function __construct()
     {
     	$this->smarty = New Smarty;
