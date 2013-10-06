@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-22 22:27:17
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-01 22:46:38
          compiled from "./templates/ipacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1118040609523f98f52462c1-02992839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6f152803e4839d14fcbfdfafd88032c8dab5b56' => 
     array (
       0 => './templates/ipacientes.tpl',
-      1 => 1378827506,
+      1 => 1380678279,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_523f98f52ac0a9_10910054',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_523f98f52ac0a9_10910054')) {function content_523f98f52ac0a9_10910054($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -27,18 +27,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="post"> 
 				<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 					<h2 class="title">Ingrese los datos del paciente </h2><br> <br>
-					<form name="ingresopaciente" onsubmit="return validacionip()">
+					<form id="ingresopaciente" method="post" onsubmit="return validacionip()">
 						<legend class="title a">
 							<div class="page"> 
-								<input type="text" id="nombre"  placeholder="Nombre y Apellido" size="25">
-								<input type="numeric" id="dni" placeholder="D.N.I." size="7"><br><br>
-								<input type="text" id="localidad" placeholder="Localidad" size="15">
-								<input type="text" id="calle"  placeholder="Calle">
-								<input type="numeric" id="num" placeholder="Nº" size="4">
-								<input type="numeric" id="cp" placeholder="C.P." size="4"><br><br>
-								<input type="tel" id="tel"  placeholder="Telefono" size="9">
-								<input type="tel" id="cel"  placeholder="Celular" size="10">
-								<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
+								<input type="text" id="Nombre_Apellido"  placeholder="Nombre y Apellido" size="25">
+								<input type="numeric" id="DNI" placeholder="D.N.I." size="7"><br><br>
+								<input type="text" id="Localidad" placeholder="Localidad" size="15">
+								<input type="text" id="Calle"  placeholder="Calle">
+								<input type="numeric" id="Numero" placeholder="Nº" size="4">
+								<input type="numeric" id="C_P" placeholder="C.P." size="4"><br><br>
+								<input type="tel" id="Telefono"  placeholder="Telefono" size="13">
+								<input type="tel" id="Movil"  placeholder="Celular" size="13">
+								<input type="email" id="Mail"  placeholder="E-mail" size="20"><br><br>
 								Fecha de nacimiento:											
 								<select id="dia" style="margin:0 5px 0 0">
 									<option >Día</option>
@@ -90,19 +90,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<option value="12">Diciembre</option>
 								</select>
 								<input type="number" id="anio" placeholder="Año" size="4"><br><br>
-								<input type="text" id="obra_social"  placeholder="Obra Social / Prepaga">
-								<input type="text" id="nro_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
+								<input type="text" id="Obr_soc"  placeholder="Obra Social / Prepaga">
+								<input type="text" id="Num_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
 								Especialidad:					
 								<select id="especialidad" style="margin:0 5px 0 0">
-									<option>Especialidad</option>
 									<option value="kinesiologia">Kinesiologia</option>
 									<option value="nutricion">Nutricion</option>
 								</select><br><br>
 								Antecedentes: 
-								<textarea id="antecedentes" wrap="SOFT" tabindex="0" autocorrect="on"></textarea><br><br>
+								<textarea id="Antecedentes" wrap="SOFT" tabindex="0" autocorrect="on"></textarea><br><br>
 								Cargar Estudios:  
 								<input type="file" id="estudios"><br><br><br>
-								<input type="submit" value="Cargar Datos">
+								<input id="cargaPaciente" name="cargaPaciente" type="submit" value="Cargar Paciente">
 								<input type="button" onclick="history.back()" name="volver atrás" value="Volver">
 							</div>
 						</legend>
@@ -114,5 +113,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 	</body>
 	<script type="text/javascript" src="scripts/compruebaform.js"></script>
+	<script type="text/javascript" src="scripts/ajax.js"></script>
 </html>
 <?php }} ?>

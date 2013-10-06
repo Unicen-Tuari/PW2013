@@ -40,3 +40,22 @@ var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
 return false;
 
 });
+
+$("#nuevoPaciente").on('submit','#ingresopaciente',function() {
+
+	$.ajax({
+	  type: "POST",
+	  url: "ipacientes.php",
+	  data:$("#ingresopaciente").serialize(),
+	  success: function(data)
+			   {
+				/*   alert(data);
+				   if(data.indexOf("Error")== -1)
+				   {
+				    	$("#ingresopaciente").find('input:text, input:password, input:file, select, textarea').val('');
+					}*/
+			   }
+	});
+ 
+	return false;
+});

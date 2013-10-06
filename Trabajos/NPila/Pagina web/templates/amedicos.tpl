@@ -7,7 +7,7 @@
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 							<div class="post">
-							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
+							<h2 class="title">Ingrese los datos del medico </h2><br><br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
 								<div class="page"> 
@@ -15,7 +15,13 @@
 									<select id="especialidad" style="margin:0 5px 0 0">
 									<option>Especialidad</option>
 									<option value="kinesiologia">Kinesiologia</option>
-									<option value="nutricion">Nutricion</option>
+									<option value="nutricion">Nutricion</option></select><br><br>
+									<input type="text" id="calle"  placeholder="Calle">
+									<input type="numeric" id="num" placeholder="Nº" size="4">
+									<input type="text" id="localidad" placeholder="Localidad" size="15"><br><br>
+									<input type="tel" id="tel"  placeholder="Telefono" size="13">
+									<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
+									<input type="submit" value="Cargar Medico">
 								</select><br><br>
 							</div>
 						</legend>

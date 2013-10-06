@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-25 20:07:09
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-01 14:14:18
          compiled from "./templates/amedicos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:459251153522e8072a437c4-89984724%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1380149841,
+      1 => 1380647646,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 							<div class="post">
-							<h2 class="title">Ingrese los datos del medico </h2><br> <br>
+							<h2 class="title">Ingrese los datos del medico </h2><br><br>
 							<form name="ingresopaciente" onsubmit="return validacionip()">
 								<legend class="title a">
 								<div class="page"> 
@@ -38,7 +38,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<select id="especialidad" style="margin:0 5px 0 0">
 									<option>Especialidad</option>
 									<option value="kinesiologia">Kinesiologia</option>
-									<option value="nutricion">Nutricion</option>
+									<option value="nutricion">Nutricion</option></select><br><br>
+									<input type="text" id="calle"  placeholder="Calle">
+									<input type="numeric" id="num" placeholder="Nº" size="4">
+									<input type="text" id="localidad" placeholder="Localidad" size="15"><br><br>
+									<input type="tel" id="tel"  placeholder="Telefono" size="13">
+									<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
+									<input type="submit" value="Cargar Medico">
 								</select><br><br>
 							</div>
 						</legend>

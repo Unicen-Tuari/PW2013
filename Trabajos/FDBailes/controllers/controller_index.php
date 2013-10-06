@@ -1,5 +1,5 @@
 <?php
-class Controller
+class Controllerindex
 {
 	private $model;
 	private $view;
@@ -8,7 +8,6 @@ class Controller
 		$this->model = $model;
 		$this->view = $view;
 	}
-	
 	public function imprimirPagina()
 	{
 		$this->view->muestraPagina();
@@ -16,7 +15,7 @@ class Controller
 	public function imprimirConsulta($id_cliente)
 	{
 		$consulta=$this->model->consultaReparaciones($id_cliente);
-		if($consulta == null)
+		if ($consulta == null)
 		{
 			return false;
 		}

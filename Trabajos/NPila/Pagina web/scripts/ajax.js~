@@ -28,8 +28,7 @@ var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
 		url: "turnos.php",
 		data: $("#cons_turnos").serialize(),
 		success: function(data)
-			{
-				alert(data);				
+			{				
 				document.getElementById('content').innerHTML=data;
 				document.getElementById('fechacons').innerHTML=fecha;
 
@@ -40,4 +39,23 @@ var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
 				
 return false;
 
+});
+
+$("#cargaPaciente").click(function() {
+
+	$.ajax({
+	  type: "POST",
+	  url: "ipacientes.php",
+	  data:$("#ingresopaciente").serialize(),
+	  success: function(data)
+			   {
+				/*   alert(data);
+				   if(data.indexOf("Error")== -1)
+				   {
+				    	$("#ingresopaciente").find('input:text, input:password, input:file, select, textarea').val('');
+					}*/
+			   }
+	});
+ 
+	return false;
 });
