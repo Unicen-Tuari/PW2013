@@ -38,7 +38,6 @@
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
-                  <li><a href="newuser">Registrarse</a></li>
                 </ul>
 
 
@@ -67,13 +66,7 @@
             <p>descripcion pagina</p>
           </div>
           {literal}
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>"Auto"</h2>
-              <p>Descripcion coche</p>
-              <p><a class="btn btn-default" href="#">Ver auto &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
+         
           {/literal}
 
 
@@ -94,7 +87,8 @@
                       <div class="thumbnail clearfix">
                         <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
                         <div class="caption" class="pull-left">
-                          <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Ver Auto</a>
+                          <a href='ver_auto.php?id={$auto.titulo}' class="btn btn-primary icon  pull-right">Ver Auto</a>
+                          
                           <h4>      
                           <a href="#" >{$auto.titulo}</a>
                           </h4>

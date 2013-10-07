@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-03 08:37:03
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 19:17:50
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:585524cbad4172f84-21757629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1380782208,
+      1 => 1381080733,
       2 => 'file',
     ),
   ),
@@ -64,7 +64,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
-                  <li><a href="newuser">Registrarse</a></li>
                 </ul>
 
 
@@ -93,13 +92,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <p>descripcion pagina</p>
           </div>
           
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>"Auto"</h2>
-              <p>Descripcion coche</p>
-              <p><a class="btn btn-default" href="#">Ver auto &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
+         
           
 
 
@@ -126,7 +119,9 @@ $_smarty_tpl->tpl_vars['auto']->_loop = true;
                       <div class="thumbnail clearfix">
                         <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
                         <div class="caption" class="pull-left">
-                          <a href="http://bootsnipp.com/" class="btn btn-primary icon  pull-right">Ver Auto</a>
+                          <a href='ver_auto.php?id=<?php echo $_smarty_tpl->tpl_vars['auto']->value['titulo'];?>
+' class="btn btn-primary icon  pull-right">Ver Auto</a>
+                          
                           <h4>      
                           <a href="#" ><?php echo $_smarty_tpl->tpl_vars['auto']->value['titulo'];?>
 </a>
@@ -168,7 +163,7 @@ $_smarty_tpl->tpl_vars['auto']->_loop = true;
           </div><!--/span-->
       </div><!--/row-->
 
-      <hr>
+     
 
       <footer>
         <p>&copy; Company 2013</p>

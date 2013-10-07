@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-06 17:43:34
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-06 19:20:39
          compiled from ".\templates\ver_auto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3148252517affc2d688-37699092%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '407559fda24f2c4ad8598cf9e6b67c16e53ea809' => 
     array (
       0 => '.\\templates\\ver_auto.tpl',
-      1 => 1381074210,
+      1 => 1381079519,
       2 => 'file',
     ),
   ),
@@ -86,27 +86,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="row-fluid">
                     <div class="span12">
                       <p text-align="center">
+                         
+                          
                         <h3>
-                          Titulo
+                         {$auto.titulo}
                         </h3>
                       </p>
                       <ul>
                         <li>
-                         <b>Valor:</b>
+                         <b>Valor:{$auto.valor}</b>
                         </li>
                         <li>
-                          <b>Modelo:</b>
+                          <b>Modelo:{$auto.modelo}</b>
                         </li>
                         <li>
-                          <b>Año:</b>
+                          <b>Año:{$auto.año}</b>
                         </li>
                       </ul>
                       <dl>
                         <dt>
                           <b>Descripcion del auto</b>
                         </dt>
+
                         <dd>
-                          Auto como nuevo, pocos kilometros
+                          {$auto.descripcion}
                         </dd>
                       </dl>
 
@@ -123,13 +126,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 </textarea>
                                 </br>
                                </br>
-                                <button class="btn btn-info" type="submit">Consulta</button>
+                                <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
                        </div>
 
 
                   </div>
                 </div>
+
+              
 
        </div><!--/span-->
 
@@ -142,7 +147,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <li class="active"><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
-                <li>Sidebar</li>
+                <li>Categorias</li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
@@ -173,7 +178,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="dist/assets/js/jquery.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
-    <script src="dist/js/offcanvas.js"></script>
+    <script src="offcanvas.js"></script>
 
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>

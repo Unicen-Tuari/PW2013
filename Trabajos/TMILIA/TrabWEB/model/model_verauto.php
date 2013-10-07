@@ -1,5 +1,5 @@
 <?php
-class Model
+class Modeladmin
 {
 	private $host = "localhost";
 	private $db = "autosBD";
@@ -17,17 +17,9 @@ class Model
 		}
     }
 	
-	public function insertarAuto($auto){
-	
-		$sql = "INSERT INTO auto (modelo,descripcion,valor,anio) VALUES (:modelo,:descripcion,:valor,:anio)";
-		$q = $this->conn->prepare($sql);
-		$q->execute(array(':modelo'=>$auto["modelo"] ,':descripcion'=>$auto["descripcion"] ,':valor'=>$auto["valor"] ,':anio'=>$auto["anio"] ));
-
-	}
-	
 	public function consultaAuto(){
 
-		$sql = "SELECT * FROM auto";
+		$sql = "SELECT id FROM auto";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch

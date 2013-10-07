@@ -65,27 +65,30 @@
                   <div class="row-fluid">
                     <div class="span12">
                       <p text-align="center">
+                         {literal}
+                          
                         <h3>
-                          Titulo
+                         {$auto.titulo}
                         </h3>
                       </p>
                       <ul>
                         <li>
-                         <b>Valor:</b>
+                         <b>Valor:{$auto.valor}</b>
                         </li>
                         <li>
-                          <b>Modelo:</b>
+                          <b>Modelo:{$auto.modelo}</b>
                         </li>
                         <li>
-                          <b>Año:</b>
+                          <b>Año:{$auto.año}</b>
                         </li>
                       </ul>
                       <dl>
                         <dt>
                           <b>Descripcion del auto</b>
                         </dt>
+
                         <dd>
-                          Auto como nuevo, pocos kilometros
+                          {$auto.descripcion}
                         </dd>
                       </dl>
 
@@ -102,13 +105,15 @@
                                 </textarea>
                                 </br>
                                </br>
-                                <button class="btn btn-info" type="submit">Consulta</button>
+                                <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
                        </div>
 
 
                   </div>
                 </div>
+
+              {/literal}
 
        </div><!--/span-->
 

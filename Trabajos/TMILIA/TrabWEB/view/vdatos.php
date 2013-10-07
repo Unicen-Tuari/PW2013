@@ -1,6 +1,6 @@
 <?php
 require('./libs/Smarty.class.php');
-class Viewindex
+class Viewdatos
 {
     private $smarty;
     public function __construct()
@@ -9,12 +9,13 @@ class Viewindex
 	}
     public function muestraPagina()
     {
-		$this->smarty->display('index.tpl');
+		$this->smarty->display('datos.tpl');
     }
-    public function generaAutos($datos)
+     public function generaAutos($datos)
     {
-    	$this->smarty->assign("autos",$datos);
-    	$this->smarty->display('index.tpl');
-	}
+        $this->smarty->assign("autos",$datos);
+        $this->smarty->display('datos.tpl');
+    }
+  
 }
 ?>
