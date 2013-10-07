@@ -1,0 +1,58 @@
+{include file = "head.tpl"}
+	<body>
+		<div id="wrapper">
+			<div id="page">
+				<div id="page-bgtop">
+					<div id="page-bgbtm">
+						<div id="content">
+							<!---->
+						</div>
+						<div id="sidebar">
+						<!-- BARRA LATERAL -->
+							<div id="logo">
+								<h1><a>Sistema de gestion </a></h1>
+							</div>
+<!---->
+<div id="menu">
+	<ul class="nav">
+		<li >
+			<a  href="index.php">Inicio</a>
+		</li>
+		<li >
+			<a>Pacientes</a>
+			<ul>
+				<li><b href="ipacientes.php">Ingresar Paciente</b></li>
+				<li><b href="pacientes.php">Consultar Paciente</b></li>
+				<li><b href="ainfopaciente.php">Actualizar Paciente</b></li>
+				<li><b href="ahistclinica.php">Actualizar Historial</b></li>
+				<li><b href="bpacientes.php">Borrar Paciente</b></li>
+			</ul>
+		</li>
+		<li>
+			<a>Turnos</a>
+			<ul>
+				<li ><b href="turnos.php">Consultar Turnos</b></li>
+				<li><b href="dturnos.php">Dar Turnos</b></li>
+			</ul>
+		</li>
+		<li >
+			<a>Medicos</a>
+			<ul>
+				<li ><b href="">Consultar Medico</b></li>
+				<li><b href="">Ingresar Medico</b></li>
+				<li><b href="bmedico.php">Borrar Medico</b></li>
+			</ul>
+		</li>
+	</ul>
+</div>							
+<!--
+{include file = "menu.tpl"}-->
+						</div>
+						<!-- FIN BARRA LATERAL -->
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

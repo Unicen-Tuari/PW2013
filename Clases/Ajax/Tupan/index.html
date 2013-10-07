@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Panificadora Tupan</title>
+<script src="js/main.js"></script>
+	</head>
+	<body>
+					<form id="formulariocontacto" action="" method="POST" >
+						<ul>
+						    <li>
+						    	<h2>Hace tu pedido!</h2>
+	       					</li>
+	       					<li>
+	           					<label for="nombre"><span class="requerido">* </span>Nombre:</label>
+	           					<input type="text" id="nombre" placeholder="Nombre" required autofocus="autofocus" />
+	       					</li>
+	       					 <li>
+	           					<label for="apellido"><span class="requerido">* </span>Apellido:</label>
+	           					<input type="text" id="apellido" placeholder="Apellido" required />
+	       					</li>
+	       					<li>
+						        <label for="email"><span class="requerido">* </span>Email:</label>
+						        <input type="email" id="email" placeholder="Email" required />
+						    </li>
+						    <li>
+						        <label for="telefono">* Telefono:</label>
+						        <input type="tel" id="telefono" placeholder="Telefono">
+						    </li>
+						    <li>
+						    	<label for="formapago"><span class="requerido">* </span>Forma de pago:</label>
+	           					<select id="formapago">
+	           						<option value="Efectivo">Efectivo</option>
+	           						<optgroup label="Tarjeta">
+	           						<option value="Visa">Visa</option>
+	           						<option value="Mastercard">Mastercard</option>
+	           						<option value="Naranja">Naranja</option>
+	           						<option value="Argencard">Argencard</option>
+	           						<option value="Nativa">Nativa</option>
+	           						</optgroup>
+	      
+	           					</select>
+						    </li>
+						    <li>
+						    	<label for="direccion">* Direccion:</label>
+						        <input type="text" id="direccion" placeholder="Direccion">
+						    </li>
+						    <li>
+						    <label for="fechadeentrega">* Fecha de entrega:</label>
+						        <input type="date" id="fechadeentrega" placeholder="Fecha de Entrega">
+						  
+						    	<li>
+						    		<label for="metodoenvio">* Metodo envio:</label>
+									<input type="radio" id="metodoenvio" name="metodo" value="envio">Envio
+									<input type="radio" id="metodoenvio" name="metodo" value="retira">Retira
+						    	</li>
+						    	<li>
+						    		<label for="producto"><span class="requerido">* </span>Producto:</label>
+	           					<select id="producto">
+	           						<option value="1">Pan</option>
+									<option value="2">Facturas</option>
+									<option value="3">Rosca de Pascua</option>
+	      	           			</select>
+								<input type="number" id="cantidad" placeholder="Cantidad">
+	           					<button class="botonsubmit"  type="button" onclick="agregaproducto();">+</button>
+								<input type="hidden" id="productos"/>
+								<input type="hidden" id="cantidadProductos"/>
+								<ul id="listaProductos">
+								</ul>
+	           					
+						    	</li><br>
+						       <button class="botonsubmit"  type="button" onclick="enviapedido();">Confirmar pedido</button>
+						    </li>
+						</ul>
+					</form>
+</html>
+			

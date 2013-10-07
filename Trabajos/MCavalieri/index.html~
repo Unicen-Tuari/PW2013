@@ -9,18 +9,11 @@
 	<body>
 		<nav>
 			<!-- agreagar hora y fecha, flotados a la izquierda -->
-<<<<<<< HEAD
-			<!--Nombre <input type="text" name="nombre"> <a class="flota_derecha"/a>
-			Clave <input type="password" name="pass"> <a class="flota_derecha"/a>-->
 			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
-			<!--<input type="button" value="Ingresar"> -->
-=======
-			<a class="menu flota_derecha" href="login.html" accesskey="l">Login</a>
->>>>>>> 7144892b2320b32addfa494a0573ac10efb41716
 		</nav>
 		<header>
-			<body onLoad="deslizar_imagenes();">
-				<img class="imagen_header" name="deslizar"/>
+		<body onLoad="deslizar_imagenes();">
+			<img class="imagen_header" name="deslizar"/>
 		</header>
 		<nav>
 			<a class="menu" href="index.html" accesskey="i">Inicio</a>
@@ -29,6 +22,7 @@
 			<a class="menu" href="calendario.html" accesskey="f">Calendario</a>
 			<a class="menu flota_derecha" href="comentarios.html" acceskey="e">Comentarios</a>
 		</nav>
+
 		<article class="articulo_principal">
 			<h2> ¿Quiénes somos? </h2>
 			<p> Agregar una introducción de quiénes son, qué ofrecen y lo que quieran agregar. </p>
@@ -40,4 +34,55 @@
 	</body>
 </html>
 
+<!--trabajps, haacerlos desplegables a los titulos AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
+		_Se muestra un formulario en la página:
+			_Me llega a mí; yo consulto en el laboratorio/me avisan que alguien se $usuario va a registrarse.
+				*Ventaja: No les tomaría tiempo ni es necesario que aprendan a hacer nada. (A mí no me tomaría más de 1 minuto hacerlo).
+				*Desventaja: Si estoy rindiendo, incomunicado, bajo tierra, en un lugar sin internet o durmiendo profundamente: No se puede crear el usuario en ese momento, hay que esperar a que yo me entere.
+			_Se crea una función en la página, que permite ver los registros para autentificación que se mandaron; con un click o dos se apruebe o no.
+				*Ventaja: No me necesitan para nada, lo pueden hacer cuando quieran.
+				*Desventaja: Necesitan sí o sí conexión a internet. (o alguien lo hace desde su casa).
+			*Ventajas: El "trabajo" lo hace el odontólogo, tomándose el tiempo que quiera; por supuesto que si no se toma esse tiempo, no va a poder acceder a la cuenta (no puede romper las bolas porque no tiene creada la cuenta)
+			*Desventaja: Si el odontólogo es muy, pero muuy "tosco", va a tener problemas para llenar el formulario (a pesar de lo básico que sea). 
+			
+			Solución: Hacer un sistema híbrido, que permita que los administradores registren manualmente a los usuarios, que puedan llenar la solicitud y llegue al la página para los chicos del laboratorio, además de que me llegue a mí y yo lo cree.
+					*Ventaja: Ningún usuario va a tener problemas para que se cree su cuenta.
+					*Desventaja: Alguien del laborario o yo tiene que hacerlo. La misma desventaja de tratar de encontrarme, que recién.
+					*Recordatorio: Mostrar una lista con los usuarios ya creados, sino, nos vamos a pisar cargando uno u otro los usuarios. 
+
+		_Los datos se toman en el laboratorio. Opciones:
+			_Los anotan en un mail o en un papel o en algo y me lo hacen llegar a mí. Y yo después creo la cuenta.
+				*Ventaja: Les va a tomar poco tiempo avisarme y no necesitan aprender a hacer nada con la página.
+				*Desventaja: Tienen que tomar las notas ustedes, lo que les va a tomar tiempo y tienen que saber o tener anotadoo los datos que tienen que pedir.
+			_Los cargan y crean en el laboratorio.
+				*Ventaja: No tienen que esperar a que yo lo haga.
+				*Desventaja: Tienen que dejar de hacer lo que estén haciendo, para crear las cuentas.
+			*Propuesta: Me hago cargo de tomar los datos de todos los adontólogos que haya al momento de subir la página, reduciendo drásticamente, la cantidad de cuentas a crear.
+
+
+Resolución: Híbrido. Soy un integrante del laboratorio.función en la página
+
+
+	Típicos Problemas de Usuario (PU):
+		_Se olvidaron la clave/usuario:
+			_Creo una función que les envíe al mail la clave y el usuario. (También se va a informar a algún administrador de esto).
+
+		
+
+Otro tema:
+	Si creáramos un calendario también para los odontólogos, hay que ver cuándo se van a subir al sistema los trabajos que acaban de entrar.
+		Propongo que para esto funcione, a última hora del día se carguen todos los trabajos que entraron; de esta manera, podemos asegurar que cada día a primera hora la página estará actualizada. Claro que también se puede ir actualizando durante el día, para no dejar todo para útlimo momento. O sí, por que no?
+		Puede agregarse además:
+			_Última actualización en el calendario (sería una función que respondería según cada odontólogo, claramente. También facilitaría lo de ver hasta dónde está actulizado).
+			_Saldo con el laboratorio. (de cada odnotólogo).
+			_Entregas que se deben solamente, SIN HISTORIAL.
+		
+			_marcar en debe los trabajos que no se mandaron. (postergado o pendiente).
+
+Pensar en la facturaciñoin: Recordar que tiene que poder ser modificable, para que se puedan aplicar los cambios permanentes y los "del momenot" (el odontólogo exige tiempos ilógicos de trabajo => Sale más caro)
+
+calendario: mirar jquery;
+-->
 
