@@ -1,0 +1,14 @@
+/* Para que sus fuentes sean visibles en cualquier dispositivo les recomiendo ingresar
+a www.fontsquirrel.com luego eligen una fuente y la suben en la sección WebFont Generator. 
+Finalmente descargan un zip que contiene los distintos formatos y un css como este */
+
+@font-face {
+    font-family: 'FuenteExterna';
+    src: url('../fuentes/webfontkit/bellota-regular-webfont.eot');
+    src: url('../fuentes/webfontkit/bellota-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/webfontkit/bellota-regular-webfont.woff') format('woff'),
+         url('../fuentes/webfontkit/bellota-regular-webfont.ttf') format('truetype'),
+         url('../fuentes/webfontkit/bellota-regular-webfont.svg#bellotaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

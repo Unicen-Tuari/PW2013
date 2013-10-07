@@ -1,14 +1,18 @@
 function verificarFormulario()
 {
+<<<<<<< HEAD
 	var name = document.getElementById('name');
 	var lastname = document.getElementById('username');
 	var lastname = document.getElementById('password');
+=======
+>>>>>>> 7000547e4cabd8503025ec43bfa220ce9e71f79a
 	var email = document.getElementById('email');
 	var fechaNac = document.getElementById('fechaNac');
 	var fechaActual = new date();
 	var linferior = 3;
 	var lsuperior = 20;
 
+<<<<<<< HEAD
 	if(esVacio(name.value) && !largoEntre(linferior, lsuperior, name.value))
 	{
 		alert('Debe ingresar un nombre entre 3 y 20 caracteres');
@@ -23,6 +27,8 @@ function verificarFormulario()
 		return;
 	}
 
+=======
+>>>>>>> 7000547e4cabd8503025ec43bfa220ce9e71f79a
 	if(!emailValido(email.value))
 	{
 		alert('Debe ingresar un email valido');
@@ -62,16 +68,6 @@ return false;
 function esVacio(valor)
 {
 	if(valor.length == 0)
-	{
-		return true;
-	}
-
-	return false;
-}
-
-function largoEntre(linferior, lsuperior, valor)
-{
-	if(valor.length> linferior && valor.length < lsuperior)
 	{
 		return true;
 	}

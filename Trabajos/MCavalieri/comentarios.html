@@ -28,8 +28,8 @@
 			<p> ¿Tiene alguna sugerencia para esta web? </p>
 			<p> ¿Hay algo que no le guste sobre ella? </p>
 			<p> ¡Cuéntenos su experiencia! </p>
-			<form>
-				<textarea class="comentario_usuario" placeholder="¿Qué piensa sobre esta web?" required></textarea>
+			<form method="post" action="guardacomentarios.php">
+				<textarea class="comentario_usuario" placeholder="¿Qué piensa sobre esta web?" name="comentario" required></textarea>
 					<br><br>
 				<button class="botones_comentario" type="reset" value="Borrar"> Borrar </button>
 				<button class="botones_comentario" type="submit" value="Enviar"> Enviar </button>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Comidas de Flor. Delivery de comidas caseras en Tandil.">
+		<meta name="keywords" content="Comidas, Tandil, Tortas, Reposteria, Flor, Delivery">
+		<link rel="stylesheet" href="estilos/estilos.css" />
+		<link rel="stylesheet" href="estilos/formulario.css" />
+		<link rel="stylesheet" href="estilos/fuentes.css" />
+		<script src="scripts/jquery-2.0.0.js" type="text/javascript"></script>   <!-- Incorporamos librerias de JQuery -->
+		<script src="scripts/galeria_promo.js" type="text/javascript"></script>   <!-- Efectos para las imagenes de promociones -->
+		<title> {$titulo} </title>
+	</head>
+	<body>
+		<header>
+			<aside id="info_techo">
+				<h1 id="titulo_cabecera">
+					<a href="http://www.facebook.com/FlorDeChocolate.Reposteria" target="_blank"><img id="img_facebook" class="efectoup" src="imagenes/iconos/ico_facebook.png"></a>
+					ComidasDeFlor.com.ar, comer casero es la mejor opción.
+				</h1>
+				<p id="info_contacto">
+					<img id="img_tel" src="imagenes/iconos/tel_ico.png"> {$tel} 
+					<img id="img_dire" src="imagenes/iconos/ico_dire.png"> {$direccion}
+				</p>
+			</aside>
+			<article id="imagenes_techo">
+				<a href="index.php">
+					<img id="logo" class="leverotacion" src="imagenes/logos/logo_cocina.jpg" alt="ComidasDeFlor.com.ar"/>
+				</a>
+				<div id="imgs_promo">
+					<img id="promo1" class="promos" src="imagenes/promociones/miniaturas/1.jpg">
+					<img id="promo2" class="promos" src="imagenes/promociones/miniaturas/2.jpg">
+					<img id="promo3" class="promos" src="imagenes/promociones/miniaturas/3.jpg">
+					<img id="promo4" class="promos" src="imagenes/promociones/miniaturas/4.jpg">
+					<img id="promo5" class="promos" src="imagenes/promociones/miniaturas/5.jpg">
+				</div>
+			</article>
+		</header>
+		<nav id="menu_nav">
+			<ul>
+				<li id="inicio" ALT="Ir a ComidasDeFlor.com.ar" class="efectoup"><a href="index.php?seccion=inicio#menu_nav"><img class="imgs_nav" src="imagenes/iconos/icon_home.png" align="bottom">Inicio</a></li>
+				<li id="dulce" class="efectoup" alt="Comidas dulces"><a href="index.php?seccion=dulce#menu_nav"><img class="imgs_nav" src="imagenes/iconos/cookie_ico.png" align="bottom">Dulce</a></li>
+				<li id="salado" class="efectoup" alt="Comidas saladas"><a href="index.php?seccion=salado#menu_nav"><img class="imgs_nav" src="imagenes/iconos/pizza_ico.png" align="bottom">Salado</a></li>
+				<li id="adultos" class="efectoup" alt="Pastelería erótica para adultos"><a href="index.php?seccion=adultos#menu_nav"><img class="imgs_nav" src="imagenes/iconos/cook_ico.png" align="bottom">Pastelería erótica</a></li>
+				<li id="flor" class="efectoup" alt="Conozca un poco más de la cocinera"><a href="index.php?seccion=flor#menu_nav"><img class="imgs_nav" src="imagenes/iconos/fcook_ico.png" align="bottom">¿Quién es Flor?</a></li>
+				<li id="contacto" class="efectoup" alt="Comuníquese con nosotros"><a href="index.php?seccion=contacto#menu_nav"><img class="imgs_nav" src="imagenes/iconos/mail_ico.png" align="bottom">Contacto</a></li>
+			</ul>
+		</nav>
+		{include file=$seccion}
+		<footer id="pie_pagina">
+			<p id="texto_footer"> ComidasDeFlor.com.ar | Envíos a domicilio en Tandil | Teléfono: (02262) 15-49-5903 | Dirección: Costa Rica 518 Dto 3, Tandil </p>
+		</footer>
+	</body>
+</html>
