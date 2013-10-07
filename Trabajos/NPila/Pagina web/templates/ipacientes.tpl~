@@ -5,7 +5,7 @@
 				<div class="post"> 
 				<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 					<h2 class="title">Ingrese los datos del paciente </h2><br> <br>
-					<form name="ingresopaciente" onsubmit="return validacionip()">
+					<form id="ingresopaciente" method="post" action="">
 						<legend class="title a">
 							<div class="page"> 
 								<input type="text" id="Nombre_Apellido"  placeholder="Nombre y Apellido" size="25">
@@ -79,7 +79,7 @@
 								<textarea id="Antecedentes" wrap="SOFT" tabindex="0" autocorrect="on"></textarea><br><br>
 								Cargar Estudios:  
 								<input type="file" id="estudios"><br><br><br>
-								<input id="cargaPaciente" name="cargaPaciente" type="submit" value="Cargar Paciente">
+								<input type="submit" value="Cargar Paciente">
 								<input type="button" onclick="history.back()" name="volver atrás" value="Volver">
 							</div>
 						</legend>

@@ -39,8 +39,7 @@ a {
 	color: #4D8D99;
 	text-transform: capitalize;
 }
-a:hover {
-}
+
 #wrapper {
 	margin: 0px auto;
 	padding: 0px;
@@ -142,7 +141,7 @@ textarea {
 #ipaciente {
 	background: url(../images/img021.jpg) no-repeat left top;
 	width: auto;
-	margin: 20px
+	margin: 20px;
 	height: auto;
 	padding: 20px;
 }
@@ -152,6 +151,12 @@ textarea {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	letter-spacing: -.5px;
 	text-transform: capitalize;
+}
+
+#login {
+	text-align:center;
+	margin:0 auto;
+	font-size: 25px;
 }
 /* Sidebar */
 

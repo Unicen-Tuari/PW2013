@@ -1,3 +1,5 @@
+/*Consultas*/
+
 // Informacion de pacientes
 $("#cons_pacientes").submit(function()
 {
@@ -9,10 +11,6 @@ $("#cons_pacientes").submit(function()
 			{
 				document.getElementById('content').innerHTML=data;
 			}
-		/*error: function(data)
-			{
-			alert("El paciente consultado no se encuentra. Compruebe que escribio el nombre correctamente y que el paciente este ingresado en la base de datos.")
-			}*/
 });
 
 return false;
@@ -41,21 +39,20 @@ return false;
 
 });
 
-$("#nuevoPaciente").on('submit','#ingresopaciente',function() {
 
+/* Carga */
+
+// Carga pacientes
+$("#ingresopaciente").submit(function() 
+{
 	$.ajax({
 	  type: "POST",
 	  url: "ipacientes.php",
 	  data:$("#ingresopaciente").serialize(),
 	  success: function(data)
 			   {
-				/*   alert(data);
-				   if(data.indexOf("Error")== -1)
-				   {
-				    	$("#ingresopaciente").find('input:text, input:password, input:file, select, textarea').val('');
-					}*/
+						alert("Paciente ingresado correctamente");
 			   }
 	});
- 
 	return false;
 });
