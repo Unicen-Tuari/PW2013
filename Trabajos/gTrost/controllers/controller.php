@@ -1,5 +1,5 @@
 <?php
-
+//Controlador base. Cada contrlador específico va a ser precargado por el autoloader después, evitando todos los require
 require('controllers/faq.controller.php');	
 require('controllers/item.controller.php');	
 require('controllers/contacto.controller.php');	
