@@ -33,30 +33,29 @@ function busquedaID()
 	$('#input_secundario').slideUp(200);
 	$("#form_buscador").removeClass('has-success has-error');
 }
-$("#form_consulta").submit(function() 
+$("#form_login").submit(function() 
 {
 	$.ajax({
 		type: "POST",
-		url: "index.php",
-		data:$("#form_consulta").serialize(),
+		url: "login.php",
+		data:$("#form_login").serialize(),
 		success: function(data)
 		{
-			if (data == false)
+			if (data == 'user')
 			{
-				$("#form_dni").removeClass('has-success has-error').addClass('has-error');
-				$("#tableData").html('');
+				alert('Usuario Invalido');
+			}
+			else if (data == 'pass')
+			{
+				alert('Password Invalido');
 			}
 			else
 			{
-				$("#form_dni").removeClass('has-success has-error').addClass('has-success');
-				$("#tableData").html(data);
+				window.location = data;
 			}
-			$('[data-spy="scroll"]').each(function () 
-			{
-				var $spy = $(this).scrollspy('refresh');
-			})
 		}
 	});
+	
 	return false;
 });
 $('#buscar').on('submit','#form_buscador',function()  
@@ -213,4 +212,15 @@ $('#nuevocliente').on('closed.bs.alert','#alerta_cli_agregado', function () {
 			$("#nuevocliente").html(data);
 		}
 	});
+});
+$('#logout').click(function() {
+	$.ajax({
+		type: "POST",
+		url: "logout.php",
+		success: function(data)
+		{
+			window.location = "login.php";
+		}
+	});
+	return false;
 });

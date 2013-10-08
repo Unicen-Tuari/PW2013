@@ -33,7 +33,14 @@ CREATE TABLE REPARACION (
 	CONSTRAINT PRECIO_REPARACION_POSITIVO CHECK (precio_reparacion >= 0)
 );
 
-INSERT INTO CLIENTE (nombre,apellido,direccion,telefono,mail)VALUES 
+CREATE TABLE USUARIO (
+	id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	username varchar(25) NOT NULL,
+	password varchar(100) NOT NULL,
+	CONSTRAINT PK_USUARIO PRIMARY KEY (id)
+);
+
+INSERT INTO CLIENTE (nombre,apellido,direccion,telefono,mail) VALUES 
 	('federico','bailes','dufau 576','0249-154665876','fdbailes@gmail.com'),
 	('hernan','bailes','dufau 576','0249-154665876','fdbailes@gmail.com'),
 	('ricardo','bailes','dufau 576','0249-154665876','fdbailes@gmail.com');
@@ -51,3 +58,6 @@ INSERT INTO REPARACION (numero_serie,marca,modelo,articulo,desperfecto,notas,pre
 	('LASYN-TRSN292','HP','Pavilion DV7 4295','Notebook','problemas de temperatura','',150,'2013-06-17','2013-06-20',2,1),
 	('LASYN-TRSN810','HP','Pavilion DV7 4285','Notebook','LCD con falla','',1200,'2013-06-17',NULL,3,2),
 	('LASYN-TRSN811','HP','Pavilion DV7 4285','Notebook','LCD con falla','',1200,'2013-06-17',NULL,3,3);
+
+INSERT INTO USUARIO VALUES
+(NULL,'admin','6db5832cd2d1ac659ad5892c06b9c155');

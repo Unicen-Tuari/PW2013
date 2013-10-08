@@ -1,27 +1,27 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-06 14:54:04
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 21:09:28
          compiled from "./templates/buscador.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:12891743005251a3bca73d03-95568694%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:66389561952534d380f08d1-28263749%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2ca43de75b55300ae9eece7ae8dadc7f8eb983b9' => 
     array (
       0 => './templates/buscador.tpl',
-      1 => 1380846167,
+      1 => 1381182762,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '12891743005251a3bca73d03-95568694',
+  'nocache_hash' => '66389561952534d380f08d1-28263749',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5251a3bcb31ef5_73478486',
+  'unifunc' => 'content_52534d381bb2c1_51592923',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5251a3bcb31ef5_73478486')) {function content_5251a3bcb31ef5_73478486($_smarty_tpl) {?><br>
+<?php if ($_valid && !is_callable('content_52534d381bb2c1_51592923')) {function content_52534d381bb2c1_51592923($_smarty_tpl) {?><br>
 	<div class="container">
-		<form class="form-horizontal" method="POST" action="" id="form_buscador">
+		<form method="POST" action="" id="form_buscador">
 			<div class="form-group col-lg-12 text-right">
 				<label class="radio-inline">Seleccione tipo de busqueda:</label>
 				<label class="radio-inline">

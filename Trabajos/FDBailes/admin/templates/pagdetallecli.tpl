@@ -1,7 +1,7 @@
 <div class="modal-header">
 	<h4 class="modal-title">Detalle del Cliente</h4>
 </div>
-<form class="form-horizontal text-left" method="POST" action="">
+<form class="text-left" method="POST" action="">
 	<div class="modal-body">
 		<div class="form-group input-group">
 			<span class="input-group-addon input-sm detallemodal">ID</span>

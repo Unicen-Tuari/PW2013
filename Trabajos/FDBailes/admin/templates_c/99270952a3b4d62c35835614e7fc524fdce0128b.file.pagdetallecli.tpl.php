@@ -1,32 +1,32 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-03 21:36:13
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 21:09:19
          compiled from "./templates/pagdetallecli.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:20774637475240b6ba613ff6-07612400%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:150609588352534d2f37ffd8-40176727%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '99270952a3b4d62c35835614e7fc524fdce0128b' => 
     array (
       0 => './templates/pagdetallecli.tpl',
-      1 => 1380846799,
+      1 => 1381183280,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '20774637475240b6ba613ff6-07612400',
+  'nocache_hash' => '150609588352534d2f37ffd8-40176727',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5240b6ba7505b6_41038915',
   'variables' => 
   array (
     'detallecli' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52534d2f4bcda4_05824295',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5240b6ba7505b6_41038915')) {function content_5240b6ba7505b6_41038915($_smarty_tpl) {?><div class="modal-header">
+<?php if ($_valid && !is_callable('content_52534d2f4bcda4_05824295')) {function content_52534d2f4bcda4_05824295($_smarty_tpl) {?><div class="modal-header">
 	<h4 class="modal-title">Detalle del Cliente</h4>
 </div>
-<form class="form-horizontal text-left" method="POST" action="">
+<form class="text-left" method="POST" action="">
 	<div class="modal-body">
 		<div class="form-group input-group">
 			<span class="input-group-addon input-sm detallemodal">ID</span>

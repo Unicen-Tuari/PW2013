@@ -2,7 +2,7 @@
 	<h4 class="modal-title">{$detallerep.nombre} {$detallerep.apellido} - {$detallerep.id_cliente}</h4>
 	<h4 class="modal-title">{$detallerep.telefono} - {$detallerep.mail}</h4>
 </div>
-<form class="form-horizontal text-left" method="POST" action="input-group-addon input-sm detallemodal">
+<form class="text-left" method="POST" action="input-group-addon input-sm detallemodal">
 	<div class="modal-body" >
 		<div class="form-group input-group">
 			<span class="input-group-addon input-sm detallemodal">ID</span>

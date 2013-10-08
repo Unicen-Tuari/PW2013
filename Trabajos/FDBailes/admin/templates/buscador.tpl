@@ -1,6 +1,6 @@
 <br>
 	<div class="container">
-		<form class="form-horizontal" method="POST" action="" id="form_buscador">
+		<form method="POST" action="" id="form_buscador">
 			<div class="form-group col-lg-12 text-right">
 				<label class="radio-inline">Seleccione tipo de busqueda:</label>
 				<label class="radio-inline">

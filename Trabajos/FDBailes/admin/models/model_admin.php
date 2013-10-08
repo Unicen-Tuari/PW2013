@@ -5,7 +5,7 @@ class Modeladmin
 	
     public function __construct()
     {
-    	include ('./variables_conexion.php');
+    	include ('../variables_conexion.php');
     	try
 		{
 			$this->conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);

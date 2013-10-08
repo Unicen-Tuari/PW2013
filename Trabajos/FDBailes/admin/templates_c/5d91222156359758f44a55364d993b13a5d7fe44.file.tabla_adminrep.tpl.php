@@ -1,36 +1,34 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-03 21:41:01
-         compiled from "./templates/busqueda_adminrep.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:895330982524df758e66824-41310862%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 19:52:07
+         compiled from "./templates/tabla_adminrep.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:97037994252533b17574ac3-24863178%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '5bf997aee4ee45a278d34c49d4180cdc8095f417' => 
+    '5d91222156359758f44a55364d993b13a5d7fe44' => 
     array (
-      0 => './templates/busqueda_adminrep.tpl',
-      1 => 1380846273,
+      0 => './templates/tabla_adminrep.tpl',
+      1 => 1380847071,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '895330982524df758e66824-41310862',
+  'nocache_hash' => '97037994252533b17574ac3-24863178',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_524df75907b728_05643052',
   'variables' => 
   array (
     'reparaciones' => 0,
     'reparacion' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52533b176de5f8_43715420',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_524df75907b728_05643052')) {function content_524df75907b728_05643052($_smarty_tpl) {?><br>
+<?php if ($_valid && !is_callable('content_52533b176de5f8_43715420')) {function content_52533b176de5f8_43715420($_smarty_tpl) {?><br>
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr class="active">
 				<th class="text-center">ID</th>
-				<th class="text-center">Nombre</th>
-				<th class="text-center">Apellido</th>
 				<th class="text-center">Articulo</th>
 				<th class="text-center">Fecha de Ingreso</th>
 				<th class="text-center">Problema reportado</th>
@@ -45,10 +43,6 @@ $_smarty_tpl->tpl_vars['reparacion']->_loop = true;
 			<tr>
 				<td><?php echo $_smarty_tpl->tpl_vars['reparacion']->value['id'];?>
 </td>
-				<td><?php echo $_smarty_tpl->tpl_vars['reparacion']->value['nombre'];?>
-</td>
-				<td><?php echo $_smarty_tpl->tpl_vars['reparacion']->value['apellido'];?>
-</td>
 				<td><?php echo $_smarty_tpl->tpl_vars['reparacion']->value['articulo'];?>
 </td>
 				<td><?php echo $_smarty_tpl->tpl_vars['reparacion']->value['fecha_ingreso_f'];?>
@@ -58,5 +52,4 @@ $_smarty_tpl->tpl_vars['reparacion']->_loop = true;
 			</tr>
 			<?php } ?>
 		</tbody>
-	</table> 
-	<?php }} ?>
+	</table><?php }} ?>
