@@ -7,8 +7,11 @@ include '/controllers/controller_verauto.php';
 $model = new Modeladmin();
 $view = new Viewadmin();
 $controller = new Controlleradmin($model, $view);
+$id = $_GET['id'];
 
-$controller->mostrarAuto();
+//echo $id;
+
+$controller->buscarAuto($id);
 
 ?>
 

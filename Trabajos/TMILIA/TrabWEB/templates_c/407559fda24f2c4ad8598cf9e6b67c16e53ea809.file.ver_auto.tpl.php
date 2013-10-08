@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-06 19:20:39
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 19:12:59
          compiled from ".\templates\ver_auto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3148252517affc2d688-37699092%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '407559fda24f2c4ad8598cf9e6b67c16e53ea809' => 
     array (
       0 => '.\\templates\\ver_auto.tpl',
-      1 => 1381079519,
+      1 => 1381252375,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_52517affca7f42_53229157',
+  'variables' => 
+  array (
+    'marcas' => 0,
+    'marca' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52517affca7f42_53229157')) {function content_52517affca7f42_53229157($_smarty_tpl) {?><!DOCTYPE html>
@@ -31,7 +36,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <title>Autos Olavarria</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+   
 
     <!-- Custom styles for this template -->
     <link href="dist/css/offcanvas.css" rel="stylesheet">
@@ -46,29 +54,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <body>
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
-              </div>
+        
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="http://localhost/atpf/index.php">Home</a></li>
+                  <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
+                  <li><a href="login.php">Ingresar</a></li>
                 </ul>
-                  <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                      <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                  </form>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -113,9 +106,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         </dd>
                       </dl>
 
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
+                      <img alt="320x240" src="http://lorempixel.com/140/140/" />
+                      
                       </br>
                       </br>
                       </br>
@@ -143,21 +135,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="well sidebar-nav">
               <ul class="nav">
-                <li>Sidebar</li>
-                <li class="active"><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
                 <li>Categorias</li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li>Ingrese su busqueda</li>
-                <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                    <div class="input-append span12">
-                        <input type="text" class="search-query" placeholder="Search">
-                        <button type="submit" class="btn"><i class="icon-search"></i></button>
-                    </div>
-                </form>
+                <?php  $_smarty_tpl->tpl_vars['marca'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['marca']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['marcas']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['marca']->key => $_smarty_tpl->tpl_vars['marca']->value){
+$_smarty_tpl->tpl_vars['marca']->_loop = true;
+?>
+                <li class="active"><a href="#"><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
+</a></li>  
+                 <?php } ?>   
+                              
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

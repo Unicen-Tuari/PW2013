@@ -10,7 +10,10 @@
     <title>Autos Olavarria</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+   
 
     <!-- Custom styles for this template -->
     <link href="dist/css/offcanvas.css" rel="stylesheet">
@@ -25,29 +28,14 @@
   <body>
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
-              </div>
+        
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="http://localhost/atpf/index.php">Home</a></li>
+                  <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
+                  <li><a href="login.php">Ingresar</a></li>
                 </ul>
-                  <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                      <input type="text" placeholder="Email" class="form-control">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" placeholder="Password" class="form-control">
-                    </div>
-                    <button type="submit" class="btn btn-success">Sign in</button>
-                  </form>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -62,14 +50,11 @@
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-                  <div class="row-fluid">
-                    <div class="span12">
-                      <p text-align="center">
-                         {literal}
-                          
-                        <h3>
-                         {$auto.titulo}
-                        </h3>
+          
+              <div class="row-fluid">
+                   <div class="span12">
+                    {foreach $autos as $auto}
+                        <h3>{$auto.titulo}</h3>
                       </p>
                       <ul>
                         <li>
@@ -91,13 +76,9 @@
                           {$auto.descripcion}
                         </dd>
                       </dl>
+                        {/foreach}
+                      <img alt="320x240" src="http://lorempixel.com/140/140/" />
 
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
-                      <img alt="140x140" src="http://lorempixel.com/140/140/" />
-                      </br>
-                      </br>
-                      </br>
                         <div class="span4 well">
                             <form accept-charset="UTF-8" action="" method="POST">
                                 <textarea class="span4" id="new_message" name="new_message"
@@ -107,13 +88,11 @@
                                </br>
                                 <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
-                       </div>
-
-
+                        </div>
                   </div>
                 </div>
 
-              {/literal}
+           
 
        </div><!--/span-->
 
@@ -122,21 +101,11 @@
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="well sidebar-nav">
               <ul class="nav">
-                <li>Sidebar</li>
-                <li class="active"><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
                 <li>Categorias</li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li>Ingrese su busqueda</li>
-                <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                    <div class="input-append span12">
-                        <input type="text" class="search-query" placeholder="Search">
-                        <button type="submit" class="btn"><i class="icon-search"></i></button>
-                    </div>
-                </form>
+                {foreach $marcas as $marca}
+                <li class="active"><a href="#">{$marca.nombre}</a></li>  
+                 {/foreach}   
+                              
               </ul>
             </div><!--/.well -->
           </div><!--/span-->

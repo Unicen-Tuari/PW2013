@@ -6,15 +6,41 @@ class Viewindex
     public function __construct()
     {
     	$this->smarty = New Smarty;
-	}
-    public function muestraPagina()
+	} 
+
+    
+
+      public function generaAutos($datos)
     {
-		$this->smarty->display('index.tpl');
+        $this->smarty->assign("autos",$datos);
+        //$this->smarty->display('index.tpl');
     }
-    public function generaAutos($datos)
+    
+
+     public function muestraCategoria($datos)
     {
-    	$this->smarty->assign("autos",$datos);
-    	$this->smarty->display('index.tpl');
-	}
+        $this->smarty->assign("marcas",$datos);
+        //$this->smarty->display('index.tpl');
+    }
+     public function imprimirPagina()
+    {
+        $this->smarty->display('index.tpl');
+    }
+
+   
+
 }
+/*
+EN la vista
+CargarCategorias
+$Smarty->assign("categorias", $categorias);
+
+CargarAutos
+$Smarty->assign("Autos", $autos);
+
+ImprimirPagina
+$Smatry->show();
+
+Lo que te esta pasando es q estas llamando 2 veces a SHow.*/
 ?>
+

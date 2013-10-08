@@ -26,7 +26,7 @@ class Modeladdcar
 		return $q->fetchAll(PDO::FETCH_ASSOC);
 
 	}
-	public function insertarAuto($auto,$mail){
+	public function insertarAuto($auto){//,$mail
 		//$id_usuario = "SELECT id FROM usuario WHERE email = $mail";
 		$id_usuario=2;
 

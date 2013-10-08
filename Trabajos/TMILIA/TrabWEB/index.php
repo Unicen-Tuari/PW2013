@@ -8,7 +8,11 @@ $model = new Modelindex();
 $view = new Viewindex();
 $controller = new Controllerindex($model, $view);
 
+
 $controller->mostrarAuto();
+$controller->mostrarCategorias();
+$controller->imprimirPagina();
 
 ?>
+
 

@@ -8,7 +8,8 @@ class Modelindex
 	private $conn;
     
 	
-    public function __construct(){
+    public function __construct()
+    {
         try{
 			$this->conn = new PDO("mysql:host=$this->host;dbname=$this->db",$this->user,$this->pass);
 		}
@@ -16,22 +17,34 @@ class Modelindex
 			die('Error de conexion, Mensaje: ' .$pe->getMessage());
 		}
     }
-	
-	public function insertarAuto($auto){
-	
-		$sql = "INSERT INTO auto (modelo,descripcion,valor,anio) VALUES (:modelo,:descripcion,:valor,:anio)";
-		$q = $this->conn->prepare($sql);
-		$q->execute(array(':modelo'=>$auto["modelo"] ,':descripcion'=>$auto["descripcion"] ,':valor'=>$auto["valor"] ,':anio'=>$auto["anio"] ));
 
-	}
-	
-	public function consultaAuto(){
+    public function consultaAuto()
+	{
 
-		$sql = "SELECT * FROM auto";
+		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 3";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch
 		return $q->fetchAll(PDO::FETCH_ASSOC);
 	}
+	
+	public function consultaCategoria()
+	{
+
+		//$sql = "SELECT * FROM marca  ";
+		//$sql = "SELECT * FROM marca WHERE id =(select id_marca where auto)  ";
+		$sql= "SELECT DISTINCT m.nombre FROM  marca m JOIN auto a ON (m.id = a.id_marca)";
+			
+			//WHERE p.idioma LIKE 'Inglés' AND EXTRACT (month FROM e.fecha_entrega) =1
+
+		$q = $this->conn->prepare($sql);
+		$q->execute();
+		// fetch
+
+		return $q->fetchAll(PDO::FETCH_ASSOC);
+
+	}
+	
+
 }
 ?>

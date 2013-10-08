@@ -14,26 +14,29 @@ class Controllerindex
 		$this->view->imprimirPagina();
 	}
 	
-	public function grabarAuto($auto)
-	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
-		$this->model->insertarAuto($auto);
-		$this->view->mensajeExito();
-	}
+
 	public function mostrarAuto()
 	{	
 		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
-		$consulta = $this->model->consultaAuto();
+		/*$consulta = $this->model->consultaAuto();
+		$this->view->generaAutos($consulta);*/
+		$consulta = $this->view->generaAutos($this->model->consultaAuto());
+	}
 
-		if($consulta == null)
-		{
-			return false;
-		}
-		else
-		{
-			$this->view->generaAutos($consulta);
-		}
+	public function mostrarCategorias()
+	{	
+		
+		/*$consultacat = $this->model->consultaCategoria();
+		$this->view->muestraCategoria($consultacat);*/
+		$consultacat = $this->view->muestraCategoria($this->model->consultaCategoria());
+		
 	}
 }
 
+
+/*Tendrias que estar haciendo algo asi:
+$view->CargarCategorias($model->GetCategorias())
+$view->CargarAutos($model->GetAutos())
+$view->ImprimirPagina();*/
 ?>
+

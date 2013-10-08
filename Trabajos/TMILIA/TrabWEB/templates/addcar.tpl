@@ -52,7 +52,7 @@
           <select class="form-control">
             
              {foreach $marcas as $marca}
-                  <option>{$marca.nombre}</option>              
+                  <option style="text-transform: capitalize;">{$marca.nombre}</option>              
              {/foreach}
           </select>
           <div class="form-group">

@@ -17,7 +17,8 @@ if(isset($_POST["titulo"]))
   $auto["modelo"] = $_POST["modelo"];
   $auto["anio"] = $_POST["anio"];
   $auto["descripcion"] = $_POST["descripcion"];
-  $auto["marca"] = $_POST["marca"];
+ // $auto["marca"] = $_POST["marca"];
+  //$auto[""] = $_POST["imagen"];
 
   $controller->grabarAuto($auto);
 

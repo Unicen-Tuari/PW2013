@@ -17,9 +17,9 @@ class Modeladmin
 		}
     }
 	
-	public function consultaAuto(){
+	public function buscarAuto($id){
 
-		$sql = "SELECT id FROM auto";
+		$sql = "SELECT * FROM auto WHERE id= $id";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch

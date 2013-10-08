@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 14:40:35
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 20:23:47
          compiled from ".\templates\addcar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:124325253262d22c368-32409731%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8ae43f58172b250d4cef50c62a4069008ef9acc' => 
     array (
       0 => '.\\templates\\addcar.tpl',
-      1 => 1381236032,
+      1 => 1381256624,
       2 => 'file',
     ),
   ),
@@ -82,7 +82,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['marca']->key => $_smarty_tpl->tpl_vars['marca']->value){
 $_smarty_tpl->tpl_vars['marca']->_loop = true;
 ?>
-                  <option><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
+                  <option style="text-transform: capitalize;"><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
 </option>              
              <?php } ?>
           </select>
