@@ -1,5 +1,5 @@
 <?php
-class Model
+class Modelindex
 {
 	private $host = "localhost";
 	private $db = "autosBD";

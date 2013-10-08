@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-23 18:01:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-06 16:10:35
          compiled from "./templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1089532065240ac3e2330c4-72463115%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:191433603052519380508746-56466266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1379274302,
+      1 => 1381086634,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1089532065240ac3e2330c4-72463115',
+  'nocache_hash' => '191433603052519380508746-56466266',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5240ac3e23c663_97567079',
+  'unifunc' => 'content_52519380512130_71316182',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5240ac3e23c663_97567079')) {function content_5240ac3e23c663_97567079($_smarty_tpl) {?><!DOCTYPE html>	
+<?php if ($_valid && !is_callable('content_52519380512130_71316182')) {function content_52519380512130_71316182($_smarty_tpl) {?><!DOCTYPE html>	
 <html>
 <head>
 	<title>TT Taller de Reparacion</title>
@@ -39,22 +39,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</button>
 				<a class="navbar-brand">DataOS</a>
 			</div>
-			<div class="collapse navbar-collapse" id="navbar">
+			<div class="collapse navbar-collapse navbar-right" id="navbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#Home" accesskey="h">Inicio</a></li>
 					<li><a href="#Servicios" accesskey="s">Servicios</a></li>
 					<li><a href="#Consulta" accesskey="r">Consulta Reparacion</a></li>
 					<li><a href="#Contacto" accesskey="c">Contacto</a></li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="text" placeholder="Usuario" class="form-control">
-					</div>
-					<div class="form-group">
-						<input type="password" placeholder="Contraseña" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-primary">Loguear</button>
-				</form>
 			</div>
 		</div>
 	</nav><?php }} ?>

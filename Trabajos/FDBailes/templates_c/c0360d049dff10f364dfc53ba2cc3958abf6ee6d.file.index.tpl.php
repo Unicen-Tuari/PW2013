@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-23 21:59:15
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 18:48:35
          compiled from "./templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9390625925240ac3e0f6648-38208898%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:157374302052519380376237-07681441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1379970524,
+      1 => 1381182507,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9390625925240ac3e0f6648-38208898',
+  'nocache_hash' => '157374302052519380376237-07681441',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5240ac3e2139c0_47350463',
+  'unifunc' => 'content_525193804dd160_40007186',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5240ac3e2139c0_47350463')) {function content_5240ac3e2139c0_47350463($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_525193804dd160_40007186')) {function content_525193804dd160_40007186($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <a id="Home"></a>
 <div class="jumbotron">
@@ -85,7 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<h2>Consulta el estado de tu reparación</h2>
 </div>
 <div class="container">
-	<form class="form-horizontal text-center" id="form_consulta" method="POST" action="">
+	<form class="text-center" id="form_consulta" method="POST" action="">
 		<h3>Datos personales<h3>
 		<div class="form-group input-group col-lg-12" id="form_dni">
 			
@@ -107,10 +107,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<h2>Haganos sus consultas</h2>
 </div>
 <div class="container text-center">
-	<div class="row">
-		<div class="col-lg-12">
-			<form class="form-horizontal">
-				<legend>Formulario de contacto</legend>
+			<form>
+				<h3>Formulario de contacto</h3>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="nombre_apellido">Nombre y Apellido</label>
 					<span class="input-group-addon glyphicon glyphicon-user"></span>

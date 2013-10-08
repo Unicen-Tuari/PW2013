@@ -1,5 +1,5 @@
 <?php
-class Controller
+class Controllerindex
 {
     private $model;
 	private $view;

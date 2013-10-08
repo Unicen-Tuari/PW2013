@@ -1,0 +1,5 @@
+DirectoryIndex login.php 
+AuthType Basic
+AuthName "DataOS"
+AuthUserFile "/etc/httpd/users/list"
+Require valid-user
