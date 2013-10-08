@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 19:17:50
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 05:36:01
          compiled from ".\templates\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:585524cbad4172f84-21757629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1381080733,
+      1 => 1381202876,
       2 => 'file',
     ),
   ),
@@ -64,18 +64,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
+                  <li><a href="login.php">Ingresar</a></li>
                 </ul>
 
 
-                      <form class="navbar-form navbar-right">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-                  <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
+               
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -91,29 +84,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-          
-         
-          
-
-
-      
-      
           <?php  $_smarty_tpl->tpl_vars['auto'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['auto']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['autos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['auto']->key => $_smarty_tpl->tpl_vars['auto']->value){
 $_smarty_tpl->tpl_vars['auto']->_loop = true;
 ?>
-            <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['auto']->value['nombre_estado'];?>
-<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=="Retirada"){?>
-              <?php $_smarty_tpl->tpl_vars["clase"] = new Smarty_variable("success", true, 0);?>
-            <?php }else{?><?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['auto']->value['nombre_estado'];?>
-<?php $_tmp2=ob_get_clean();?><?php if ($_tmp2=="En Reparación"){?>
-              <?php $_smarty_tpl->tpl_vars["clase"] = new Smarty_variable("danger", true, 0);?>
-            <?php }else{ ?>
-              <?php $_smarty_tpl->tpl_vars["clase"] = new Smarty_variable("warning", true, 0);?>
-            <?php }}?>
-         
-      
                   <ul class="thumbnails">
                     <ul class="span5 clearfix">
                       <div class="thumbnail clearfix">

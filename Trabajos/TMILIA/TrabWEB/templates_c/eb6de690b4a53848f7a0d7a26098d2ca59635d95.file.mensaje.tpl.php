@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 20:57:16
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 23:22:40
          compiled from ".\templates\mensaje.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26855525302aa2d1bb2-89345853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb6de690b4a53848f7a0d7a26098d2ca59635d95' => 
     array (
       0 => '.\\templates\\mensaje.tpl',
-      1 => 1381172220,
+      1 => 1381173031,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <li  class="active"><a href="mensaje.php">Mensajes</a></li>
           <li><a href="datos.php">Mis datos</a></li>
         </ul>
-        <h3 class="text-muted">Projecto: Auto tandil</h3>
+       <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
 
       <div class="jumbotron">

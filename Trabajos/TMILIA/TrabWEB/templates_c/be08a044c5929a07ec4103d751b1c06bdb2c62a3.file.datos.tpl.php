@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 20:57:37
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 23:22:44
          compiled from ".\templates\datos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:3051452530410f0aba8-90797773%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be08a044c5929a07ec4103d751b1c06bdb2c62a3' => 
     array (
       0 => '.\\templates\\datos.tpl',
-      1 => 1381172254,
+      1 => 1381173058,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <li><a href="mensaje.php">Mensajes</a></li>
           <li class="active"><a href="datos.php">Mis datos</a></li>
         </ul>
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
 
       <div class="jumbotron">

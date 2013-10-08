@@ -31,7 +31,7 @@
           <li  class="active"><a href="mensaje.php">Mensajes</a></li>
           <li><a href="datos.php">Mis datos</a></li>
         </ul>
-        <h3 class="text-muted">Projecto: Auto tandil</h3>
+       <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
 
       <div class="jumbotron">

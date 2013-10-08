@@ -38,18 +38,11 @@
                   <li class="active"><a href="#">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
+                  <li><a href="login.php">Ingresar</a></li>
                 </ul>
 
 
-                      <form class="navbar-form navbar-right">
-                  <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                  </div>
-                  <button type="submit" class="btn btn-success">Sign in</button>
-                </form>
+               
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -65,23 +58,7 @@
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-          {literal}
-         
-          {/literal}
-
-
-      
-      
           {foreach $autos as $auto}
-            {if {$auto.nombre_estado} == "Retirada"}
-              {assign var = "clase" value = "success" nocache}
-            {elseif {$auto.nombre_estado} == "En Reparación" }
-              {assign var = "clase" value = "danger" nocache}
-            {else}
-              {assign var = "clase" value = "warning" nocache}
-            {/if}
-         
-      
                   <ul class="thumbnails">
                     <ul class="span5 clearfix">
                       <div class="thumbnail clearfix">

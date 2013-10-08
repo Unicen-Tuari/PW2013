@@ -31,7 +31,7 @@
           <li><a href="mensaje.php">Mensajes</a></li>
           <li class="active"><a href="datos.php">Mis datos</a></li>
         </ul>
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
 
       <div class="jumbotron">
