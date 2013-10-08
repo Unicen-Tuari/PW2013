@@ -1,3 +1,5 @@
+/*Consultas*/
+
 // Informacion de pacientes
 $("#cons_pacientes").submit(function()
 {
@@ -41,21 +43,18 @@ return false;
 
 });
 
-$("#cargaPaciente").click(function() {
 
+/* Carga */
+$("#ingresopaciente").submit(function() 
+{
 	$.ajax({
 	  type: "POST",
 	  url: "ipacientes.php",
 	  data:$("#ingresopaciente").serialize(),
 	  success: function(data)
 			   {
-				/*   alert(data);
-				   if(data.indexOf("Error")== -1)
-				   {
-				    	$("#ingresopaciente").find('input:text, input:password, input:file, select, textarea').val('');
-					}*/
+						alert("Paciente ingresado correctamente");
 			   }
 	});
- 
 	return false;
 });
