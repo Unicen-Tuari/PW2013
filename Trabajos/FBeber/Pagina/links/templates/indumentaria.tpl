@@ -7,7 +7,7 @@
 					<p> {$descripcion[lnombres]}<p>
 					<h1>${$precio[lnombres]}</h1>	
 			</div>
-			{/section}
+		{/section}
 
 
 {include file="footer.tpl"}
