@@ -1,124 +1,31 @@
 <?php
-//Configuración
-$host 	= "localhost";
-$db	= "gestoriaautomotor";
-$user	= "root";
-$pass	= "";
+require('./libs/Smarty.class.php');
 
-//Conexión
-try{
-
-$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
-}
-catch(PDOException $pe)
-{
-	die('Error de conexion, Mensaje: ' -$pe->getMessage());
-}
-
+include('conexion.php');
 //Consulta
-$sql = "SELECT es_cliente_amigo,url_imagen,web FROM cliente";
+	$sql = "SELECT es_cliente_amigo,url_imagen,web FROM cliente WHERE es_cliente_amigo='s'";
 
-//Ejecucion
-$q	 = $conn->query($sql);
+	//Ejecucion
+	$resultado = $conn->prepare($sql);
+	$resultado->execute();
+	if(!$resultado){
+		die(print_r($conn->errorInfo()));
+	}
+	$amigos=$resultado->fetchAll(PDO::FETCH_ASSOC);
 
-//Si es null, hubo un error
-if(!$q)
-{
-  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
-}
+	//Si es null, hubo un error
+	if(!$amigos)
+	{
+	  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
+	}
+
+	$smarty = new Smarty;
+	$smarty->assign("amigos", $amigos);
+	
+	//$smarty->debugging = true;
+	$smarty->caching = true;
+	$smarty->cache_lifetime = 120;
+
+	$smarty->display('clientes.tpl');
 
 ?>
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Gestoria del Automotor CN</title>
-		<link rel="stylesheet" href="styles/estilo.css">
-		<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
-
-		<script type="text/javascript" 	src="./js/jquery.smint.js"></script>
-
-		<script type="text/javascript">
-			
-		$(document).ready( function() {
-		    $('.menu').smint({
-		    	'scrollSpeed' : 1000
-		    });
-		});
-
-		</script>
-	</head>
-	<body>
-		<div id="contenedorgeneral">
-			<header id="encabezado">
-				<img alt="Logo CN" src="imagenes/cn.jpg">
-			</header>
-			<nav>
-				<ul class="menu">
-					<li><a href="inicio.html">Inicio</a></li>
-					<li>Servicios
-						<ul class="submenu">
-							<li><a href="estadotransferencia.html">Estado de Transferencias</a></li>
-							<li><a href="publicarautomotor.html">Publicar Automotor</a></li>
-						</ul>
-					</li>
-					<li class="selected"><a href="clientes.php">Clientes Amigos</a></li>
-					<li><a href="links.html">Links de Inter&eacute;s</a></li>
-					<li>Cuenta
-						<ul class="submenu">
-							<li><a href="editardatos.html">Editar Datos</a></li>
-							<li><a href="agregarautomotor.html">Agregar Automotor</a></li>
-						</ul>
-					</li>
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>	
-			<div id="contenedorcentral">
-				<article id="articulo" >
-					<?php
-					//Imprimo fotos de clientes "amigos" de a 3 por fila.
-						$cont=0;
-						while($r = $q->fetch()){
-  							while (cont<2 and $r and $r[es_cliente_amigo]='s'){
-  								echo('<a id="linkamigo" href="//'.$r[web].'" target="_blank"><img alt="Imagen Amigo" src="'.$r[url_imagen].'"></a>');
-  								$r= $q->fetch();
-  								$cont++;
-  							}
-						}
-					?>		
-				</article>
-				<aside id="contenedorlateral">
-					<div id="contenedorloguin">
-						<h3>Ingresa con tu Cuenta!</h3>
-						<form class="loguin" name="loguin" action="" method="" accept-charset="">
-							<ul>
-								<li>
-									<input id="input" type="text" name="usuario" placeholder="Email!" required>
-								</li>
-								<li>
-									<input id="input" type="password" name="contrasenia" placeholder="Contrase&ntilde;a"required>
-								</li>
-								<li>
-									<input id="input" type="checkbox" name="recordarme" id="recordarme">
-									Recordarme
-								</li>
-								<li>
-									<input class="botonsubmit" type="submit" value="Entrar">
-								</li>
-							</ul>
-						</form>
-
-					</div>
-					<div id="contenedorpublis">
-						<a href="http://www.arba.gov.ar/" target="_blank"><img alt="Logo Arba" src="imagenes/LogodeArbaHOME.gif"></a>
-						<a href="http://www.dnrpa.gov.ar/" target="_blank"><img alt="Logo Registro Automotor" src="imagenes/LogoRegistro.bmp"></a>
-					</div>
-				</aside>
-			</div>			
-		</div>
-	<footer>
-		Copyright 2013 Vecchio Matias Designs
-		<br>vecchiomatiasdesigns@gmail.com
-		<br>
-	</footer>
-</html>

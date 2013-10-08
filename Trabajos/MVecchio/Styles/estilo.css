@@ -81,7 +81,7 @@ ul{list-style-type: none;}
 
 }
 
-.menu .selected {
+.menu > li:first-child{
 	background-color: #D8D8D8;
 	padding-top: 10px;
 	box-shadow: 0px 0px 4px #A4A4A4;
@@ -194,6 +194,17 @@ article#articulo{
 	position: static;
 }
 
+article#articuloadmin{
+	padding: 20px ;
+	margin-left: 30px;
+	height: auto;
+	max-height: 1000px;
+	border-radius: 10px;
+	background-color: #fff;
+	width: 800px;
+	float: left;
+	position: static;
+}
 article#articulo ul{
 	text-align: left;
 	border-bottom:1px solid #eee;
