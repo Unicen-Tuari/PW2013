@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 00:34:22
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 03:24:12
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:911606773525379ef47c182-04375712%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1381203261,
+      1 => 1381213441,
       2 => 'file',
     ),
   ),
@@ -39,11 +39,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <a class="navbar-brand" href="/">Fretzilland</a>
         </div>
         <div>
-          <form class="navbar-form navbar-right" action="/search" method="post" role="search">
+          <form class="navbar-form navbar-right" action="/search" method="post" role="search" id="searchform" name="searchform">
           <div class="form-group">
-            <input type="text" name="search_kw"class="form-control" placeholder="Buscar producto">
+            <input type="text" name="search_kw" id="search_kw" class="form-control" placeholder="Buscar producto">
           </div>
-          <button type="submit" class="btn btn-default">Buscar</button>
+          <button type="submit" id="searchbtn" name="searchbtn" class="btn btn-default">Buscar</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Registrarse</a></li>

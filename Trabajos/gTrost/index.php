@@ -1,4 +1,5 @@
 <?php
+// -- Bootstrap
 
 function __autoload($class_name) {
     $filename = "models/" . $class_name . ".model.php";
@@ -10,12 +11,11 @@ function __autoload($class_name) {
 }
 spl_autoload_register("__autoload");
 
-// -- Bootstrap
+	require('libs/router.class.php');
 	require('models/model.php');
 	require('views/view.php');	
 	require('controllers/controller.php');	
 
-	
 
 // -- Application
 	$view = new View();

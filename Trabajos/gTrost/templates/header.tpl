@@ -18,11 +18,11 @@
           <a class="navbar-brand" href="/">Fretzilland</a>
         </div>
         <div>
-          <form class="navbar-form navbar-right" action="/search" method="post" role="search">
+          <form class="navbar-form navbar-right" action="/search" method="post" role="search" id="searchform" name="searchform">
           <div class="form-group">
-            <input type="text" name="search_kw"class="form-control" placeholder="Buscar producto">
+            <input type="text" name="search_kw" id="search_kw" class="form-control" placeholder="Buscar producto">
           </div>
-          <button type="submit" class="btn btn-default">Buscar</button>
+          <button type="submit" id="searchbtn" name="searchbtn" class="btn btn-default">Buscar</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Registrarse</a></li>
