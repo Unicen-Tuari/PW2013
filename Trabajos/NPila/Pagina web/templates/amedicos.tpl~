@@ -18,7 +18,7 @@
 									<option value="nutricion">Nutricion</option></select><br><br>
 									<input type="text" id="calle"  placeholder="Calle">
 									<input type="numeric" id="num" placeholder="Nº" size="4">
-									<input type="numeric" id="cp" placeholder="C.P." size="4"><br><br>
+									<input type="text" id="localidad" placeholder="Localidad" size="15"><br><br>
 									<input type="tel" id="tel"  placeholder="Telefono" size="13">
 									<input type="email" id="mail"  placeholder="E-mail" size="20"><br><br>
 									<input type="submit" value="Cargar Medico">

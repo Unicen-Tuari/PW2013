@@ -13,7 +13,5 @@
 			<div style="clear: both;"></div>
 			</div>
 		</div>
-	<script type="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
-	<script type="text/javascript" src="scripts/login.js"></script>
 	</body>
-</html>
+{include file = "footer.tpl"}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-01 14:14:18
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 20:59:24
          compiled from "./templates/amedicos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:459251153522e8072a437c4-89984724%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1380647646,
+      1 => 1381184278,
       2 => 'file',
     ),
   ),
@@ -67,5 +67,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 	</body>
-</html>
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+
 <?php }} ?>

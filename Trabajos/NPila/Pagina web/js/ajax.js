@@ -11,10 +11,6 @@ $("#cons_pacientes").submit(function()
 			{
 				document.getElementById('content').innerHTML=data;
 			}
-		/*error: function(data)
-			{
-			alert("El paciente consultado no se encuentra. Compruebe que escribio el nombre correctamente y que el paciente este ingresado en la base de datos.")
-			}*/
 });
 
 return false;
@@ -44,17 +40,3 @@ return false;
 });
 
 
-/* Carga */
-$("#ingresopaciente").submit(function() 
-{
-	$.ajax({
-	  type: "POST",
-	  url: "ipacientes.php",
-	  data:$("#ingresopaciente").serialize(),
-	  success: function(data)
-			   {
-						alert("Paciente ingresado correctamente");
-			   }
-	});
-	return false;
-});

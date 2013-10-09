@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-01 14:19:06
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 01:13:59
          compiled from "./templates/menu.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:52159641752436c9d300666-05854302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '243b1378187b2878c10cdd133ad5f270cdcebcd8' => 
     array (
       0 => './templates/menu.tpl',
-      1 => 1380647764,
+      1 => 1381197233,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_52436c9d302b34_51440458')) {function content_52436c9d302b34_51440458($_smarty_tpl) {?><div id="menu">
 	<ul class="nav">
 		<li >
-			<a  href="index.php">Inicio</a>
+			<a href="index.php">Inicio</a>
 		</li>
 		<li >
 			<a>Pacientes</a>
@@ -47,6 +47,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li class="submen"><a href="#">Consultar Medico</a></li>
 				<li class="submen"><a href="amedicos.php">Ingresar Medico</a></li>
 			</ul>
+		</li>
+		<li>
+			<a href="logout.php" id="logout">Logout</a>
 		</li>
 	</ul>
 </div>

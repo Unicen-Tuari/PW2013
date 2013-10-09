@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-30 21:30:42
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 19:22:13
          compiled from "./templates/infopaciente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4672163085239fe96f39ee1-09818283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '939f94d757628f9c5eab1e6b3d72851dc029227a' => 
     array (
       0 => './templates/infopaciente.tpl',
-      1 => 1380149884,
+      1 => 1381184351,
       2 => 'file',
     ),
   ),
@@ -53,8 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 			</div>
 		</div>
-		<script text="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
-		<script text="text/javascript" src="scripts/ajax.js"></script>
 	</body>
-</html>
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <?php }} ?>

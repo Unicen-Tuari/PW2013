@@ -1,7 +1,7 @@
 <?php
 	include './controlers/cipacientes.php';
 	include './views/vipacientes.php';
-	include './models/minfopaciente.php';
+	include './models/mipaciente.php';
 
 	$model = new Model();
 	$view = new View();
@@ -11,7 +11,6 @@
 		{
 			/*Ver como insertar estudios (Tabla diferente)*/
 			$controller->ingresaPaciente($_POST);
-			/*$controller->imprimirPaginaSalida();*/
 		}
 	else
 		{			

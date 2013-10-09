@@ -51,7 +51,8 @@ $("#ingresopaciente").submit(function()
 	  data:$("#ingresopaciente").serialize(),
 	  success: function(data)
 			   {
-						alert("Paciente ingresado correctamente");
+				alert("Paciente ingresado correctamente");
+				window.location = 'index.php';
 			   }
 	});
 	return false;

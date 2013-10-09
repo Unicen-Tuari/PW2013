@@ -3,13 +3,19 @@
 		{
 			private $view;
 
-    public function __construct($view) {
-		$this->view = $view;
+    public function __construct($model, $view) {
+$this->model = $model;		
+$this->view = $view;
     }
 	
 	public function imprimirPagina()
 	{
 		$this->view->imprimirPagina();
 	}
+
+	public function ingresaTurno($form)
+				{
+					$this->model->guardaTurno($form);
+				}
 }
 ?>

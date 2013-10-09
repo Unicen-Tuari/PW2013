@@ -1,7 +1,7 @@
 <div id="menu">
 	<ul class="nav">
 		<li >
-			<a  href="index.php">Inicio</a>
+			<a href="index.php">Inicio</a>
 		</li>
 		<li >
 			<a>Pacientes</a>
@@ -26,6 +26,9 @@
 				<li class="submen"><a href="#">Consultar Medico</a></li>
 				<li class="submen"><a href="amedicos.php">Ingresar Medico</a></li>
 			</ul>
+		</li>
+		<li>
+			<a href="logout.php" id="logout">Logout</a>
 		</li>
 	</ul>
 </div>

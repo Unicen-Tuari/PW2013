@@ -30,7 +30,5 @@
 				</div>
 			</div>
 		</div>
-		<script text="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
-		<script text="text/javascript" src="scripts/ajax.js"></script>
 	</body>
-</html>
+{include file = "footer.tpl"}

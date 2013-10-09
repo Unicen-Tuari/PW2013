@@ -14,28 +14,26 @@
 				{
 					session_start();
 					$this->view->imprimirPagina();
-					
 				}
 	
 			public function loginUsuario($formulario)
-			{
-			
+				{
 					$user = $this->model->getUsuario($formulario['User']);
-			
+
 					if(empty($user))
 					{
-						$this->view->MensajeError("Error: Usuario Inexistente");
+						print_r("Usuario Inexistente");					
+						/*$this->view->MensajeError("Error: Usuario Inexistente");*/
 					} 	
 					if($user['Pass'] != md5($formulario['Pass']))
 					{
-						$this->view->MensajeError("Error: Password Inválida");
+						print_r("Usuario Inexistente");	
+						/*$this->view->MensajeError("Error: Password Inválida");*/
 					}
 			
 					session_start();
 					$_SESSION['User']=$formulario['User'];
 					echo "index.php";
-			
-		
-			}
-	}
+				}
+		}
 ?>

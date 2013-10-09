@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-25 20:06:25
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 18:02:28
          compiled from "./templates/dturnos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145861096523f9406d89f85-59212591%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774dc3d8c66f70dc394bf11a20f7b2f0e2905ad3' => 
     array (
       0 => './templates/dturnos.tpl',
-      1 => 1380149873,
+      1 => 1381266144,
       2 => 'file',
     ),
   ),
@@ -30,17 +30,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="post"> 
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 								<legend class="title a"><br><br>								
-									<form id="" method="post">
+									<form id="formmedico" method="post" action="">
 										Nombre y Apellido:
-										<input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="" size="30">
+										<input type="text" id="Nombre_apellido" name="Nombre_apellido" placeholder="" size="30">
 										<br><br>
 										Turnos para el dia: 									
-										<input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" size="10">
-										Especialidad:					
-										<select name="especialidad" style="margin:0 5px 0 0">
-											<option value="kinesiologia">Kinesiologia</option>
-											<option value="nutricion">Nutricion</option>
-										</select><br><br><br>
+										<input type="text" name="Fecha" id="fecha" placeholder="MM/DD/AAAA" size="10">
+										Hora:					
+										<input type="text" name="Hora" placeholder="HH:MM" size="5"><br><br><br>
 										<input type="submit" value="Dar Turno">
 									</form>
 								</legend>
@@ -62,5 +59,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 	</body>
-</html>
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <?php }} ?>

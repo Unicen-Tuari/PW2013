@@ -18,12 +18,7 @@
 			public function ingresaPaciente($form)
 				{
 					$this->model->guardaPaciente($form);
-					$this->view->imprimirPaginaSalida();
 				}
 
-			public function imprimirPaginaSalida()
-				{
-					$this->view->imprimirPaginaSalida();
-				}
 		}
 ?>
