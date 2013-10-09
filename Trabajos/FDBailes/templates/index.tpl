@@ -63,7 +63,7 @@
 	<h2>Consulta el estado de tu reparación</h2>
 </div>
 <div class="container">
-	<form class="form-horizontal text-center" id="form_consulta" method="POST" action="">
+	<form class="text-center" id="form_consulta" method="POST" action="">
 		<h3>Datos personales<h3>
 		<div class="form-group input-group col-lg-12" id="form_dni">
 			{literal}
@@ -85,10 +85,8 @@
 	<h2>Haganos sus consultas</h2>
 </div>
 <div class="container text-center">
-	<div class="row">
-		<div class="col-lg-12">
-			<form class="form-horizontal">
-				<legend>Formulario de contacto</legend>
+			<form>
+				<h3>Formulario de contacto</h3>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="nombre_apellido">Nombre y Apellido</label>
 					<span class="input-group-addon glyphicon glyphicon-user"></span>

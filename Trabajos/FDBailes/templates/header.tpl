@@ -18,22 +18,13 @@
 				</button>
 				<a class="navbar-brand">DataOS</a>
 			</div>
-			<div class="collapse navbar-collapse" id="navbar">
+			<div class="collapse navbar-collapse navbar-right" id="navbar">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#Home" accesskey="h">Inicio</a></li>
 					<li><a href="#Servicios" accesskey="s">Servicios</a></li>
 					<li><a href="#Consulta" accesskey="r">Consulta Reparacion</a></li>
 					<li><a href="#Contacto" accesskey="c">Contacto</a></li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="text" placeholder="Usuario" class="form-control">
-					</div>
-					<div class="form-group">
-						<input type="password" placeholder="Contraseña" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-primary">Loguear</button>
-				</form>
 			</div>
 		</div>
 	</nav>

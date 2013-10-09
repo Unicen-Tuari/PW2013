@@ -22,6 +22,6 @@
 </footer>
 <script type="text/javascript" src="./js/jquery-1.10.0.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./js/consultas.js"></script>
+<script type="text/javascript" src="./js/cliente.js"></script>
 </body>
 </html>
