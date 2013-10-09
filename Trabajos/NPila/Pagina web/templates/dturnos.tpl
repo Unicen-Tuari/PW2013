@@ -8,17 +8,14 @@
 							<div class="post"> 
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
 								<legend class="title a"><br><br>								
-									<form id="" method="post">
+									<form id="formmedico" method="post" action="">
 										Nombre y Apellido:
-										<input type="text" id="nombre_apellido" name="nombre_apellido" placeholder="" size="30">
+										<input type="text" id="Nombre_apellido" name="Nombre_apellido" placeholder="" size="30">
 										<br><br>
 										Turnos para el dia: 									
-										<input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" size="10">
-										Especialidad:					
-										<select name="especialidad" style="margin:0 5px 0 0">
-											<option value="kinesiologia">Kinesiologia</option>
-											<option value="nutricion">Nutricion</option>
-										</select><br><br><br>
+										<input type="text" name="Fecha" id="fecha" placeholder="MM/DD/AAAA" size="10">
+										Hora:					
+										<input type="text" name="Hora" placeholder="HH:MM" size="5"><br><br><br>
 										<input type="submit" value="Dar Turno">
 									</form>
 								</legend>
@@ -39,4 +36,4 @@
 			</div>
 		</div>
 	</body>
-</html>
+{include file = "footer.tpl"}

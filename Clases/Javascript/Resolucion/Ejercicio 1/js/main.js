@@ -1,10 +1,34 @@
 function verificarFormulario()
 {
+<<<<<<< HEAD
+	var name = document.getElementById('name');
+	var lastname = document.getElementById('username');
+	var lastname = document.getElementById('password');
+=======
+>>>>>>> 7000547e4cabd8503025ec43bfa220ce9e71f79a
 	var email = document.getElementById('email');
-	var consulta = document.getElementById('consulta');
+	var fechaNac = document.getElementById('fechaNac');
+	var fechaActual = new date();
 	var linferior = 3;
 	var lsuperior = 20;
 
+<<<<<<< HEAD
+	if(esVacio(name.value) && !largoEntre(linferior, lsuperior, name.value))
+	{
+		alert('Debe ingresar un nombre entre 3 y 20 caracteres');
+		name.focus();
+		return;
+	}
+
+	if(esVacio(username.value) && !largoEntre(linferior, lsuperior, username.value))
+	{
+		alert('Debe ingresar un apellido entre 3 y 20 caracteres');
+		lastname.focus();
+		return;
+	}
+
+=======
+>>>>>>> 7000547e4cabd8503025ec43bfa220ce9e71f79a
 	if(!emailValido(email.value))
 	{
 		alert('Debe ingresar un email valido');
@@ -12,12 +36,11 @@ function verificarFormulario()
 		return;
 	}
 
-	if(esVacio(consulta.value))
-	{
-		alert('Debe ingresar una consulta');
-		email.focus();
+	if !(fechaNac(getFullYear) < (fechaActual(getFullYear) - 17)) 
+		{
+		alert("Tiene que ser mayor de 18 para poder registrarse.")
 		return;
-	}
+		}
 	
 }
 
@@ -35,6 +58,11 @@ function emailValido(email)
 	return true;
 }
 
+
+if (Date.parse(fromDate) > Date.parse(toDate)) {
+alert("Invalid Date Range!\nStart Date cannot be after End Date!")
+return false;
+}
 
 
 function esVacio(valor)

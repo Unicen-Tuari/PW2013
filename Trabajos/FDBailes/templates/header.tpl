@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="./css/bootstrap.min.css" media="screen">
 	<link rel="stylesheet" href="./css/own.css" media="screen">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar">
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -16,24 +16,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">DataOS</a>
+				<a class="navbar-brand">DataOS</a>
 			</div>
-			<div class="collapse navbar-collapse">
+			<div class="collapse navbar-collapse navbar-right" id="navbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#" accesskey="h">Inicio</a></li>
+					<li class="active"><a href="#Home" accesskey="h">Inicio</a></li>
 					<li><a href="#Servicios" accesskey="s">Servicios</a></li>
 					<li><a href="#Consulta" accesskey="r">Consulta Reparacion</a></li>
 					<li><a href="#Contacto" accesskey="c">Contacto</a></li>
 				</ul>
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="text" placeholder="Usuario" class="form-control">
-					</div>
-					<div class="form-group">
-						<input type="password" placeholder="Contraseña" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-primary">Loguear</button>
-				</form>
 			</div>
 		</div>
 	</nav>

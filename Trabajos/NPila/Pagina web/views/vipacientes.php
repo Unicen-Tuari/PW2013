@@ -5,12 +5,13 @@
 			private $smarty;
 
 		    public function __construct()
-			{
-				$this->smarty = New Smarty;
-			}
+				{
+					$this->smarty = New Smarty;
+				}
+			
 			public function imprimirPagina()
-			{
-				$this->smarty->display('ipacientes.tpl');
-			}
+				{
+					$this->smarty->display('ipacientes.tpl');
+				}
 		}
 ?>

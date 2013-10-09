@@ -1,0 +1,1 @@
+Debe comentarse el htaccess para poder entrar a /cargarProductos.php, que carga una lista ya determinada de productos. Descomentar después de agregarlos para que la página siga con el ruteo correcto.

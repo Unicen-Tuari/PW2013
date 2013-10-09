@@ -13,7 +13,7 @@
 								<legend class="title a"><br><br>								
 									<form id="cons_turnos" method="post">
 										Turnos del dia: 									
-										<input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" size="10">
+										<input type="text" id="fecha" name="fecha" placeholder="MM/DD/AAAA" size="10">
 										Especialidad:					
 										<select name="especialidad" style="margin:0 5px 0 0">
 											<option value="kinesiologia">Kinesiologia</option>
@@ -38,7 +38,5 @@
 				</div>
 			</div>
 		</div>
-		<script text="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
-		<script text="text/javascript" src="scripts/ajax.js"></script>
 	</body>
-</html>
+{include file = "footer.tpl"}

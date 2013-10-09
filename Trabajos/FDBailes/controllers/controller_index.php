@@ -1,27 +1,27 @@
 <?php
-class Controller
+class Controllerindex
 {
-    private $model;
+	private $model;
 	private $view;
- 
-    public function __construct($model, $view) {
-        $this->model = $model;
+
+	public function __construct($model, $view) {
+		$this->model = $model;
 		$this->view = $view;
-    }
-	
+	}
 	public function imprimirPagina()
 	{
-		if(isset($_GET["dni"]))
+		$this->view->muestraPagina();
+	}
+	public function imprimirConsulta($id_cliente)
+	{
+		$consulta=$this->model->consultaReparaciones($id_cliente);
+		if ($consulta == null)
 		{
-			$consulta=$this->model->consultaReparaciones($_GET["dni"]);
-			if($consulta)
-			{
-				$this->view->generaTabla($consulta);	
-			}
+			return false;
 		}
 		else
 		{
-			$this->view->muestraPagina();
+			$this->view->generaTabla($consulta);
 		}
 	}
 }

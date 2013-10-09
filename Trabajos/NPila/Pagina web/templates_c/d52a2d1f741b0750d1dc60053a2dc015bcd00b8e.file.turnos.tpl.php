@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-25 20:07:02
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 20:50:29
          compiled from "./templates/turnos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1188906404523a1de73b5aa3-55261343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd52a2d1f741b0750d1dc60053a2dc015bcd00b8e' => 
     array (
       0 => './templates/turnos.tpl',
-      1 => 1380150418,
+      1 => 1381189825,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<legend class="title a"><br><br>								
 									<form id="cons_turnos" method="post">
 										Turnos del dia: 									
-										<input type="text" id="fecha" name="fecha" placeholder="DD/MM/YYYY" size="10">
+										<input type="text" id="fecha" name="fecha" placeholder="MM/DD/AAAA" size="10">
 										Especialidad:					
 										<select name="especialidad" style="margin:0 5px 0 0">
 											<option value="kinesiologia">Kinesiologia</option>
@@ -61,8 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 			</div>
 		</div>
-		<script text="text/javascript" src="scripts/jquery-1.10.0.min.js"></script>
-		<script text="text/javascript" src="scripts/ajax.js"></script>
 	</body>
-</html>
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <?php }} ?>

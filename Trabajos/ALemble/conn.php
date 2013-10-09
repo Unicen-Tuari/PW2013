@@ -1,16 +1,10 @@
 <?php
 //Configuración
-$host 	= "localhost";
-$db	= "broms";
-$user	= "root";
-$pass	= "";
+$host 	= "mysql.nixiweb.com";
+$db	= "u969435197_broms";
+$user	= "u969435197_admin";
+$pass	= "bender36217598";
 //Conexión
-try {
-$conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
-}
-catch(PDOException $pe)
-{
-	die('Error de conexion');
-}
-
+$conn = mysql_connect($host, $user, $pass);
+mysql_select_db($db,$conn);
 ?>

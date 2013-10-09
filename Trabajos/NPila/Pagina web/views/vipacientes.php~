@@ -2,9 +2,16 @@
 	require('./libs/Smarty.class.php');
 	class View
 		{
-			public function imprimirPagina(){
-				$smarty = new Smarty;
-				$smarty->display('ipacientes.tpl');
-			}
-		}	
+			private $smarty;
+
+		    public function __construct()
+				{
+					$this->smarty = New Smarty;
+				}
+			
+			public function imprimirPagina()
+				{
+					$this->smarty->display('ipacientes.tpl');/*A donde manda despues de cargar*/
+				}
+		}
 ?>
