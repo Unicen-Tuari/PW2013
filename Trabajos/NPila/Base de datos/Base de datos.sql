@@ -30,7 +30,7 @@ CREATE TABLE Paciente(
 	Telefono NUMERIC(11) NOT NULL,
 	Movil NUMERIC(13),
 	Mail VARCHAR(30),
-	--Fecha_nac DATE NOT NULL,
+	Fecha_nac DATE NOT NULL,
 	Obr_soc VARCHAR(40),
 	Num_afiliado VARCHAR(15),
 	Antecedentes TEXT,
@@ -49,30 +49,30 @@ CREATE TABLE Turnos(
 	CONSTRAINT FK_TURNOS_PACIENTE_NOM_APE FOREIGN KEY (Nombre_Apellido) REFERENCES Paciente(Nombre_Apellido) ON DELETE CASCADE);
 
 CREATE TABLE Usuario(
-	Id TINYUNT UNSIGNED NOT NULL AUTO_INCREMENT,
+	Id_usr TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
   	Nom_usuario VARCHAR(50) NOT NULL,
-	Pass varchar(50) NOT NULL,
-  	CONSTRAINT PK_USUARIO PRIMARY KEY (Id);
+	Pass VARCHAR(50) NOT NULL,
+  	CONSTRAINT PK_USUARIO PRIMARY KEY (Id_usr));
 
 
-INSERT INTO Usuario (Id, Nom_usuario, Pass) VALUES
-	(1, 'nahuel', '3e5a240026859a74d5224fff869d0546');
+INSERT INTO Usuario (Id_usr, Nom_usuario, Pass) VALUES
+	('1', 'nahuel', '3e5a240026859a74d5224fff869d0546');
 
 INSERT INTO Especialidad (Nom_especialidad) VALUES
 	('Kinesiologia'),
 	('Nutricion');
 
-INSERT INTO Medico (Id_especialidad, Nombre_Apellido) VALUES
-	('1', 'Roberto Perez'),
-	('2', 'Juan Martinez');
+INSERT INTO Medico (Id_especialidad, Nombre_Apellido, Calle, Numero, Localidad, Telefono, Mail) VALUES
+	('1', 'Roberto Perez', 'Moreno', '35', 'Las Flores', '24585896', 'medico@medico.com'),
+	('2', 'Juan Martinez', 'Alvear', '1235', 'Las Flores', '29625896', 'medico@medico.com');
 
 INSERT INTO Estudios (Estudio) VALUES
 	('nsjsabfksdbfksdbfkbsdfkbjdsfgsdfgdfs'),
 	('dsfsdflñheberbgoburegfb reufharbfuse');
 
 INSERT INTO Paciente VALUES
-	('Nahuel Pila', '35874586', 'Las Flores', 'Bº Las Flores', '11', '454404', '2244422370', 'nahuelmpila@gmail.com', '19910904', 'ioma', '14047887/2', 'No presenta antecedentes', '1', '1'),
-	('Martin Pila', '35258745', 'Las Flores', 'Bº Las Flores', '11', '450888', '2244912570', 'nahuelmpila_22@hotmail.com', '19990718', 'ioma', '14047887/19', 'No presenta antecedentes', '2', '2');
+	('Nahuel Pila', '35874586', 'Las Flores', 'Bº Las Flores', '11', '7200', '454404', '2244422370', 'nahuelmpila@gmail.com', '19910904', 'ioma', '14047887/2', 'No presenta antecedentes', '1', '1'),
+	('Martin Pila', '35258745', 'Las Flores', 'Bº Las Flores', '11', '7200', '450888', '2244912570', 'nahuelmpila_22@hotmail.com', '19990718', 'ioma', '14047887/19', 'No presenta antecedentes', '2', '2');
 
 INSERT INTO Turnos VALUES
 	('1', 'Nahuel Pila', '20130920', '153000'),
