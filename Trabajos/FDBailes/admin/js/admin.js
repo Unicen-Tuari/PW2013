@@ -196,13 +196,13 @@ $("#nuevocliente").on('submit','#form_nuevocli',function()
 		data:$("#form_nuevocli").serialize(),
 		success: function(data)
 		{
-			$('#nuevocliente').html('<br><br><br><div class="container"><div class="row"><div class="col-lg-12 alert alert-success fade in" id="alerta_cli_agregado"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>Cliente agregado exitosamente.</div></div></div>')
-			
+			$('#nuevocliente').html(data)
 		}
 	});
 	return false;
 });
-$('#nuevocliente').on('closed.bs.alert','#alerta_cli_agregado', function () {
+$('#nuevocliente').on('closed.bs.alert','#alerta_cli_agregado', function ()
+{
 	$.ajax({
 		type: "POST",
 		url: "admin.php",
@@ -213,7 +213,33 @@ $('#nuevocliente').on('closed.bs.alert','#alerta_cli_agregado', function () {
 		}
 	});
 });
-$('#logout').click(function() {
+$("#nuevareparacion").on('submit','#form_nuevarep',function() 
+{
+	$.ajax({
+		type: "POST",
+		url: "admin.php",
+		data:$("#form_nuevarep").serialize(),
+		success: function(data)
+		{
+			$('#nuevareparacion').html(data)
+		}
+	});
+	return false;
+});
+$('#nuevareparacion').on('closed.bs.alert','#alerta_rep_agregada', function ()
+{
+	$.ajax({
+		type: "POST",
+		url: "admin.php",
+		data: "nuevarep=true",
+		success: function(data)
+		{
+			$("#nuevareparacion").html(data);
+		}
+	});
+});
+$('#logout').click(function()
+{
 	$.ajax({
 		type: "POST",
 		url: "logout.php",
@@ -224,3 +250,20 @@ $('#logout').click(function() {
 	});
 	return false;
 });
+$('#modal_body').on('click','#boton_modificacli',activaForm);
+function activaForm()
+{
+	alert('activas form')
+	$('#modal_body input[name!=id]').prop('disabled',false);
+	$('#modal_body').off('click').on('click','#boton_modificacli',modificaForm);
+	$('#boton_modificacli').removeClass('btn-primary').addClass('btn-success');
+	$('#boton_modificacli span').removeClass('glyphicon-edit').addClass('glyphicon-ok');
+};
+function modificaForm()
+{
+	//el ajax q manda la modificacion
+	alert('modificas form')
+	$('#modal_body').off('click').on('click','#boton_modificacli',activaForm);
+// 	$('#boton_modificacli').removeClass('btn-success').addClass('btn-primary');
+// 	$('#boton_modificacli span').removeClass('glyphicon-ok').addClass('glyphicon-edit');
+};

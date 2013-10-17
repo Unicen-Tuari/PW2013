@@ -55,6 +55,10 @@
 	{
 		$controller->insertaCli($_POST);
 	}
+	else if (isset($_POST["articulo"]))
+	{
+		$controller->insertaRep($_POST);
+	}
 	else if (isset($_SESSION["username"]))
 	{
 		$controller->imprimirPagina();

@@ -2,27 +2,23 @@
 <div class="container">
 	<form class="text-left" method="POST" action="" id="form_nuevocli">
 		<div class="form-group col-lg-12 input-group">
-			<span class="input-group-addon input-sm detallemodal">ID</span>
-			<input class="form-control" type="text" name="id" value="{$next_id.Auto_increment}" disabled>
-		</div>
-		<div class="form-group col-lg-12 input-group">
-			<span class="input-group-addon input-sm detallemodal">Nombre</span>
+			<span class="input-group-addon detallemodal">Nombre</span>
 			<input class="form-control" type="text" name="nombre" required autofocus>
 		</div>
 		<div class="form-group col-lg-12 input-group">
-		<span class="input-group-addon input-sm detallemodal">Apellido</span>
+		<span class="input-group-addon detallemodal">Apellido</span>
 			<input class="form-control" type="text" name="apellido" required>
 		</div>
 		<div class="form-group col-lg-12 input-group">
-			<span class="input-group-addon input-sm detallemodal">Dirección</span>
+			<span class="input-group-addon detallemodal">Dirección</span>
 			<input class="form-control" type="text" name="direccion" required>
 		</div>
 		<div class="form-group col-lg-12 input-group">
-			<span class="input-group-addon input-sm detallemodal">Telefono</span>
+			<span class="input-group-addon detallemodal">Telefono</span>
 			<input class="form-control" type="tel" name="telefono" required>
 		</div>
 		<div class="form-group col-lg-12 input-group">
-			<span class="input-group-addon input-sm detallemodal">Mail</span>
+			<span class="input-group-addon detallemodal">Mail</span>
 			<input class="form-control" type="email" name="mail">
 		</div> 
 		<div class="form-group col-lg-12">

@@ -27,11 +27,11 @@ class Controlleradmin
 	}
 	public function imprimirFormrep()
 	{
-		$this->view->generaFormrep();
+		$this->view->generaFormrep($this->model->consultaClientesmin(),$this->model->consultaEstadosrep());
 	}
 	public function imprimirFormcli()
 	{
-		$this->view->generaFormcli($this->model->consultaNextidcli());
+		$this->view->generaFormcli();
 	}
 	public function imprimirDetallerep($id_reparacion)
 	{
@@ -94,7 +94,36 @@ class Controlleradmin
 		{
 			$arreglo['mail'] = '-';
 		}
-		$this->model->guardaCli($arreglo);
+		$this->view->generaAlerta($this->model->guardaCli($arreglo));
+	}
+	public function insertaRep($arreglo)
+	{
+		foreach ($arreglo as $valor)
+		{
+			$valor = trim($valor);
+		}
+		if (!$arreglo['marca'])
+		{
+			$arreglo['marca'] = '-';
+		}
+		if (!$arreglo['modelo'])
+		{
+			$arreglo['modelo'] = '-';
+		}
+		if (!$arreglo['serie'])
+		{
+			$arreglo['serie'] = '-';
+		}
+		if (!$arreglo['notas'])
+		{
+			$arreglo['notas'] = '-';
+		}
+		if (!$arreglo['precio'])
+		{
+			$arreglo['precio'] = 0;
+		}
+		print_r($arreglo);
+		$this->view->generaAlerta($this->model->guardaRep($arreglo));
 	}
 }
 ?>

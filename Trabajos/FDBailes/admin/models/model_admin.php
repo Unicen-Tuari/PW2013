@@ -38,6 +38,17 @@ class Modeladmin
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function consultaClientesmin()
+    {
+    	$sql = "SELECT id,nombre,apellido FROM CLIENTE ORDER BY apellido,nombre;";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetchAll(PDO::FETCH_ASSOC);
+    }
     public function consultaDetallerep($id_reparacion)
     {
     	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE r.id = $id_reparacion AND (e.id=r.id_estado) AND c.id=r.id_cliente;";
@@ -49,6 +60,17 @@ class Modeladmin
 		}
 		return $resultado->fetch(PDO::FETCH_ASSOC);
 	}
+	public function consultaEstadosrep()
+    {
+    	$sql = "SELECT id,nombre_estado FROM ESTADO;";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetchAll(PDO::FETCH_ASSOC);
+    }
 	public function consultaDetallecli($id_cliente)
     {
     	$sql = "SELECT * FROM CLIENTE WHERE id = $id_cliente;";
@@ -100,17 +122,6 @@ class Modeladmin
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
 	}
-	public function consultaNextidcli()
-	{
-		$sql = "SELECT Auto_increment FROM information_schema.TABLES WHERE TABLE_NAME = 'CLIENTE';";
-		$resultado = $this->conn->prepare($sql);
-		$resultado->execute();
-		if (!$resultado)
-		{
-			die(print($this->conn->errorInfo()[2]));
-		}
-		return $resultado->fetch(PDO::FETCH_ASSOC);
-	}
 	public function guardaCli($cliente)
 	{
 		$sql = "INSERT INTO CLIENTE VALUES (NULL,'".$cliente['nombre']."','".$cliente['apellido']."','".$cliente['direccion']."','".$cliente['telefono']."','".$cliente['mail']."');";
@@ -120,6 +131,26 @@ class Modeladmin
 		{
 			die(print($this->conn->errorInfo()[2]));
 		}
+		$sql = "SELECT LAST_INSERT_ID();";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetch(PDO::FETCH_ASSOC)['LAST_INSERT_ID()'];
+	}
+	public function guardaRep($reparacion)
+	{
+		$sql = "INSERT INTO REPARACION VALUES (NULL,'".$reparacion['serie']."','".$reparacion['marca']."','".$reparacion['modelo']."','".$reparacion['articulo']."','".$reparacion['problema']."','".$reparacion['notas']."',".$reparacion['precio'].",'".date('Y-m-d')."',NULL,".$reparacion['cliente'].",".$reparacion['estado'].");";
+		print ($sql);
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return -1;
 	}
 }
 ?>

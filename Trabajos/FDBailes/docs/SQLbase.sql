@@ -22,7 +22,7 @@ CREATE TABLE REPARACION (
 	articulo VARCHAR(30) NOT NULL,
 	desperfecto TEXT NOT NULL,
 	notas TEXT,
-	precio_reparacion NUMERIC(6,2) NOT NULL,
+	precio_reparacion NUMERIC(6,2) NOT NULL DEFAULT 0,
 	fecha_ingreso DATE NOT NULL,
 	fecha_egreso DATE DEFAULT NULL,
 	id_cliente MEDIUMINT UNSIGNED NOT NULL,
