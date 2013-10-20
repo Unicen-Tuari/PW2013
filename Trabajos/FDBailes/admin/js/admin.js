@@ -201,7 +201,7 @@ $("#nuevocliente").on('submit','#form_nuevocli',function()
 	});
 	return false;
 });
-$('#nuevocliente').on('closed.bs.alert','#alerta_cli_agregado', function ()
+$('#nuevocliente').on('closed.bs.alert','#alerta', function ()
 {
 	$.ajax({
 		type: "POST",
@@ -226,7 +226,7 @@ $("#nuevareparacion").on('submit','#form_nuevarep',function()
 	});
 	return false;
 });
-$('#nuevareparacion').on('closed.bs.alert','#alerta_rep_agregada', function ()
+$('#nuevareparacion').on('closed.bs.alert','#alerta', function ()
 {
 	$.ajax({
 		type: "POST",
@@ -250,20 +250,120 @@ $('#logout').click(function()
 	});
 	return false;
 });
-$('#modal_body').on('click','#boton_modificacli',activaForm);
-function activaForm()
+$('#modal_body').on('click','#boton_modificacli',activaFormcli);
+function activaFormcli()
 {
-	alert('activas form')
-	$('#modal_body input[name!=id]').prop('disabled',false);
-	$('#modal_body').off('click').on('click','#boton_modificacli',modificaForm);
+	$('#modal_body input').not("[name=id]").prop('readonly',false);
+	$('#modal_body input[name=nombre_n]').focus();
+	$('#modal_body').off('click','#boton_modificacli',activaFormcli).on('click','#boton_modificacli',modificaFormcli);
 	$('#boton_modificacli').removeClass('btn-primary').addClass('btn-success');
 	$('#boton_modificacli span').removeClass('glyphicon-edit').addClass('glyphicon-ok');
+	$('#modal_emergente').off('hidden.bs.modal').on('hidden.bs.modal', function ()
+	{
+		$('#modal_body').off('click','#boton_modificacli',modificaFormcli).on('click','#boton_modificacli',activaFormcli);
+	});
 };
-function modificaForm()
+function modificaFormcli()
+{	
+	$("#modal_body").load("admin.php",$("#actualiza_cli").serializeArray());
+	$('#modal_body').off('closed.bs.alert').on('closed.bs.alert','#alerta', function ()
+	{
+		$('#modal_emergente').modal('hide');
+	});
+	$('#modal_emergente').on('hidden.bs.modal', function ()
+	{
+		$.ajax({
+			type: "POST",
+			url: "admin.php",
+			data: "cli=true",
+			success: function(data)
+			{
+				$("#tablaclientes").html(data);
+			}
+		});
+		return false;
+	});
+};
+$('#modal_body').on('click','#boton_modificarep',activaFormrep);
+function activaFormrep()
 {
-	//el ajax q manda la modificacion
-	alert('modificas form')
-	$('#modal_body').off('click').on('click','#boton_modificacli',activaForm);
-// 	$('#boton_modificacli').removeClass('btn-success').addClass('btn-primary');
-// 	$('#boton_modificacli span').removeClass('glyphicon-ok').addClass('glyphicon-edit');
+	$('#modal_body textarea,input').not("[name=id_rep]").not("[name=fecha_ing]").not("[name=fecha_egr]").prop('readonly',false);
+	$('#modal_body select').prop('disabled',false);
+	$('#modal_body input[name=articulo_n]').focus();
+	$('#modal_body').off('click','#boton_modificarep',activaFormrep).on('click','#boton_modificarep',modificaFormrep);
+	$('#boton_modificarep').removeClass('btn-primary').addClass('btn-success');
+	$('#boton_modificarep span').removeClass('glyphicon-edit').addClass('glyphicon-ok');
+	$('#modal_emergente').off('hidden.bs.modal').on('hidden.bs.modal', function ()
+	{
+		$('#modal_body').off('click','#boton_modificarep',modificaFormrep).on('click','#boton_modificarep',activaFormrep);
+	});
 };
+function modificaFormrep()
+{	
+	$("#modal_body").load("admin.php",$("#actualiza_rep").serializeArray());
+	$('#modal_body').off('closed.bs.alert').on('closed.bs.alert','#alerta', function ()
+	{
+		$('#modal_emergente').modal('hide');
+	});
+	$('#modal_emergente').on('hidden.bs.modal', function ()
+	{
+		$.ajax({
+			type: "POST",
+			url: "admin.php",
+			data: "rep=true",
+			success: function(data)
+			{
+				$("#tablareparaciones").html(data);
+			}
+		});
+		return false;
+	});
+};
+$('#modal_body').on('click','#boton_borracli',function ()
+{
+	if (confirm('Seguro desea eliminar a el cliente?'))
+	{
+		$("#modal_body").load("admin.php",{id_delcli:$('#modal_body input[name=id]').val()});
+		$('#modal_body').off('closed.bs.alert').on('closed.bs.alert','#alerta', function ()
+		{
+			$('#modal_emergente').modal('hide');
+		});
+		$('#modal_emergente').off('hidden.bs.modal').on('hidden.bs.modal', function ()
+		{
+			$.ajax({
+				type: "POST",
+				url: "admin.php",
+				data: "cli=true",
+				success: function(data)
+				{
+					$("#tablaclientes").html(data);
+				}
+			});
+			return false;
+		});
+	}
+});
+$('#modal_body').on('click','#boton_borrarep',function ()
+{
+	if (confirm('Seguro desea eliminar la reparacion?'))
+	{
+		$("#modal_body").load("admin.php",{id_delrep:$('#modal_body input[name=id_rep]').val()});
+		$('#modal_body').off('closed.bs.alert').on('closed.bs.alert','#alerta', function ()
+		{
+			$('#modal_emergente').modal('hide');
+		});
+		$('#modal_emergente').off('hidden.bs.modal').on('hidden.bs.modal', function ()
+		{
+			$.ajax({
+				type: "POST",
+				url: "admin.php",
+				data: "rep=true",
+				success: function(data)
+				{
+					$("#tablareparaciones").html(data);
+				}
+			});
+			return false;
+		});
+	}
+});

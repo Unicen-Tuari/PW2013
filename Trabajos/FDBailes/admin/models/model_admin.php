@@ -18,7 +18,7 @@ class Modeladmin
     public function consultaReparaciones()
     {
 
-    	$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (e.id=r.id_estado) ORDER BY fecha_ingreso DESC;";
+    	$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (e.id=r.id_estado) ORDER BY r.fecha_ingreso DESC, r.id;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -51,7 +51,7 @@ class Modeladmin
     }
     public function consultaDetallerep($id_reparacion)
     {
-    	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE r.id = $id_reparacion AND (e.id=r.id_estado) AND c.id=r.id_cliente;";
+    	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c WHERE r.id = $id_reparacion AND c.id=r.id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -142,8 +142,7 @@ class Modeladmin
 	}
 	public function guardaRep($reparacion)
 	{
-		$sql = "INSERT INTO REPARACION VALUES (NULL,'".$reparacion['serie']."','".$reparacion['marca']."','".$reparacion['modelo']."','".$reparacion['articulo']."','".$reparacion['problema']."','".$reparacion['notas']."',".$reparacion['precio'].",'".date('Y-m-d')."',NULL,".$reparacion['cliente'].",".$reparacion['estado'].");";
-		print ($sql);
+		$sql = "INSERT INTO REPARACION VALUES (NULL,'".$reparacion['serie']."','".$reparacion['marca']."','".$reparacion['modelo']."','".$reparacion['articulo']."','".$reparacion['problema']."','".$reparacion['notas']."',".$reparacion['precio'].",CURRENT_DATE(),NULL,".$reparacion['cliente'].",".$reparacion['estado'].");";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -151,6 +150,50 @@ class Modeladmin
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return -1;
+	}
+	public function updateCli($cliente)
+	{
+		$sql = "UPDATE CLIENTE SET nombre = '".$cliente['nombre_n']."',apellido = '".$cliente['apellido']."',direccion = '".$cliente['direccion']."',telefono = '".$cliente['telefono']."',mail = '".$cliente['mail']."' WHERE id = ".$cliente['id']."";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return -2;
+	}
+	public function updateRep($reparacion)
+	{
+		$sql = "UPDATE REPARACION SET numero_serie = '".$reparacion['serie']."',marca = '".$reparacion['marca']."',modelo = '".$reparacion['modelo']."',articulo = '".$reparacion['articulo_n']."',desperfecto = '".$reparacion['problema']."',notas = '".$reparacion['notas']."',precio_reparacion = ".$reparacion['precio'].",id_estado = '".$reparacion['estado']."',fecha_egreso = ".$reparacion['fecha_egr']." WHERE id = ".$reparacion['id_rep']."";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return -5;
+	}
+	public function deleteCli($id)
+	{
+		$sql = "DELETE FROM CLIENTE WHERE id=$id;";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return -3;
+	}
+	public function deleteRep($id)
+	{
+		$sql = "DELETE FROM REPARACION WHERE id=$id;";
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute();
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return -4;
 	}
 }
 ?>

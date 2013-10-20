@@ -21,9 +21,10 @@ class Viewadmin
 		$this->smarty->assign("clientes",$datos);
 		$this->smarty->display('tabla_admincli.tpl');
 	}
-	public function generaDetallerep($datos)
+	public function generaDetallerep($datos,$estados)
 	{
 		$this->smarty->assign("detallerep",$datos);
+		$this->smarty->assign("estados",$estados);
 		$this->smarty->display('pagdetallerep.tpl');
 	}
 	public function generaDetallecli($datos)
@@ -59,12 +60,33 @@ class Viewadmin
 	{
 		if($id == -1)
 		{
-			$this->smarty->display('alerta_nuevarep.tpl');	
+			$this->smarty->assign("mensaje",'Reparacion agregada exitosamente.');
+			$this->smarty->display('alerta.tpl');	
+		}
+		else if ($id == -2)
+		{
+			$this->smarty->assign("mensaje",'Cliente actualizado exitosamente.');
+			$this->smarty->display('alerta.tpl');
+		}
+		else if ($id == -3)
+		{
+			$this->smarty->assign("mensaje",'Cliente eliminado exitosamente');
+			$this->smarty->display('alerta.tpl');
+		}
+		else if ($id == -4)
+		{
+			$this->smarty->assign("mensaje",'Reparacion eliminada exitosamente');
+			$this->smarty->display('alerta.tpl');
+		}
+		else if ($id == -5)
+		{
+			$this->smarty->assign("mensaje",'Reparacion actualizada exitosamente');
+			$this->smarty->display('alerta.tpl');
 		}
 		else
 		{
-			$this->smarty->assign("id_cliente",$id);
-			$this->smarty->display('alerta_nuevocli.tpl');
+			$this->smarty->assign("mensaje","Cliente agregado exitosamente con la ID: $id");
+			$this->smarty->display('alerta.tpl');
 		}
 	}
 }

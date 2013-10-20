@@ -35,7 +35,7 @@ class Controlleradmin
 	}
 	public function imprimirDetallerep($id_reparacion)
 	{
-		$this->view->generaDetallerep($this->model->consultaDetallerep($id_reparacion));
+		$this->view->generaDetallerep($this->model->consultaDetallerep($id_reparacion),$this->model->consultaEstadosrep());
 	}
 	public function imprimirDetallecli($id_cliente)
 	{
@@ -87,13 +87,6 @@ class Controlleradmin
 		{
 			$valor = trim($valor);
 		}
-		$arreglo['nombre'] = ucfirst($arreglo['nombre']);
-		$arreglo['apellido'] = ucfirst($arreglo['apellido']);
-		$arreglo['direccion'] = ucfirst($arreglo['direccion']);
-		if (!$arreglo['mail'])
-		{
-			$arreglo['mail'] = '-';
-		}
 		$this->view->generaAlerta($this->model->guardaCli($arreglo));
 	}
 	public function insertaRep($arreglo)
@@ -102,28 +95,43 @@ class Controlleradmin
 		{
 			$valor = trim($valor);
 		}
-		if (!$arreglo['marca'])
-		{
-			$arreglo['marca'] = '-';
-		}
-		if (!$arreglo['modelo'])
-		{
-			$arreglo['modelo'] = '-';
-		}
-		if (!$arreglo['serie'])
-		{
-			$arreglo['serie'] = '-';
-		}
-		if (!$arreglo['notas'])
-		{
-			$arreglo['notas'] = '-';
-		}
 		if (!$arreglo['precio'])
 		{
 			$arreglo['precio'] = 0;
 		}
-		print_r($arreglo);
 		$this->view->generaAlerta($this->model->guardaRep($arreglo));
+	}
+	public function actualizaCli($arreglo)
+	{
+		foreach ($arreglo as $valor)
+		{
+			$valor = trim($valor);
+		}
+		$this->view->generaAlerta($this->model->updateCli($arreglo));
+	}
+	public function actualizaRep($arreglo)
+	{
+		foreach ($arreglo as $valor)
+		{
+			$valor = trim($valor);
+		}
+		if ($arreglo['estado'] == 3)
+		{
+			$arreglo['fecha_egr'] = 'CURRENT_DATE()';
+		}
+		else
+		{
+			$arreglo['fecha_egr'] = 'NULL';
+		}
+		$this->view->generaAlerta($this->model->updateRep($arreglo));
+	}
+	public function borrarCli($id)
+	{
+		$this->view->generaAlerta($this->model->deleteCli($id));
+	}
+	public function borrarRep($id)
+	{
+		$this->view->generaAlerta($this->model->deleteRep($id));
 	}
 }
 ?>

@@ -55,6 +55,22 @@
 	{
 		$controller->insertaCli($_POST);
 	}
+	else if (isset($_POST["id"]))
+	{
+		$controller->actualizaCli($_POST);
+	}
+	else if (isset($_POST["id_rep"]))
+	{
+		$controller->actualizaRep($_POST);
+	}
+	else if (isset($_POST["id_delcli"]))
+	{
+		$controller->borrarCli($_POST["id_delcli"]);
+	}
+	else if (isset($_POST["id_delrep"]))
+	{
+		$controller->borrarRep($_POST["id_delrep"]);
+	}
 	else if (isset($_POST["articulo"]))
 	{
 		$controller->insertaRep($_POST);
