@@ -8,7 +8,8 @@ class IndexController extends BaseController {
 		$view = $this->view;
 		
 		$view->assign('productos', $productos_array);
-		$view->display('index.tpl');
+		$view->display();
+
 	}
 	
 }

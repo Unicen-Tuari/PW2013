@@ -3,7 +3,7 @@
 class ProductosController extends BaseController {
 
 	public function indexAction() {
-		$this->view->display('productos.tpl');
+		$this->view->display();
 	}
 
 	public function searchAction() {
@@ -14,7 +14,8 @@ class ProductosController extends BaseController {
 		$cat_array = $model->getByCategory($subcat);
 		$this->view->assign('subcat', $subcat);
 		$this->view->assign('productos', $cat_array);
-		$this->view->display('productos.tpl');
+		$this->view->display();
+		
 		
 	}
 }
