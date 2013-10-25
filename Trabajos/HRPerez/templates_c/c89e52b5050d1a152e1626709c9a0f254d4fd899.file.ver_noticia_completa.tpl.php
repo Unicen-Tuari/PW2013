@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-26 00:17:48
-         compiled from "./templates/Home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1941613923526aee0cdbb9d5-15473155%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-26 00:18:47
+         compiled from "./templates/ver_noticia_completa.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1693341789526aee47c534b2-28996868%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'aa97b5be7b02c66baecf1d6eba81e08667aaf5f9' => 
+    'c89e52b5050d1a152e1626709c9a0f254d4fd899' => 
     array (
-      0 => './templates/Home.tpl',
-      1 => 1382642174,
+      0 => './templates/ver_noticia_completa.tpl',
+      1 => 1382735256,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1941613923526aee0cdbb9d5-15473155',
+  'nocache_hash' => '1693341789526aee47c534b2-28996868',
   'function' => 
   array (
   ),
@@ -23,10 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_526aee0cede358_85710378',
+  'unifunc' => 'content_526aee47cf9ff1_48822935',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_526aee0cede358_85710378')) {function content_526aee0cede358_85710378($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
-?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_526aee47cf9ff1_48822935')) {function content_526aee47cf9ff1_48822935($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
@@ -34,7 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <a href="index.php">
         <div class="large-6 columns"></div></a>
         <a href="index.php">Home</a>
-		<?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']);
+    <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['name'] = 'secciones';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['Seccion']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['show'] = true;
@@ -61,7 +60,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
         <a href="index.php?idSection=<?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
 "><?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['nombre_seccion'];?>
 </a>
-		<?php endfor; endif; ?>
+    <?php endfor; endif; ?>
       
       
   </nav>
@@ -113,8 +112,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = (
           <div class="large-12 columns">
             <p>
       
-	  <h3>
-      <a href="ver_noticia_completa.php?id_noticia=<?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['id_noticia'];?>
+    <h3>
+      <a href="index.php?id_noticia=<?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['id_noticia'];?>
 "><?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['titulo'];?>
 </a>
       
@@ -130,7 +129,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = (
         <div class="row">
           <div class="large-12 columns">
             <p>
-            <?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['cuerpo'],250,"...",true);?>
+            <?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['cuerpo'];?>
 
             </p>
             
@@ -144,11 +143,47 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = (
           </div>
           
         </div>
-        
+
       </article>
 <?php endfor; endif; ?>
+  
+        <!-- Content Slider -->
+ <div class="row">
+            <div class="large-1! columns">
+            <ul id="featured1" data-orbit data-options="timer_speed:4000;">
+              <li>
+                <img src="imagenes/chrome1.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/window2.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/explorer3.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/chrome2.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/Opera Mini and Mobile Finales.png" />
+              </li>
+              <li>
+                <img src="imagenes/firefox-goodbye-flash2-630x350.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/mouse.jpg" />
+              </li>
+              <li>
+                <img src="imagenes/xbox1.jpg" />
+              </li>
+           </ul>
+
+          </div>
+</div>
+
+    <!-- End Content Slider -->
     </div>
 
+     
     <!-- End Main Content -->
 
 
@@ -158,7 +193,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = (
 
       <h5>Tags</h5>
       <ul class="side-nav">
-	  <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['tags'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['tags']);
+    <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['tags'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['tags']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['name'] = 'tags';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['Tag']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['show'] = true;
@@ -185,7 +220,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['last']       = ($_sm
         <li><a href="index.php?idTag=<?php echo $_smarty_tpl->tpl_vars['Tag']->value[$_smarty_tpl->getVariable('smarty')->value['section']['tags']['index']]['id_tag'];?>
 "><?php echo $_smarty_tpl->tpl_vars['Tag']->value[$_smarty_tpl->getVariable('smarty')->value['section']['tags']['index']]['nombre_tag'];?>
 </a></li>
-	<?php endfor; endif; ?>
+  <?php endfor; endif; ?>
       </ul>
 
       <div class="panel">

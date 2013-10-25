@@ -23,13 +23,12 @@ class Model
 		}
 	}
 
-    public function verificaAdmin($administrador){
+    public function insertarNoticia($noticia){
 
-		//$sql = "SELECT usuario, password FROM administrador WHERE usuario =".$administrador["usuario"] 
-		//AND password =".$administrador["password"]";
-
-			 $resultado = $this->conn->prepare($sql);
-			 $resultado->execute();
+		$sql = "INSERT INTO `noticia` (`titulo`,`subtitulo`,`cuerpo`, `id_tag`, `id_seccion`) VALUES (:titulo,:subtitulo,:cuerpo,:id_tag,:id_seccion)";
+		
+			$resultado = $this->conn->prepare($sql);
+			 $resultado->execute(array(':titulo'=>$noticia["titulo"],':subtitulo'=>$noticia["subtitulo"],':cuerpo'=>$noticia["cuerpo"],':id_tag'=>$noticia["id_tag"],':id_seccion'=>$noticia["id_seccion"]));
 			if(!$resultado){
 				die(print($this->conn->errorInfo()[2]));
 			}

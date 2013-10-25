@@ -9,7 +9,14 @@ class Controller
 		$this->view = $view;
     }
 	
-	public function CargarNoticia($noticia)
+
+	public function imprimirPagina()
+	{
+		$this->view->imprimirPagina();
+	}
+
+	
+	public function CrearNoticia($noticia)
 	{
 			$this->model->insertarNoticia($noticia);
 		

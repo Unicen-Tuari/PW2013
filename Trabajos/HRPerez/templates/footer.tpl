@@ -7,8 +7,7 @@
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
-            <li><a href="Admin_login.php">LogIn</a></li>
-            
+                        
           </ul>
         </div>
       </div>
@@ -24,6 +23,7 @@
   <script>
     $(document).foundation();
   </script>
+  <script text="text/javascript" src="js/ajax.js"></script>
 
   <!-- End Footer -->
 </body>

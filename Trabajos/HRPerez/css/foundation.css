@@ -3199,7 +3199,7 @@ label.error {
 
 .orbit-container {
   overflow: hidden;
-  width: 100%;
+  width: 75%;
   position: relative;
   background: whitesmoke; }
   .orbit-container .orbit-slides-container {
@@ -3241,7 +3241,7 @@ label.error {
     position: absolute;
     top: 10px;
     right: 10px;
-    height: 6px;
+    height: 2px;
     width: 100px;
     z-index: 10; }
     .orbit-container .orbit-timer .orbit-progress {
@@ -3447,6 +3447,7 @@ label.error {
   .joyride-content-wrapper .button {
     margin-bottom: 0 !important; }
 
+
 /* Add a little css triangle pip, older browser just miss out on the fanciness of it */
 .joyride-tip-guide .joyride-nub {
   display: block;
@@ -3645,7 +3646,7 @@ label.error {
   .clearing-assembled .clearing-container .carousel > ul {
     display: none; }
 
-.clearing-feature li {
+.clearing-d li {
   display: none; }
   .clearing-feature li.clearing-featured-img {
     display: block; }

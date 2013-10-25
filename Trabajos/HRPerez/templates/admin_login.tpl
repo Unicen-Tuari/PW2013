@@ -14,7 +14,7 @@
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
-         <li><a href="Admin_login.php" class="button">LogIn</a></li>
+         
       </ul>
       </div>
       <h1>Tecper<small> Este es mi sitio. Disfrútelo.</small></h1>
@@ -35,7 +35,7 @@
         
         <div class="row">
           <div class="large-6 columns">
-            <form ACTION = "procesa_login_admin.php" METHOD = "GET">
+            <form ACTION = "" METHOD = "POST">
   <fieldset>
     <legend>Administrador</legend>
 

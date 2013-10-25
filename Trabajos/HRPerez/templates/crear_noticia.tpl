@@ -14,7 +14,7 @@
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
-         <li><a href="#" class="button">LogOut</a></li>
+         <li><a href="#" class="button">Bienvenido Hugo</a></li>
          
           </ul>
       </div>
@@ -32,13 +32,13 @@
 
       <article>
 
-        <h3><a href="#">Cargar noticia</a></h3>
+        <h3><a href="#">Crear Noticia</a></h3>
         
         <div class="row">
           <div class="large-6 columns">
 <form  ACTION ="" METHOD ="POST">
   <fieldset>
-    <legend>Cargar Noticia</legend>
+    <legend>Crear Noticia</legend>
 
    <div class="row">
       <div class="large-12 columns">
@@ -74,9 +74,10 @@
       </div>
       
     </div>
-      <a href="#"><input class="button" type="submit" value="Cargar Noticia"></a>
+      <a href="#"><input class="button" type="submit" value="Ok"></a>
+      <a href="panel.php"><input class="button" value="Cancel"></a>
   </fieldset>
-
+      
 </form>
 
       </article>

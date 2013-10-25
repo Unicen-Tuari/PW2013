@@ -10,7 +10,7 @@ class View
 			}
 			public function ImprimirPagina()
 			{
-				$this->smarty->display('cargar_noticia.tpl');
+				$this->smarty->display('crear_noticia.tpl');
 				
 			}		
 }

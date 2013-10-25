@@ -16,7 +16,7 @@
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
-         <li><a href="admin_login.php" class="button">LogIn</a></li>
+         <li><a href="#" class="button">Bienvenido Hugo</a></li>
        </ul>
       </div>
       <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
@@ -30,28 +30,55 @@
 
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
-{section name =noticias loop= $Noticia}
+
       <article>
         <div class="row">
           <div class="large-12 columns">
             <p>
       
 	  <h3>
-      <a href="ver_noticia_completa.php?id_noticia={$Noticia[noticias]['id_noticia']}">{$Noticia[noticias]['titulo']}</a>
+      <a href="#"></a>
       
     </h3>
-      <hr />
+        <table>
+    <thead>
+      <tr>
+        <th width="145">Titulo</th>
+        <th width="145">Seccion</th>
+        <th width="145">Tag</th>
+        <th width="145">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Titulo 1</td>
+        <td>Seccion 1 </td>
+        <td>Tag 1</td>
+        <td>Editar/Borrar</td>
+      </tr>
+      <tr>
+        <td>Titulo 2</td>
+        <td>Seccion 2</td>
+        <td>Tag 2</td>
+        <td>Editar/Borrar</td>
+      </tr>
+      <tr>
+        <td>Titulo3</td>
+        <td>Seccion 3</td>
+        <td>Tag 2</td>
+        <td>Editar/Borrar</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <a href="crear_noticia.php"><input class="button" type="submit" value="Crear Noticia"></a>
 
       
-        <h6>
-            {$Noticia[noticias]['subtitulo']}
-            </h6><br>
+        <h6></h6><br>
 
         <div class="row">
           <div class="large-12 columns">
-            <p>
-            {$Noticia[noticias]['cuerpo']|truncate:250:"...":true}
-            </p>
+            <p></p>
             
           </div>
         </div>
@@ -65,7 +92,7 @@
         </div>
         
       </article>
-{/section}
+
     </div>
 
     <!-- End Main Content -->

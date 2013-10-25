@@ -67,15 +67,13 @@ class Model
 
 	}
 
-	public function getNoticias(){
+	public function getNoticiasById($id_noticia){
 		
-		$sql = "SELECT * FROM noticia"; 
+		$sql = "SELECT * FROM noticia WHERE id_noticia = ".$id_noticia;
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 
 	}
-
-
 
 }
 ?>

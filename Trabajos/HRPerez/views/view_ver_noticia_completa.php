@@ -1,0 +1,33 @@
+<?php
+require('./libs/Smarty.class.php');
+class View
+{
+  	  public $smarty;   
+  
+      public function __construct()
+			{
+				$this->smarty = New Smarty;
+			}
+			public function imprimirNoticia()
+			{
+				$this->smarty->display('ver_noticia_completa.tpl');
+			}
+			
+			public function setTags($tags)
+			{
+				$this->smarty->assign("Tag",$tags);		
+			}
+
+			public function setSecciones($seccion)
+			{
+				$this->smarty->assign("Seccion",$seccion);
+			}
+
+			public function setNoticias($noticias)
+			{
+			
+			  	$this->smarty->assign("Noticia",$noticias);
+			}
+}
+
+?>

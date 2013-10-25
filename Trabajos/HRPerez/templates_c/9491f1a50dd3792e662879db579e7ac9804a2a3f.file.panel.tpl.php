@@ -1,32 +1,30 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-26 00:17:48
-         compiled from "./templates/Home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1941613923526aee0cdbb9d5-15473155%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-26 00:14:50
+         compiled from "./templates/panel.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1200894495526ae26854eb32-07787165%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'aa97b5be7b02c66baecf1d6eba81e08667aaf5f9' => 
+    '9491f1a50dd3792e662879db579e7ac9804a2a3f' => 
     array (
-      0 => './templates/Home.tpl',
-      1 => 1382642174,
+      0 => './templates/panel.tpl',
+      1 => 1382739287,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1941613923526aee0cdbb9d5-15473155',
+  'nocache_hash' => '1200894495526ae26854eb32-07787165',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_526ae2685e0bd0_27154690',
   'variables' => 
   array (
     'Seccion' => 0,
-    'Noticia' => 0,
     'Tag' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_526aee0cede358_85710378',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_526aee0cede358_85710378')) {function content_526aee0cede358_85710378($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
-?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_526ae2685e0bd0_27154690')) {function content_526ae2685e0bd0_27154690($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
@@ -70,7 +68,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
-         <li><a href="admin_login.php" class="button">LogIn</a></li>
+         <li><a href="#" class="button">Bienvenido Hugo</a></li>
        </ul>
       </div>
       <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
@@ -84,55 +82,55 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
 
     <!-- Main Blog Content -->
     <div class="large-9 columns" role="content">
-<?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['name'] = 'noticias';
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['Noticia']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['show'] = true;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['loop'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['step'] = 1;
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['loop']-1;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['show']) {
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['loop'];
-    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['total'] == 0)
-        $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['show'] = false;
-} else
-    $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['total'] = 0;
-if ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['show']):
 
-            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration'] = 1;
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['total'];
-                 $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration']++):
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['step'];
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration'] == 1);
-$_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['total']);
-?>
       <article>
         <div class="row">
           <div class="large-12 columns">
             <p>
       
 	  <h3>
-      <a href="ver_noticia_completa.php?id_noticia=<?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['id_noticia'];?>
-"><?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['titulo'];?>
-</a>
+      <a href="#"></a>
       
     </h3>
-      <hr />
+        <table>
+    <thead>
+      <tr>
+        <th width="145">Titulo</th>
+        <th width="145">Seccion</th>
+        <th width="145">Tag</th>
+        <th width="145">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Titulo 1</td>
+        <td>Seccion 1 </td>
+        <td>Tag 1</td>
+        <td>Editar/Borrar</td>
+      </tr>
+      <tr>
+        <td>Titulo 2</td>
+        <td>Seccion 2</td>
+        <td>Tag 2</td>
+        <td>Editar/Borrar</td>
+      </tr>
+      <tr>
+        <td>Titulo3</td>
+        <td>Seccion 3</td>
+        <td>Tag 2</td>
+        <td>Editar/Borrar</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <a href="crear_noticia.php"><input class="button" type="submit" value="Crear Noticia"></a>
 
       
-        <h6>
-            <?php echo $_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['subtitulo'];?>
-
-            </h6><br>
+        <h6></h6><br>
 
         <div class="row">
           <div class="large-12 columns">
-            <p>
-            <?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['Noticia']->value[$_smarty_tpl->getVariable('smarty')->value['section']['noticias']['index']]['cuerpo'],250,"...",true);?>
-
-            </p>
+            <p></p>
             
           </div>
         </div>
@@ -146,7 +144,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['last']       = (
         </div>
         
       </article>
-<?php endfor; endif; ?>
+
     </div>
 
     <!-- End Main Content -->
