@@ -3,7 +3,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="essudo"> <!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html;charset= UTF-8">
  
   
 

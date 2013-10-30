@@ -6,7 +6,7 @@
         <div class="large-6 columns"></div></a>
         <a href="index.php">Home</a>
 		{section name=secciones loop=$Seccion}
-        <a href="index.php?idSection={$Seccion[secciones]['id_seccion']}">{$Seccion[secciones]['nombre_seccion']}</a>
+        <a href="javascript:getNoticias({$Seccion[secciones]['id_seccion']})">{$Seccion[secciones]['nombre_seccion']}</a>
 		{/section}
       
       
@@ -29,7 +29,7 @@
   <div class="row">
 
     <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
+    <div id= "content"class="large-9 columns" role="content">
 {section name =noticias loop= $Noticia}
       <article>
         <div class="row">
@@ -93,7 +93,5 @@
   </div>
 
   <!-- End Main Content and Sidebar -->
-
-
   <!-- Footer -->
 {include file = "footer.tpl"}

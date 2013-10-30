@@ -1,20 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-26 00:17:48
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-30 00:15:36
          compiled from "./templates/Home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1941613923526aee0cdbb9d5-15473155%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:165357413852703f56496f16-51397292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'aa97b5be7b02c66baecf1d6eba81e08667aaf5f9' => 
     array (
       0 => './templates/Home.tpl',
-      1 => 1382642174,
+      1 => 1383088475,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1941613923526aee0cdbb9d5-15473155',
+  'nocache_hash' => '165357413852703f56496f16-51397292',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_52703f5654b327_20564515',
   'variables' => 
   array (
     'Seccion' => 0,
@@ -22,10 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Tag' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_526aee0cede358_85710378',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_526aee0cede358_85710378')) {function content_526aee0cede358_85710378($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
+<?php if ($_valid && !is_callable('content_52703f5654b327_20564515')) {function content_52703f5654b327_20564515($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
@@ -58,8 +58,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['index_next'] = 
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['total']);
 ?>
-        <a href="index.php?idSection=<?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
-"><?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['nombre_seccion'];?>
+        <a href="javascript:getNoticias(<?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
+)"><?php echo $_smarty_tpl->tpl_vars['Seccion']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['nombre_seccion'];?>
 </a>
 		<?php endfor; endif; ?>
       
@@ -83,7 +83,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
   <div class="row">
 
     <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
+    <div id= "content"class="large-9 columns" role="content">
 <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['name'] = 'noticias';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['noticias']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['Noticia']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -199,8 +199,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['last']       = ($_sm
   </div>
 
   <!-- End Main Content and Sidebar -->
-
-
   <!-- Footer -->
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

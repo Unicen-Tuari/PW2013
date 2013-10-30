@@ -24,10 +24,10 @@ class View
 				$this->smarty->assign("Seccion",$seccion);
 			}
 
-			public function setNoticias($noticias)
+			public function setNoticias($Noticia)
 			{
 			
-			  	$this->smarty->assign("Noticia",$noticias);
+			  	$this->smarty->assign("Noticia",$Noticia);
 			}
 }
 
