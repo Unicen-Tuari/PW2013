@@ -15,6 +15,8 @@ if(isset($_POST["mail"]))
     $formulario["mail"] = $_POST["mail"];
 	$formulario["pass"] = $_POST["pass"];
 	$controller->loginUsuario($formulario);
+	
+
 }
 else
 {

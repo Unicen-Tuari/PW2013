@@ -16,13 +16,6 @@
     <!-- Custom styles for this template -->
     <link href="dist/css/signin.css" rel="stylesheet">
 
-    
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -37,10 +30,7 @@
             <div id="error" class="alert alert-danger" style="display: none;"></div>
             <button id="signin" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
           </form>
-
-
-         
-       </div><!-- /jumbotron -->    
+      </div><!-- /jumbotron -->    
 
     </div> <!-- /container -->
 

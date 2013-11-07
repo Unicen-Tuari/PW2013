@@ -9,5 +9,6 @@ $view = new Viewmensaje();
 $controller = new Controllermensaje($model, $view);
 
 
-$controller->mostrarAuto();
+$controller->imprimirPagina();
+$controller->mostrarMensaje();
 ?>

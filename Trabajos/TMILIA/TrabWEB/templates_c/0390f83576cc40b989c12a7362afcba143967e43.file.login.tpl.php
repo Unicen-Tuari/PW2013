@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 06:44:49
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 01:05:47
          compiled from ".\templates\login.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:207452537f6c251170-05250907%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1136527ad95bb914a8-94837810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0390f83576cc40b989c12a7362afcba143967e43' => 
     array (
       0 => '.\\templates\\login.tpl',
-      1 => 1381207486,
+      1 => 1383782067,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '207452537f6c251170-05250907',
+  'nocache_hash' => '1136527ad95bb914a8-94837810',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52537f6c291ef8_04288548',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_527ad95bbedce3_82576490',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52537f6c291ef8_04288548')) {function content_52537f6c291ef8_04288548($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_527ad95bbedce3_82576490')) {function content_527ad95bbedce3_82576490($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -37,13 +37,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Custom styles for this template -->
     <link href="dist/css/signin.css" rel="stylesheet">
 
-    
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -58,10 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div id="error" class="alert alert-danger" style="display: none;"></div>
             <button id="signin" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
           </form>
-
-
-         
-       </div><!-- /jumbotron -->    
+      </div><!-- /jumbotron -->    
 
     </div> <!-- /container -->
 

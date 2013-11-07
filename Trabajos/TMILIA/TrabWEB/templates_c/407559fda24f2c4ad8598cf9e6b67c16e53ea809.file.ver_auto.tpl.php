@@ -1,30 +1,32 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 19:12:59
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 00:07:12
          compiled from ".\templates\ver_auto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3148252517affc2d688-37699092%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9709527abfcde48f83-52265769%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '407559fda24f2c4ad8598cf9e6b67c16e53ea809' => 
     array (
       0 => '.\\templates\\ver_auto.tpl',
-      1 => 1381252375,
+      1 => 1383778035,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3148252517affc2d688-37699092',
+  'nocache_hash' => '9709527abfcde48f83-52265769',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52517affca7f42_53229157',
+  'unifunc' => 'content_527abfcdeb9080_03805006',
   'variables' => 
   array (
+    'auto' => 0,
+    'imagenes' => 0,
     'marcas' => 0,
     'marca' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52517affca7f42_53229157')) {function content_52517affca7f42_53229157($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_527abfcdeb9080_03805006')) {function content_527abfcdeb9080_03805006($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -38,7 +40,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Bootstrap core CSS -->
      <link href="dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="dist/css/bootstrap.css" rel="stylesheet">
-    
+     <link href="dist/css/jquery.bxslider.css" rel="stylesheet">
+     <script src="./js/jquery.bxslider.min.js"></script>
+     <script src="./js/galeria.js"></script> 
+
    
 
     <!-- Custom styles for this template -->
@@ -57,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="index.php">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li><a href="login.php">Ingresar</a></li>
@@ -76,57 +81,73 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-                  <div class="row-fluid">
-                    <div class="span12">
-                      <p text-align="center">
-                         
-                          
-                        <h3>
-                         {$auto.titulo}
-                        </h3>
-                      </p>
-                      <ul>
-                        <li>
-                         <b>Valor:{$auto.valor}</b>
-                        </li>
-                        <li>
-                          <b>Modelo:{$auto.modelo}</b>
-                        </li>
-                        <li>
-                          <b>Año:{$auto.año}</b>
-                        </li>
-                      </ul>
-                      <dl>
-                        <dt>
-                          <b>Descripcion del auto</b>
-                        </dt>
+          
+              <div class="row-fluid">
+                   <div class="span12">
+                  
+                            <h3><?php echo $_smarty_tpl->tpl_vars['auto']->value[0]['titulo'];?>
+</h3>
+                          </p>
+                          <ul>
+                            <li>
+                             <b>Valor:<?php echo $_smarty_tpl->tpl_vars['auto']->value[0]['valor'];?>
+</b>
+                            </li>
+                            <li>
+                              <b>Modelo:<?php echo $_smarty_tpl->tpl_vars['auto']->value[0]['modelo'];?>
+</b>
+                            </li>
+                            <li>
+                              <b>Año:<?php echo $_smarty_tpl->tpl_vars['auto']->value[0]['anio'];?>
+</b>
+                            </li>
+                          </ul>
+                          <dl>
+                            <dt>
+                              <b>Descripcion del auto</b>
+                            </dt>
 
-                        <dd>
-                          {$auto.descripcion}
-                        </dd>
-                      </dl>
+                            <dd>
+                              <?php echo $_smarty_tpl->tpl_vars['auto']->value[0]['descripcion'];?>
 
-                      <img alt="320x240" src="http://lorempixel.com/140/140/" />
-                      
-                      </br>
-                      </br>
-                      </br>
-                        <div class="span4 well">
-                            <form accept-charset="UTF-8" action="" method="POST">
-                                <textarea class="span4" id="new_message" name="new_message"
-                                  placeholder="nueva consulta" rows="5" cols="100">
-                                </textarea>
-                                </br>
-                               </br>
-                                <button class="btn btn-info" type="submit">Enviar</button>
-                            </form>
+                            </dd>
+                          </dl>
+                       
+                       <div style="height:30%; width:30%;">
+
+                          <img alt="320x240" src="<?php echo $_smarty_tpl->tpl_vars['imagenes']->value;?>
+" class="img-thumbnail" />
+
                        </div>
 
+                       </br>
+                        </br> 
+                        <div class="span4 well">
+                            <form accept-charset="UTF-8" action="verauto.php" method="POST">
+                                <div class="form-group">
+                                  <label name="nombre">Nombre</label>
+                                  <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre">
+                                </div>
+                                <div class="form-group">
+                                  <label  name="email">Email</label>
+                                  <input type="text" class="form-control" name="email" placeholder="Ingresa tu correo">
+                                </div>
+                                 <div class="form-group">
+                                  <label  name="telefono">Telefono</label>
+                                  <input type="text" class="form-control" name="telefono" placeholder="Ingresa tu numero de telefono">
+                                </div>
 
-                  </div>
+                                <textarea class="span4" name="texto" placeholder="Ingresa tu consulta" rows="5" cols="100">
+                                </textarea>
+                                </br>
+                                </br>
+                                <button class="btn btn-info" type="submit">Enviar</button>
+                            </form>
+                        </div>
                 </div>
+            </div>
 
-              
+           
 
        </div><!--/span-->
 
@@ -141,7 +162,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['marca']->key => $_smarty_tpl->tpl_vars['marca']->value){
 $_smarty_tpl->tpl_vars['marca']->_loop = true;
 ?>
-                <li class="active"><a href="#"><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
+               
+                <li class="active" style="text-transform: capitalize;"><a href='index.php?marca=<?php echo $_smarty_tpl->tpl_vars['marca']->value['id'];?>
+'><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
 </a></li>  
                  <?php } ?>   
                               

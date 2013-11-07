@@ -11,7 +11,19 @@ $controller = new Controllerindex($model, $view);
 
 $controller->mostrarAuto();
 $controller->mostrarCategorias();
-$controller->imprimirPagina();
+$controller->buscarImag();
+
+
+
+if(isset($_GET['marca']))
+{
+	$id = $_GET['marca'];
+	$controller->buscarCat($id);
+
+}else{
+	$controller->imprimirPagina();
+}
+
 
 ?>
 

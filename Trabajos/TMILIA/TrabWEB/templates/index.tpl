@@ -38,7 +38,7 @@
               </div>
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="index.php">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li><a href="login.php">Ingresar</a></li>
@@ -58,32 +58,37 @@
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-          {foreach $autos as $auto}
-              <ul class="thumbnails">
-                <ul class="span5 clearfix">
-                  <div class="thumbnail clearfix">
-                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
-                    <div class="caption" class="pull-left">
-                      <a href='verauto.php?id={$auto.id}' class="btn btn-primary icon  pull-right">Ver Auto</a>
-                      <h4>      
-                      <a href="#" >{$auto.titulo}</a>
-                      </h4>
-                      <small><b>Precio: </b>{$auto.valor}</small>
+
+          
+            {foreach $autos as $auto}
+                <ul class="thumbnails">
+                  <ul class="span5 clearfix">
+                    <div class="thumbnail clearfix">
+                    
+                        <img src="{$imagenes}" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px; height:30%; width:50%;'>
+                      
+                      
+                      <div class="caption" class="pull-left" >
+                        <a href='verauto.php?id={$auto.id}' class="btn btn-primary icon  pull-right">Ver Auto</a>
+                        <h4>      
+                        <a href='verauto.php?id={$auto.id}' >{$auto.titulo}</a>
+                        </h4>
+                        <small><b>Precio:$</b>{$auto.valor}</small>
+                        </br>
+                        </br>                        
+                        <small><b>Año: </b>{$auto.anio}</small>
+                      </div>
                     </div>
-                  </div>
+                  </ul>
                 </ul>
-              </ul>
-          {/foreach}
+            {/foreach}
         </div><!--/span-->
-
-
-       
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="well sidebar-nav">
               <ul class="nav">
                 <li>Categorias</li>
                  {foreach $marcas as $marca}
-                <li class="active" style="text-transform: capitalize;"><a href="#">{$marca.nombre}</a></li>  
+                <li class="active" style="text-transform: capitalize;"><a href='index.php?marca={$marca.id}'>{$marca.nombre}</a></li>  
                  {/foreach}                            
               </ul>
             </div><!--/.well -->

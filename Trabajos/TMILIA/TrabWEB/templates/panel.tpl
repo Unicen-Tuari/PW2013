@@ -28,8 +28,7 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="panel.php">Autos</a></li>
-          <li><a href="mensaje.php">Mensajes</a></li>
-          <li><a href="datos.php">Mis datos</a></li>
+          <li><a href="mensaje.php">Mensajes</a></li>      
           <li><a href="logout.php">Cerrar Sesion</a></li>
         </ul>
         <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>

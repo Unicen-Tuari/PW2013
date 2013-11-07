@@ -21,7 +21,8 @@ class Modelindex
     public function consultaAuto()
 	{
 
-		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 3";
+		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 4";
+		//$sql = "SELECT * FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id) WHERE a.id = ai.id_auto";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch
@@ -31,18 +32,32 @@ class Modelindex
 	public function consultaCategoria()
 	{
 
-		//$sql = "SELECT * FROM marca  ";
-		//$sql = "SELECT * FROM marca WHERE id =(select id_marca where auto)  ";
-		$sql= "SELECT DISTINCT m.nombre FROM  marca m JOIN auto a ON (m.id = a.id_marca)";
-			
-			//WHERE p.idioma LIKE 'Inglés' AND EXTRACT (month FROM e.fecha_entrega) =1
+		$sql= "SELECT * FROM  marca WHERE id IN (select distinct a.id_marca from auto a)";
+		$q = $this->conn->prepare($sql);
+		$q->execute();
+		return $q->fetchAll(PDO::FETCH_ASSOC);
 
+	}
+
+	public function consultaImagen()
+	{
+		//$sql = "SELECT i.path FROM auto_imagen ai JOIN imagen i ON (ai.id_imagen = i.id)   ";//WHERE ai.id_auto = $id
+		$sql = "SELECT i.path FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id)";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch
+		$resultado = $q->fetchAll(PDO::FETCH_ASSOC);
+		return $resultado[0]['path']; // imagenes/527a93bb42188.jpg
+	}
 
+	public function buscarCat($id)
+	{
+		//$sql= "SELECT * FROM  marca WHERE id IN (select distinct a.id_marca from auto a)";
+		$sql = "SELECT a.titulo, a.valor,a.anio FROM auto a JOIN marca m ON (a.id_marca = m.id) where a.id_marca = $id";
+		$q = $this->conn->prepare($sql);
+		$q->execute();
+		
 		return $q->fetchAll(PDO::FETCH_ASSOC);
-
 	}
 	
 

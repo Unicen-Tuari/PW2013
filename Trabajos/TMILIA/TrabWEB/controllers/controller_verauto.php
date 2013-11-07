@@ -13,12 +13,52 @@ class Controlleradmin
 	{
 		$this->view->imprimirPagina();
 	}
+
+	public function mostrarPagina() {
+		$this->view->muestraPagina();
+	}
+
+	public function mostrarCategorias()
+	{	
+		$consultacat = $this->view->muestraCategoria($this->model->consultaCategoria());
+		
+	}
 	
 	public function buscarAuto($id)
 	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
 		$consulta = $this->model->buscarAuto($id);
-		$this->view->generaAutos($consulta);
+		if ($consulta) {
+			$this->view->generaAutos($consulta);
+			
+		}
+
+		
+	}
+	public function buscarImag($id) // 63
+	{	
+		//$this->model->buscarimagen($id);
+		$path = $this->model->consultaImagen($id);
+		$this->view->mostrarImagen($path);
+		
+	 }
+
+		public function grabarConsulta($consulta)
+	{	
+		
+		$this->model->insertarConsulta($consulta);
+		//$this->view->mensajeExito();
+	}
+
+	
+
+	public function buscarCat($id)
+	{	
+		
+		$consulta = $this->model->buscarCat($id);
+		if ($consulta) {
+			$this->view->generaCat($consulta);
+			
+		}
 		
 	}
 }

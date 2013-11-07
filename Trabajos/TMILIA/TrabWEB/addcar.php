@@ -8,6 +8,8 @@ $model = new Modeladdcar();
 $view = new Viewaddcar();
 $controller = new Controlleraddcar($model, $view);
 
+session_start();
+
 $controller->mostrarMarca();
 
 if(isset($_POST["titulo"]))
@@ -17,10 +19,14 @@ if(isset($_POST["titulo"]))
   $auto["modelo"] = $_POST["modelo"];
   $auto["anio"] = $_POST["anio"];
   $auto["descripcion"] = $_POST["descripcion"];
- // $auto["marca"] = $_POST["marca"];
-  //$auto[""] = $_POST["imagen"];
+  $auto["marca"] = $_POST["marca"];
 
-  $controller->grabarAuto($auto);
+  $auto["imagen"] = $_FILES["imagen"];
+  //$auto["imagen"] = $_FILES["imagen2"];
+  //$auto["imagen"] = $_FILES["imagen3"];
+  
+  //print_r($_FILES)
+$controller->grabarAuto($auto);
 
 }
 else

@@ -29,7 +29,7 @@
         <ul class="nav nav-pills pull-right">
           <li><a href="panel.php">Autos</a></li>
           <li  class="active"><a href="mensaje.php">Mensajes</a></li>
-          <li><a href="datos.php">Mis datos</a></li>
+          <li><a href="logout.php">Cerrar Sesion</a></li>
         </ul>
        <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
@@ -43,28 +43,25 @@
                           <th>#</th>
                           <th>Mensajes</th>
                           <th>Usuario</th>
+                          <th>Telefono</th>
                           <th>Auto</th>
                           <th>Acciones</th>
                           <th style="width: 36px;"></th>
                         </tr>
                       </thead>
                       <tbody>
-
+                     <!-- {section name=mensaje loop=$mensaje} -->
+                      {foreach $mensaje as $mensajes}
                         <tr>
                           <td>ID</td>
-                          <td>"Mensaje"</td>
-                          <td>"Tomas"</td>
+                          <td>{$mensajes.texto}</td>
+                          <td>{$mensajes.nombre}</td>
+                          <td>{$mensajes.telefono}</td>
                           <td>"Ford Ka"</td>
-                          <td>"Editar"</td><td>"Borrar"</td>
+                          <td>"Borrar"</td>
                         </tr>
-                         <tr>
-                          <td>ID</td>
-                          <td>"Mensaje"</td>
-                          <td>"Tomas"</td>
-                          <td>"Ford Ka"</td>
-                          <td>"Editar"</td><td>"Borrar"</td>
-                        </tr>
-                       
+                      {/foreach}
+                      <!-- {/section} -->
                       </tbody>
                     </table>
                    

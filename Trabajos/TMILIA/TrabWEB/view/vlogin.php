@@ -3,9 +3,6 @@ require('./libs/Smarty.class.php');
 class Viewlogin
 {
      
-    
-
-
     	public function imprimirPagina()
     	{
        

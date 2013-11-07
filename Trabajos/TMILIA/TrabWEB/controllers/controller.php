@@ -13,30 +13,44 @@ class Controllerindex
 	{
 		$this->view->imprimirPagina();
 	}
+
+	public function mostrarPagina() {
+		$this->view->muestraPagina();
+	}
 	
 
 	public function mostrarAuto()
 	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
-		/*$consulta = $this->model->consultaAuto();
-		$this->view->generaAutos($consulta);*/
 		$consulta = $this->view->generaAutos($this->model->consultaAuto());
 	}
 
 	public function mostrarCategorias()
 	{	
-		
-		/*$consultacat = $this->model->consultaCategoria();
-		$this->view->muestraCategoria($consultacat);*/
 		$consultacat = $this->view->muestraCategoria($this->model->consultaCategoria());
+		
+	}
+
+	public function buscarImag() // 63
+	{	
+		//$this->model->buscarimagen($id);
+		$path = $this->model->consultaImagen();
+		$this->view->mostrarImagen($path);
+		
+	 }
+
+	public function buscarCat($id)
+	{	
+		
+		$consulta = $this->model->buscarCat($id);
+		if ($consulta) {
+			$this->view->generaCat($consulta);
+			
+		}
 		
 	}
 }
 
 
-/*Tendrias que estar haciendo algo asi:
-$view->CargarCategorias($model->GetCategorias())
-$view->CargarAutos($model->GetAutos())
-$view->ImprimirPagina();*/
+
 ?>
 

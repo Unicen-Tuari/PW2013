@@ -16,7 +16,9 @@ class Modeladdcar
 			die('Error de conexion, Mensaje: ' .$pe->getMessage());
 		}
     }
-	public function consultaMarca(){
+
+	public function consultaMarca()
+	{
 
 		$sql = "SELECT * FROM marca";
 		$q = $this->conn->prepare($sql);
@@ -24,16 +26,75 @@ class Modeladdcar
 		// fetch
 
 		return $q->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+
+
+	public function insertarAuto($auto) //,$mail
+	{
+
+		
+		$id_usuario= 2;
+		$sql = "INSERT INTO `autosbd`.`auto` (`id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`)  VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
+		$q = $this->conn->prepare($sql);
+		$a=$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
+		
+		//mysql_query("INSERT INTO `auto` (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio) )";
+
+		$id_auto = $this->conn->lastInsertId();
+		//mysql_insert_id();
+
+		$id_imagen = $this->insertarImagen($auto["imagen"]);
+
+		$sql = " INSERT INTO  `autosbd`.`auto_imagen` (`id_auto` ,`id_imagen`) VALUES ( :id_auto, :id_imagen)";
+		$q = $this->conn->prepare($sql);
+		$a=$q->execute(array(':id_auto'=>$id_auto,':id_imagen'=>$id_imagen));
+		
+	
 
 	}
-	public function insertarAuto($auto){//,$mail
-		//$id_usuario = "SELECT id FROM usuario WHERE email = $mail";
-		$id_usuario=2;
 
-		$sql = "INSERT INTO auto (id_usuario,marca,titulo,valor,descripcion,modelo,anio) VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
-		$q = $this->conn->prepare($sql);
-		$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
+	public function insertarImagen($imagen)
+	{
 
+		$allowed =  array('gif','png' ,'jpg','jpeg');
+		if(!$imagen['error'])
+			{
+				$filename = $imagen['name'];
+				$ext = pathinfo($filename, PATHINFO_EXTENSION);
+				if(in_array($ext,$allowed) ) {
+					$new_file_name = uniqid(); //Generar un uniq id para la foto.
+					$path = 'imagenes/'.$new_file_name.'.'.$ext;
+					move_uploaded_file($imagen['tmp_name'],$path );
+					//echo 'Congratulations!  Your image was uploaded.';
+
+
+					$sql = "INSERT INTO `autosbd`.`imagen` (`path`)  VALUES (:path)";
+					
+
+
+					$q = $this->conn->prepare($sql);
+					$arreglo = array(':path'=>$path);
+					$a=$q->execute($arreglo);
+					$id_imagen = $this->conn->lastInsertId();
+					//print_r($id_imagen);
+					return $id_imagen;
+					
+				}
+				else
+				{
+					echo 'Error: Invalid Extension';
+				}
+			}
+			else
+			{
+				echo 'Error: Fatal Error';
+			}
+		
+		
+
+		
 	}
 }
 ?>
+

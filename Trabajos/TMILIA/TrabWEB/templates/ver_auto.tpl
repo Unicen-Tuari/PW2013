@@ -12,7 +12,10 @@
     <!-- Bootstrap core CSS -->
      <link href="dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="dist/css/bootstrap.css" rel="stylesheet">
-    
+     <link href="dist/css/jquery.bxslider.css" rel="stylesheet">
+     <script src="./js/jquery.bxslider.min.js"></script>
+     <script src="./js/galeria.js"></script> 
+
    
 
     <!-- Custom styles for this template -->
@@ -31,7 +34,7 @@
         
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="index.php">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li><a href="login.php">Ingresar</a></li>
@@ -53,44 +56,62 @@
           
               <div class="row-fluid">
                    <div class="span12">
-                    {foreach $autos as $auto}
-                        <h3>{$auto.titulo}</h3>
-                      </p>
-                      <ul>
-                        <li>
-                         <b>Valor:{$auto.valor}</b>
-                        </li>
-                        <li>
-                          <b>Modelo:{$auto.modelo}</b>
-                        </li>
-                        <li>
-                          <b>Año:{$auto.año}</b>
-                        </li>
-                      </ul>
-                      <dl>
-                        <dt>
-                          <b>Descripcion del auto</b>
-                        </dt>
+                  
+                            <h3>{$auto[0].titulo}</h3>
+                          </p>
+                          <ul>
+                            <li>
+                             <b>Valor:{$auto[0].valor}</b>
+                            </li>
+                            <li>
+                              <b>Modelo:{$auto[0].modelo}</b>
+                            </li>
+                            <li>
+                              <b>Año:{$auto[0].anio}</b>
+                            </li>
+                          </ul>
+                          <dl>
+                            <dt>
+                              <b>Descripcion del auto</b>
+                            </dt>
 
-                        <dd>
-                          {$auto.descripcion}
-                        </dd>
-                      </dl>
-                        {/foreach}
-                      <img alt="320x240" src="http://lorempixel.com/140/140/" />
+                            <dd>
+                              {$auto[0].descripcion}
+                            </dd>
+                          </dl>
+                       
+                       <div style="height:30%; width:30%;">
 
+                          <img alt="320x240" src="{$imagenes}" class="img-thumbnail" />
+
+                       </div>
+
+                       </br>
+                        </br> 
                         <div class="span4 well">
-                            <form accept-charset="UTF-8" action="" method="POST">
-                                <textarea class="span4" id="new_message" name="new_message"
-                                  placeholder="nueva consulta" rows="5" cols="100">
+                            <form accept-charset="UTF-8" action="verauto.php" method="POST">
+                                <div class="form-group">
+                                  <label name="nombre">Nombre</label>
+                                  <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre">
+                                </div>
+                                <div class="form-group">
+                                  <label  name="email">Email</label>
+                                  <input type="text" class="form-control" name="email" placeholder="Ingresa tu correo">
+                                </div>
+                                 <div class="form-group">
+                                  <label  name="telefono">Telefono</label>
+                                  <input type="text" class="form-control" name="telefono" placeholder="Ingresa tu numero de telefono">
+                                </div>
+
+                                <textarea class="span4" name="texto" placeholder="Ingresa tu consulta" rows="5" cols="100">
                                 </textarea>
                                 </br>
-                               </br>
+                                </br>
                                 <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
                         </div>
-                  </div>
                 </div>
+            </div>
 
            
 
@@ -103,7 +124,8 @@
               <ul class="nav">
                 <li>Categorias</li>
                 {foreach $marcas as $marca}
-                <li class="active"><a href="#">{$marca.nombre}</a></li>  
+               
+                <li class="active" style="text-transform: capitalize;"><a href='index.php?marca={$marca.id}'>{$marca.nombre}</a></li>  
                  {/foreach}   
                               
               </ul>

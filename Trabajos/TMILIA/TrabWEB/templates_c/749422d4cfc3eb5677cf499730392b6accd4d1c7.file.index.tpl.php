@@ -1,32 +1,33 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 20:21:00
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 00:06:00
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:585524cbad4172f84-21757629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:16000527ac5c617e963-64507763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1381256456,
+      1 => 1383779157,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '585524cbad4172f84-21757629',
+  'nocache_hash' => '16000527ac5c617e963-64507763',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_524cbad438af61_55927683',
+  'unifunc' => 'content_527ac5c625bde6_41564158',
   'variables' => 
   array (
     'autos' => 0,
+    'imagenes' => 0,
     'auto' => 0,
     'marcas' => 0,
     'marca' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_524cbad438af61_55927683')) {function content_524cbad438af61_55927683($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_527ac5c625bde6_41564158')) {function content_527ac5c625bde6_41564158($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -66,7 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
               <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
+                  <li class="active"><a href="index.php">Home</a></li>
                   <li><a href="#about">About</a></li>
                   <li><a href="#contact">Contact</a></li>
                   <li><a href="login.php">Ingresar</a></li>
@@ -86,33 +87,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h1>Autos Tandil</h1>
             <p>descripcion pagina</p>
           </div>
-          <?php  $_smarty_tpl->tpl_vars['auto'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['auto']->_loop = false;
+
+          
+            <?php  $_smarty_tpl->tpl_vars['auto'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['auto']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['autos']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['auto']->key => $_smarty_tpl->tpl_vars['auto']->value){
 $_smarty_tpl->tpl_vars['auto']->_loop = true;
 ?>
-              <ul class="thumbnails">
-                <ul class="span5 clearfix">
-                  <div class="thumbnail clearfix">
-                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
-                    <div class="caption" class="pull-left">
-                      <a href='verauto.php?id=<?php echo $_smarty_tpl->tpl_vars['auto']->value['id'];?>
+                <ul class="thumbnails">
+                  <ul class="span5 clearfix">
+                    <div class="thumbnail clearfix">
+                    
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['imagenes']->value;?>
+" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px; height:30%; width:50%;'>
+                      
+                      
+                      <div class="caption" class="pull-left" >
+                        <a href='verauto.php?id=<?php echo $_smarty_tpl->tpl_vars['auto']->value['id'];?>
 ' class="btn btn-primary icon  pull-right">Ver Auto</a>
-                      <h4>      
-                      <a href="#" ><?php echo $_smarty_tpl->tpl_vars['auto']->value['titulo'];?>
+                        <h4>      
+                        <a href='verauto.php?id=<?php echo $_smarty_tpl->tpl_vars['auto']->value['id'];?>
+' ><?php echo $_smarty_tpl->tpl_vars['auto']->value['titulo'];?>
 </a>
-                      </h4>
-                      <small><b>Precio: </b><?php echo $_smarty_tpl->tpl_vars['auto']->value['valor'];?>
+                        </h4>
+                        <small><b>Precio:$</b><?php echo $_smarty_tpl->tpl_vars['auto']->value['valor'];?>
 </small>
+                        </br>
+                        </br>                        
+                        <small><b>Año: </b><?php echo $_smarty_tpl->tpl_vars['auto']->value['anio'];?>
+</small>
+                      </div>
                     </div>
-                  </div>
+                  </ul>
                 </ul>
-              </ul>
-          <?php } ?>
+            <?php } ?>
         </div><!--/span-->
-
-
-       
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="well sidebar-nav">
               <ul class="nav">
@@ -122,7 +131,8 @@ $_smarty_tpl->tpl_vars['auto']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['marca']->key => $_smarty_tpl->tpl_vars['marca']->value){
 $_smarty_tpl->tpl_vars['marca']->_loop = true;
 ?>
-                <li class="active" style="text-transform: capitalize;"><a href="#"><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
+                <li class="active" style="text-transform: capitalize;"><a href='index.php?marca=<?php echo $_smarty_tpl->tpl_vars['marca']->value['id'];?>
+'><?php echo $_smarty_tpl->tpl_vars['marca']->value['nombre'];?>
 </a></li>  
                  <?php } ?>                            
               </ul>

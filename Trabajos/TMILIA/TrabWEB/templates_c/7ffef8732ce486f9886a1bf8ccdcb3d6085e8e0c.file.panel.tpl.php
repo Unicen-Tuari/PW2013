@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 06:28:18
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 01:06:52
          compiled from ".\templates\panel.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:69915252fdcbd1c8a3-65230120%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:31175527ad99cc94021-56012284%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7ffef8732ce486f9886a1bf8ccdcb3d6085e8e0c' => 
     array (
       0 => '.\\templates\\panel.tpl',
-      1 => 1381206470,
+      1 => 1383685267,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '69915252fdcbd1c8a3-65230120',
+  'nocache_hash' => '31175527ad99cc94021-56012284',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5252fdcbd860e7_70449021',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_527ad99ccd6e70_88013233',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5252fdcbd860e7_70449021')) {function content_5252fdcbd860e7_70449021($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_527ad99ccd6e70_88013233')) {function content_527ad99ccd6e70_88013233($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -49,8 +49,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="panel.php">Autos</a></li>
-          <li><a href="mensaje.php">Mensajes</a></li>
-          <li><a href="datos.php">Mis datos</a></li>
+          <li><a href="mensaje.php">Mensajes</a></li>      
           <li><a href="logout.php">Cerrar Sesion</a></li>
         </ul>
         <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>

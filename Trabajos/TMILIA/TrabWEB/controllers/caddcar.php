@@ -25,16 +25,18 @@ class Controlleraddcar
 		}
 		else
 		{
-			$this->view->muestramarca($consulta);
+			$this->view->muestraMarca($consulta);
 		}
 	}
 
 		public function grabarAuto($auto)
 	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
+		
 		$this->model->insertarAuto($auto);
-		//$this->view->mensajeExito();
+		$this->view->mensajeExito();
 	}
+
+	
 }
 
 ?>

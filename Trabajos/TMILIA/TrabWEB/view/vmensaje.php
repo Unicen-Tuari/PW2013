@@ -7,15 +7,18 @@ class Viewmensaje
     {
     	$this->smarty = New Smarty;
 	}
-    public function muestraPagina()
+    public function imprimirPagina()
     {
-		$this->smarty->display('mensaje.tpl');
+		//$this->smarty->display('mensaje.tpl');
     }
-     public function generaAutos($datos)
+
+      public function mostrarMensaje($mensaje)
     {
-        $this->smarty->assign("autos",$datos);
+        $this->smarty->assign("mensaje",$mensaje);
         $this->smarty->display('mensaje.tpl');
+        
     }
+    
   
 }
 ?>

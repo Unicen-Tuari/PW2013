@@ -13,19 +13,13 @@ class Controllermensaje
 	{
 		$this->view->imprimirPagina();
 	}
-	public function mostrarAuto()
-	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
-		$consulta = $this->model->consultaAuto();
 
-		if($consulta == null)
-		{
-			return false;
-		}
-		else
-		{
-			$this->view->generaAutos($consulta);
-		}
+
+	public function mostrarMensaje()
+	{	
+	
+	  $mensaje = $this->view->mostrarMensaje($this->model->consultaMensaje());
+		
 	}
 }
 

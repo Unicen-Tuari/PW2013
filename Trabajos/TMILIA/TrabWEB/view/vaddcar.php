@@ -13,15 +13,18 @@ class Viewaddcar
 		$this->smarty->display('addcar.tpl');
     }
   
-     public function muestraMarca($datos)
+   public function muestraMarca($consulta)
     {
-        $this->smarty->assign("marcas",$datos);
-        $this->smarty->display('addcar.tpl');
+        $this->smarty->assign("marcas",$consulta);
     }
+   
 
     public function mensajeExito()
       {
         echo "el auto se grabo correctamente";
+
+        header('location: panel.php');
+
     }
   
 }
