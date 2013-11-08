@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 23:39:54
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 19:48:09
          compiled from "./templates/ipacientes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1118040609523f98f52462c1-02992839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a6f152803e4839d14fcbfdfafd88032c8dab5b56' => 
     array (
       0 => './templates/ipacientes.tpl',
-      1 => 1381199767,
+      1 => 1383803912,
       2 => 'file',
     ),
   ),
@@ -41,17 +41,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<input type="email" name="Mail"  placeholder="E-mail" size="20"><br><br>
 								Fecha de nacimiento:											
 								<input type="text" name="Fecha" id="fecha"  placeholder="MM/DD/AAAA" size="10"><br><br>
-								<input type="text" name="Obr_soc"  placeholder="Obra Social / Prepaga">
-								<input type="text" name="Num_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
+								<?php echo $_smarty_tpl->getSubTemplate ("obr_soc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 								Especialidad:					
-								<select name="especialidad" style="margin:0 5px 0 0">
-									<option value="kinesiologia">Kinesiologia</option>
-									<option value="nutricion">Nutricion</option>
+								<select name="Especialidad" style="margin:0 5px 0 0">
+									<option value="1">Kinesiologia</option>
+									<option value="2">Nutricion</option>
 								</select><br><br>
 								Antecedentes: 
 								<textarea name="Antecedentes" wrap="SOFT" tabindex="0" autocorrect="on"></textarea><br><br>
-								Cargar Estudios:  
-								<input type="file" name="estudios"><br><br><br>
 								<input type="submit" value="Cargar Paciente">
 								<input type="button" onclick="history.back()" name="volver atrás" value="Volver">
 							</div>

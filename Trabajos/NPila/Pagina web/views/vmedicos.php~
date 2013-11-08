@@ -2,9 +2,21 @@
 	require('./libs/Smarty.class.php');
 	class View
 		{
-			public function imprimirPagina(){
-				$smarty = new Smarty;
-				$smarty->display('medicos.tpl');
+			private $smarty;
+
+		    public function __construct()
+			{
+				$this->smarty = New Smarty;
 			}
-		}	
+			public function imprimirPagina()
+			{
+				$this->smarty->display('medicos.tpl');
+			}
+
+			public function muestraInfo($nombre)
+			{
+				$this->smarty->assign("datos", $nombre);
+				$this->smarty->display('resconsultamedicos.tpl');
+			}
+}
 ?>

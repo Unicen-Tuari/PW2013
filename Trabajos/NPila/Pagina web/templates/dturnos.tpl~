@@ -10,7 +10,7 @@
 								<legend class="title a"><br><br>								
 									<form id="formmedico" method="post" action="">
 										Nombre y Apellido:
-										<input type="text" name="Nombre_apellido" placeholder="" size="30">
+										<input type="text" id="Nombre_apellido" name="Nombre_apellido" placeholder="" size="30">
 										<br><br>
 										Turnos para el dia: 									
 										<input type="text" name="Fecha" id="fecha" placeholder="MM/DD/AAAA" size="10">

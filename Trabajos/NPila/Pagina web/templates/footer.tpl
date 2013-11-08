@@ -5,5 +5,6 @@
 	<script text="text/javascript" src="js/inserciones.js"></script>
 	<script text="text/javascript" src="js/login.js"></script>
 	<script text="text/javascript" src="js/calendario.js"></script>
+	<script text="text/javascript" src="js/borrados.js"></script>
 </footer>
 </html>
