@@ -5,11 +5,19 @@ $("#cons_pacientes").submit(function()
 {
 	$.ajax({
 		type: "POST",
-		url: "infopaciente.php",
+		url: "informacion_paciente.php",
 		data: $("#cons_pacientes").serialize(),
 		success: function(data)
 			{
-				document.getElementById('content').innerHTML=data;
+				if (data != "El nombre contiene caracteres no validos o no fue completado")
+					{		
+						document.getElementById('content').innerHTML=data;
+					}
+				else
+					{
+						alert(data);
+						window.location = 'informacion_paciente.php';
+					}
 			}
 });
 
@@ -26,9 +34,26 @@ var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
 		url: "turnos.php",
 		data: $("#cons_turnos").serialize(),
 		success: function(data)
-			{				
-				document.getElementById('content').innerHTML=data;
-				document.getElementById('fechacons').innerHTML=fecha;
+			{		
+				if (data != "La fecha del turno no fue completada")
+					{
+						document.getElementById('content').innerHTML=data;
+						document.getElementById('fechacons').innerHTML=fecha;
+					}
+				else if (data == '')
+					{
+						alert("No hay turnos dados para la fecha seleccionada");
+					}
+				else
+					{
+						alert(data);
+						window.location = 'turnos.php';
+					}
+
+
+
+		
+				
 
 			}
 	
@@ -39,21 +64,27 @@ return false;
 
 });
 
-
-/* Carga */
-
-// Carga pacientes
-$("#ingresopaciente").submit(function() 
+// Medicos
+$("#cons_medico").submit(function()
 {
 	$.ajax({
-	  type: "POST",
-	  url: "ipacientes.php",
-	  data:$("#ingresopaciente").serialize(),
-	  success: function(data)
-			   {
-				alert("Paciente ingresado correctamente");
-				window.location = 'index.php';
-			   }
-	});
-	return false;
+		type: "POST",
+		url: "medicos.php",
+		data: $("#cons_medico").serialize(),
+		success: function(data)
+			{
+				if (data != "El nombre contiene caracteres no validos o no fue completado")
+					{
+						document.getElementById('content').innerHTML=data;
+					}
+				else
+					{
+						alert(data);
+						window.location = 'medicos.php';
+					}
+			}
+});
+
+return false;
+
 });

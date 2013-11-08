@@ -11,7 +11,7 @@
 			
 			public function imprimirPagina()
 				{
-					$this->smarty->display('ipacientes.tpl');/*A donde manda despues de cargar*/
+					$this->smarty->display('ipacientes.tpl');
 				}
 		}
 ?>

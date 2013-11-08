@@ -7,6 +7,9 @@
 						<div id="content">
 							<div class="post"> 
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+								<div class="post">
+									<h2 class="title">Ingresar el turno</h2>
+								</div>
 								<legend class="title a"><br><br>								
 									<form id="formmedico" method="post" action="">
 										Nombre y Apellido:

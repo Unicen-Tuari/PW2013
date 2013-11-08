@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-18 15:49:28
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-05 02:14:04
          compiled from "./templates/rescunsultakines.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16606153375239f1f27db3d0-08988093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef44747791209f15cb3414c150bbe64908f0e15c' => 
     array (
       0 => './templates/rescunsultakines.tpl',
-      1 => 1379530100,
+      1 => 1383628319,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		Obra Social: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Obr_soc'];?>
  &nbsp &nbsp Numero de afiliado: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Num_afiliado'];?>
  <br><br>
+		<input type="button" name="borrar" value="Borrar">
 		<input type="button" name="historia" value="Historia Clinica">
+		<input type="button" name="mod_historia" value="Modificar Historia Clinica">
 </div></legend></div>
 <?php }} ?>

@@ -7,8 +7,15 @@ $("#ingresopaciente").submit(function()
 			data:$("#ingresopaciente").serialize(),
 			success: function(data)
 				{
-					alert("Paciente ingresado correctamente");
-					window.location = 'index.php';
+					if (data == "correcto")
+						{
+							alert("Paciente ingresado correctamente");
+							window.location = 'index.php';
+						}
+					else
+						{
+							alert(data);
+						}
 				}
 		});
 		return false;
@@ -23,8 +30,38 @@ $("#formmedico").submit(function()
 			data:$("#formmedico").serialize(),
 			success: function(data)
 				{
-					alert("El turno fue ingresado correctamente");
-					/*window.location = 'index.php';*/
+					if (data == "correcto")
+						{
+							alert("El turno fue ingresado correctamente");
+							window.location = 'index.php';
+						}
+					else
+						{
+							alert(data);
+						}					
+				}
+		});
+		return false;
+	});
+
+// Carga medicos
+$("#ingresomedico").submit(function() 
+	{
+		$.ajax({
+			type: "POST",
+			url: "amedicos.php",
+			data:$("#ingresomedico").serialize(),
+			success: function(data)
+				{
+					if (data == "correcto")
+						{
+							alert("Medico ingresado correctamente");
+							window.location = 'index.php';
+						}
+					else
+						{
+							alert(data);
+						}	
 				}
 		});
 		return false;

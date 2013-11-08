@@ -13,7 +13,7 @@
 				$this->smarty->display('turnos.tpl');
 			}
 
-			public function muestraInfo($info)
+			public function muestraTurnos($info)
 			{
 				$this->smarty->assign("datos", $info);
 				$this->smarty->display('resconsultaturnos.tpl');
