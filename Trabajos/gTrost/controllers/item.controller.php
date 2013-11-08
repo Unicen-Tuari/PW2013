@@ -1,7 +1,7 @@
 <?php
 class ItemController extends BaseController {
 	public function indexAction() {
-		$this->view->display('item.tpl');
+		$this->view->display();
 	}
 
 	public function searchAction() {
@@ -11,6 +11,7 @@ class ItemController extends BaseController {
 
 		$item_array = $model->getData($item);
 		$this->view->assign('item_datos', $item_array);
-		$this->view->display('item.tpl');
+		$this->view->display();
+		
 	}
 }

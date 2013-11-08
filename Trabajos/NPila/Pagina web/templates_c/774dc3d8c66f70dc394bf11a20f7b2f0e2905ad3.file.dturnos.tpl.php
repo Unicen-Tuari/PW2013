@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 18:02:28
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 21:00:26
          compiled from "./templates/dturnos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2145861096523f9406d89f85-59212591%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '774dc3d8c66f70dc394bf11a20f7b2f0e2905ad3' => 
     array (
       0 => './templates/dturnos.tpl',
-      1 => 1381266144,
+      1 => 1383868818,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div id="content">
 							<div class="post"> 
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+								<div class="post">
+									<h2 class="title">Ingresar el turno</h2>
+								</div>
 								<legend class="title a"><br><br>								
 									<form id="formmedico" method="post" action="">
 										Nombre y Apellido:

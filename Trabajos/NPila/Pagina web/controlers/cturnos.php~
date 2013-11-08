@@ -13,7 +13,6 @@
 		{
 			if (isset($_POST['fecha']))
 			{
-				print_r($_POST['fecha']);
 				$info = $this->model->consultaTurno($_POST['fecha'], $_POST['especialidad']);
 				if($info)
 				{
@@ -22,7 +21,7 @@
 			}
 			else
 			{
-				$this->view->imprimirPagina();
+				$this->view->imprimirPaginaCons();
 			}
 		}
 	}

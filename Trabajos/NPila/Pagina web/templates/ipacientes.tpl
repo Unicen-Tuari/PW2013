@@ -19,17 +19,14 @@
 								<input type="email" name="Mail"  placeholder="E-mail" size="20"><br><br>
 								Fecha de nacimiento:											
 								<input type="text" name="Fecha" id="fecha"  placeholder="MM/DD/AAAA" size="10"><br><br>
-								<input type="text" name="Obr_soc"  placeholder="Obra Social / Prepaga">
-								<input type="text" name="Num_afiliado"  placeholder="Nº Afiliado" size="15"><br><br>
+								{include file = "obr_soc.tpl"}
 								Especialidad:					
-								<select name="especialidad" style="margin:0 5px 0 0">
-									<option value="kinesiologia">Kinesiologia</option>
-									<option value="nutricion">Nutricion</option>
+								<select name="Especialidad" style="margin:0 5px 0 0">
+									<option value="1">Kinesiologia</option>
+									<option value="2">Nutricion</option>
 								</select><br><br>
 								Antecedentes: 
 								<textarea name="Antecedentes" wrap="SOFT" tabindex="0" autocorrect="on"></textarea><br><br>
-								Cargar Estudios:  
-								<input type="file" name="estudios"><br><br><br>
 								<input type="submit" value="Cargar Paciente">
 								<input type="button" onclick="history.back()" name="volver atrás" value="Volver">
 							</div>

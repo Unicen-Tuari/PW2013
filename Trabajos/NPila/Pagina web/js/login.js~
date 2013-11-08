@@ -6,24 +6,37 @@ $("#formulariologin").submit(function()
 			data:$("#formulariologin").serialize(),
 			success: function(data)
 				{
-					window.location = data;
+					if (data == '1')
+						{			
+							alert(data);
+							alert("Usuario incorrecto");
+							window.location = "index.php";
+						}
+					else if (data == '2')
+						{
+							alert("Clave incorrecta");
+							window.location = "index.php";
+						}
+					else
+						{
+							window.location = data;
+						}
 				}
 		});
 		return false;
 	});
 
 
-$("#logout").click(function() {
-
-	$.ajax({
-	  type: "POST",
-	  url: "logout.php",
-	  data:$("#formlogin").serialize(),
-	  success: function(data)
-			   {
-				   window.location = "login.php";
+$("#logout").click(function()
+	{
+		$.ajax({
+			type: "POST",
+			url: "logout.php",
+			data:$("#formlogin").serialize(),
+			success: function(data)
+				{
+					window.location = "login.php";
 				}
+		});
+		return false;
 	});
- 
-	return false;
-});

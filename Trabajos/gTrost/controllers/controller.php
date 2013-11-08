@@ -1,5 +1,5 @@
 <?php
-//Controlador base. Cada contrlador específico va a ser precargado por el autoloader después, evitando todos los require
+
 require('controllers/faq.controller.php');	
 require('controllers/item.controller.php');	
 require('controllers/contacto.controller.php');	
@@ -19,12 +19,18 @@ class FrontController {
 	public function __construct($view) {
 		
 		$this->view = $view;
+		
 
 		$this->router = new Router();
+
+		$this->view->setView($this->router->controllerName);
+		
 
 		$this->controllerName = $this->router->controllerName . 'Controller';
 		$this->controllerAction = $this->router->controllerAction . 'Action';
 
+		
+		
 
 		if(class_exists($this->controllerName)) {
 			$controller = new $this->controllerName($this->view,
@@ -40,6 +46,12 @@ class FrontController {
 			die('404 - error/invalid controller');
 		}
 	}
+
+
+
+
+
+	
 }
 
 abstract class BaseController {
@@ -58,6 +70,7 @@ abstract class BaseController {
 
 		$view->assign('categorias', $categorias_array);
 		
+		
 		foreach ($categorias_array as $categoria) {
 			$catNombre=$categoria['cat_nombre'];
 			$subcat_array[$catNombre] = $model->getSubCat($catNombre); 
@@ -67,6 +80,8 @@ abstract class BaseController {
 		
 		$view->assign('subcategorias', $subcat_array);
 	}
+
+	
 
 }
 

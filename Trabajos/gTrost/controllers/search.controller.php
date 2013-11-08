@@ -9,7 +9,8 @@ class SearchController extends BaseController {
 		$search_array = $model->getByKeyword($search_keyword);
 
 		$this->view->assign('productos', $search_array);
-		$this->view->display('search.tpl');
+		$this->view->display();
+		
 		
 	}
 }

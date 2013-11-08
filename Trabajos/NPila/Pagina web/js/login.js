@@ -6,7 +6,20 @@ $("#formulariologin").submit(function()
 			data:$("#formulariologin").serialize(),
 			success: function(data)
 				{
-					window.location = data;
+					if (data == '1')
+						{			
+							alert("Usuario incorrecto");
+							window.location = "index.php";
+						}
+					else if (data == '2')
+						{
+							alert("Clave incorrecta");
+							window.location = "index.php";
+						}
+					else
+						{
+							window.location = data;
+						}
 				}
 		});
 		return false;

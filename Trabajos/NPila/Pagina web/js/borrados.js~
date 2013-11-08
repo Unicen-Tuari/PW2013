@@ -1,0 +1,32 @@
+function borrarTurno(id)
+	{
+ var id = $(this).val();
+ $(function()
+        {
+            $.ajax({
+			type: "POST",
+			url: "turnos.php",
+			data:$("#id_turno").serialize(),
+			success: function(data)
+				{
+					document.getElementById('content').innerHTML=id;
+				}
+		});
+		return false;
+	});
+}
+
+/*
+$("#borrar_turn").onclick(function() 
+	{
+		$.ajax({
+			type: "POST",
+			url: "turnos.php",
+			data:$("#id_turno").serialize(),
+			success: function(data)
+				{
+					document.getElementById('content').innerHTML=data;
+				}
+		});
+		return false;
+	});*/
