@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 02:09:03
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-25 05:49:56
          compiled from ".\templates\nuevocliente.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:440152537756883d78-95380579%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '42edcb54b130e219f39b365f880ef64d200d8465' => 
     array (
       0 => '.\\templates\\nuevocliente.tpl',
-      1 => 1381203679,
+      1 => 1382672990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5253775693aa57_92698726',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5253775693aa57_92698726')) {function content_5253775693aa57_92698726($_smarty_tpl) {?><form id="formulariocontacto" method="POST" >
+<?php if ($_valid && !is_callable('content_5253775693aa57_92698726')) {function content_5253775693aa57_92698726($_smarty_tpl) {?><form class="text-center" id="formulariocontacto" method="POST" >
 	<ul>
 	    <li>
 	    	<h2>Completa los siguientes datos:</h2>

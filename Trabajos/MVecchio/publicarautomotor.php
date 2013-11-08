@@ -1,10 +1,11 @@
 <?php
-require('./libs/Smarty.class.php');
-$smarty = new Smarty;
-
-//$smarty->debugging = true;
-$smarty->caching = true;
-$smarty->cache_lifetime = 120;
-
-$smarty->display('publicarautomotor.tpl');
+	include './controllers/controllerpublicarautomotor.php';
+	include './views/viewpublicarautomotor.php';
+	include './models/modelpublicarautomotor.php';
+		
+	$model= new Model();
+	$view = new View();
+	$controller = new Controller($view,$model);
+	$controller->publicarAuto();
+	$controller->imprimirPagina();
 ?>
