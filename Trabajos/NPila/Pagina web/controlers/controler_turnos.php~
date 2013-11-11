@@ -14,21 +14,27 @@ include 'funciones_comprobacion.php';
 
 /*----------------------------------------Listar turnos----------------------------------*/
 
-		public function imprimirPagina()
+	public function consultaTurno($cons)
 		{
-			if (isset($_POST['fecha']))
-			{
-				$info = $this->model->consultaTurno($_POST['fecha'], $_POST['especialidad']);
-				if($info)
-				{
-					$this->view->muestraTurnos($info);
+			if (comprobar_fecha($cons['fecha']))
+				{	
+					$info = $this->model->consultaTurno($cons['fecha'], $cons['especialidad']);
+					if($info)
+					{
+						$this->view->muestraTurnos($info);
+					}
 				}
-			}
 			else
+				{
+					echo("La fecha del turno no fue completada");
+				}
+		}
+
+		public function imprimirPagina()
 			{
 				$this->view->imprimirPaginaCons();
 			}
-		}
+		
 
 		public function borrarTurno($idturno)
 			{

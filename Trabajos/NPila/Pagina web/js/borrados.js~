@@ -1,32 +1,15 @@
-function borrarTurno(id)
+alert("entro");
+function borrarTurno(id) 
 	{
- var id = $(this).val();
- $(function()
-        {
-            $.ajax({
+		alert("entro");
+		$.ajax({
 			type: "POST",
 			url: "turnos.php",
-			data:$("#id_turno").serialize(),
+			data:{valor:id},
 			success: function(data)
 				{
-					document.getElementById('content').innerHTML=id;
+					alert('Borro');
 				}
 		});
 		return false;
 	});
-}
-
-/*
-$("#borrar_turn").onclick(function() 
-	{
-		$.ajax({
-			type: "POST",
-			url: "turnos.php",
-			data:$("#id_turno").serialize(),
-			success: function(data)
-				{
-					document.getElementById('content').innerHTML=data;
-				}
-		});
-		return false;
-	});*/

@@ -31,7 +31,7 @@
 				return $resultado;
 			}
 
-		public function eliminaPaciente($idturno)
+		public function eliminaTurno($idturno)
 			{
 				$sql = "DELETE FROM Turnos WHERE Id_turno = '$idturno';";
 				$resultado = $this->conn->prepare($sql);

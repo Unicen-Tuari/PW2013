@@ -1,12 +1,13 @@
-$("#borrar_turn").click(function() 
+function borrarTurno(id) 
 	{
+		alert("entro");
 		$.ajax({
 			type: "POST",
 			url: "turnos.php",
-			data:$("#id_turno").serialize(),
+			data:{valor:id},
 			success: function(data)
 				{
-					document.getElementById('content').innerHTML=data;
+					alert('Borro');
 				}
 		});
 		return false;
