@@ -1,3 +1,5 @@
+<br>
+<br>
 <footer class="navbar navbar-default navbar-static-bottom">
 	<div class="container text-center">
 		<div class="row">

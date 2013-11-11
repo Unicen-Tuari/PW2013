@@ -1,10 +1,11 @@
 <?php
-require('./libs/Smarty.class.php');
-$smarty = new Smarty;
-
-//$smarty->debugging = true;
-$smarty->caching = true;
-$smarty->cache_lifetime = 120;
-
-$smarty->display('agregarautomotor.tpl');
+	include './controllers/controlleragregarautomotor.php';
+	include './views/viewagregarautomotor.php';
+	include './models/modelagregarautomotor.php';
+		
+	$model= new Model();
+	$view = new View();
+	$controller = new Controller($view,$model);
+	$controller->agregarAuto();
+	$controller->imprimirPagina();
 ?>

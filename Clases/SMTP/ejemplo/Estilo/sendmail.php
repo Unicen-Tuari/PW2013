@@ -1,5 +1,5 @@
 <?php
-$to = 'ijonas@alumnos.exa.unicen.edu.ar';
+$to = 'vecchiomatias@gmail.com';
 
 $subject = 'Envío de Mails Con Estilo';
 
