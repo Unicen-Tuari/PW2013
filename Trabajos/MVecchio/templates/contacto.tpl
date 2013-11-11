@@ -24,7 +24,7 @@
 	        <textarea id="mensaje" name="mensaje" cols="40" rows="6" required placeholder="Tu Mensaje"></textarea>
 	    </li>
 	    <li>
-	    	<button id="submitcontacto" type="submit" class="btn btn-primary" onclick="enviar();">Enviar Mensaje</button><br>
+	    	<a id="submitcontacto" type="submit" class="btn btn-primary" onclick="enviar();">Enviar Mensaje</a><br>
 	    	<h4 id="result" class="succes" style="display: none;"></h4>
 	    </li>
 	</ul>
