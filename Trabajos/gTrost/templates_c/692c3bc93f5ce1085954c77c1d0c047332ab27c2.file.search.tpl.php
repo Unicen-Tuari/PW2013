@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 03:29:49
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-09 09:29:34
          compiled from "./templates/search.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15931776845253a645578c55-04329304%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '692c3bc93f5ce1085954c77c1d0c047332ab27c2' => 
     array (
       0 => './templates/search.tpl',
-      1 => 1381213782,
+      1 => 1384000160,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5253a645605a23_29456978')) {function content_5253a645605a23_29456978($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_5253a645605a23_29456978')) {function content_5253a645605a23_29456978($_smarty_tpl) {?><div class="productos_container">
   <div class="f_index_productos">
 
 
@@ -64,5 +64,5 @@ $_smarty_tpl->tpl_vars['producto']->_loop = true;
       </ul>
     </div>
   </div>
-
+</div>
 <?php }} ?>
