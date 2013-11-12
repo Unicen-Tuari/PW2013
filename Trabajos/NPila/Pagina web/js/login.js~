@@ -8,7 +8,6 @@ $("#formulariologin").submit(function()
 				{
 					if (data == '1')
 						{			
-							alert(data);
 							alert("Usuario incorrecto");
 							window.location = "index.php";
 						}

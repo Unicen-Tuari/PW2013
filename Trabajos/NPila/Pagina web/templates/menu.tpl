@@ -6,8 +6,8 @@
 		<li >
 			<a>Pacientes</a>
 			<ul>
-				<li class="submen"><a href="agregar_pacientes.php">Ingresar Paciente</a></li>
 				<li class="submen"><a href="informacion_paciente.php">Consultar Paciente</a></li>
+				<li class="submen"><a href="agregar_pacientes.php">Ingresar Paciente</a></li>
 			</ul>
 		</li>
 		<li>

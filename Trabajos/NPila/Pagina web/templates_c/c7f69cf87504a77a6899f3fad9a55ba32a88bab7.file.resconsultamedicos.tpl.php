@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-05 02:17:14
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 00:24:37
          compiled from "./templates/resconsultamedicos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:203906184952671168905cc4-36635793%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c7f69cf87504a77a6899f3fad9a55ba32a88bab7' => 
     array (
       0 => './templates/resconsultamedicos.tpl',
-      1 => 1383628623,
+      1 => 1384226668,
       2 => 'file',
     ),
   ),
@@ -34,6 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		Telefono: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Telefono'];?>
  &nbsp &nbsp Correo electronico: <?php echo $_smarty_tpl->tpl_vars['datos']->value['Mail'];?>
  <br><br>
-		<input type="button" name="borrar" value="Borrar">
+		<input type="button" name="borrar" value="Borrar" onclick="borrarMedico(<?php echo $_smarty_tpl->tpl_vars['datos']->value['Id_medico'];?>
+);">
 </div></legend></div>
 <?php }} ?>

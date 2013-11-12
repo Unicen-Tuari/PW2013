@@ -22,9 +22,10 @@
 							WHERE Id_especialidad = '$especialidad'";
 					$res = $this->conn->prepare($sql);
 					$res->execute();
-					if(!$res){
-						die(print($this->conn->errorInfo()[2]));
-					}
+					if(!$res)
+						{
+							die(print($this->conn->errorInfo()[2]));
+						}
 					$res=$res->fetch(PDO::FETCH_ASSOC);
 					$id = $res['Id_medico'];
 					return $id;
@@ -56,6 +57,28 @@
 						}
 					$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
 					return $resultado;
+				}
+
+			public function eliminaPaciente($idpaciente)
+				{
+					$sql = "DELETE FROM Paciente WHERE DNI = '$idpaciente';";
+					$resultado = $this->conn->prepare($sql);
+					$resultado->execute();
+					if (!$resultado)
+						{
+							die(print($this->conn->errorInfo()[2]));
+						}
+				}
+
+			public function actHistclinica($dato)
+				{
+					$sql = "UPDATE Paciente SET Antecedentes = '".$dato['historia']."' WHERE DNI = '".$dato['paciente']."'";
+					$resultado = $this->conn->prepare($sql);
+					$resultado->execute();
+					if (!$resultado)
+						{
+							die(print($this->conn->errorInfo()[2]));
+						}
 				}
 		}
 ?>

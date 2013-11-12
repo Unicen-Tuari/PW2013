@@ -1,7 +1,7 @@
 <?php
-	include './controlers/controler_turnos.php';
-	include './views/view_turnos.php';	
-	include './models/model_turnos.php';
+	include './controller/controller_turnos.php';
+	include './view/view_turnos.php';	
+	include './model/model_turnos.php';
 	
 	$model = new Model();
 	$view = new View();

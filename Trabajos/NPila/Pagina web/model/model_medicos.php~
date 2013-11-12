@@ -39,6 +39,17 @@
 							die(print($this->conn->errorInfo()[2]));
 						}
 				}
+
+		public function eliminaTurno($idmedico)
+			{
+				$sql = "DELETE FROM Medico WHERE Id_medico = '$idmedico';";
+				$resultado = $this->conn->prepare($sql);
+				$resultado->execute();
+				if (!$resultado)
+					{
+						die(print($this->conn->errorInfo()[2]));
+					}
+			}
 	
 	}
 ?>

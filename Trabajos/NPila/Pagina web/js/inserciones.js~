@@ -1,9 +1,9 @@
-// Carga pacientes
+/*-------------------------------------------- Carga pacientes --------------------------------------------*/
 $("#ingresopaciente").submit(function() 
 	{
 		$.ajax({
 			type: "POST",
-			url: "ipacientes.php",
+			url: "agregar_pacientes.php",
 			data:$("#ingresopaciente").serialize(),
 			success: function(data)
 				{
@@ -21,12 +21,28 @@ $("#ingresopaciente").submit(function()
 		return false;
 	});
 
-// Dar turnos
+$("#content").on('submit', '#act_hist', function() 
+	{
+		alert("entra");
+		$.ajax({
+			type: "POST",
+			url: "informacion_paciente.php",
+			data:$("#act_hist").serialize(),
+			success: function(data)
+				{
+					alert("Historia clinica actualizada correctamente");
+					window.location = 'index.php';
+				}
+		});
+		return false;
+	});
+
+/*-------------------------------------------- Dar turnos --------------------------------------------*/
 $("#formmedico").submit(function() 
 	{
 		$.ajax({
 			type: "POST",
-			url: "dturnos.php",
+			url: "dar_turnos.php",
 			data:$("#formmedico").serialize(),
 			success: function(data)
 				{
@@ -44,12 +60,12 @@ $("#formmedico").submit(function()
 		return false;
 	});
 
-// Carga medicos
+/*-------------------------------------------- Carga medicos --------------------------------------------*/
 $("#ingresomedico").submit(function() 
 	{
 		$.ajax({
 			type: "POST",
-			url: "amedicos.php",
+			url: "agregar_medicos.php",
 			data:$("#ingresomedico").serialize(),
 			success: function(data)
 				{

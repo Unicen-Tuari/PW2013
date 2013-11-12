@@ -1,8 +1,7 @@
 <?php
-	include './controlers/controler_index.php';
-	include './views/view_index.php';
+	include './controller/controller_index.php';
+	include './view/view_index.php';
 
-//	$model = new Model();
 	$view = new View();
 	$controller = new Controller($view);
 	

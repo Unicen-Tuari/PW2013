@@ -1,7 +1,7 @@
 <?php
-	include './controlers/controler_medicos.php';
-	include './views/view_medicos.php';
-	include './models/model_medicos.php';
+	include './controller/controller_medicos.php';
+	include './view/view_medicos.php';
+	include './model/model_medicos.php';
 
 	$model = new Model();
 	$view = new View();

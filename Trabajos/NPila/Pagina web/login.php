@@ -1,7 +1,7 @@
 <?php
-	include './controlers/controler_login.php';
-	include './views/view_login.php';
-	include './models/model_login.php';
+	include './controller/controller_login.php';
+	include './view/view_login.php';
+	include './model/model_login.php';
 
 	$model = new Model();
 	$view = new View();

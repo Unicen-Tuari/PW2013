@@ -15,13 +15,13 @@
 
 			public function imprimirPaginaDar()
 			{
-				$this->smarty->display('dturnos.tpl');
+				$this->smarty->display('dar_turnos.tpl');
 			}
 
 			public function muestraTurnos($info)
 			{
 				$this->smarty->assign("datos", $info);
-				$this->smarty->display('resconsultaturnos.tpl');
+				$this->smarty->display('consulta_turnos.tpl');
 			}
 	}
 ?>

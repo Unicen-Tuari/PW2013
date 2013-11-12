@@ -11,19 +11,18 @@
 			
 			public function imprimirPaginaAgr()
 				{
-					$this->smarty->display('ipacientes.tpl');
+					$this->smarty->display('pacientes.tpl');
 				}
 
 			public function imprimirPaginaInfo()
-			{
-				$this->smarty->display('infopaciente.tpl');
-			}
+				{
+					$this->smarty->display('informacion_paciente.tpl');
+				}
 
 			public function muestraInfo($nombre)
-			{
-				$this->smarty->assign("datos", $nombre);
-				$this->smarty->display('resconsultapacientes.tpl');
-			}
-
+				{
+					$this->smarty->assign("datos", $nombre);
+					$this->smarty->display('consulta_pacientes.tpl');
+				}
 		}
 ?>

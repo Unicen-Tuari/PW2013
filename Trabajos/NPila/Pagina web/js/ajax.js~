@@ -25,6 +25,15 @@ return false;
 
 });
 
+function SINO(cual) {
+   var elElemento=document.getElementById(cual);
+   if(elElemento.style.display == 'block') {
+      elElemento.style.display = 'none';
+   } else {
+      elElemento.style.display = 'block';
+   }
+}
+
 // Turnos
 $("#cons_turnos").submit(function()
 {
@@ -39,10 +48,6 @@ var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
 					{
 						document.getElementById('content').innerHTML=data;
 						document.getElementById('fechacons').innerHTML=fecha;
-					}
-				else if (data == '')
-					{
-						alert("No hay turnos dados para la fecha seleccionada");
 					}
 				else
 					{

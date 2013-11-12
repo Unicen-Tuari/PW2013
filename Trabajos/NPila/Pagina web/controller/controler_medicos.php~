@@ -11,26 +11,36 @@ include 'funciones_comprobacion.php';
 			$this->view = $view;
 		}
 
-		public function imprimirPaginaInfo()
-		{
-			if (isset($_POST['search-text']))
+/*---------------------------Muestra datos medico--------------------------------------------*/
+
+		public function consultaMedico($dato)		
 			{
-				$nombre = $this->model->consultaMedico($_POST['search-text']);
-				if($nombre)
-				{
-					$this->view->muestraInfo($nombre);
-				}
+				if (comprobar_nombre($dato))
+					{
+						$nombre = $this->model->consultaMedico($dato);
+						if($nombre)
+						{
+							$this->view->muestraInfo($nombre);
+						}
+					}
+				else
+					{
+						echo("El nombre contiene caracteres no validos o no fue completado");
+					}
 			}
-			else
+
+
+		public function imprimirPaginaInfo()
 			{
 				$this->view->imprimirPaginaInfo();
 			}
-		}
+		
+		public function borrarMedico($idmedico)
+			{
+				$this->model->eliminaTurno($idmedico);			
+			}
 
-public function imprimirPaginaAgr()
-		{
-			$this->view->imprimirPaginaAgr();
-		}
+/*-----------------------------Ingresa Medico---------------------------------------------------*/
 
 	public function comprueba_error($formulario)
 		{
@@ -86,7 +96,10 @@ public function imprimirPaginaAgr()
 				}
 		}	
 
-
+public function imprimirPaginaAgr()
+		{
+			$this->view->imprimirPaginaAgr();
+		}
 
 	public function ingresaMedico($form)
 		{

@@ -129,7 +129,6 @@ public function ingresaPaciente($form)
 			{
 				if (comprobar_nombre($dato))
 					{
-						echo("correcto");
 						$nombre = $this->model->consultaPaciente($dato);
 						if($nombre)
 						{
@@ -149,4 +148,10 @@ public function ingresaPaciente($form)
 		
 
 		}
+
+/*------------------------------------ Borrado de Medicos ------------------------------------*/
+	public function borrarPaciente($idpaciente)
+			{
+				$this->model->eliminaPaciente($idpaciente);			
+			}
 ?>

@@ -35,6 +35,10 @@ include 'funciones_comprobacion.php';
 				$this->view->imprimirPaginaInfo();
 			}
 		
+		public function borrarMedico($idmedico)
+			{
+				$this->model->eliminaTurno($idmedico);			
+			}
 
 /*-----------------------------Ingresa Medico---------------------------------------------------*/
 
