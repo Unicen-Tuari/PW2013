@@ -9,8 +9,7 @@
         <a href="javascript:getNoticias({$Seccion[secciones]['id_seccion']})">{$Seccion[secciones]['nombre_seccion']}</a>
 		{/section}
       
-      
-  </nav>
+</nav>
 
   <div class="row">
     <div class="large-12 columns">
@@ -84,8 +83,8 @@
 
       <div class="panel">
         <h5>Biografia</h5>
-        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
-      </div>
+        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aquí &rarr;</a></p>
+     </div>
 
     </aside>
 

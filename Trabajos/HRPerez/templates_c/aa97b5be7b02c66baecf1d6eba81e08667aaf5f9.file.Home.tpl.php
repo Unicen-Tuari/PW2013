@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-30 00:15:36
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 01:36:43
          compiled from "./templates/Home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165357413852703f56496f16-51397292%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:8169595195271a61b281621-75948102%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'aa97b5be7b02c66baecf1d6eba81e08667aaf5f9' => 
     array (
       0 => './templates/Home.tpl',
-      1 => 1383088475,
+      1 => 1383142626,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165357413852703f56496f16-51397292',
+  'nocache_hash' => '8169595195271a61b281621-75948102',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_52703f5654b327_20564515',
   'variables' => 
   array (
     'Seccion' => 0,
@@ -24,8 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Tag' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5271a61b437641_83593106',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_52703f5654b327_20564515')) {function content_52703f5654b327_20564515($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
+<?php if ($_valid && !is_callable('content_5271a61b437641_83593106')) {function content_5271a61b437641_83593106($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/opt/lampp/htdocs/HRPerez/libs/plugins/modifier.truncate.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
@@ -63,8 +63,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
 </a>
 		<?php endfor; endif; ?>
       
-      
-  </nav>
+</nav>
 
   <div class="row">
     <div class="large-12 columns">
@@ -190,8 +189,8 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['last']       = ($_sm
 
       <div class="panel">
         <h5>Biografia</h5>
-        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
-      </div>
+        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aquí &rarr;</a></p>
+     </div>
 
     </aside>
 

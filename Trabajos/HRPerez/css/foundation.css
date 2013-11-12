@@ -4710,3 +4710,8 @@ a.th {
   font-style: normal;
   text-decoration: inherit;
 }
+
+.section-auto-sample-tabs{
+  @include section-container($section-type:tabs);
+  & > section {@include section($section-type:tabs, $title-selector:".title-sample", $content-selector:".content-sample"); }
+}

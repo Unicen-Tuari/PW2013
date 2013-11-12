@@ -37,5 +37,23 @@ class Model
 		return $query->fetchAll();
 
 	}
+
+	public function ConsultaNoticia(){
+		
+		$sql = "SELECT titulo,s.nombre_seccion,s.descripcion,t.nombre_tag,t.descripcion
+		FROM noticia n
+		INNER JOIN seccion s ON ( s.id_seccion = n.id_seccion )
+		INNER JOIN tag t ON ( t.id_tag = n.id_tag )" ; 
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+/*	public function ConsultaSeccion(){
+		
+		$sql = "SELECT nombre_seccion, descripcion
+		FROM seccion";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}*/
 }
 ?>

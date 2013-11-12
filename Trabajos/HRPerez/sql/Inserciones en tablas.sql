@@ -386,3 +386,9 @@ INSERT INTO `tag` (`nombre_tag`,`descripcion`) VALUES
 
 INSERT INTO `tag` (`nombre_tag`,`descripcion`) VALUES
 ('Safari',' ');
+
+
+--tabla administrador
+
+INSERT INTO `administrador` (`mail`, `pass`) VALUES
+('perez.hgr@gmail.com','91f5167c34c400758115c2a6826ec2e3');

@@ -1,35 +1,35 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-30 00:33:51
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 15:22:11
          compiled from "./templates/crear_noticia.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1750442762527045dfdf0493-35896126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14244367545271a5689b3347-06545305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5088b296732f2871b93d35616c7c83e0082f902a' => 
     array (
       0 => './templates/crear_noticia.tpl',
-      1 => 1382740422,
+      1 => 1384266127,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1750442762527045dfdf0493-35896126',
+  'nocache_hash' => '14244367545271a5689b3347-06545305',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527045dff19587_90898543',
+  'unifunc' => 'content_5271a568a01970_24877376',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527045dff19587_90898543')) {function content_527045dff19587_90898543($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5271a568a01970_24877376')) {function content_5271a568a01970_24877376($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
 <nav class="breadcrumbs">
-      <a href="#">
+      <a href="index.php">
         <div class="large-6 columns">Home</div></a>
-      <a href="#">Browser</a>
-      <a href="#">Software</a>
-      <a href="#">Hardware</a>
-      <a href="#">Website Future</a>
+      <a href="index.php">Browser</a>
+      <a href="index.php">Software</a>
+      <a href="index.php">Hardware</a>
+      <a href="index.php">Website Future</a>
   </nav>
 
   <div class="row">
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
          
           </ul>
       </div>
-      <h1>Tecper<small> Este es mi sitio. Disfrútelo.</small></h1>
+      <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
       <hr />
     </div>
   </div>
@@ -101,6 +101,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </fieldset>
       
 </form>
+  
 
       </article>
 
@@ -119,8 +120,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <aside class="large-3 columns">
 
       <div class="panel">
-        <h5>Biografía</h5>
-        <p>Soy Hugo Perez, creador y diseñador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseño que espero disfruten. Si quieres conocer más de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
+        <h5>Biografia</h5>
+        <p>Soy Hugo Perez, creador y disenador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten. Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aqui &rarr;</a></p>
       </div>
 
     </aside>
