@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-08-22 01:26:43
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-25 23:26:15
          compiled from ".\templates\inicio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:704152113d33c4ef02-44542312%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '14fed9e69511568bdc77c5953678657044bf7d2c' => 
     array (
       0 => '.\\templates\\inicio.tpl',
-      1 => 1377145599,
+      1 => 1382736302,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_52113d33d705f1_31322325')) {function content_52113d33d705f1_31322325($_smarty_tpl) {?>	<?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 	<?php echo $_smarty_tpl->getSubTemplate ("menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
-
+	
 			<div class="target"  id="contenedorcentral">
 				<article  id="articulo" >
 					<div id="inicio">
@@ -48,17 +48,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<h3>No sos Cliente???<h3><br>
 							<p>Consultanos mediante la secci&oacute;n Contacto!</p>
 						</div>
-
+					</div>					
 				</article>
 				<aside id="contenedorlateral">
-						<?php echo $_smarty_tpl->getSubTemplate ("loguin.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
+					<?php echo $_smarty_tpl->getSubTemplate ("login.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array('title'=>'foo'), 0);?>
 
 									
-						<?php echo $_smarty_tpl->getSubTemplate ("publis.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+					<?php echo $_smarty_tpl->getSubTemplate ("publis.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 				
 				</aside>
-			</div>			
-		</div>
+			</div>	
+		</div>		
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 	
 <?php }} ?>

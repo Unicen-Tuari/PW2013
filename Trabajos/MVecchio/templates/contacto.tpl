@@ -1,30 +1,33 @@
-<form id="formulariocontacto" action="enviar.php" method="POST" >
+<form id="formcontacto" name="formcontacto" method="post" action="">
 	<ul>
-	    <li>
-	    	<h2>Contactanos!!</h2>
-			</li>
-			<li>
-				<label for="nombre"><span class="requerido">* </span>Nombre y &nbsp;&nbsp;Apellido:</label>
-				<input type="text" id="nombre" placeholder="Nombre y Apellido" required autofocus="autofocus" />
-			</li>
-			<li>
+		<li>
+    		<h2>Contactanos!!</h2>
+		</li>
+		<li>
+			<label for="nombre"><span class="requerido">* </span>Nombre Completo:</label>
+			<input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" required autofocus="autofocus" />
+		</li>
+		<li>
 	        <label for="email"><span class="requerido">* </span>Email:</label>
-	        <input type="email" id="email" placeholder="Email" required />
+	        <input type="email" id="email" name="email" placeholder="Email" required />
 	    </li>
 	    <li>
 	        <label for="telefono">&nbsp;&nbsp;Telefono:</label>
-	        <input type="tel" id="telefono" placeholder="Telefono">
+	        <input type="tel" class="input" id="telefono" name="telefono"placeholder="Telefono">
 	    </li>
 	    <li>
 				<label for="asunto"><span class="requerido">* </span>Asunto:</label>
-				<input type="text" id="asunto" placeholder="Asunto" required />
+				<input type="text" id="asunto" name="asunto" placeholder="Asunto" required />
 			</li>
 	    <li>
 	        <label for="mensaje"><span class="requerido">* </span>Mensaje:</label>
-	        <textarea id="mensaje" cols="40" rows="6" required ></textarea>
+	        <textarea id="mensaje" name="mensaje" cols="40" rows="6" required placeholder="Tu Mensaje"></textarea>
 	    </li>
 	    <li>
-	       <button class="botonsubmit"  type="button" onclick="verificarFormulario();">Enviar Mensaje</button>
+	    	<a id="submitcontacto" type="submit" class="btn btn-primary" onclick="enviar();">Enviar Mensaje</a><br>
+	    	<h4 id="result" class="succes" style="display: none;"></h4>
 	    </li>
 	</ul>
 </form>
+	
+	    	

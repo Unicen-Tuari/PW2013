@@ -1,0 +1,12 @@
+menu usuario normal
+
+loguear mal cliente
+loguear biencliente
+
+menu cliente
+
+intentar acceder a a todas las funciones del cliente por url
+
+mostrar funciones cliente
+
+

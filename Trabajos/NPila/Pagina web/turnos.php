@@ -15,14 +15,14 @@
 				{
 					$controller->consultaTurno($_POST);
 				}
+			else if	(isset($_POST['valor']))
+				{
+					$controller->borrarTurno($_POST['valor']);
+				}
 			else
 				{
 					$controller->imprimirPagina();
 				}
-		/*	else if	(isset($_POST['id_turno']))
-				{
-					$controller->borrarTurno($_POST)
-				}*/
 		}
 	else
 		{

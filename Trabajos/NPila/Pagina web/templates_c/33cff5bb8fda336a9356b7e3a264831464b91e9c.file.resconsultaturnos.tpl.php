@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 03:07:01
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-11 18:53:22
          compiled from "./templates/resconsultaturnos.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:404691915523b3e17283be7-72528555%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '33cff5bb8fda336a9356b7e3a264831464b91e9c' => 
     array (
       0 => './templates/resconsultaturnos.tpl',
-      1 => 1383791136,
+      1 => 1384206776,
       2 => 'file',
     ),
   ),
@@ -44,7 +44,7 @@ $_smarty_tpl->tpl_vars['dato']->_loop = true;
 </td> <td><?php echo $_smarty_tpl->tpl_vars['dato']->value['Hora'];?>
 </td> <td><?php echo $_smarty_tpl->tpl_vars['dato']->value['Nom_especialidad'];?>
 </td>
-						<td><input type="button" name="borrar_turn" value="Borrar" onClick="borrarTurno(<?php echo $_smarty_tpl->tpl_vars['dato']->value['Id_turno'];?>
+						<td><input type="button" name="borrar_turn" value="Borrar" onclick="borrarTurno(<?php echo $_smarty_tpl->tpl_vars['dato']->value['Id_turno'];?>
 );"></td>
 					</tr>
 				<?php } ?>

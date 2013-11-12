@@ -1,10 +1,11 @@
 <?php
-require('./libs/Smarty.class.php');
-$smarty = new Smarty;
+	include './controllers/controllereditardatos.php';
+	include './views/vieweditardatos.php';
+	include './models/modeleditardatos.php';
+		
+	$model= new Model();
+	$view = new View();
+	$controller = new Controller($view,$model);
 
-//$smarty->debugging = true;
-$smarty->caching = true;
-$smarty->cache_lifetime = 120;
-
-$smarty->display('editardatos.tpl');
+	$controller->imprimirPagina();
 ?>
