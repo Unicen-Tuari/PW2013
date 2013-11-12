@@ -10,8 +10,7 @@
 
 		<link rel="stylesheet" href="../css/estilo.css">
 		<link href="../css\bootstrap.css" rel="stylesheet">
-        <link href="../css\signin.css" rel="stylesheet">
-	</head>
+    </head>
 	<body>
 		<div id="contenedorgeneral">
 		<header id="encabezado">

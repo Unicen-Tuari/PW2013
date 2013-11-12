@@ -10,7 +10,7 @@ $("#adminlogout").on("click",function() {
 	return false;
 });
 
-$("#formlogin").on("submit",function() {
+$("#signin").on("click",function() {
 	$.ajax({
 		type: "POST",
 		url: "login.php",
@@ -35,18 +35,6 @@ $("#logout").on("click",function() {
 		data:$("#formlogin").serialize(),
 		success: function(data){
 				   window.location = data;
-		}
-	});
-	return false;
-});
-
-$("#adminlogout").on("click",function() {
-	$.ajax({
-		type: "POST",
-		url: "logout.php",
-		data:$("#formlogin").serialize(),
-		success: function(data){
-				   window.location = "../index.php";
 		}
 	});
 	return false;

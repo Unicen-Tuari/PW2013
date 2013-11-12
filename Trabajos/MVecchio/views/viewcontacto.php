@@ -15,7 +15,7 @@
     		echo "Tu mensaje ah sido enviado";
     	}
 	
-		public function MensajeError($error){
+		public function MensajeError(){
 			echo "Mensaje fallido. Itenta más tarde";
     	}
 	}

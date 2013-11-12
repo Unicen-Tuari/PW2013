@@ -9,4 +9,10 @@ intentar acceder a a todas las funciones del cliente por url
 
 mostrar funciones cliente
 
+salir
+
+loguear administrador
+agregar cliente
+editar borrar (?.. casi
+
 

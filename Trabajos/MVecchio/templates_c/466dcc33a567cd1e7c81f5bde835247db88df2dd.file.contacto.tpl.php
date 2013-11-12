@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-08 18:49:30
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 05:30:51
          compiled from ".\templates\contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14327526ace7c705e14-03557997%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '466dcc33a567cd1e7c81f5bde835247db88df2dd' => 
     array (
       0 => '.\\templates\\contacto.tpl',
-      1 => 1383932943,
+      1 => 1384230390,
       2 => 'file',
     ),
   ),
@@ -45,7 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	        <textarea id="mensaje" name="mensaje" cols="40" rows="6" required placeholder="Tu Mensaje"></textarea>
 	    </li>
 	    <li>
-	    	<button id="submitcontacto" type="submit" class="btn btn-primary" onclick="enviar();">Enviar Mensaje</button><br>
+	    	<button id="submitcontacto" type="button" class="btn btn-primary" onClick="enviar();">Enviar Mensaje</button><br>
 	    	<h4 id="result" class="succes" style="display: none;"></h4>
 	    </li>
 	</ul>

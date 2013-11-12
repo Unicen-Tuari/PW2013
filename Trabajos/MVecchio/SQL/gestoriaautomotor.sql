@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2013 a las 19:29:56
+-- Tiempo de generación: 12-11-2013 a las 22:08:19
 -- Versión del servidor: 5.5.32
 -- Versión de PHP: 5.4.19
 
@@ -90,29 +90,56 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `provincia` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `localidad` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `email` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
-  `tipo_Documento` varchar(3) COLLATE latin1_general_ci NOT NULL,
-  `nro_Documento` varchar(13) COLLATE latin1_general_ci NOT NULL,
-  `razon_Social` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
-  `descuento/Oferta` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
+  `tipo_documento` varchar(4) COLLATE latin1_general_ci NOT NULL,
+  `nro_documento` varchar(13) COLLATE latin1_general_ci NOT NULL,
+  `razon_social` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
+  `descuento` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
   `es_cliente_amigo` varchar(1) COLLATE latin1_general_ci NOT NULL,
   `web` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
   `url_imagen` varchar(30) COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_cliente`),
-  UNIQUE KEY `Tipo_Documento` (`tipo_Documento`,`nro_Documento`),
+  UNIQUE KEY `Tipo_Documento` (`tipo_documento`,`nro_documento`),
   UNIQUE KEY `id_cliente` (`id_cliente`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci COMMENT='Tabla de clientes' AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci COMMENT='Tabla de clientes' AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `cliente` (`id_cliente`, `nombre`, `apellido`, `direccion`, `telefono`, `provincia`, `localidad`, `email`, `tipo_Documento`, `nro_Documento`, `razon_Social`, `descuento/Oferta`, `es_cliente_amigo`, `web`, `url_imagen`) VALUES
-(1, 'TREBUQ SRL', 'TREBUQ SRL', 'Hornos 2048', 424228, 'Buenos Aires', 'Olavarria', 'trebuq@gmail.com', 'CUI', '20-05415366-0', 'TREBUQ SRL', NULL, 's', 'www.trebuqsrl.com.ar', 'img/trebuqsrl.jpg'),
+INSERT INTO `cliente` (`id_cliente`, `nombre`, `apellido`, `direccion`, `telefono`, `provincia`, `localidad`, `email`, `tipo_documento`, `nro_documento`, `razon_social`, `descuento`, `es_cliente_amigo`, `web`, `url_imagen`) VALUES
+(1, 'TREBUQ', 'SRL', 'Hornos 2050', 424228, 'Buenos Aires', 'Olavarria', 'trebuq@gmail.com', 'CUI', '20-05415366-0', 'TREBUQ SRL', NULL, 's', 'www.trebuqsrl.com.ar', 'img/trebuqsrl.jpg'),
 (2, 'Simone Automotores', 'Simone Automotores', 'Av. Independencia 2561', 0, 'Buenos Aires', 'Mar del Plata', 'simone@gmail.com', 'CUI', '30-69133886-6', 'Simone Automotores', NULL, 's', 'www.simoneautomotores.com.ar/', 'img/simoneautomotores.png'),
 (3, 'TREBUQ SRL', 'TREBUQ SRL', 'Hornos 2048', 424228, 'Buenos Aires', 'Olavarria', NULL, 'CUI', '20-05415366-1', 'TREBUQ SRL', NULL, 's', 'www.trebuqsrl.com.ar', 'img/trebuqsrl.jpg'),
 (4, 'Simone Automotores', 'Simone Automotores', 'Av. Independencia 2561', 0, 'Buenos Aires', 'Mar del Plata', NULL, 'CUI', '30-69133886-2', 'Simone Automotores', NULL, 's', 'www.simoneautomotores.com.ar/', 'img/simoneautomotores.png'),
-(5, 'Carlos', 'Nievas', 'nn', 11, 'Buenos Aires', 'Olavarria', 'carlosnievas', 'dni', '1', NULL, NULL, 'n', NULL, NULL);
+(5, 'Carlos', 'Nievas', 'nn', 11, 'Buenos Aires', 'Olavarria', 'carlosnievas', 'dni', '1', NULL, NULL, 'n', NULL, NULL),
+(6, 'mati', 'vecchio', 'garib 386', 123456, 'bs as', 'tandil', 'mattyas_02@yahoo.com.ar', 'dni', '123456789', '0', '', 'n', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE IF NOT EXISTS `clientes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `fecha_nac` date NOT NULL,
+  `peso` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=34 ;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `fecha_nac`, `peso`) VALUES
+(1, 'Lucas', 'Forchino', '2008-01-24', 95.5),
+(2, 'Jorge', 'Solis', '1945-10-01', 55.2),
+(3, 'Javier', 'Figueroa', '1981-09-02', 90),
+(23, 'Jorge', 'Solisa', '2008-01-01', 55.2),
+(24, 'Jorge', 'Solisan', '2007-12-01', 55.4);
 
 -- --------------------------------------------------------
 
@@ -128,16 +155,7 @@ CREATE TABLE IF NOT EXISTS `mensajecontacto` (
   `telefono` int(15) DEFAULT NULL,
   `mensaje` text COLLATE latin1_general_ci NOT NULL,
   PRIMARY KEY (`id_mensaje`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=10 ;
-
---
--- Volcado de datos para la tabla `mensajecontacto`
---
-
-INSERT INTO `mensajecontacto` (`id_mensaje`, `nombre`, `email`, `asunto`, `telefono`, `mensaje`) VALUES
-(7, 'matias vecchio', 'vecchiomatias@gmail.com', 'uno', 2147483647, 'asdasd'),
-(8, 'matias vecchio', 'vecchiomatias@gmail.com', 'dos', 2147483647, 'asda'),
-(9, 'matias vecchio', 'vecchiomatias@gmail.com', 'cuatro', 2147483647, 'asdasd');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

@@ -192,10 +192,10 @@ ul{list-style-type: none;}
 	border-radius: 5px 5px 0px 0px;
 }
 .titulo{
-	max-width: 200px;
 	color: gray;
 	font-weight: bold;
 	text-shadow:1px 1px 1px  #000;
+	text-align: center;
 }
 
 #articulo{
@@ -231,13 +231,13 @@ ul{list-style-type: none;}
 	position:relative;
 }
 
-form#formcontacto ul li{
+.formulario,form#formcontacto ul li{
 	padding:12px;
 	border-bottom:1px solid #eee;
 	position:relative;
 }
 
-form#formcontacto label{
+.formulario,form#formcontacto label{
 	float: left;
 	color: #55555;
 	display: inline-block;
@@ -249,7 +249,7 @@ form#formcontacto label{
 	width: 160px;
 }
 
-form#formcontacto input,form#formcontacto textarea{
+.formulario,form#formcontacto input,form#formcontacto textarea{
 	height:30px;
 	min-width:220px;
 	border:1px solid #aaa;
@@ -259,7 +259,7 @@ form#formcontacto input,form#formcontacto textarea{
     color: #888;
     font-size: 12px;
 }
-form#formlogin input{
+.formulario,form#formlogin input{
 	height:30px;
 	width: 150px;
 	margin: 2px;
@@ -291,11 +291,11 @@ form#formcontacto textarea {
     max-width: 330px;
 }
 
-form#formcontacto button {
+.formulario,form#formcontacto button {
     margin-left:90px;
 }
 
-form#formcontacto input:focus, form#formcontacto textarea:focus, form#formlogin input:focus {
+.formulario,form#formcontacto input:focus, form#formcontacto textarea:focus, form#formlogin input:focus {
     background: #fff;
     border:1px solid #55555;
     box-shadow: 0 0 3px #aaa;

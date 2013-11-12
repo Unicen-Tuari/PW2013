@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-08 04:21:27
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 05:26:36
          compiled from ".\templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9717526adf43b0bdc1-18997138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0390f83576cc40b989c12a7362afcba143967e43' => 
     array (
       0 => '.\\templates\\login.tpl',
-      1 => 1383880424,
+      1 => 1384230372,
       2 => 'file',
     ),
   ),
@@ -39,7 +39,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		          <input id="check"type="checkbox"> Recordarme
 		        </label>
 		      </div>
-		    <button id="signin"type="submit" class="btn btn-primary">Entrar</button>
+		    <button id="signin"type="button" class="btn btn-primary">Entrar</button>
 		</form>
-<?php }?> 
-<?php }} ?>
+<?php }?><?php }} ?>

@@ -2,6 +2,7 @@
 		<script type="text/javascript" src="../js/main.js"></script>
 		<script type="text/javascript" src="../js/login.js"></script>
 		<script type="text/javascript" 	src="../js/jquery.smint.js"></script>
+		<script type="text/javascript" src="./js/panel.js"></script>
 </body>
 	<footer>
 		Copyright 2013 Vecchio Matias Designs

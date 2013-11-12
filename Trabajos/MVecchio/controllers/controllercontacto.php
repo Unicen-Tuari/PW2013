@@ -13,8 +13,9 @@
 	}
 	
 	public function grabarFormulario($formulario){
+	    $verificado = $this->verificarFormulario($formulario);
 	    $enviado=$this->enviarMail($formulario);
-	    if($enviado){
+	    if(($enviado)&&($verificado)){
 			$this->model->grabarFormulario($formulario);
 			$this->view->MensajeExito();
 		}
@@ -83,6 +84,9 @@
 		    else 
 		        return false;
 		}
+	}
+	public function verificarFormulario($formulario){
+			return true;
 	}
 }
 ?>

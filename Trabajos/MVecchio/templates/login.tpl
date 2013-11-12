@@ -13,6 +13,6 @@
 		          <input id="check"type="checkbox"> Recordarme
 		        </label>
 		      </div>
-		    <button id="signin"type="submit" class="btn btn-primary">Entrar</button>
+		    <button id="signin"type="button" class="btn btn-primary">Entrar</button>
 		</form>
-{/if} 
+{/if}

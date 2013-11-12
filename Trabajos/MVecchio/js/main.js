@@ -1,3 +1,19 @@
+
+function guardarDatos() {
+	$.ajax({
+		type: "POST",
+		url: "editardatos.php",
+		data:$("#formcontacto").serialize(),
+		success: function(data){
+			alert(data);
+			if(data.indexOf("Error")== -1){
+				getPage('articulo','editardatos.php')
+			}
+		}
+	});
+	return false;
+}
+
 function enviar() {
 	$.ajax({
 		type: "POST",
