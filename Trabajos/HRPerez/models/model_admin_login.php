@@ -23,20 +23,48 @@ class Model
 		}
 	}
 
-    public function verificaAdmin($administrador){
-
-		//$sql = "SELECT usuario, password FROM administrador WHERE usuario =".$administrador["usuario"] 
-		//AND password =".$administrador["password"]";
-
-			 $resultado = $this->conn->prepare($sql);
-			 $resultado->execute();
-			if(!$resultado){
-				die(print($this->conn->errorInfo()[2]));
-			}
-			$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
-			return $resultado;
+	public function getTags(){
+		
+		$sql = "SELECT * FROM tag";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
 	}
+
+	public function getSecciones(){
+		
+		$sql = "SELECT * FROM seccion";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+
+	}
+
+	public function getNoticiasByTag($id_tag){
+		
+		$sql = "SELECT * FROM noticia WHERE id_tag = ".$id_tag;
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+
+	}
+
+	public function getNoticiasBySection($id_seccion){
+		
+		$sql = "SELECT * FROM noticia WHERE id_seccion = ".$id_seccion;
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+
+	}
+
+ 	public function getUsuario($mail){
+					
+   		$sql = "SELECT * FROM administrador WHERE mail = '$mail'";
+   		$query = $this->conn->prepare($sql);
+		$query->execute();
+  		return $query->fetchAll();
+
+	}
+
 }
+
 
 ?>
 

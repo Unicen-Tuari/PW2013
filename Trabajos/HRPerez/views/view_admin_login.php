@@ -13,6 +13,20 @@ class View
 				$this->smarty->display('admin_login.tpl');
 				
 			}
+
+			public function setTags($tags)
+			{
+				$this->smarty->assign("Tag",$tags);		
+			}
+
+			public function setSecciones($seccion)
+			{
+				$this->smarty->assign("Seccion",$seccion);
+			}
+
+			 public function MensajeError($error){
+				echo $error;
+		    }
 			
 }
 

@@ -28,6 +28,7 @@ class View
 			
 			  	$this->smarty->assign("Noticia",$noticias);
 			}
+
 }
 
 ?>

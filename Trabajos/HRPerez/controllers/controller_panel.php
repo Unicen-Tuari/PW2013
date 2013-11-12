@@ -14,6 +14,8 @@ class Controller
 			$noticias = $this->model; // Definición de una variables que luego utilizaré,pero en el controller y no en el model.
 			$tags = $this->model->getTags();
 			$seccion = $this->model->getSecciones();
+			$panel = $this->model->ConsultaNoticia();
+			//$panel1 = $this->model->ConsultaSeccion();
 						
 			if($tags){
 					$this->view->setTags($tags);
@@ -22,23 +24,14 @@ class Controller
 					$this->view->setSecciones($seccion);
 			}
 
-			if(isset($_GET['idTag'])){
-				$noticias = $this->model->getNoticiasByTag($_GET['idTag']);				
+			if($panel){
+					$this->view->setNoticias($panel);
 			}
 
-			else
-			{
-				if(isset($_GET['idSection']))
-				{
-					$noticias = $this->model->getNoticiasBySection($_GET['idSection']);
-				}
-			}
-
-			if($noticias)
-			{
-					$this->view->setNoticias($noticias);
-			}
-
+			/*if($panel1){
+					$this->view->setSecciones($panel1);
+			}*/
+			
 			$this->view->imprimirPanel();
 
 	}

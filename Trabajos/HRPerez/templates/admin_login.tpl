@@ -2,13 +2,13 @@
 <body>
 
 <nav class="breadcrumbs">
-      <a href="#">
-        <div class="large-6 columns">Home</div></a>
-      <a href="#">Browser</a>
-      <a href="#">Software</a>
-      <a href="#">Hardware</a>
-      <a href="#">Website Future</a>
-  </nav>
+      <a href="index.php">
+        <div class="large-6 columns"></div></a>
+        <a href="index.php">Home</a>
+    {section name=secciones loop=$Seccion}
+        <a href="index.php?idSection={$Seccion[secciones]['id_seccion']}">{$Seccion[secciones]['nombre_seccion']}</a>
+    {/section}     
+</nav>
 
   <div class="row">
     <div class="large-12 columns">
@@ -37,24 +37,25 @@
           <div class="large-6 columns">
             <form ACTION = "" METHOD = "POST">
   <fieldset>
-    <legend>Administrador</legend>
+    <legend>Please sign in</legend>
 
     <div class="row">
       <div class="large-12 columns">
         <label>Usuario</label>
-        <input id="name" type="text" name="nombre" placeholder="Ingrese su nombre">
+        <input id="name" name="mail" type="text" placeholder="Dirección de e-mail">
       </div>
     </div>
 
       <div class="row">
       <div class="large-12 columns">
         <label>Password</label>
-        <input id="password" type="password" name="contrasena"placeholder="Ingrese el password">
+        <input id="password" name="pass" type="password" placeholder="Password">
       </div>
       
     </div>
       <div>
-      <a href="cargar_noticia.php"><input class="button" type="submit" onclick="verificarFormulario();" value="LogIn"><hr></a>
+      <a href="panel.php"><input class="button" type="submit" onclick="verificarFormulario();" value="Sign in"></a>
+      <a href="index.php"><input class="button" value="Cancel"></a>
       
     </div><br>
   
@@ -79,10 +80,17 @@
 
     <aside class="large-3 columns">
 
-     <div class="panel">
-        <h5>Biografía</h5>
-        <p>Soy Hugo Perez, creador y diseñador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseño que espero disfruten. Si quieres conocer más de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
-      </div>
+      <h5>Tags</h5>
+      <ul class="side-nav">
+    {section name=tags loop=$Tag}
+        <li><a href="index.php?idTag={$Tag[tags]['id_tag']}">{$Tag[tags]['nombre_tag']}</a></li>
+  {/section}
+      </ul>
+
+      <div class="panel">
+        <h5>Biografia</h5>
+        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aquí &rarr;</a></p>
+     </div>
 
     </aside>
 

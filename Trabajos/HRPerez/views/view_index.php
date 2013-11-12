@@ -11,7 +11,7 @@ class View
 			public function imprimirNoticia()
 			{
 				$this->smarty->display('Home.tpl');
-				//print_r(imprimirNoticias);
+				
 			}
 			
 			public function setTags($tags)
