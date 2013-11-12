@@ -15,7 +15,20 @@
 			}
 	    }
 
+		public function consultaE_mail($fecha)
+			{
+				$sql = "SELECT T.Nombre_Apellido, T.Hora, P.Mail
+				FROM Turnos T, Paciente P
+				WHERE (T.Fecha = '$fecha') AND (T.Nombre_Apellido = P.Nombre_Apellido)";
+				$resultado = $this->conn->prepare($sql);
+				$resultado->execute();
+				if(!$resultado){
+					die(print($this->conn->errorInfo()[2]));
+				}
+				$resultado=$resultado->fetchAll(PDO::FETCH_ASSOC);
+				return $resultado;
 
+			}
 
 	}
 ?>
