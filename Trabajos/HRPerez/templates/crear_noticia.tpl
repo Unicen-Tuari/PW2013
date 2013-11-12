@@ -2,12 +2,12 @@
 <body>
 
 <nav class="breadcrumbs">
-      <a href="#">
+      <a href="index.php">
         <div class="large-6 columns">Home</div></a>
-      <a href="#">Browser</a>
-      <a href="#">Software</a>
-      <a href="#">Hardware</a>
-      <a href="#">Website Future</a>
+      <a href="index.php">Browser</a>
+      <a href="index.php">Software</a>
+      <a href="index.php">Hardware</a>
+      <a href="index.php">Website Future</a>
   </nav>
 
   <div class="row">
@@ -18,7 +18,7 @@
          
           </ul>
       </div>
-      <h1>Tecper<small> Este es mi sitio. Disfrútelo.</small></h1>
+      <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
       <hr />
     </div>
   </div>
@@ -79,6 +79,7 @@
   </fieldset>
       
 </form>
+  
 
       </article>
 
@@ -97,8 +98,8 @@
     <aside class="large-3 columns">
 
       <div class="panel">
-        <h5>Biografía</h5>
-        <p>Soy Hugo Perez, creador y diseñador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseño que espero disfruten. Si quieres conocer más de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
+        <h5>Biografia</h5>
+        <p>Soy Hugo Perez, creador y disenador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten. Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aqui &rarr;</a></p>
       </div>
 
     </aside>

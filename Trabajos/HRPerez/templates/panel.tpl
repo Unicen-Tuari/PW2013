@@ -3,13 +3,11 @@
 
 <nav class="breadcrumbs">
       <a href="index.php">
-        <div class="large-6 columns"></div></a>
-        <a href="index.php">Home</a>
-		{section name=secciones loop=$Seccion}
-        <a href="index.php?idSection={$Seccion[secciones]['id_seccion']}">{$Seccion[secciones]['nombre_seccion']}</a>
-		{/section}
-      
-      
+        <div class="large-6 columns">Home</div></a>
+      <a href="index.php">Browser</a>
+      <a href="index.php">Software</a>
+      <a href="index.php">Hardware</a>
+      <a href="index.php">Website Future</a>
   </nav>
 
   <div class="row">
@@ -27,53 +25,44 @@
   <!-- Main Page Content and Sidebar -->
 
   <div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns" role="content">
+<div class="section-auto-sample-tabs" data-section = "tabs" >
+        <section class="active">
+          <p class = "title-sample" data-section-title><a href="#section1">Noticias </a></p>
+          <div class="content-sample" data-slug ="section1" data-section-content>
+            <p>     <div class="large-9 columns" role="content">
 
       <article>
         <div class="row">
           <div class="large-12 columns">
             <p>
       
-	  <h3>
+    <h3>
       <a href="#"></a>
       
     </h3>
         <table>
     <thead>
       <tr>
-        <th width="145">Titulo</th>
-        <th width="145">Seccion</th>
-        <th width="145">Tag</th>
-        <th width="145">Acciones</th>
+        <th width="350">Titulo</th>
+        <th width="80">Seccion</th>
+        <th width="80">Tag</th>
+        <th width="130">Acciones</th>
       </tr>
     </thead>
     <tbody>
+      {section name =noticias loop= $Noticia}
       <tr>
-        <td>Titulo 1</td>
-        <td>Seccion 1 </td>
-        <td>Tag 1</td>
-        <td>Editar/Borrar</td>
+        <td>{$Noticia[noticias]['titulo']}</td>      
+        <td>{$Noticia[noticias]['nombre_seccion']}</td>
+        <td>{$Noticia[noticias]['nombre_tag']}</td>
+        <td><a href="editar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Editar / </a><a href="borrar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Borrar</a></td>
       </tr>
-      <tr>
-        <td>Titulo 2</td>
-        <td>Seccion 2</td>
-        <td>Tag 2</td>
-        <td>Editar/Borrar</td>
-      </tr>
-      <tr>
-        <td>Titulo3</td>
-        <td>Seccion 3</td>
-        <td>Tag 2</td>
-        <td>Editar/Borrar</td>
-      </tr>
+      {/section}
     </tbody>
   </table>
-
       <a href="crear_noticia.php"><input class="button" type="submit" value="Crear Noticia"></a>
 
-      
+       
         <h6></h6><br>
 
         <div class="row">
@@ -93,7 +82,128 @@
         
       </article>
 
-    </div>
+    </div></p>
+          </div>
+        </section>
+        <section class="active">
+          <p class = "title-sample" data-section-title><a href="#section1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSecciones</a></p>
+          <div class="content-sample" data-slug ="section2" data-section-content>
+            <p>      <div class="large-9 columns" role="content">
+
+      <article>
+        <div class="row">
+          <div class="large-12 columns">
+            <p>
+      
+    <h3>
+      <a href="#"></a>
+      
+    </h3>
+        <table>
+    <thead>
+      <tr>
+        <th width="150">Nombre</th>
+        <th width="350">Descripcion</th>
+        <th width="130">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {section name =seccion loop= $Seccion}
+      <tr>
+        <td>{$Seccion[seccion]['nombre_seccion']}</td>
+        <td>{$Seccion[seccion]['descripcion']}</td>
+        <td><a href="editar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Editar / </a><a href="borrar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Borrar</a></td>
+      </tr>
+      {/section}
+    </tbody>
+  </table>
+      <a href="crear_seccion.php"><input class="button" type="submit" value="Crear Seccion"></a>
+
+       
+        <h6></h6><br>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <p></p>
+            
+          </div>
+        </div>
+          <div class="row">
+          <div class="large-6 columns">
+            
+            
+            
+          </div>
+          
+        </div>
+        
+      </article>
+
+    </div></p>
+            </div>
+        </section>
+        <section class="active">
+          <p class = "title-sample" data-section-title><a href="#section1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTags</a></p>
+          <div class="content-sample" data-slug ="section2" data-section-content>
+            <p>      <div class="large-9 columns" role="content">
+
+      <article>
+        <div class="row">
+          <div class="large-12 columns">
+            <p>
+      
+    <h3>
+      <a href="#"></a>
+      
+    </h3>
+        <table>
+    <thead>
+      <tr>
+        <th width="150">Nombre</th>
+        <th width="350">Descripcion</th>
+        <th width="130">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {section name =tags loop= $Tag}
+      <tr>
+        <td>{$Tag[tags]['nombre_tag']}</td>      
+        <td>{$Tag[tags]['descripcion']}</td>
+        <td><a href="editar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Editar / </a><a href="borrar_noticia.php?id_noticia={$Noticia[noticias]['id_noticia']}">Borrar</a></td>
+      </tr>
+      {/section}
+    </tbody>
+  </table>
+      <a href="crear_tag.php"><input class="button" type="submit" value="Crear Tag"></a>
+
+       
+        <h6></h6><br>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <p></p>
+            
+          </div>
+        </div>
+          <div class="row">
+          <div class="large-6 columns">
+            
+            
+            
+          </div>
+          
+        </div>
+        
+      </article>
+
+    </div></p>
+            </div>
+        </section>
+
+
+</div>
+    <!-- Main Blog Content -->
+
 
     <!-- End Main Content -->
 
@@ -111,7 +221,7 @@
 
       <div class="panel">
         <h5>Biografia</h5>
-        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme en perez.hgr@gmail.com</p>
+        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aqui &rarr;</a></p>
       </div>
 
     </aside>

@@ -3,10 +3,10 @@ class Modeladmin
 { 
 	private $conn;
 	
-    public function __construct()
-    {
-    	include ('../variables_conexion.php');
-    	try
+	public function __construct()
+	{
+		include ('../variables_conexion.php');
+		try
 		{
 			$this->conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
 		}
@@ -14,11 +14,11 @@ class Modeladmin
 		{
 			die('Error de conexion, Mensaje: ' .$pe->getMessage());
 		}
-    }
-    public function consultaReparaciones()
-    {
+	}
+	public function consultaReparaciones()
+	{
 
-    	$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (e.id=r.id_estado) ORDER BY r.fecha_ingreso DESC, r.id;";
+		$sql = "SELECT r.*,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,ESTADO e WHERE (e.id=r.id_estado) ORDER BY r.fecha_ingreso DESC, r.id;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -26,10 +26,10 @@ class Modeladmin
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return $reparaciones=$resultado->fetchAll(PDO::FETCH_ASSOC);
-    }
-    public function consultaClientes()
-    {
-    	$sql = "SELECT * FROM CLIENTE;";
+	}
+	public function consultaClientes()
+	{
+		$sql = "SELECT * FROM CLIENTE;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -37,10 +37,10 @@ class Modeladmin
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
-    }
-    public function consultaClientesmin()
-    {
-    	$sql = "SELECT id,nombre,apellido FROM CLIENTE ORDER BY apellido,nombre;";
+	}
+	public function consultaClientesmin()
+	{
+		$sql = "SELECT id,nombre,apellido FROM CLIENTE ORDER BY apellido,nombre;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -48,10 +48,10 @@ class Modeladmin
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
-    }
-    public function consultaDetallerep($id_reparacion)
-    {
-    	$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c WHERE r.id = $id_reparacion AND c.id=r.id_cliente;";
+	}
+	public function consultaDetallerep($id_reparacion)
+	{
+		$sql = "SELECT r.*,c.nombre,c.telefono,c.mail,c.apellido,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c WHERE r.id = $id_reparacion AND c.id=r.id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -61,8 +61,8 @@ class Modeladmin
 		return $resultado->fetch(PDO::FETCH_ASSOC);
 	}
 	public function consultaEstadosrep()
-    {
-    	$sql = "SELECT id,nombre_estado FROM ESTADO;";
+	{
+		$sql = "SELECT id,nombre_estado FROM ESTADO;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -70,10 +70,10 @@ class Modeladmin
 			die(print($this->conn->errorInfo()[2]));
 		}
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
-    }
+	}
 	public function consultaDetallecli($id_cliente)
-    {
-    	$sql = "SELECT * FROM CLIENTE WHERE id = $id_cliente;";
+	{
+		$sql = "SELECT * FROM CLIENTE WHERE id = $id_cliente;";
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute();
 		if (!$resultado)
@@ -83,7 +83,7 @@ class Modeladmin
 		return $resultado->fetch(PDO::FETCH_ASSOC);
 	}
 	public function consultaBusquedarep($valor_principal,$valor_secundario,$tipo_busqueda)
-    {
+	{
 		if ($tipo_busqueda == 'na')
 		{
 			$sql = "SELECT r.*,c.nombre,c.apellido,e.nombre_estado,DATE_FORMAT(r.fecha_ingreso,'%d/%m/%Y') as fecha_ingreso_f,DATE_FORMAT(r.fecha_egreso,'%d/%m/%Y') as fecha_egreso_f FROM REPARACION r,CLIENTE c,ESTADO e WHERE (r.id_estado = e.id) AND (c.id = r.id_cliente) AND (c.nombre LIKE '$valor_principal') AND (c.apellido LIKE '$valor_secundario') ORDER BY fecha_ingreso DESC;";
@@ -105,7 +105,7 @@ class Modeladmin
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
 	}
 	public function consultaBusquedacli($valor_principal,$valor_secundario,$tipo_busqueda)
-    {
+	{
 		if ($tipo_busqueda == 'na')
 		{
 			$sql = "SELECT * FROM CLIENTE WHERE (nombre LIKE '$valor_principal') AND (apellido LIKE '$valor_secundario') ORDER BY apellido,nombre ASC;";

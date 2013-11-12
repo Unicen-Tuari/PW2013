@@ -24,3 +24,20 @@ $("#form_consulta").submit(function()
 	});
 	return false;
 });
+$("#form_mail").submit(function() 
+{
+	$.ajax({
+		type: "POST",
+		url: "index.php",
+		data:$("#form_mail").serialize(),
+		success: function(data)
+		{
+			$("#alerta_mail").html(data);
+		}
+	});
+	return false;
+});
+$('#alerta_mail').on('closed.bs.alert','#alerta' , function () {
+	$('#form_mail input,textarea').val('');
+
+})

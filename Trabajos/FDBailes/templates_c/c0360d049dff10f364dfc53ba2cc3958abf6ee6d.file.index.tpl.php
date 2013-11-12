@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 18:48:35
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-11 19:40:55
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:157374302052519380376237-07681441%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1381182507,
+      1 => 1384209633,
       2 => 'file',
     ),
   ),
@@ -106,19 +106,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="separador text-center">
 	<h2>Haganos sus consultas</h2>
 </div>
+
 <div class="container text-center">
-			<form>
+	<div class="row" id="alerta_mail">
+	</div>
+			<form action="" id="form_mail">
 				<h3>Formulario de contacto</h3>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="nombre_apellido">Nombre y Apellido</label>
 					<span class="input-group-addon glyphicon glyphicon-user"></span>
-					<input class="form-control" type="text" name="nombre_apellido" placeholder="*Nombre y Apellido" pattern="[a-zA-Z]+\s[a-zA-Z]+" title="Formato: Nombre" required>
+					<input class="form-control" type="text" name="nombre_apellido" placeholder="*Nombre y Apellido" pattern="[a-zA-Z]+\s[a-zA-Z]+" title="Formato: Nombre Apellido" required>
 				</div>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="email">Email</label>
 					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
 					
-					<input class="form-control" type="email" name="correo" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required>
+					<input class="form-control" type="email" name="mail" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required>
 					
 				</div>
 				<div class="form-group input-group col-lg-12">

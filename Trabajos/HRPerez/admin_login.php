@@ -9,16 +9,16 @@
 	//$view->imprimirPagina();
 
 
-	if (isset ($_POST['usuario'])) 
+	if (isset ($_POST['mail'])) 
 		{
-				$administrador["usuario"] = $_POST["usuario"];
-				$administrador["password"] = $_POST["password"];
-				
-		$controller->loguearAdmin($administrador);
+
+		$controller->loginUsuario($_POST);
+
 		}
 	else
 		{ 
-	  		$controller->imprimirPagina();
+
+  		$controller->imprimirPagina();
 
 		}
 ?>

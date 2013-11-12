@@ -1,0 +1,13 @@
+1 - entrar a la pagina publica para el cliente y navegar sus opciones
+2 - enviar un mail de consulta y mostrar como llego
+3 - entrar a la seccion administrador y loguearse con usuario y contraseña (mostrar errores de logueo)
+4 - Agregar clientes
+5 - agregar reparaciones
+6 - editar clientes
+7 - editar reparaciones
+8 - buscar clientes (mostrar errores de busqueda)
+9 - buscar reparaciones (mostrar errores de busqueda)
+10 - volver al sector cliente y consultar reparacion de un cliente (mostrar error de busqueda)
+11 - volver al sector administrador  y borrar reparacion del cliente
+12 - borrar cliente
+13 - cerrar sesion de administrador y probar que pide re login para poder volver a iniciar.
