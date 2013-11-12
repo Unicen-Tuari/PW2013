@@ -35,7 +35,7 @@ class Controller
 				$this->view->imprimirPagina();
 			}
 
-				session_start();
+				/*session_start();
 				if(!isset($_SESSION["mail"]))
 				{
 					$this->view->imprimirPagina();
@@ -43,7 +43,7 @@ class Controller
 				else
 				{
 					header('Location:admin_login.php');
-				}
+				}*/
 			}
 
 	
@@ -58,15 +58,16 @@ class Controller
 			{
 				$this->view->MensajeError("Error: Usuario Inexistente");
 			} 	
-			if($user[0]["Pass"] != md5($formulario["pass"]))
+			else if($user["pass"] != md5($formulario["pass"]))
 			{
 				$this->view->MensajeError("Error: Password Inválida");
 			}
-			
-			session_start();
-			$_SESSION["mail"]=$formulario["mail"];
-			echo "index.php";
-			
+			else
+			{
+				
+				$_SESSION["mail"]=$formulario["mail"];
+				echo "panel.php";
+			}
 		}
 		else
 		{

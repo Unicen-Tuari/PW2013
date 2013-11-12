@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 15:20:45
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 18:41:23
          compiled from "./templates/panel.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12294639605271a17697a8f0-53636744%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9491f1a50dd3792e662879db579e7ac9804a2a3f' => 
     array (
       0 => './templates/panel.tpl',
-      1 => 1384266003,
+      1 => 1384278079,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="nav-bar right">
        <ul class="button-group">
          <li><a href="#" class="button">Bienvenido Hugo</a></li>
+         <li><a id="logout" action= "" METHOD = "POST" href="" class="button">Logout</a></li>
        </ul>
       </div>
       <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>

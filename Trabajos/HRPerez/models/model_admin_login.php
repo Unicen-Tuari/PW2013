@@ -59,7 +59,7 @@ class Model
    		$sql = "SELECT * FROM administrador WHERE mail = '$mail'";
    		$query = $this->conn->prepare($sql);
 		$query->execute();
-  		return $query->fetchAll();
+  		return $query->fetch();
 
 	}
 

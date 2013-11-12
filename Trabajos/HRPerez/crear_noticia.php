@@ -7,20 +7,28 @@
 	$view = new View();
 	$controller = new Controller($model,$view);
 	
-	if (isset ($_POST['titulo'])) 
-		{
-				$noticia["titulo"] = $_POST["titulo"];
-				$noticia["subtitulo"] = $_POST["subtitulo"];
-				$noticia["cuerpo"] = $_POST["cuerpo"];
-				$noticia["id_tag"] = $_POST["id_tag"];
-				$noticia["id_seccion"] = $_POST["id_seccion"];
-		
-		$controller->CrearNoticia($noticia);
-		}
+	session_start();
+
+	if (isset($_SESSION['mail'])){
+
+			if (isset ($_POST['titulo'])) 
+				{
+						$noticia["titulo"] = $_POST["titulo"];
+						$noticia["subtitulo"] = $_POST["subtitulo"];
+						$noticia["cuerpo"] = $_POST["cuerpo"];
+						$noticia["id_tag"] = $_POST["id_tag"];
+						$noticia["id_seccion"] = $_POST["id_seccion"];
+				
+				$controller->CrearNoticia($noticia);
+				}
+			else
+				{ 
+			  		$controller->imprimirPagina();
+
+				}
+	}
 	else
-		{ 
-	  		$controller->imprimirPagina();
-
+		{
+			header('Location: admin_login.php');
 		}
-
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-31 01:16:54
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 18:38:29
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15521648795271a176a17734-82739882%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1382647895,
+      1 => 1384277905,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5271a176a1a6a4_90142264',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5271a176a1a6a4_90142264')) {function content_5271a176a1a6a4_90142264($_smarty_tpl) {?><footer class="row">
     <div class="large-12 columns">
@@ -45,7 +45,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     $(document).foundation();
   </script>
   <script text="text/javascript" src="js/ajax.js"></script>
-
+ <script text="text/javascript" src="js/login.js"></script>
+ <script text="text/javascript" src="js/vendor/jquery.js"></script>
   <!-- End Footer -->
 </body>
 </html>

@@ -18,7 +18,7 @@
          
           </ul>
       </div>
-      <h1>Tecper<small> Este es mi sitio. Disfrútelo.</small></h1>
+      <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
       <hr />
     </div>
   </div>
@@ -78,7 +78,7 @@
 
       <div class="panel">
         <h5>Biografía</h5>
-        <p>Soy Hugo Perez, creador y diseñador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseño que espero disfruten. Si quieres conocer más de mi trabajo puedes contactarme <a href="envio_de_mail.php">aquí &rarr;</a></p>
+        <p>Soy Hugo Perez, creador y disenador del proyecto Tecper. Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseño que espero disfruten. Si quieres conocer más de mi trabajo puedes contactarme <a href="envio_de_mail.php">aqui &rarr;</a></p>
       </div>
 
     </aside>

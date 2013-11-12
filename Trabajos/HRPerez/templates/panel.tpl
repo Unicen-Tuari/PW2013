@@ -15,6 +15,7 @@
       <div class="nav-bar right">
        <ul class="button-group">
          <li><a href="#" class="button">Bienvenido Hugo</a></li>
+         <li><a id="logout" action= "" METHOD = "POST" href="" class="button">Logout</a></li>
        </ul>
       </div>
       <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>

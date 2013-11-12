@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-06 01:08:14
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 19:11:22
          compiled from "./templates/admin_login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9494681435271a6254ccb07-63751125%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '25d0eaafe423e2ae03510ff7729ec83497f52fcb' => 
     array (
       0 => './templates/admin_login.tpl',
-      1 => 1383696491,
+      1 => 1384279596,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
          
       </ul>
       </div>
-      <h1>Tecper<small> Este es mi sitio. Disfrútelo.</small></h1>
+      <h1>Tecper<small> Este es mi sitio. Disfrutelo.</small></h1>
       <hr />
     </div>
   </div>
@@ -87,14 +87,14 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
         
         <div class="row">
           <div class="large-6 columns">
-            <form ACTION = "" METHOD = "POST">
+            <form id="formulariologin" action= "" METHOD = "POST">
   <fieldset>
     <legend>Please sign in</legend>
 
     <div class="row">
       <div class="large-12 columns">
         <label>Usuario</label>
-        <input id="name" name="mail" type="text" placeholder="Dirección de e-mail">
+        <input id="name" name="mail" type="text" placeholder="Direccion de e-mail">
       </div>
     </div>
 
@@ -106,7 +106,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
       
     </div>
       <div>
-      <a href="panel.php"><input class="button" type="submit" onclick="verificarFormulario();" value="Sign in"></a>
+      <a><input class="button" type="submit" value="Sign in"></a>
       <a href="index.php"><input class="button" value="Cancel"></a>
       
     </div><br>
@@ -166,7 +166,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['tags']['last']       = ($_sm
 
       <div class="panel">
         <h5>Biografia</h5>
-        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aquí &rarr;</a></p>
+        <p>Soy Hugo Perez,creador y disenador del proyecto Tecper.Dedico parte de mi tiempo a actualizar y mantener este proyecto de diseno que espero disfruten.Si quieres conocer mas de mi trabajo puedes contactarme <a href="envio_de_mail.php">aqui &rarr;</a></p>
      </div>
 
     </aside>

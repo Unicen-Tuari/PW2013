@@ -8,7 +8,7 @@
 	$controller = new Controller($model,$view);
 	//$view->imprimirPagina();
 
-
+	session_start();
 	if (isset ($_POST['mail'])) 
 		{
 

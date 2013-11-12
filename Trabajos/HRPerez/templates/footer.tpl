@@ -24,7 +24,8 @@
     $(document).foundation();
   </script>
   <script text="text/javascript" src="js/ajax.js"></script>
-
+ <script text="text/javascript" src="js/login.js"></script>
+ <script text="text/javascript" src="js/vendor/jquery.js"></script>
   <!-- End Footer -->
 </body>
 </html>
