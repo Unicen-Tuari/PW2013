@@ -9,6 +9,10 @@
 	{
 		$controller->imprimirConsulta($_POST["id_cliente"]);
 	}
+	else if (isset($_POST["consulta"]))
+	{
+		$controller->enviaMail($_POST);
+	}
 	else
 	{
 		$controller->imprimirPagina();

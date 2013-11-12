@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 19:52:05
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-11 22:58:22
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:126527099052533b15e60f16-81428295%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1381086115,
+      1 => 1384221441,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_52533b16006e08_42529163',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52533b16006e08_42529163')) {function content_52533b16006e08_42529163($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -45,7 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<ul class="pagination pagination-sm">
 					<li><a href="#">&laquo;</a></li>
@@ -55,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li><a href="#">&raquo;</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="modal fade" id="modal_emergente">
 		<div class="modal-dialog">

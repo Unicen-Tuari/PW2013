@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<ul class="pagination pagination-sm">
 					<li><a href="#">&laquo;</a></li>
@@ -33,7 +33,7 @@
 					<li><a href="#">&raquo;</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<div class="modal fade" id="modal_emergente">
 		<div class="modal-dialog">
