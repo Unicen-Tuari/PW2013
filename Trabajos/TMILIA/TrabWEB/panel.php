@@ -5,15 +5,17 @@ include '/view/vpanel.php';
 include '/controllers/cpanel.php';
 
 
-//{
-	$model = new Modelpanel();
-	$view = new Viewpanel();
-	$controller = new Controllerpanel($model, $view);
-//}else {header('Location: addcar.php');}
 
-//session_start());
-	session_start($user);
-	print_r($user);
+$model = new Modelpanel();
+$view = new Viewpanel();
+$controller = new Controllerpanel($model, $view);
 
-$controller->mostrarAuto();
+session_start();
+//print_r($_SESSION['id_client']);
+$id = $_SESSION['id_client'];
+//print_r($id);
+$controller->mostrarAuto($id);
+$controller->buscarUser($id);
+
+
 ?>

@@ -40,13 +40,14 @@ class Controlleradmin
 		$path = $this->model->consultaImagen($id);
 		$this->view->mostrarImagen($path);
 		
+		
 	 }
 
 		public function grabarConsulta($consulta)
 	{	
 		
 		$this->model->insertarConsulta($consulta);
-		//$this->view->mensajeExito();
+		$this->view->mensajeExito();
 	}
 
 	
@@ -61,6 +62,19 @@ class Controlleradmin
 		}
 		
 	}
+
+	public function mostrarComentario($id)
+	{	
+		
+		$consulta = $this->model->buscarComentario($id);
+		if ($consulta) {
+			$this->view->muestraPagina($consulta);
+			
+		}
+		
+	}
+
+	
 }
 
 ?>

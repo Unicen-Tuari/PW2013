@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2013 a las 18:03:01
+-- Tiempo de generación: 13-11-2013 a las 21:50:59
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -42,21 +42,21 @@ CREATE TABLE IF NOT EXISTS `auto` (
   KEY `id_marca` (`id_marca`),
   KEY `id_marca_2` (`id_marca`),
   KEY `id_marca_3` (`id_marca`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=77 ;
 
 --
 -- Volcado de datos para la tabla `auto`
 --
 
 INSERT INTO `auto` (`id`, `id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`) VALUES
-(1, 1, 1, 'Titulo', 11, 'a ver si anda', 'ford ka', 2011),
-(17, 1, 14, 'Volkswagen Bora 1.8 T Cuero- Impecable ', 118000, 'El auto se encuentra en inmejorables con', 'Bora', 2009),
-(18, 1, 3, 'Chevrolet Corsa Classic Lt Con Gnc - Muy Bueno', 65000, 'El auto se encuentra en muy buenas condi', 'Corsa', 2011),
-(19, 2, 5, 'Fiat Fiorino Con Aire Y Direccion Muy Buena', 60000, '- Aire acondicionado - Direccion hidraul', 'Fiorino', 2005),
-(20, 2, 1, 'Audi A4 1.8T FSI (160cv) Multitronic Sport Alcantara', 168000, 'endo a excelente precio. Muy poco uso. T', 'A4', 2009),
-(21, 2, 11, 'Renault Mégane II 5Ptas. 1.9 dCi ABCP ABS (120cv)', 85000, 'Renault megane II DYNAMIQUE 5 PTAS 2007 ', 'Megane', 2007),
-(62, 2, 14, 'Volkswagen Bora 1.8T Highline MT Cuero', 121, 'Impecable!', 'Bora', 2088),
-(63, 2, 7, 'Honda Civic 2.0 Si 6MT SedÃ¡n', 175000, 'El auto tiene los los siguientes agregad', 'Civic', 2011);
+(68, 2, 1, 'Audi A4 1.8T', 89500, 'Vendo Audi A4 1.8 T, segundo dueÃ±o titu', 'A4', 2011),
+(69, 2, 14, 'Volkswagen Bora 1.8T Highline MT Cuero', 94000, 'Bora en impecable estado. bla bla bla bl', 'Bora', 2005),
+(70, 2, 10, 'Peugeot 206 3Ptas. 1.6 XS Techo ABS', 48000, 'El auto se encuentra en muy buen estado ', '206', 2003),
+(71, 2, 3, 'Chevrolet Corsa Classic 4Ptas. 1.6 N', 44000, 'Vendo Chevrolet Corsa Classic 2006 en bu', 'Corsa', 2006),
+(72, 2, 6, 'Ford Ranger 3.0', 148000, 'Ford ranger', 'Ranger f10', 2009),
+(73, 2, 15, 'CitroÃ«n Xsara Picasso 1.6i 16v', 65000, 'Citroen Xsara Picasso 1.6i Sedan 5 Ptas', 'PIcasso', 2006),
+(75, 1, 6, 'Ford Ka', 50000, 'Auto como nuevo, ideal para familia', 'Ka', 2011),
+(76, 1, 7, 'logan de vane', 10, 'auto vane lo vende.. esta todo roto!', 'modelo', 2008);
 
 -- --------------------------------------------------------
 
@@ -74,15 +74,18 @@ CREATE TABLE IF NOT EXISTS `auto_imagen` (
   KEY `id_auto_2` (`id_auto`),
   KEY `id_imagen_2` (`id_imagen`),
   KEY `id_auto_3` (`id_auto`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Volcado de datos para la tabla `auto_imagen`
 --
 
 INSERT INTO `auto_imagen` (`id`, `id_auto`, `id_imagen`) VALUES
-(28, 62, 20),
-(29, 63, 21);
+(33, 71, 25),
+(34, 72, 26),
+(35, 73, 27),
+(36, 75, 28),
+(37, 76, 29);
 
 -- --------------------------------------------------------
 
@@ -99,15 +102,15 @@ CREATE TABLE IF NOT EXISTS `consulta` (
   `id_auto` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_auto` (`id_auto`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Volcado de datos para la tabla `consulta`
 --
 
 INSERT INTO `consulta` (`id`, `texto`, `nombre`, `email`, `telefono`, `id_auto`) VALUES
-(10, '                asdasdasd               ', 'asd', 'aasdasd', 123123, 1),
-(11, '                                ', 'ahi esta la onda, en el src de la imagen', '', 0, 1);
+(19, 'hola estoy interesado en el auto', 'tomas', 'tomm.11@hotmail.es', 493031, 72),
+(20, 'hola estoy interesado en el auto', 'tomas', 'tomm.11@hotmail.es', 493031, 72);
 
 -- --------------------------------------------------------
 
@@ -120,20 +123,18 @@ CREATE TABLE IF NOT EXISTS `imagen` (
   `path` varchar(40) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Volcado de datos para la tabla `imagen`
 --
 
 INSERT INTO `imagen` (`id`, `path`) VALUES
-(15, 'imagenes/0.jpeg'),
-(16, 'imagenes/5279724e2e447.jpeg'),
-(17, 'imagenes/5279730662001.jpeg'),
-(18, 'imagenes/527973617030b.jpeg'),
-(19, 'imagenes/527973ac3ee85.jpeg'),
-(20, 'imagenes/527a92999c140.jpg'),
-(21, 'imagenes/527a93bb42188.jpg');
+(25, 'imagenes/5281b40c8a8a5.jpg'),
+(26, 'imagenes/5281b4a2d7ac4.jpg'),
+(27, 'imagenes/5281b7627ac62.jpg'),
+(28, 'imagenes/528287fb7d5de.jpg'),
+(29, 'imagenes/5282af876bb4b.jpg');
 
 -- --------------------------------------------------------
 
@@ -147,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `marca` (
   PRIMARY KEY (`id`),
   KEY `id` (`id`),
   KEY `id_2` (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `marca`
@@ -167,7 +168,8 @@ INSERT INTO `marca` (`id`, `nombre`) VALUES
 (11, 'renault'),
 (12, 'suzuki'),
 (13, 'toyota'),
-(14, 'volkswagen');
+(14, 'volkswagen'),
+(15, 'Citroen');
 
 -- --------------------------------------------------------
 
@@ -181,7 +183,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `id` (`id`)
+  KEY `id` (`id`),
+  KEY `id_2` (`id`),
+  KEY `id_3` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
@@ -197,29 +201,23 @@ INSERT INTO `usuario` (`id`, `nombre`, `email`, `password`) VALUES
 --
 
 --
+-- Filtros para la tabla `auto`
+--
+ALTER TABLE `auto`
+  ADD CONSTRAINT `auto_ibfk_1` FOREIGN KEY (`id_marca`) REFERENCES `auto` (`id_marca`);
+
+--
 -- Filtros para la tabla `auto_imagen`
 --
 ALTER TABLE `auto_imagen`
-  ADD CONSTRAINT `auto_imagen_ibfk_2` FOREIGN KEY (`id_auto`) REFERENCES `auto` (`id`),
-  ADD CONSTRAINT `auto_imagen_ibfk_1` FOREIGN KEY (`id_imagen`) REFERENCES `imagen` (`id`);
+  ADD CONSTRAINT `auto_imagen_ibfk_1` FOREIGN KEY (`id_auto`) REFERENCES `auto` (`id`),
+  ADD CONSTRAINT `auto_imagen_ibfk_2` FOREIGN KEY (`id_imagen`) REFERENCES `imagen` (`id`);
 
 --
 -- Filtros para la tabla `consulta`
 --
 ALTER TABLE `consulta`
   ADD CONSTRAINT `consulta_ibfk_1` FOREIGN KEY (`id_auto`) REFERENCES `auto` (`id`);
-
---
--- Filtros para la tabla `marca`
---
-ALTER TABLE `marca`
-  ADD CONSTRAINT `marca_ibfk_1` FOREIGN KEY (`id`) REFERENCES `marca` (`id`);
-
---
--- Filtros para la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id`) REFERENCES `auto` (`id_usuario`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -21,7 +21,7 @@ class Modelindex
     public function consultaAuto()
 	{
 
-		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 4";
+		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 3";
 		//$sql = "SELECT * FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id) WHERE a.id = ai.id_auto";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
@@ -42,12 +42,18 @@ class Modelindex
 	public function consultaImagen()
 	{
 		//$sql = "SELECT i.path FROM auto_imagen ai JOIN imagen i ON (ai.id_imagen = i.id)   ";//WHERE ai.id_auto = $id
-		$sql = "SELECT i.path FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id)";
+		$sql = "SELECT i.path FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id) ORDER BY i.id DESC LIMIT 3";
+		//$sql = "SELECT i.path FROM imagen i JOIN auto_imagen ai ON (a.id = ai.id_auto)";
 		$q = $this->conn->prepare($sql);
-		$q->execute();
-		// fetch
+		$q->execute();		
 		$resultado = $q->fetchAll(PDO::FETCH_ASSOC);
-		return $resultado[0]['path']; // imagenes/527a93bb42188.jpg
+
+		for ($i=0; $i < 3 ; $i++) { 
+			$resultado2 [$i] = $resultado [$i]['path'];
+		}
+		
+		//print_r($resultado);
+		return $resultado2;//[0]['path']; // imagenes/527a93bb42188.jpg
 	}
 
 	public function buscarCat($id)

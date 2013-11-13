@@ -13,10 +13,11 @@ class Controllerpanel
 	{
 		$this->view->imprimirPagina();
 	}
-	public function mostrarAuto()
+	public function mostrarAuto($id)
 	{	
-		//Codigo para verificar datos del auto. Ejemplo: modelo no es vacio, anio > 1800
-		$consulta = $this->model->consultaAuto();
+		
+		$consulta = $this->model->consultaAuto($id);
+		//print_r($consulta);
 
 		if($consulta == null)
 		{
@@ -26,6 +27,13 @@ class Controllerpanel
 		{
 			$this->view->generaAutos($consulta);
 		}
+	}
+
+
+	public function buscarUser($id){
+
+		$consulta = $this->model->consultaUser($id);
+		//$this->view->generaUser($consulta);
 	}
 }
 

@@ -16,6 +16,14 @@ class Viewpanel
         $this->smarty->assign("autos",$datos);
         $this->smarty->display('panel.tpl');
     }
+     /*public function generaUser($consulta)
+    {
+        $this->smarty->assign("user",$consulta);
+        $this->smarty->display('panel.tpl');
+    }*/
+
+
+    
   
 }
 ?>

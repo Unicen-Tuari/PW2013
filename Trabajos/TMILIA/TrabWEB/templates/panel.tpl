@@ -16,20 +16,26 @@
     <link href="dist/css/offcanvas.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
+    <!--[if lt IE 9]-->
+     <!-- <script src="../../assets/js/html5shiv.js"></script> -->
+     <!-- <script src="../../assets/js/respond.min.js"></script> -->
+
+
+    <!--[endif]-->
   </head>
 
   <body>
 
     <div class="container">
       <div class="header">
+
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="panel.php">Autos</a></li>
           <li><a href="mensaje.php">Mensajes</a></li>      
           <li><a href="logout.php">Cerrar Sesion</a></li>
+          <!--{foreach $user as $usuario}
+          <li><a>User:</a>{$usuario.nombre}</li>
+          {/foreach} -->
         </ul>
         <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
@@ -41,28 +47,21 @@
                       <thead>
                         <tr>
                           <th>#</th>
-                          <th>Nombre Auto</th>
+                          <th>Titulo Auto</th>
                           <th>Marca</th>
                           <th>Acciones</th>
                           <th style="width: 36px;"></th>
                         </tr>
                       </thead>
                       <tbody>
-
+                        {foreach $autos as $auto}
                         <tr>
                           <td>ID</td>
-                          <td>"titulo auto"</td>
-                          <td>"Marca"</td>
+                          <td>{$auto.titulo}</td>
+                          <td>{$auto.nombre}</td>
                           <td>"Editar"</td><td>"Borrar"</td>
                         </tr>
-                        <tr>
-                          <td>ID</td>
-                          <td>"titulo a"</td>
-                          <td>"Marca"</td>
-
-                          <td>"Editar"</td><td>"Editar"</td>
-                        </tr>
-                       
+                        {/foreach}                                              
                       </tbody>
                     </table>
                     <a href="addcar.php"><button class="btn btn-primary">Crear Auto</button></a>

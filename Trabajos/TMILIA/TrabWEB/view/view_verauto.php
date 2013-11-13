@@ -11,8 +11,9 @@ class Viewadmin
     {
 		$this->smarty->display('ver_auto.tpl');
     }
-    public function mostrarImagen($path) // $path = imagenes/527a93bb42188.jpg
+    public function mostrarImagen($path) 
     {
+        
         $this->smarty->assign("imagenes",$path);
        //$all_tpl_vars = $smarty->getTemplateVars();
        // print_r($x);
@@ -35,8 +36,20 @@ class Viewadmin
      public function generaCat($datos)
     {
         $this->smarty->assign("autos",$datos);
-        $this->smarty->display('index.tpl');
+        //$this->smarty->display('ver_auto.tpl');
        // print_r($datos);
     }
+
+     public function generaComentario($consulta)
+    {
+        //print_r($consulta);
+        //if ($consulta!= NULL) {
+            $this->smarty->assign("comentario",$consulta);
+            $this->smarty->display('ver_auto.tpl');
+        //}
+        
+    }
+
+    
 }
 ?>

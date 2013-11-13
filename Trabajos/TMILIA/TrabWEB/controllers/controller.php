@@ -21,7 +21,7 @@ class Controllerindex
 
 	public function mostrarAuto()
 	{	
-		$consulta = $this->view->generaAutos($this->model->consultaAuto());
+		$consulta = $this->view->generaAutos($this->model->consultaAuto(), $this->model->consultaImagen());
 	}
 
 	public function mostrarCategorias()
@@ -35,6 +35,7 @@ class Controllerindex
 		//$this->model->buscarimagen($id);
 		$path = $this->model->consultaImagen();
 		$this->view->mostrarImagen($path);
+		//print_r($path);
 		
 	 }
 

@@ -40,14 +40,14 @@
         <h2>Competa el siguiente formulario para registrar un nuevo auto</h2>
 
 </form>
-        <form action="addcar.php" role="form" id="formAuto" method="POST" enctype="multipart/form-data">
+        <form action="addcar.php" role="form" id="formAuto" method="POST" enctype="multipart/form-data" onsubmit="return formulario(this)">
           <div class="form-group">
             <label for="exampleInputTitulo" name="titulo">Titulo</label>
-            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el titulo">
+            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el titulo" required/>
           </div>
           <div class="form-group">
             <label for="exampleInputPrecio" name="valor" >Precio</label>
-            <input type="text" class="form-control" name="valor" placeholder="$">
+            <input type="text" class="form-control" name="valor" placeholder="$" required/>
           </div>
           <label for="exampleInputMarca">Elige la Marca</label>
           <select class="form-control" name="marca">
@@ -58,19 +58,19 @@
           </select>
           <div class="form-group">
             <label for="exampleInputModelo" name="modelo" >Modelo</label>
-            <input type="text" class="form-control" name="modelo" placeholder="Ingrese el Modelo">
+            <input type="text" class="form-control" name="modelo" placeholder="Ingrese el Modelo" required/>
           </div>
           <div class="form-group">
             <label for="exampleInputAño" name="anio" >Año</label>
-            <input type="text" class="form-control" name="anio" placeholder="Ingrese año del auto">
+            <input type="text" class="form-control" name="anio" placeholder="Ingrese año del auto" required/>
           </div>
           <div class="form-group">
             <label for="exampleInputAño" name="descripcion" >Descripcion</label>
-            <textarea type="text" class="form-control" name="descripcion" placeholder="Ingrese su Descripcion"></textarea>
+            <textarea type="text" class="form-control" name="descripcion" placeholder="Ingrese su Descripcion"required></textarea>
           </div>
           <div class="form-group">
-            <label for="imagen">Agregar Imagen</label>
-            <input type='file' name="imagen" id="imagen">
+            <label for="imagen" >Agregar Imagen</label>
+            <input type='file' name="imagen" id="imagen" required/>
             <label for="imagen">Agregar Imagen 2 </label>
             <input type='file' name="imagen2" id="imagen2">
             <label for="imagen">Agregar Imagen 3</label>
@@ -83,6 +83,13 @@
 
 
       </div><!-- /jumbotron -->
+
+      <script>function formulario(f) { 
+        if (f.anio.value   == < 1980) { alert ('El año del auto es invalido');  
+        f.anio.focus(); return false; } 
+        if (f.anio.value  == >2013) { alert ('El año del auto es invalido'); 
+        f.anio.focus(); return false; } return true; } 
+      </script>
 
 
        <div class="footer">

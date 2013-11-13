@@ -1,25 +1,30 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 23:22:40
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 12:53:36
          compiled from ".\templates\mensaje.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:26855525302aa2d1bb2-89345853%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:25236528216c08bb961-63006397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb6de690b4a53848f7a0d7a26098d2ca59635d95' => 
     array (
       0 => '.\\templates\\mensaje.tpl',
-      1 => 1381173031,
+      1 => 1383768652,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26855525302aa2d1bb2-89345853',
+  'nocache_hash' => '25236528216c08bb961-63006397',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_525302aa32e5c0_67345696',
+  'variables' => 
+  array (
+    'mensaje' => 0,
+    'mensajes' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_528216c0951ed1_86338769',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_525302aa32e5c0_67345696')) {function content_525302aa32e5c0_67345696($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_528216c0951ed1_86338769')) {function content_528216c0951ed1_86338769($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -50,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <ul class="nav nav-pills pull-right">
           <li><a href="panel.php">Autos</a></li>
           <li  class="active"><a href="mensaje.php">Mensajes</a></li>
-          <li><a href="datos.php">Mis datos</a></li>
+          <li><a href="logout.php">Cerrar Sesion</a></li>
         </ul>
        <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
@@ -64,28 +69,55 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                           <th>#</th>
                           <th>Mensajes</th>
                           <th>Usuario</th>
+                          <th>Telefono</th>
                           <th>Auto</th>
                           <th>Acciones</th>
                           <th style="width: 36px;"></th>
                         </tr>
                       </thead>
                       <tbody>
+                     <!-- <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['name'] = 'mensaje';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['mensaje']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['show']):
 
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['mensaje']['total']);
+?> -->
+                      <?php  $_smarty_tpl->tpl_vars['mensajes'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['mensajes']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['mensaje']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['mensajes']->key => $_smarty_tpl->tpl_vars['mensajes']->value){
+$_smarty_tpl->tpl_vars['mensajes']->_loop = true;
+?>
                         <tr>
                           <td>ID</td>
-                          <td>"Mensaje"</td>
-                          <td>"Tomas"</td>
+                          <td><?php echo $_smarty_tpl->tpl_vars['mensajes']->value['texto'];?>
+</td>
+                          <td><?php echo $_smarty_tpl->tpl_vars['mensajes']->value['nombre'];?>
+</td>
+                          <td><?php echo $_smarty_tpl->tpl_vars['mensajes']->value['telefono'];?>
+</td>
                           <td>"Ford Ka"</td>
-                          <td>"Editar"</td><td>"Borrar"</td>
+                          <td>"Borrar"</td>
                         </tr>
-                         <tr>
-                          <td>ID</td>
-                          <td>"Mensaje"</td>
-                          <td>"Tomas"</td>
-                          <td>"Ford Ka"</td>
-                          <td>"Editar"</td><td>"Borrar"</td>
-                        </tr>
-                       
+                      <?php } ?>
+                      <!-- <?php endfor; endif; ?> -->
                       </tbody>
                     </table>
                    

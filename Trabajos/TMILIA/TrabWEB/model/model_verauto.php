@@ -43,17 +43,18 @@ class Modeladmin
 		$q->execute();
 		// fetch
 		$resultado = $q->fetchAll(PDO::FETCH_ASSOC);
-		return $resultado[0]['path']; // imagenes/527a93bb42188.jpg
+		return $resultado; 
 	}
 
 
 		public function insertarConsulta($consulta)
 	{
-		$id_auto= 1;
+		
+	//	print_r($consulta);
 
-		$sql = " INSERT INTO  `autosbd`.`consulta` (`texto` ,`nombre` ,`email` ,`telefono`,`id_auto`) VALUES ( :texto, :nombre, :email, :telefono, :id_auto)";
+		$sql = "INSERT INTO  `autosbd`.`consulta` (`texto` ,`nombre` ,`email` ,`telefono`,`id_auto`) VALUES ( :texto, :nombre, :email, :telefono, :id_auto)";
 		$q = $this->conn->prepare($sql);
-		$a=$q->execute(array(':id_auto'=>$id_auto,':texto'=>$consulta["texto"],':nombre'=>$consulta["nombre"],':email'=>$consulta["email"],':telefono'=>$consulta["telefono"],));
+		$q->execute(array(':id_auto'=>$id_auto,':texto'=>$consulta["texto"],':nombre'=>$consulta["nombre"],':email'=>$consulta["email"],':telefono'=>$consulta["telefono"]));
 	}
 
 	public function buscarCat($id)
@@ -65,5 +66,17 @@ class Modeladmin
 		
 		return $q->fetchAll(PDO::FETCH_ASSOC);
 	}
+
+		public function buscarComentario($id)
+	{
+		//$sql= "SELECT * FROM  marca WHERE id IN (select distinct a.id_marca from auto a)";
+		//$sql = "SELECT a.titulo, a.valor,a.anio FROM auto a JOIN marca m ON (a.id_marca = m.id) where a.id_marca = $id";
+		$sql = "SELECT texto, nombre FROM consulta where id_auto = $id";
+		$q = $this->conn->prepare($sql);
+		$q->execute();
+		
+		return $q->fetchAll(PDO::FETCH_ASSOC);
+	}
+	
 }
 ?>

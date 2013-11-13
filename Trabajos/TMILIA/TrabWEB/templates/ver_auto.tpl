@@ -33,11 +33,15 @@
       <div class="container">
         
               <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.php">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav">                  
+                  {if isset($_SESSION['mail'])}
+                  <li class="active"><a href="index.php">Home</a></li>                  
+                  <li><a href="panel.php">Panel</a></li>
+                  <li><a href="logout.php">Cerrar sesion</a></li>                  
+                  {else}
+                  <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="login.php">Ingresar</a></li>
+                  {/if} 
                 </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -50,8 +54,8 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>Autos Tandil</h1>
-            <p>descripcion pagina</p>
+            <h1>Consecionaria Tandil</h1>
+            <p>Los mejores coches a tu alcance</p>
           </div>
           
               <div class="row-fluid">
@@ -79,12 +83,20 @@
                               {$auto[0].descripcion}
                             </dd>
                           </dl>
+
+                          {foreach $imagenes as $img}
                        
-                       <div style="height:30%; width:30%;">
+                             <div style="height:30%; width:30%; float: left; margin-right: 10px;">
 
-                          <img alt="320x240" src="{$imagenes}" class="img-thumbnail" />
+                                <img alt="320x240" src="{$img.path}" class="img-thumbnail" />
 
-                       </div>
+                             </div>
+
+                          {/foreach}
+
+                          
+
+                       <div style="clear: both;"></div>
 
                        </br>
                         </br> 
@@ -110,6 +122,21 @@
                                 <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
                         </div>
+
+                         {foreach $comentario as $coment}
+                        <div class="span4 well">
+                           <dt>
+                              <b>Nombre:</b><dd>{$coment.nombre}</dd> 
+                            </dt>
+
+                            <dd>
+                              {$coment.texto}
+                            </dd> 
+
+
+                        </div>
+                        {/foreach}
+ 
                 </div>
             </div>
 

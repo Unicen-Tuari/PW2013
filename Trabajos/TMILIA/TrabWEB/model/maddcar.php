@@ -13,7 +13,7 @@ class Modeladdcar
 			$this->conn = new PDO("mysql:host=$this->host;dbname=$this->db",$this->user,$this->pass);
 		}
 		catch(PDOException $pe){
-			die('Error de conexion, Mensaje: ' .$pe->getMessage());
+			die('Error de conexion, Mensaje: '.$pe->getMessage());
 		}
     }
 
@@ -32,9 +32,7 @@ class Modeladdcar
 
 	public function insertarAuto($auto) //,$mail
 	{
-
-		
-		$id_usuario= 2;
+		$id_usuario= 1;
 		$sql = "INSERT INTO `autosbd`.`auto` (`id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`)  VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
 		$q = $this->conn->prepare($sql);
 		$a=$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
@@ -44,9 +42,13 @@ class Modeladdcar
 		$id_auto = $this->conn->lastInsertId();
 		//mysql_insert_id();
 
+
+		//for ($i=0; $i <count($_FILES) ; $i++) { 
+			# code...
+		//}
 		$id_imagen = $this->insertarImagen($auto["imagen"]);
 
-		$sql = " INSERT INTO  `autosbd`.`auto_imagen` (`id_auto` ,`id_imagen`) VALUES ( :id_auto, :id_imagen)";
+		$sql = "INSERT INTO  `autosbd`.`auto_imagen` (`id_auto` ,`id_imagen`) VALUES ( :id_auto, :id_imagen)";
 		$q = $this->conn->prepare($sql);
 		$a=$q->execute(array(':id_auto'=>$id_auto,':id_imagen'=>$id_imagen));
 		

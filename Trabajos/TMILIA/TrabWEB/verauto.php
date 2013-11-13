@@ -17,7 +17,8 @@ if(isset($_POST["nombre"]))
   $consulta["telefono"] = $_POST["telefono"];
   $consulta["texto"] = $_POST["texto"];
 
-$controller->grabarConsulta($consulta);
+
+$controller->grabarConsulta($consulta, $id);
 
 }
 else
@@ -28,6 +29,7 @@ else
 	//$id = $_GET['marca'];
 	$controller->buscarCat($id);
 	$controller->mostrarPagina();
+	$controller->mostrarComentario($id);
 }
 
 

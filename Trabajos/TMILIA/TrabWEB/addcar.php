@@ -22,10 +22,9 @@ if(isset($_POST["titulo"]))
   $auto["marca"] = $_POST["marca"];
 
   $auto["imagen"] = $_FILES["imagen"];
-  //$auto["imagen"] = $_FILES["imagen2"];
-  //$auto["imagen"] = $_FILES["imagen3"];
-  
-  //print_r($_FILES)
+ //$auto["imagen1"] = $_FILES["imagen1"];
+//  $auto["imagen2"] = $_FILES["imagen2"];
+
 $controller->grabarAuto($auto);
 
 }

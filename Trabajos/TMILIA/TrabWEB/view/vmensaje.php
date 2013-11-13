@@ -14,6 +14,7 @@ class Viewmensaje
 
       public function mostrarMensaje($mensaje)
     {
+        //print_r($mensaje);
         $this->smarty->assign("mensaje",$mensaje);
         $this->smarty->display('mensaje.tpl');
         

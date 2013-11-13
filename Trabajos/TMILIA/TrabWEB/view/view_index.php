@@ -7,7 +7,7 @@ class Viewindex
     {
     	$this->smarty = New Smarty;
 	} 
-
+   
 
      public function imprimirPagina()
     {
@@ -15,11 +15,7 @@ class Viewindex
     }
        public function mostrarImagen($path) 
     {
-        $this->smarty->assign("imagenes",$path);
-       //$all_tpl_vars = $smarty->getTemplateVars();
-       // print_r($x);
-        //var_dump($imagen);
-        //echo;
+        $this->smarty->assign("imagenes",$path); 
        
     }
 
@@ -30,8 +26,12 @@ class Viewindex
         //$this->smarty->display('index.tpl');
     }
 
-      public function generaAutos($datos)
+      public function generaAutos($datos, $imagenes)
     {
+      for ($i=0; $i < count($datos); $i++) { 
+        $datos[$i]['path'] = $imagenes[$i];
+      }
+
         $this->smarty->assign("autos",$datos);
         //$this->smarty->display('index.tpl');
     }

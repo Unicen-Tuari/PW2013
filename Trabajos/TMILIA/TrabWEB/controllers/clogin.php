@@ -11,7 +11,7 @@ class Controllerlogin
 	
 	public function imprimirPagina()
 	{
-		session_start();
+		
 		if(!isset($_SESSION["mail"]))
 		{
 			$this->view->imprimirPagina();
@@ -30,6 +30,7 @@ class Controllerlogin
 		if(!$error)
 		{
 			$user = $this->model->getUsuario($formulario["mail"]);
+			//print_r($user);
 			
 			if(empty($user))
 			{
@@ -41,8 +42,10 @@ class Controllerlogin
 			}
 			
 			session_start();
-			$_SESSION["mail"]=$formulario["mail"];
-			//echo "index.php";
+			//$_SESSION["mail"]=$formulario["mail"];
+			$_SESSION['id_client'] = $user[0]['id'];
+			//print_r($_SESSION['id_client']);
+
 			header('Location: panel.php');
 			
 		}

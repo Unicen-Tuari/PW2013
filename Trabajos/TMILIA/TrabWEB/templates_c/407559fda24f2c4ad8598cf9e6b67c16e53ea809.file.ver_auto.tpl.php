@@ -1,32 +1,36 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-07 00:07:12
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 22:59:06
          compiled from ".\templates\ver_auto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9709527abfcde48f83-52265769%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1056528211c2394538-63686555%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '407559fda24f2c4ad8598cf9e6b67c16e53ea809' => 
     array (
       0 => '.\\templates\\ver_auto.tpl',
-      1 => 1383778035,
+      1 => 1384293529,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9709527abfcde48f83-52265769',
+  'nocache_hash' => '1056528211c2394538-63686555',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_527abfcdeb9080_03805006',
+  'unifunc' => 'content_528211c2454464_03960398',
   'variables' => 
   array (
+    '_SESSION' => 0,
     'auto' => 0,
     'imagenes' => 0,
+    'img' => 0,
+    'comentario' => 0,
+    'coment' => 0,
     'marcas' => 0,
     'marca' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_527abfcdeb9080_03805006')) {function content_527abfcdeb9080_03805006($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_528211c2454464_03960398')) {function content_528211c2454464_03960398($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -61,11 +65,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="container">
         
               <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="index.php">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                <ul class="nav navbar-nav">                  
+                  <?php if (isset($_smarty_tpl->tpl_vars['_SESSION']->value['mail'])){?>
+                  <li class="active"><a href="index.php">Home</a></li>                  
+                  <li><a href="panel.php">Panel</a></li>
+                  <li><a href="logout.php">Cerrar sesion</a></li>                  
+                  <?php }else{ ?>
+                  <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="login.php">Ingresar</a></li>
+                  <?php }?> 
                 </ul>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
@@ -78,8 +86,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <div class="jumbotron">
-            <h1>Autos Tandil</h1>
-            <p>descripcion pagina</p>
+            <h1>Consecionaria Tandil</h1>
+            <p>Los mejores coches a tu alcance</p>
           </div>
           
               <div class="row-fluid">
@@ -112,13 +120,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
                             </dd>
                           </dl>
-                       
-                       <div style="height:30%; width:30%;">
 
-                          <img alt="320x240" src="<?php echo $_smarty_tpl->tpl_vars['imagenes']->value;?>
+                          <?php  $_smarty_tpl->tpl_vars['img'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['img']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['imagenes']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['img']->key => $_smarty_tpl->tpl_vars['img']->value){
+$_smarty_tpl->tpl_vars['img']->_loop = true;
+?>
+                       
+                             <div style="height:30%; width:30%; float: left; margin-right: 10px;">
+
+                                <img alt="320x240" src="<?php echo $_smarty_tpl->tpl_vars['img']->value['path'];?>
 " class="img-thumbnail" />
 
-                       </div>
+                             </div>
+
+                          <?php } ?>
+
+                          
+
+                       <div style="clear: both;"></div>
 
                        </br>
                         </br> 
@@ -144,6 +164,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                                 <button class="btn btn-info" type="submit">Enviar</button>
                             </form>
                         </div>
+
+                         <?php  $_smarty_tpl->tpl_vars['coment'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['coment']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['comentario']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['coment']->key => $_smarty_tpl->tpl_vars['coment']->value){
+$_smarty_tpl->tpl_vars['coment']->_loop = true;
+?>
+                        <div class="span4 well">
+                           <dt>
+                              <b>Nombre:</b><dd><?php echo $_smarty_tpl->tpl_vars['coment']->value['nombre'];?>
+</dd> 
+                            </dt>
+
+                            <dd>
+                              <?php echo $_smarty_tpl->tpl_vars['coment']->value['texto'];?>
+
+                            </dd> 
+
+
+                        </div>
+                        <?php } ?>
+ 
                 </div>
             </div>
 
