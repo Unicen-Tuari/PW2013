@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 01:40:24
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 18:05:44
          compiled from "./templates/item.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:103726810652538b9f36c1e7-79833937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '356b4d9ea0b84973ab1dfd39a921cf3abf5963b4' => 
     array (
       0 => './templates/item.tpl',
-      1 => 1381207221,
+      1 => 1384290343,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'item_datos' => 0,
+    'imagenes' => 0,
+    'img' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -31,29 +33,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <ol class="breadcrumb">
   <li><a href="/">Home</a></li>
   <li><a href="#">Categoría</a></li>
-  <li class="active"><?php echo $_smarty_tpl->tpl_vars['item_datos']->value['subcat_nombre'];?>
-</li>
+  <li class="active"><a href="/productos/search/<?php echo $_smarty_tpl->tpl_vars['item_datos']->value['subcat_nombre'];?>
+"><?php echo $_smarty_tpl->tpl_vars['item_datos']->value['subcat_nombre'];?>
+</a></li>
 </ol>
-
+<div class="productos_container">
 <div class="f_item_container">
 	<div class="row">
   		<div class="col-md-4">
   			<div class="f_item_fotos">
   				<div class="f_fotos_principal">
-  					<img src="<?php echo $_smarty_tpl->tpl_vars['item_datos']->value['imagenes'];?>
+  					<img class="f_fotos_principal" id="foto_principal" src="<?php echo $_smarty_tpl->tpl_vars['imagenes']->value[0];?>
 ">
   				</div>
   				<div class="f_fotos_thumbs ">
   					<div class="row-fluid">
-				    	<div class="col-md-3 item_thumb">
-				    		<img src="http://placehold.it/100x100">
-				    	</div>
-				    	<div class="col-md-3 item_thumb">
-				    		<img src="http://placehold.it/100x100">
-				    	</div>
-				    	<div class="col-md-3 item_thumb">
-				    		<img src="http://placehold.it/100x100">
-				    	</div>
+              <?php  $_smarty_tpl->tpl_vars['img'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['img']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['imagenes']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['img']->key => $_smarty_tpl->tpl_vars['img']->value){
+$_smarty_tpl->tpl_vars['img']->_loop = true;
+?>
+              <div class="col-md-3 item_thumb">
+                <img class="item_foto" src="<?php echo $_smarty_tpl->tpl_vars['img']->value;?>
+" height=95>
+              </div>                
+            <?php } ?>
+
 				    	
     				</div>
   				</div>
@@ -64,14 +69,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </h2>
   			<h4><?php echo $_smarty_tpl->tpl_vars['item_datos']->value['precio'];?>
 </h4>
-  			<button type="button" class="btn btn-default btn-lg">
+  			<a href="/cart/addToCart/<?php echo $_smarty_tpl->tpl_vars['item_datos']->value['producto_id'];?>
+"><button type="button" class="btn btn-default btn-lg">
   				<span class="glyphicon glyphicon-shopping-cart"></span> Agregar al Carrito
-			</button>
+			 </button></a>
   			<p><?php echo $_smarty_tpl->tpl_vars['item_datos']->value['descripcion'];?>
 </p>
 
   		</div>
 	</div>
+</div>
 </div>
 
 

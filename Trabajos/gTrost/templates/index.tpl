@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 {include file="categorias.tpl"}
- 
+ <div class="productos_container">
   <div class="f_index_productos">
 
 
@@ -19,18 +19,18 @@
           </div>
       {/foreach}
     </div>
+    
     <div class="f_pagination">
       <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
+        <li><a href="/index/index/1">&laquo;</a></li>
+          {for $page=1 to $total_paginas}
+                <li><a href="/index/index/{$page}">{$page}</a></li>
+          {/for}
+        <li><a href="/index/index/{$total_paginas}">&raquo;</a></li>
       </ul>
     </div>
-  </div>
 
+  </div>
+</div>
 
 {include file="footer.tpl"}

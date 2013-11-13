@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 03:46:36
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-09 06:17:15
          compiled from "./templates/faq.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8735760585253aa4c052cd0-54984305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd592014428b705a43ae981c6cdccc2dacf5d95b5' => 
     array (
       0 => './templates/faq.tpl',
-      1 => 1381020979,
+      1 => 1383969038,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5253aa4c0b9487_03983007',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5253aa4c0b9487_03983007')) {function content_5253aa4c0b9487_03983007($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 

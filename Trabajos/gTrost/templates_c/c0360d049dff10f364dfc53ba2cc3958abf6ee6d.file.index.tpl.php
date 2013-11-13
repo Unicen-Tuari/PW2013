@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-10-08 01:34:33
+<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 16:13:11
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2072633462525379ef3e86f9-49321902%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1381206870,
+      1 => 1384283590,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'productos' => 0,
     'producto' => 0,
+    'total_paginas' => 0,
+    'page' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -28,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <?php echo $_smarty_tpl->getSubTemplate ("categorias.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
- 
+ <div class="productos_container">
   <div class="f_index_productos">
 
 
@@ -56,19 +58,25 @@ $_smarty_tpl->tpl_vars['producto']->_loop = true;
           </div>
       <?php } ?>
     </div>
+    
     <div class="f_pagination">
       <ul class="pagination">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">&raquo;</a></li>
+        <li><a href="/index/index/1">&laquo;</a></li>
+          <?php $_smarty_tpl->tpl_vars['page'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['page']->step = 1;$_smarty_tpl->tpl_vars['page']->total = (int)ceil(($_smarty_tpl->tpl_vars['page']->step > 0 ? $_smarty_tpl->tpl_vars['total_paginas']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['total_paginas']->value)+1)/abs($_smarty_tpl->tpl_vars['page']->step));
+if ($_smarty_tpl->tpl_vars['page']->total > 0){
+for ($_smarty_tpl->tpl_vars['page']->value = 1, $_smarty_tpl->tpl_vars['page']->iteration = 1;$_smarty_tpl->tpl_vars['page']->iteration <= $_smarty_tpl->tpl_vars['page']->total;$_smarty_tpl->tpl_vars['page']->value += $_smarty_tpl->tpl_vars['page']->step, $_smarty_tpl->tpl_vars['page']->iteration++){
+$_smarty_tpl->tpl_vars['page']->first = $_smarty_tpl->tpl_vars['page']->iteration == 1;$_smarty_tpl->tpl_vars['page']->last = $_smarty_tpl->tpl_vars['page']->iteration == $_smarty_tpl->tpl_vars['page']->total;?>
+                <li><a href="/index/index/<?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</a></li>
+          <?php }} ?>
+        <li><a href="/index/index/<?php echo $_smarty_tpl->tpl_vars['total_paginas']->value;?>
+">&raquo;</a></li>
       </ul>
     </div>
-  </div>
 
+  </div>
+</div>
 
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

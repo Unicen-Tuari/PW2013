@@ -6,9 +6,10 @@ class SearchController extends BaseController {
 		
 		$model = new productos();
 		$search_array = array();
-		$search_array = $model->getByKeyword($search_keyword);
+		$search_array = $model->getByKeyword($search_keyword, $this->page);
 
 		$this->view->assign('productos', $search_array);
+
 		$this->view->display();
 		
 		

@@ -1,13 +1,13 @@
 <?php
-
-require('controllers/faq.controller.php');	
+	
 require('controllers/item.controller.php');	
 require('controllers/contacto.controller.php');	
 require('controllers/admin.controller.php');	
 require('controllers/productos.controller.php');	
 require('controllers/search.controller.php');	
 require('controllers/index.controller.php');	
-
+require('controllers/signup.controller.php');	
+require('controllers/cart.controller.php');	
 
 class FrontController {
 	private $router;
@@ -34,7 +34,8 @@ class FrontController {
 
 		if(class_exists($this->controllerName)) {
 			$controller = new $this->controllerName($this->view,
-													$this->router->controllerParams);
+													$this->router->controllerParams,
+													$this->router->controllerPage);
 
 			if(method_exists($controller, $this->controllerAction)) {
 				call_user_func(array($controller,
@@ -47,21 +48,20 @@ class FrontController {
 		}
 	}
 
-
-
-
-
-	
 }
 
 abstract class BaseController {
 	protected $model;
 	protected $view;
 	protected $params;
+	protected $page;
 
-	public function __construct($view, $params=null) {
+	public function __construct($view, $params=null, $current_page) {
 		$this->view = $view;
 		$this->params = $params;
+		$this->page = $current_page;
+
+		
 
 		$model = new categorias();
 		$categorias_array = $model->getCat();
@@ -86,6 +86,24 @@ abstract class BaseController {
 }
 
 
+class Session {
 
+	public function __construct(){
+		session_start();
+
+		if (!isset($_SESSION['usuario_email'])) {
+			$_SESSION['usuario_email']=-1;
+		}
+		if (!isset($_SESSION['usuario_cart'])) {
+			$_SESSION['usuario_cart']=array();
+		}
+		if (!isset($_SESSION['message'])) {
+			$_SESSION['message']=-1;
+		}
+		if (!isset($_SESSION['admin'])) {
+			$_SESSION['admin']=-1;
+		}
+	}
+}
 
 
