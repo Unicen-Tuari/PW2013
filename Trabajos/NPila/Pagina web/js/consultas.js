@@ -1,0 +1,85 @@
+/*-------------------------------------------- Informacion paciente --------------------------------------------*/
+$("#cons_pacientes").submit(function()
+	{
+		$.ajax({
+			type: "POST",
+			url: "informacion_paciente.php",
+			data: $("#cons_pacientes").serialize(),
+			success: function(data)
+				{
+					if (data != "El nombre contiene caracteres no validos o no fue completado")
+						{		
+							document.getElementById('content').innerHTML=data;
+						}
+					else
+						{
+							alert(data);
+							window.location = 'informacion_paciente.php';
+						}
+				}
+	});
+	return false;
+});
+
+function historia(cual)
+	{
+	  	var elElemento=document.getElementById(cual);
+	  	if(elElemento.style.display == 'block')
+			{
+				elElemento.style.display = 'none';
+			}
+		else
+			{
+				elElemento.style.display = 'block';
+			}
+	}
+
+/*-------------------------------------------- Turnos --------------------------------------------*/
+$("#cons_turnos").submit(function()
+	{
+		var fecha= 'Turnos del dia: ' + document.getElementById('fecha').value;
+			$.ajax({
+				type: "POST",
+				url: "turnos.php",
+				data: $("#cons_turnos").serialize(),
+				success: function(data)
+					{		
+						if (data != "La fecha del turno no fue completada")
+							{
+								document.getElementById('content').innerHTML=data;
+								document.getElementById('fechacons').innerHTML=fecha;
+							}
+						else
+							{
+								alert(data);
+								window.location = 'turnos.php';
+							}
+					}
+			});	
+		return false;
+	});
+
+/*-------------------------------------------- Medicos --------------------------------------------*/
+$("#cons_medico").submit(function()
+	{
+		$.ajax({
+			type: "POST",
+			url: "medicos.php",
+			data: $("#cons_medico").serialize(),
+			success: function(data)
+				{
+					if (data != "El nombre contiene caracteres no validos o no fue completado")
+						{
+							document.getElementById('content').innerHTML=data;
+						}
+					else
+						{
+							alert(data);
+							window.location = 'medicos.php';
+						}
+				}
+		});
+
+	return false;
+
+	});

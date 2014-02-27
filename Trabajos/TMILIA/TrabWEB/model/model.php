@@ -22,7 +22,10 @@ class Modelindex
 	{
 
 		$sql = "SELECT * FROM auto ORDER BY id DESC LIMIT 3";
-		//$sql = "SELECT * FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id) WHERE a.id = ai.id_auto";
+
+
+		/*$sql = "SELECT distinct a.* FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) 
+		JOIN imagen i ON (ai.id_imagen = i.id) WHERE a.id = ai.id_auto";*/
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		// fetch
@@ -41,9 +44,28 @@ class Modelindex
 
 	public function consultaImagen()
 	{
-		//$sql = "SELECT i.path FROM auto_imagen ai JOIN imagen i ON (ai.id_imagen = i.id)   ";//WHERE ai.id_auto = $id
-		$sql = "SELECT i.path FROM auto a JOIN auto_imagen ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id) ORDER BY i.id DESC LIMIT 3";
+		
+		/*$sql = "SELECT i.path FROM auto a 
+		JOIN auto_imagen ai ON (a.id = ai.id_auto)
+		JOIN imagen i ON (ai.id_imagen = i.id) 
+		ORDER BY i.id DESC LIMIT 3";*/
+
+		$sql = "SELECT i.path FROM auto a 
+		JOIN (select * from auto_imagen group by id_auto) ai ON (a.id = ai.id_auto)
+		JOIN imagen i ON (ai.id_imagen = i.id) 
+		ORDER BY i.id DESC LIMIT 3";
+
+	
+
+
+
+
+		//$sql = "SELECT i.path FROM auto_imagen ai
+		 //JOIN imagen i ON (ai.id_imagen = i.id) WHERE ai.id_auto IN (select distinct ai.id_auto from auto_imagen ai) ORDER BY i.path DESC LIMIT 3";
+		
 		//$sql = "SELECT i.path FROM imagen i JOIN auto_imagen ai ON (a.id = ai.id_auto)";
+
+		//$sql = "SELECT i.path FROM imagen i where i.id=(select distinct id_auto from auto_imagen) ORDER BY i.id DESC LIMIT 3 ";
 		$q = $this->conn->prepare($sql);
 		$q->execute();		
 		$resultado = $q->fetchAll(PDO::FETCH_ASSOC);
@@ -58,8 +80,10 @@ class Modelindex
 
 	public function buscarCat($id)
 	{
-		//$sql= "SELECT * FROM  marca WHERE id IN (select distinct a.id_marca from auto a)";
-		$sql = "SELECT a.titulo, a.valor,a.anio FROM auto a JOIN marca m ON (a.id_marca = m.id) where a.id_marca = $id";
+		
+		$sql = "SELECT a.id, a.titulo, a.valor,a.anio, i.path FROM auto a 
+		JOIN marca m ON (a.id_marca = m.id) 
+		JOIN (select * from auto_imagen group by id_auto) ai ON (a.id = ai.id_auto) JOIN imagen i ON (ai.id_imagen = i.id)  where a.id_marca = $id";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		

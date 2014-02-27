@@ -26,6 +26,7 @@ class Viewaddcar
         header('location: panel.php');
 
     }
+   
   
 }
 ?>

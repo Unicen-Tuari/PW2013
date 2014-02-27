@@ -24,12 +24,37 @@
 
   <body>
 
+     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  
+                  
+                  <li><a href="index.php">Home</a></li>                  
+                  <li><a href="panel.php">Panel</a></li>
+                  <li><a href="logout.php">Cerrar sesion</a></li>                  
+                 
+                </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li><a href="panel.php">Autos</a></li>
           <li  class="active"><a href="mensaje.php">Mensajes</a></li>
-          <li><a href="logout.php">Cerrar Sesion</a></li>
+           {foreach $usuario as $nombre}     
+            <li><button <button class="btn btn-primary">Bienvenido {$nombre.nombre}</button></li>
+          {/foreach}
         </ul>
        <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
@@ -51,14 +76,14 @@
                       </thead>
                       <tbody>
                      <!-- {section name=mensaje loop=$mensaje} -->
-                      {foreach $mensaje as $mensajes}
+                      {foreach $mensajes as $mensaj}
                         <tr>
                           <td>ID</td>
-                          <td>{$mensajes.texto}</td>
-                          <td>{$mensajes.nombre}</td>
-                          <td>{$mensajes.telefono}</td>
-                          <td>"Ford Ka"</td>
-                          <td>"Borrar"</td>
+                          <td>{$mensaj.texto}</td>
+                          <td>{$mensaj.nombre}</td>
+                          <td>{$mensaj.email}</td>
+                          <td>{$mensaj.telefono}</td>
+                          <td>Eliminar</td>                            
                         </tr>
                       {/foreach}
                       <!-- {/section} -->

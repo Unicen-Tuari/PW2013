@@ -9,18 +9,19 @@ class Viewpanel
 	}
     public function muestraPagina()
     {
-		$this->smarty->display('panel.tpl');
+		//$this->smarty->display('panel.tpl');
+    }
+       public function generaUser($consulta)
+    {
+        $this->smarty->assign("usuario",$consulta);
+        $this->smarty->display('panel.tpl');
     }
      public function generaAutos($datos)
     {
         $this->smarty->assign("autos",$datos);
         $this->smarty->display('panel.tpl');
     }
-     /*public function generaUser($consulta)
-    {
-        $this->smarty->assign("user",$consulta);
-        $this->smarty->display('panel.tpl');
-    }*/
+  
 
 
     

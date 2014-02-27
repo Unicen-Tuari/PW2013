@@ -14,6 +14,8 @@ class Viewlogin
 	
 	 public function MensajeError($error){
 		echo $error;
+		header( "refresh:2; url=login.php" );
+		
     }
 }
 ?>

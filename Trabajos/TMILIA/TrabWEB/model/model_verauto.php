@@ -47,10 +47,10 @@ class Modeladmin
 	}
 
 
-		public function insertarConsulta($consulta)
+		public function insertarConsulta($consulta, $id)
 	{
 		
-	//	print_r($consulta);
+		//$id_auto = $id;
 
 		$sql = "INSERT INTO  `autosbd`.`consulta` (`texto` ,`nombre` ,`email` ,`telefono`,`id_auto`) VALUES ( :texto, :nombre, :email, :telefono, :id_auto)";
 		$q = $this->conn->prepare($sql);

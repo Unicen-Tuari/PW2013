@@ -7,19 +7,17 @@ class Viewadmin
     {
     	$this->smarty = New Smarty;
 	}
+    
     public function muestraPagina()
     {
 		$this->smarty->display('ver_auto.tpl');
     }
+
     public function mostrarImagen($path) 
     {
-        
+
         $this->smarty->assign("imagenes",$path);
-       //$all_tpl_vars = $smarty->getTemplateVars();
-       // print_r($x);
-        //var_dump($imagen);
-        //echo;
-       
+ 
     }
     public function generaAutos($datos)
     {
@@ -39,16 +37,17 @@ class Viewadmin
         //$this->smarty->display('ver_auto.tpl');
        // print_r($datos);
     }
-
-     public function generaComentario($consulta)
+      /* public function generaComentario($consulta)
     {
         //print_r($consulta);
         //if ($consulta!= NULL) {
             $this->smarty->assign("comentario",$consulta);
-            $this->smarty->display('ver_auto.tpl');
+            //$this->smarty->display('ver_auto.tpl');
         //}
         
-    }
+    }*/
+
+  
 
     
 }

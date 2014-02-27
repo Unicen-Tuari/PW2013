@@ -11,6 +11,7 @@ class Viewindex
 
      public function imprimirPagina()
     {
+
         $this->smarty->display('index.tpl');
     }
        public function mostrarImagen($path) 
@@ -26,6 +27,14 @@ class Viewindex
         //$this->smarty->display('index.tpl');
     }
 
+      public function generaCat($datos)
+    {
+        $this->smarty->assign("autos",$datos);
+        $this->smarty->display('index.tpl');
+       // print_r($datos);
+    }
+
+
       public function generaAutos($datos, $imagenes)
     {
       for ($i=0; $i < count($datos); $i++) { 
@@ -35,13 +44,7 @@ class Viewindex
         $this->smarty->assign("autos",$datos);
         //$this->smarty->display('index.tpl');
     }
-     public function generaCat($datos)
-    {
-        $this->smarty->assign("autos",$datos);
-        $this->smarty->display('index.tpl');
-       // print_r($datos);
-    }
-
+   
    
 
 }

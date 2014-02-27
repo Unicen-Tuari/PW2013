@@ -29,12 +29,13 @@ class Controlleraddcar
 		}
 	}
 
-		public function grabarAuto($auto)
+	public function grabarAuto($auto, $id_user)
 	{	
 		
-		$this->model->insertarAuto($auto);
+		$this->model->insertarAuto($auto,$id_user);
 		$this->view->mensajeExito();
 	}
+
 
 	
 }

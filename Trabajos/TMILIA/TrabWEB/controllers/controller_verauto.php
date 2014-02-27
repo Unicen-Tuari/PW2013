@@ -39,19 +39,17 @@ class Controlleradmin
 		//$this->model->buscarimagen($id);
 		$path = $this->model->consultaImagen($id);
 		$this->view->mostrarImagen($path);
+		//print_r($path);
 		
 		
 	 }
 
-		public function grabarConsulta($consulta)
+		public function grabarConsulta($consulta, $id)
 	{	
 		
-		$this->model->insertarConsulta($consulta);
-		$this->view->mensajeExito();
+		$this->model->insertarConsulta($consulta, $id);
+		//$this->view->mensajeExito();
 	}
-
-	
-
 	public function buscarCat($id)
 	{	
 		
@@ -63,7 +61,7 @@ class Controlleradmin
 		
 	}
 
-	public function mostrarComentario($id)
+	/*public function mostrarComentario($id)
 	{	
 		
 		$consulta = $this->model->buscarComentario($id);
@@ -72,7 +70,7 @@ class Controlleradmin
 			
 		}
 		
-	}
+	}*/
 
 	
 }

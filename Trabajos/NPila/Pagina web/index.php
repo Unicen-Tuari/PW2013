@@ -1,9 +1,18 @@
 <?php
-	include './controlers/cindex.php';
-	include './views/vindex.php';
+	include './controller/controller_index.php';
+	include './view/view_index.php';
 
-//	$model = new Model();
 	$view = new View();
 	$controller = new Controller($view);
-	$controller->imprimirPagina();
+	
+	session_start();
+
+	if (isset($_SESSION['User']))
+		{
+			$controller->imprimirPagina();
+		}
+	else
+		{
+			header('Location: login.php');
+		}
 ?>

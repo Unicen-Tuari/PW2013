@@ -1,9 +1,9 @@
 <?php
 //Configuración
 $host 	= "localhost";
-$db	= "mysql";
+$db	= "ejemplo";
 $user	= "root";
-$pass	= "491991_454404";
+//$pass	= "491991_454404";
 
 //Conexión
 try{

@@ -6,26 +6,29 @@
 					<div id="page-bgbtm">
 						<div id="content">
 							<!-- CONTENIDO DEL CENTRO DE LA PAGINA -->
+								<div class="post"><h2 class="title">Ingrese el nombre del medico </h2></div>
+								<div id="search" >
+									<form id="cons_pacientes" method="post" action="">
+									<div>
+										<input type="text" name="search-text" id="search-text" value="" />
+										<input type="submit" id="search-submit" value="GO" />
+									</div>
+									</form>
+								</div>
 							<!-- FIN CONTENIDO DEL CENTRO DE LA PAGINA -->
 						</div>
 						<div id="sidebar">
 							<!-- BARRA LATERAL -->
 							<div id="logo">
-								<h1><a>Medicos</a></h1>
+								<h1><a>Informacion del Medico</a></h1>
 							</div>
-							<nav id="menu">
-								<ul>
-									<li><a href="index.php">Inicio</a></li>
-									<li><a href="amedicos.php">Agregar medico</a></li>
-									<li><a href="#">Borrar medico</a></li>
-								</ul>
-							</div>
+							{include file = "menu.tpl"}
 							<!-- FIN BARRA LATERAL -->
-						</nav>
+						</div>
 						<div style="clear: both;"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
-</html>
+{include file = "footer.tpl"}

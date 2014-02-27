@@ -63,7 +63,7 @@
 	<h2>Consulta el estado de tu reparación</h2>
 </div>
 <div class="container">
-	<form class="form-horizontal text-center" id="form_consulta" method="POST" action="">
+	<form class="text-center" id="form_consulta" method="POST" action="">
 		<h3>Datos personales<h3>
 		<div class="form-group input-group col-lg-12" id="form_dni">
 			{literal}
@@ -84,21 +84,22 @@
 <div class="separador text-center">
 	<h2>Haganos sus consultas</h2>
 </div>
+
 <div class="container text-center">
-	<div class="row">
-		<div class="col-lg-12">
-			<form class="form-horizontal">
-				<legend>Formulario de contacto</legend>
+	<div class="row" id="alerta_mail">
+	</div>
+			<form action="" id="form_mail">
+				<h3>Formulario de contacto</h3>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="nombre_apellido">Nombre y Apellido</label>
 					<span class="input-group-addon glyphicon glyphicon-user"></span>
-					<input class="form-control" type="text" name="nombre_apellido" placeholder="*Nombre y Apellido" pattern="[a-zA-Z]+\s[a-zA-Z]+" title="Formato: Nombre" required>
+					<input class="form-control" type="text" name="nombre_apellido" placeholder="*Nombre y Apellido" pattern="[a-zA-Z]+\s[a-zA-Z]+" title="Formato: Nombre Apellido" required>
 				</div>
 				<div class="form-group input-group col-lg-12">
 					<label class="sr-only" for="email">Email</label>
 					<span class="input-group-addon glyphicon glyphicon-envelope"></span>
 					{literal}
-					<input class="form-control" type="email" name="correo" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required>
+					<input class="form-control" type="email" name="mail" placeholder="*Direccion de E-Mail" pattern="[\w-.]+@[\w-.]+\.\w{2,3}" title="Formato: xxx@yyy.zzz" required>
 					{/literal}
 				</div>
 				<div class="form-group input-group col-lg-12">

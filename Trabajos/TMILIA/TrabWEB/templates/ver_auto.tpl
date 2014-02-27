@@ -13,6 +13,7 @@
      <link href="dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="dist/css/bootstrap.css" rel="stylesheet">
      <link href="dist/css/jquery.bxslider.css" rel="stylesheet">
+     <script src="dist/js/bootstrap.js"></script>
      <script src="./js/jquery.bxslider.min.js"></script>
      <script src="./js/galeria.js"></script> 
 
@@ -33,8 +34,8 @@
       <div class="container">
         
               <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">                  
-                  {if isset($_SESSION['mail'])}
+               <ul class="nav navbar-nav">                  
+                  {if isset($smarty.session.mail)}
                   <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="panel.php">Panel</a></li>
                   <li><a href="logout.php">Cerrar sesion</a></li>                  
@@ -42,7 +43,7 @@
                   <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="login.php">Ingresar</a></li>
                   {/if} 
-                </ul>
+                </ul>>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
@@ -84,91 +85,74 @@
                             </dd>
                           </dl>
 
-                          {foreach $imagenes as $img}
-                       
-                             <div style="height:30%; width:30%; float: left; margin-right: 10px;">
+                          <div id="myCarousel" class="carousel">
+                              <div class=""carousel-inner>
+                                <div class="item active">
+                                  
+                                  {foreach $imagenes as $img}
+                                     <div style="height:30%; width:30%; float: left; margin-right: 10px;">
+                                        <img alt="320x240" src="{$img.path}" class="img-thumbnail" />
+                                     </div>
+                                   
+                                  {/foreach}
 
-                                <img alt="320x240" src="{$img.path}" class="img-thumbnail" />
-
-                             </div>
-
-                          {/foreach}
-
-                          
+                                  </div> 
+                               </div>    
+                          </div>
 
                        <div style="clear: both;"></div>
-
                        </br>
                         </br> 
                         <div class="span4 well">
-                            <form accept-charset="UTF-8" action="verauto.php" method="POST">
+                            <form accept-charset="UTF-8" id="coment"  method="POST">
                                 <div class="form-group">
                                   <label name="nombre">Nombre</label>
-                                  <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre">
+                                  <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
                                 </div>
                                 <div class="form-group">
                                   <label  name="email">Email</label>
-                                  <input type="text" class="form-control" name="email" placeholder="Ingresa tu correo">
+                                  <input type="text" class="form-control" name="email" placeholder="Ingrese su correo">
                                 </div>
                                  <div class="form-group">
                                   <label  name="telefono">Telefono</label>
                                   <input type="text" class="form-control" name="telefono" placeholder="Ingresa tu numero de telefono">
                                 </div>
-
-                                <textarea class="span4" name="texto" placeholder="Ingresa tu consulta" rows="5" cols="100">
+                                <textarea class="span4" name="texto" placeholder="Ingrese su consulta" rows="5" cols="100">
                                 </textarea>
+                                <input type="hidden" name="id"  value="{$auto[0].id}">                                
                                 </br>
                                 </br>
-                                <button class="btn btn-info" type="submit">Enviar</button>
+                                <button class="btn btn-info" type="button" id="comentario">Enviar</button> 
                             </form>
                         </div>
 
-                         {foreach $comentario as $coment}
-                        <div class="span4 well">
-                           <dt>
-                              <b>Nombre:</b><dd>{$coment.nombre}</dd> 
-                            </dt>
-
-                            <dd>
-                              {$coment.texto}
-                            </dd> 
+                    <div class="span4 well" id="comentarios">
+                 
 
 
-                        </div>
-                        {/foreach}
+
+                    </div>    
+                         
  
                 </div>
             </div>
-
-           
-
        </div><!--/span-->
-
-        
-
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <div class="well sidebar-nav">
               <ul class="nav">
                 <li>Categorias</li>
                 {foreach $marcas as $marca}
-               
                 <li class="active" style="text-transform: capitalize;"><a href='index.php?marca={$marca.id}'>{$marca.nombre}</a></li>  
                  {/foreach}   
-                              
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
       </div><!--/row-->
-
-
-    
       <footer>
         <p>&copy; Company 2013</p>
       </footer>
 
     </div><!--/.container-->
-
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -176,10 +160,13 @@
     <script src="dist/assets/js/jquery.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="offcanvas.js"></script>
-
-
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/comentario.js"></script>
+    <script type="text/javascript">$('.carousel').carousel();</script>
+
+    
+    
   </body>
 </html>

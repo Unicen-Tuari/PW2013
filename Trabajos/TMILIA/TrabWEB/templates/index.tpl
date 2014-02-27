@@ -12,11 +12,7 @@
     <!-- Bootstrap core CSS -->
      <link href="dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
-   
 
     <!-- Custom styles for this template -->
     <link href="dist/css/offcanvas.css" rel="stylesheet">
@@ -37,12 +33,11 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Projecto: Autos tandil</a>
+                
               </div>
               <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  
-                  {if isset($_SESSION['mail'])}
+                <ul class="nav navbar-nav">                  
+                  {if isset($smarty.session.mail)}
                   <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="panel.php">Panel</a></li>
                   <li><a href="logout.php">Cerrar sesion</a></li>                  
@@ -72,7 +67,6 @@
                 <ul class="thumbnails">
                   <ul class="span5 clearfix">
                     <div class="thumbnail clearfix">
-                    
                         <img src="{$auto.path}" alt="" class="pull-left span2 clearfix" style='margin-right:10px; height:30%; width:50%;'>
                       <div class="caption" class="pull-left">
                         <a href='verauto.php?id={$auto.id}' class="btn btn-primary icon  pull-right">Ver Auto</a>
@@ -87,8 +81,6 @@
                     </div>
                   </ul>
                 </ul>
-                
-           
             {/foreach}
 
         </div><!--/span-->

@@ -26,20 +26,45 @@
 
   <body>
 
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  
+                  
+                  <li><a href="index.php">Home</a></li>                  
+                  <li class="active"><a href="panel.php">Panel</a></li>
+                  <li><a href="logout.php">Cerrar sesion</a></li>                  
+                   
+                </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
+
     <div class="container">
       <div class="header">
 
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="panel.php">Autos</a></li>
-          <li><a href="mensaje.php">Mensajes</a></li>      
-          <li><a href="logout.php">Cerrar Sesion</a></li>
+          <li><a href="mensaje.php">Mensajes</a></li>           
+          {foreach $usuario as $nombre}     
+          <li><button <button class="btn btn-primary">Bienvenido {$nombre.nombre}</button></li>
+          {/foreach} 
           <!--{foreach $user as $usuario}
           <li><a>User:</a>{$usuario.nombre}</li>
           {/foreach} -->
         </ul>
         <h3 class="text-muted"><a href="index.php">Volver a Home</a></h3>
       </div>
-
+      <div id="mensajes"></div>
       <div class="jumbotron">
            
                 <div class="well">
@@ -56,11 +81,12 @@
                       <tbody>
                         {foreach $autos as $auto}
                         <tr>
-                          <td>ID</td>
+                          <td>{$auto.id}</td>
                           <td>{$auto.titulo}</td>
                           <td>{$auto.nombre}</td>
-                          <td>"Editar"</td><td>"Borrar"</td>
-                        </tr>
+                          <td><a href="edit.php?id={$auto.id}"><button class="btn btn-primary">Editar</button></a></td>
+                          <td><a href="#" onclick="borrarAuto({$auto.id})"><button class="btn btn-primary">Eliminar</button></a></td>
+                        </tr>                      
                         {/foreach}                                              
                       </tbody>
                     </table>
@@ -75,7 +101,7 @@
       </div>
 
     </div> <!-- /container -->
-
+    <script type="text/javascript" src="./js/borrar.js"></script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -3,7 +3,9 @@ class Controllerindex
 {
     private $model;
 	private $view;
- 
+ 	
+
+
     public function __construct($model, $view) {
         $this->model = $model;
 		$this->view = $view;
@@ -30,7 +32,7 @@ class Controllerindex
 		
 	}
 
-	public function buscarImag() // 63
+	public function buscarImag() 
 	{	
 		//$this->model->buscarimagen($id);
 		$path = $this->model->consultaImagen();

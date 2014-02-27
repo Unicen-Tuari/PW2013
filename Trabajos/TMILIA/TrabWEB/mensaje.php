@@ -9,6 +9,13 @@ $view = new Viewmensaje();
 $controller = new Controllermensaje($model, $view);
 
 
+//$id_comentario = $_REQUEST[id];
+//print_r($id_comentario);
+
+session_start();  
+$id = $_SESSION['id_client'];
+//print_r($id);
 $controller->imprimirPagina();
-$controller->mostrarMensaje();
+$controller->mostrarMensaje($id);
+$controller->buscarUser($id);
 ?>

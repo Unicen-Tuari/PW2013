@@ -20,7 +20,7 @@ class Modelpanel
 	
 	public function consultaAuto($id){
 
-		$sql = "SELECT a.titulo, m.nombre FROM auto a JOIN marca m ON (a.id_marca = m.id) WHERE a.id_usuario = $id";
+		$sql = "SELECT a.titulo, a.id, m.nombre FROM auto a JOIN marca m ON (a.id_marca = m.id) WHERE a.id_usuario = $id";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
 		return $q->fetchAll(PDO::FETCH_ASSOC);

@@ -18,16 +18,23 @@ class Modelmensaje
 		}
     }
 	
-	public function consultaMensaje()
-		{
-
-			
-			//$sql= "SELECT  a.titulo, a.valor FROM  marca m JOIN auto a ON (m.$id = a.id_marca)";
-			$sql= "SELECT texto,nombre,telefono FROM consulta ";
+	public function consultaMensaje($id)
+		{			
+			//$sql= "SELECT texto,nombre,telefono FROM consulta c JOIN auto a ON (c.id_auto = a.id) AND JOIN usuario u ON (u.id = $id) ";
+			$sql= "SELECT texto,nombre,telefono FROM consulta WHERE id_auto = $id";
 			$q = $this->conn->prepare($sql);
 			$q->execute();
 			
 			return $q->fetchAll(PDO::FETCH_ASSOC);
 		}
+
+		public function consultaUser($id){
+
+		$sql = "SELECT nombre FROM usuario where id = $id ";
+		$q = $this->conn->prepare($sql);
+		$q->execute();
+		// fetch
+		return $q->fetchAll(PDO::FETCH_ASSOC);
+	}
 }
 ?>

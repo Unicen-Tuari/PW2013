@@ -9,9 +9,9 @@ class Controllerpanel
 		$this->view = $view;
     }
 	
-	public function imprimirPagina()
+	public function muestraPagina()
 	{
-		$this->view->imprimirPagina();
+		$this->view->muestraPagina();
 	}
 	public function mostrarAuto($id)
 	{	
@@ -33,7 +33,7 @@ class Controllerpanel
 	public function buscarUser($id){
 
 		$consulta = $this->model->consultaUser($id);
-		//$this->view->generaUser($consulta);
+		$this->view->generaUser($consulta);
 	}
 }
 

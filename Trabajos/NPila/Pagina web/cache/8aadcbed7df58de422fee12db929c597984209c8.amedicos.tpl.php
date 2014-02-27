@@ -5,35 +5,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8aadcbed7df58de422fee12db929c597984209c8' => 
     array (
       0 => './templates/amedicos.tpl',
-      1 => 1380647646,
+      1 => 1381184278,
       2 => 'file',
     ),
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
     array (
       0 => './templates/head.tpl',
-      1 => 1380074906,
+      1 => 1381189537,
       2 => 'file',
     ),
     '243b1378187b2878c10cdd133ad5f270cdcebcd8' => 
     array (
       0 => './templates/menu.tpl',
-      1 => 1380647764,
+      1 => 1381197233,
+      2 => 'file',
+    ),
+    '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
+    array (
+      0 => './templates/footer.tpl',
+      1 => 1381199052,
       2 => 'file',
     ),
   ),
   'nocache_hash' => '459251153522e8072a437c4-89984724',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_524b0489dc5c38_52696284',
+  'unifunc' => 'content_5266b6224f7876_16070054',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_524b0489dc5c38_52696284')) {function content_524b0489dc5c38_52696284($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5266b6224f7876_16070054')) {function content_5266b6224f7876_16070054($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>Sistema de gestion</title>
 		<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="styles/stylemenu.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="styles/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="styles/jquery-ui.theme.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 
 	<body>
@@ -74,7 +82,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div id="menu">
 	<ul class="nav">
 		<li >
-			<a  href="index.php">Inicio</a>
+			<a href="index.php">Inicio</a>
 		</li>
 		<li >
 			<a>Pacientes</a>
@@ -100,6 +108,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li class="submen"><a href="amedicos.php">Ingresar Medico</a></li>
 			</ul>
 		</li>
+		<li>
+			<a href="logout.php" id="logout">Logout</a>
+		</li>
 	</ul>
 </div>
 
@@ -111,5 +122,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 	</body>
+<footer>
+	<script text="text/javascript" src="js/jquery-1.10.0.min.js"></script>
+	<script text="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script text="text/javascript" src="js/ajax.js"></script>
+	<script text="text/javascript" src="js/inserciones.js"></script>
+	<script text="text/javascript" src="js/login.js"></script>
+	<script text="text/javascript" src="js/calendario.js"></script>
+</footer>
 </html>
+
 <?php }} ?>

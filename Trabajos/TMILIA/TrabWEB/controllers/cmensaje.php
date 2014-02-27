@@ -15,11 +15,18 @@ class Controllermensaje
 	}
 
 
-	public function mostrarMensaje()
+	public function mostrarMensaje($id)
 	{	
-	
-	  $mensaje = $this->view->mostrarMensaje($this->model->consultaMensaje());
+		$mensaje= $this->model->consultaMensaje($id);
+	    $this->view->mostrar($mensaje);
+	   print_r($mensaje);
 		
+	}
+
+	public function buscarUser($id){
+
+		$consulta = $this->model->consultaUser($id);
+		$this->view->generaUser($consulta);
 	}
 }
 

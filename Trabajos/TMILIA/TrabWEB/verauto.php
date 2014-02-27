@@ -10,27 +10,29 @@ $controller = new Controlleradmin($model, $view);
 
 
 $controller->mostrarCategorias();
-if(isset($_POST["nombre"]))
+
+session_start();
+
+/*if(isset($_POST["nombre"]))
 {
   $consulta["nombre"] = $_POST["nombre"];
   $consulta["email"] = $_POST["email"];
   $consulta["telefono"] = $_POST["telefono"];
   $consulta["texto"] = $_POST["texto"];
-
-
-$controller->grabarConsulta($consulta, $id);
+  $consulta["id_auto"] = $_POST['id'];
+  
+$controller->grabarConsulta($consulta);
 
 }
 else
-{
+{*/
 	$id = $_GET['id'];
 	$controller->buscarAuto($id);
 	$controller->buscarImag($id);
-	//$id = $_GET['marca'];
-	$controller->buscarCat($id);
+    $controller->buscarCat($id);
 	$controller->mostrarPagina();
-	$controller->mostrarComentario($id);
-}
+	//$controller->mostrarComentario($id);
+//}
 
 
 ?>

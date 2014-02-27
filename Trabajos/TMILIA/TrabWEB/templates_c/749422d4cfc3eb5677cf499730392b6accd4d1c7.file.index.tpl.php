@@ -1,25 +1,24 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-11-12 23:02:08
+<?php /* Smarty version Smarty-3.1.14, created on 2014-02-27 04:14:33
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:4661528211bba714d7-12424346%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32179530d11bd3cc592-35627942%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1384293641,
+      1 => 1393470542,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4661528211bba714d7-12424346',
+  'nocache_hash' => '32179530d11bd3cc592-35627942',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_528211bbb18601_56024308',
+  'unifunc' => 'content_530d11bd486a39_00132680',
   'variables' => 
   array (
-    '_SESSION' => 0,
     'autos' => 0,
     'auto' => 0,
     'marcas' => 0,
@@ -27,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_528211bbb18601_56024308')) {function content_528211bbb18601_56024308($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_530d11bd486a39_00132680')) {function content_530d11bd486a39_00132680($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -41,11 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- Bootstrap core CSS -->
      <link href="dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    
-   
 
     <!-- Custom styles for this template -->
     <link href="dist/css/offcanvas.css" rel="stylesheet">
@@ -66,12 +61,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Projecto: Autos tandil</a>
+                
               </div>
               <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                  
-                  <?php if (isset($_smarty_tpl->tpl_vars['_SESSION']->value['mail'])){?>
+                <ul class="nav navbar-nav">                  
+                  <?php if (isset($_SESSION['mail'])){?>
                   <li class="active"><a href="index.php">Home</a></li>                  
                   <li><a href="panel.php">Panel</a></li>
                   <li><a href="logout.php">Cerrar sesion</a></li>                  
@@ -105,7 +99,6 @@ $_smarty_tpl->tpl_vars['auto']->_loop = true;
                 <ul class="thumbnails">
                   <ul class="span5 clearfix">
                     <div class="thumbnail clearfix">
-                    
                         <img src="<?php echo $_smarty_tpl->tpl_vars['auto']->value['path'];?>
 " alt="" class="pull-left span2 clearfix" style='margin-right:10px; height:30%; width:50%;'>
                       <div class="caption" class="pull-left">
@@ -126,8 +119,6 @@ $_smarty_tpl->tpl_vars['auto']->_loop = true;
                     </div>
                   </ul>
                 </ul>
-                
-           
             <?php } ?>
 
         </div><!--/span-->

@@ -1,4 +1,4 @@
-function verificarFormulario()
+function formulario()
 {
 	var email = document.getElementById('email');
 	var consulta = document.getElementById('consulta');

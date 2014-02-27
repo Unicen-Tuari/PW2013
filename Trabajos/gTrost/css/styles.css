@@ -1,0 +1,253 @@
+body {
+    background-image: url('/img/sos.png');
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#f_body {
+    padding-bottom: 70px;
+}
+
+.f_footer{
+    height: 70px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+.f_heading {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3c3c3c), to(#222222));
+    background-image: -webkit-linear-gradient(top, #3c3c3c, 0%, #222222, 100%);
+    background-image: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+    background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+   
+}
+
+.f_login {
+    position: absolute;
+    top: 60px;
+    right: 400px;
+    height: 180px;
+    width: 220px;
+    z-index: 10;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: none;
+}
+
+.login-close {
+    margin-left: 10px;
+}
+.login-control {
+  display: block;
+  margin-left: 10px;
+  width: 200px;
+  height: 34px;
+  margin-top:8px; 
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.btn-login {
+  margin-left: 10px;
+}
+
+.f_contact {
+    width: auto;
+    margin-top: 20px;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.f_navbar_header {
+    position: relative;
+	margin-bottom: 0px;
+    
+}
+.f_navbar_menu {
+	margin-bottom: 0px;
+    position: relative;
+    z-index: 1;
+}
+.f_featured {
+	width: 800;
+	margin-left: auto;
+	margin-right: auto;
+	height: 500px;
+}
+
+.f_index_productos {
+	width: auto;
+    height: 1050px;
+	margin-left: 15%;
+	margin-right: 15%;
+    margin-top: 50px;
+}
+
+.f_prod {
+    height: 205px;
+    
+}
+
+.f_pagination {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    margin-top: 1005px;
+    margin-left: 10px;
+    
+}
+
+.catalogo_foto {
+    width: 175px;
+    height: 131px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.catalogo_thumb {
+    width: 175px;
+    min-height: 131px;
+
+}
+
+.catalogo_info {
+    text-align: center;
+}
+
+.f_prod_productos {
+    width: auto;
+
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 500px;
+    
+    
+}
+
+.f_item_container {
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 500px;
+}
+
+.f_item_fotos {
+    width: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 400px;
+}
+
+.f_fotos_principal {
+    height: 300px;
+    width: 400px;
+}
+
+.f_fotos_thumbs {
+    height: 100px;
+}
+
+.item_thumb {
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    
+}
+
+.f_item_info{
+    margin-left: 140px;
+    max-width: 400px;
+}
+
+
+.admin_panel {
+    height: 600px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.admin_panel h4 {
+    color: white;
+    margin-left: 5px;
+}
+
+.admin_panel p {
+    color: white;
+    text-align: center;
+    padding-top:40px;
+
+}
+
+.admin_panel_form {
+    width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.f_faqs {
+    width: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 20px;
+    min-height: 1000px;
+}
+
+.f_signup_form {
+    width: 800px;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+
+#pass_error {
+    background-color: red;
+    width: 400px;
+    height: 25px;
+    border-radius: 5px;
+    display: none;
+}
+
+#f_signup_post {
+    display: none;
+
+}
+
+.cart_total{
+    font-size: 1.3em;
+}
+
+.cart_icon{
+    vertical-align: center;
+}

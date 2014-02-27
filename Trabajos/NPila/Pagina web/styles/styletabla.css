@@ -1,0 +1,28 @@
+table 
+	{
+		border-collapse:collapse;
+	}
+
+td, th
+	{
+		padding:5px;
+		text-align:center;
+	}
+
+thead
+	{
+		padding: 0 0 .5em 0;
+		text-align: center;
+		background: transparent;
+	}
+
+th
+	{
+		background:#333 url(http://www.roscripts.com/images/llsh.gif) repeat-x;
+		color:#fff
+	}
+
+tr:hover 
+	{
+		background:#fafafa
+	}

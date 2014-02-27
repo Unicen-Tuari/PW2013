@@ -7,10 +7,14 @@
 	$controller = new Controllerindex($model, $view);
 	if (isset($_POST["id_cliente"]))
 	{
-	  $controller->imprimirConsulta($_POST["id_cliente"]);
+		$controller->imprimirConsulta($_POST["id_cliente"]);
+	}
+	else if (isset($_POST["consulta"]))
+	{
+		$controller->enviaMail($_POST);
 	}
 	else
 	{
-	  $controller->imprimirPagina();
+		$controller->imprimirPagina();
 	}
 ?>

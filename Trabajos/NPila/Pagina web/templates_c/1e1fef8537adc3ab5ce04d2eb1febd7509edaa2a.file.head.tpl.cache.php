@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2013-09-25 20:07:09
+<?php /* Smarty version Smarty-3.1.14, created on 2013-10-07 20:59:24
          compiled from "./templates/head.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:591311160520690350986e6-79467988%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1e1fef8537adc3ab5ce04d2eb1febd7509edaa2a' => 
     array (
       0 => './templates/head.tpl',
-      1 => 1380074906,
+      1 => 1381189537,
       2 => 'file',
     ),
   ),
@@ -26,5 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<title>Sistema de gestion</title>
 		<link href="styles/style.css" rel="stylesheet" type="text/css" media="screen" />
 		<link href="styles/stylemenu.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="styles/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="styles/jquery-ui.theme.css" rel="stylesheet" type="text/css" media="screen" />
 	</head>
 <?php }} ?>

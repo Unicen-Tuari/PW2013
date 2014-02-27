@@ -24,6 +24,28 @@
   </head>
 
   <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+              </div>
+              <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  
+                  
+                  <li><a href="index.php">Home</a></li>                  
+                  <li><a href="panel.php">Panel</a></li>
+                  <li><a href="logout.php">Cerrar sesion</a></li>                  
+                  
+                </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
 
     <div class="container">
       <div class="header">
@@ -41,13 +63,14 @@
 
 </form>
         <form action="addcar.php" role="form" id="formAuto" method="POST" enctype="multipart/form-data" onsubmit="return formulario(this)">
+          
           <div class="form-group">
             <label for="exampleInputTitulo" name="titulo">Titulo</label>
-            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el titulo" required/>
+            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el titulo"  required/>
           </div>
           <div class="form-group">
-            <label for="exampleInputPrecio" name="valor" >Precio</label>
-            <input type="text" class="form-control" name="valor" placeholder="$" required/>
+            <label for="exampleInputPrecio" name="valor">Precio</label>
+            <input type="text" class="form-control" name="valor" placeholder="$"  required/>
           </div>
           <label for="exampleInputMarca">Elige la Marca</label>
           <select class="form-control" name="marca">
@@ -57,43 +80,35 @@
              {/foreach}
           </select>
           <div class="form-group">
-            <label for="exampleInputModelo" name="modelo" >Modelo</label>
-            <input type="text" class="form-control" name="modelo" placeholder="Ingrese el Modelo" required/>
+            <label for="exampleInputModelo" name="modelo">Modelo</label>
+            <input type="text" class="form-control" name="modelo" placeholder="Ingrese el Modelo"  required/>
           </div>
           <div class="form-group">
             <label for="exampleInputAño" name="anio" >Año</label>
-            <input type="text" class="form-control" name="anio" placeholder="Ingrese año del auto" required/>
+            <input type="text" class="form-control" name="anio" placeholder="Ingrese año del auto"  required/>
           </div>
           <div class="form-group">
             <label for="exampleInputAño" name="descripcion" >Descripcion</label>
-            <textarea type="text" class="form-control" name="descripcion" placeholder="Ingrese su Descripcion"required></textarea>
+            <textarea type="text" class="form-control" name="descripcion" placeholder="Ingrese su Descripcion"></textarea>
           </div>
+         
           <div class="form-group">
             <label for="imagen" >Agregar Imagen</label>
-            <input type='file' name="imagen" id="imagen" required/>
+            <input type='file' name="imagen0" required/>
+
             <label for="imagen">Agregar Imagen 2 </label>
-            <input type='file' name="imagen2" id="imagen2">
+            <input type='file' name="imagen1" >
+
             <label for="imagen">Agregar Imagen 3</label>
-            <input type='file' name="imagen3" id="imagen3">
+            <input type='file' name="imagen2" >
 
                     
-          <button id ="grabarAuto" type="submit" class="btn btn-primary btn-lg btn-block">Subir</button>
+          <button  type="submit" class="btn btn-primary btn-lg btn-block">Subir</button>
         </form>
-
-
-
       </div><!-- /jumbotron -->
 
-      <script>function formulario(f) { 
-        if (f.anio.value   == < 1980) { alert ('El año del auto es invalido');  
-        f.anio.focus(); return false; } 
-        if (f.anio.value  == >2013) { alert ('El año del auto es invalido'); 
-        f.anio.focus(); return false; } return true; } 
-      </script>
-
-
        <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Company 2014</p>
       </div>
 
     </div> <!-- /container -->

@@ -17,48 +17,45 @@ class Modeladdcar
 		}
     }
 
+    
+
 	public function consultaMarca()
 	{
 
 		$sql = "SELECT * FROM marca";
 		$q = $this->conn->prepare($sql);
 		$q->execute();
-		// fetch
-
 		return $q->fetchAll(PDO::FETCH_ASSOC);
 	}
 
+	
 
-
-	public function insertarAuto($auto) //,$mail
+	public function insertarAuto($auto,$id_user) 
 	{
-		$id_usuario= 1;
+		$id_usuario= $id_user; 
+
 		$sql = "INSERT INTO `autosbd`.`auto` (`id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`)  VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
 		$q = $this->conn->prepare($sql);
 		$a=$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
+			
+
+		$id_auto = $this->conn->lastInsertId();		
+
+
+		for ($i=0; $i<3 ; $i++) { 
 		
-		//mysql_query("INSERT INTO `auto` (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio) )";
-
-		$id_auto = $this->conn->lastInsertId();
-		//mysql_insert_id();
-
-
-		//for ($i=0; $i <count($_FILES) ; $i++) { 
-			# code...
-		//}
-		$id_imagen = $this->insertarImagen($auto["imagen"]);
+		$id_imagen = $this->insertarImagen($auto["imagen".$i]);
 
 		$sql = "INSERT INTO  `autosbd`.`auto_imagen` (`id_auto` ,`id_imagen`) VALUES ( :id_auto, :id_imagen)";
 		$q = $this->conn->prepare($sql);
 		$a=$q->execute(array(':id_auto'=>$id_auto,':id_imagen'=>$id_imagen));
-		
+		}
 	
 
 	}
 
 	public function insertarImagen($imagen)
 	{
-
 		$allowed =  array('gif','png' ,'jpg','jpeg');
 		if(!$imagen['error'])
 			{
@@ -72,8 +69,6 @@ class Modeladdcar
 
 
 					$sql = "INSERT INTO `autosbd`.`imagen` (`path`)  VALUES (:path)";
-					
-
 
 					$q = $this->conn->prepare($sql);
 					$arreglo = array(':path'=>$path);
@@ -91,11 +86,7 @@ class Modeladdcar
 			else
 			{
 				echo 'Error: Fatal Error';
-			}
-		
-		
-
-		
+			}		
 	}
 }
 ?>
