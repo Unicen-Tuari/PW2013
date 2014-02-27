@@ -19,8 +19,5 @@ else
 	$controller->imprimirPagina();
 }
 
-
-
-		
 		
 ?>
